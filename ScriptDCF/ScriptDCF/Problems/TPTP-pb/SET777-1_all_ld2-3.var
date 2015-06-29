@@ -1,0 +1,6 @@
+%Sol source: SET777-1
+%Variant name: all_ld2-7
+
+solSource(SET777-1).
+pf([-member(_,_), -subset(_,_), member(_,_), subset(_,_), -equal_sets(_,_), equal_sets(_,_)]<=2).
+depthLimit(3).

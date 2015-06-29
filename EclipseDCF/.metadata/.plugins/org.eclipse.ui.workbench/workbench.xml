@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="15" version="2.0">
+<workbenchAdvisor/>
+<window height="694" width="1755" x="30" y="22">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="106" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="100" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="54" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1289985557245" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PLiteral.java" partName="PLiteral.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/PLiteral.java" title="PLiteral.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/PLiteral.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/PLiteral.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8531" selectionTopPixel="3118"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PField.java" partName="PField.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/pfield/PField.java" title="PField.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PField.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PField.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4762" selectionTopPixel="913"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldChecker.java" partName="PFieldChecker.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldChecker.java" title="PFieldChecker.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldChecker.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldChecker.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3328" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldCheckerWithSubst.java" partName="PFieldCheckerWithSubst.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithSubst.java" title="PFieldCheckerWithSubst.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithSubst.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithSubst.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="26" selectionOffset="5189" selectionTopPixel="1110"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldCheckerWithoutSubst.java" partName="PFieldCheckerWithoutSubst.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithoutSubst.java" title="PFieldCheckerWithoutSubst.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithoutSubst.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithoutSubst.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5892" selectionTopPixel="1198"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldItem.java" partName="PFieldItem.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldItem.java" title="PFieldItem.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldItem.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldItem.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="77" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Skip.java" partName="Skip.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/operator/Skip.java" title="Skip.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/operator/Skip.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/operator/Skip.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8095" selectionTopPixel="1753"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldCounter.java" partName="PFieldCounter.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCounter.java" title="PFieldCounter.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCounter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCounter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3112" selectionTopPixel="193"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Unifiable.java" partName="Unifiable.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/Unifiable.java" title="Unifiable.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/Unifiable.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/Unifiable.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3634" selectionTopPixel="373"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFCardConstraint.java" partName="PFCardConstraint.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/pfield/PFCardConstraint.java" title="PFCardConstraint.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFCardConstraint.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFCardConstraint.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="453" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldCheckerCardConstraints.java" partName="PFieldCheckerCardConstraints.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerCardConstraints.java" title="PFieldCheckerCardConstraints.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerCardConstraints.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerCardConstraints.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2744" selectionTopPixel="675"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/src/org/nabelab/solar/Main.java" title="Main.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/Main.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/src/org/nabelab/solar/Main.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="75" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="test.sol" partName="test.sol" path="/Users/ki/Documents/Recherche/Programs/Eclipse/Solar-Bourgne/test.sol" title="test.sol" tooltip="Solar-Bourgne/test.sol" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Solar-Bourgne/test.sol"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="230" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1289985557245">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="324" org.eclipse.ui.ide.locationField="84" org.eclipse.ui.ide.markerType="114" org.eclipse.ui.ide.pathField="144" org.eclipse.ui.ide.priorityField="40" org.eclipse.ui.ide.resourceField="114"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.team.svn.ui.menu.help"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4f5522b9">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@dfb093b" ratio="0.15295966" ratioLeft="292" ratioRight="1617" relationship="2" relative="org.eclipse.ui.internal.ViewStack@4f5522b9">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="left" ratio="0.2489019" ratioLeft="170" ratioRight="513" relationship="4" relative="org.eclipse.ui.internal.ViewStack@dfb093b">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@3ad35341" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.32971373" ratioLeft="334" ratioRight="679" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.22411953" ratioLeft="210" ratioRight="727" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.7493438" ratioLeft="571" ratioRight="191" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.team.svn.ui.menu.help"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.6886887" ratioLeft="688" ratioRight="311" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.55413103" ratioLeft="389" ratioRight="313" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PField.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithoutSubst.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithSubst.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldItem.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerCardConstraints.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Solar-Bourgne/src/org/nabelab/solar/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Solar-Bourgne/test.sol"/>
+</editors>
+<item historyLabel="PField.java" index="0">
+<position info="not_deleted" x="4856" y="0"/>
+</item>
+<item historyLabel="PField.java" index="0">
+<position info="not_deleted" x="4762" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="6932" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithoutSubst.java" index="1">
+<position info="not_deleted" x="5892" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="3724" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="3649" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="5064" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="5131" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="5130" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="5132" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="5105" y="9"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="5059" y="4"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="3002" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="2995" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="5143" y="0"/>
+</item>
+<item historyLabel="PField.java" index="0">
+<position info="not_deleted" x="4762" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="3724" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="7224" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="3724" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="3704" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="4509" y="0"/>
+</item>
+<item historyLabel="PFieldItem.java" index="3">
+<position info="not_deleted" x="77" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="3696" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="3010" y="159"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position/>
+</item>
+<item historyLabel="PFieldCheckerWithoutSubst.java" index="1">
+<position info="not_deleted" x="5892" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="3547" y="404"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="745" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="3196" y="38"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="979" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="3416" y="73"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="979" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="1112" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="7176" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="2542" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="4017" y="496"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="2684" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="6503" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="2684" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="3448" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="4511" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position/>
+</item>
+<item historyLabel="PFieldCheckerWithSubst.java" index="2">
+<position info="not_deleted" x="5189" y="26"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="3106" y="0"/>
+</item>
+<item historyLabel="PFieldCheckerCardConstraints.java" index="4">
+<position info="not_deleted" x="2744" y="0"/>
+</item>
+<item historyLabel="Main.java" index="5">
+<position info="not_deleted" x="75" y="0"/>
+</item>
+<item active="true" historyLabel="test.sol" index="6">
+<position info="not_deleted" x="230" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/Main.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/Main.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldCheckerCardConstraints.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerCardConstraints.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerCardConstraints.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFCardConstraint.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFCardConstraint.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFCardConstraint.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Unifiable.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/Unifiable.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/Unifiable.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldCounter.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCounter.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCounter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Skip.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/operator/Skip.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/operator/Skip.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldItem.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldItem.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldItem.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldCheckerWithoutSubst.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithoutSubst.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithoutSubst.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldCheckerWithSubst.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithSubst.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldCheckerWithSubst.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PFieldChecker.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldChecker.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PFieldChecker.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PField.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/pfield/PField.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/pfield/PField.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PLiteral.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/PLiteral.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/PLiteral.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/Test.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/Test.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TermCont.java" tooltip="Solar-Bourgne/src/org/nabelab/solar/TermCont.java">
+<persistable path="/Solar-Bourgne/src/org/nabelab/solar/TermCont.java"/>
+</file>
+</mruList>
+</workbench>

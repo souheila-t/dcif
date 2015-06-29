@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+sys --begin--> i (leaf)
+
+i --send clause--> j
+
+...
+
+i --send clause--> j
+
+root --fin--> sys
+
+sys --terminate--> i
+
+...
+
+sys --terminate--> i

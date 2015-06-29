@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Problem>
+<!--  -->
+<Infos>
+<NbAgents>2</NbAgents>
+</Infos>
+   <Common type="fusion">
+     <CommLanguage type="fusion">
+	<ConstantTypes type="unique">
+	   <Pred> P </Pred>
+	</ConstantTypes>
+	<Format type="liste">
+	   <pLitGroup> Pred </pLitGroup>
+	   <pLitGroup> -Pred </pLitGroup>
+	</Format>
+     </CommLanguage>
+     <Weighting type="fusion">
+		<GlobalParams type="unique">
+			<ClauseAggregator>PROD</ClauseAggregator>
+	     	</GlobalParams>
+		<Defaults type="fusion">
+			<PredicateDefaults type="unique">
+				<Weight>0.01</Weight>
+				<Aggregator>PROD</Aggregator>
+				<UseParam>ALL</UseParam>
+				<IntegerWeight>1</IntegerWeight>
+				<VariableWeight>0.95</VariableWeight>
+			</PredicateDefaults>
+		</Defaults>
+		<Symbols type="list">
+			<Predicate weight="0.99">g</Predicate>
+			<Predicate weight="0.95">i</Predicate>
+		</Symbols>
+	</Weighting>
+      <Program>     
+pf([i(_),g(_)]&lt;=1).
+      </Program>
+   </Common>
+
+   <Agent i="0">
+      <Program>
+cnf(a,axiom,[-g(X),b(X)]).
+cnf(a,axiom,[-a(c1)]).
+cnf(a,axiom,[-k(X),b(X)]).
+cnf(a,axiom,[-h(X),e(X)]).
+cnf(a,axiom,[f(X,Y),-h(Y),-g(X)]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [b(c2)]).
+      </Observations>
+      <CommLanguage>
+	<ConstantsDomain>
+	   <P>a(X)</P>
+	   <P>b(X)</P>
+	   <P>e(X)</P>
+	   <P>f(X,Y)</P>
+	   <P>g(X)</P>
+	   <P>h(X)</P>
+	   <P>k(X)</P>
+	</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+   <Agent i="1">
+      <Program>
+cnf(a,axiom,[-e(X),-c(X)]).
+cnf(a,axiom,[a(X),c(X),-d(Y,X)]).
+cnf(a,axiom,[k(X),-i(X)]).
+cnf(a,axiom,[h(c1)]).
+cnf(a,axiom,[-f(X,Y),d(X,Y)]).
+      </Program>
+      <CommLanguage>
+	<ConstantsDomain>
+	   <P>a(X)</P>
+	   <P>c(X)</P>
+	   <P>d(X,Y)</P>
+	   <P>e(X)</P>
+	   <P>f(X,Y)</P>
+	   <P>h(X)</P>
+	   <P>i(X)</P>
+	   <P>k(X)</P>
+	</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+</Problem>

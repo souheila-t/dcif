@@ -1,0 +1,309 @@
+/**
+ * 
+ */
+package main;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import communication.protocol.LocalPBProtocol;
+
+import cnfPb.VariantProblem;
+
+import problemDistribution.DCFProblem;
+import problemDistribution.DistributedConsequenceFindingProblem;
+import logicLanguage.CNF;
+import logicLanguage.IndepClause;
+import solarInterface.CFSolver;
+import solarInterface.SolProblem;
+import stats.ConsFindingAgentStats;
+import stats.ExpeSummary;
+import systemStructure.Tree;
+import agLib.agentCommunicationSystem.CanalComm;
+import agents.ConsFindingAgent;
+
+
+/**
+ * @author Gauvain Bourgne
+ *
+ */
+public class CFLauncher {
+
+
+
+	public static DistributedConsequenceFindingProblem<SolProblem> setProblem(String problemRad, String variantSuffix, String distribSuffix) throws Exception{
+		//load dcf
+		DCFProblem dcf=new DCFProblem(problemRad+distribSuffix);
+		//load var if any
+		if (variantSuffix!=null && variantSuffix.length()>0){
+			VariantProblem var=new VariantProblem(problemRad+variantSuffix);
+			dcf.setGbPField(var.variantPField);
+			dcf.setMaxDepth(var.depthLimit);
+		}
+		return dcf;	
+	}
+	
+	public static ExpeSummary partitionBasedCF(DistributedConsequenceFindingProblem<SolProblem> problem,
+			String pbName, String distribSuffix, String method, int methodCF, String methodRoot, long deadline) throws Exception{
+		long start = System.currentTimeMillis();
+		PBConsFinding pb=new PBConsFinding(problem, methodCF, methodRoot, deadline);
+		long middle = System.currentTimeMillis();
+		pb.startExpe();
+		long end = System.currentTimeMillis();
+		
+		// print some outpur
+		System.out.println(""+pb.consequences.size()+" CHARACTERISTIC CLAUSES");
+		System.out.println();
+		for (IndepClause c:pb.consequences){
+			System.out.println(c);
+		}
+		System.out.println();
+		System.out.println("\nTotal execution time was " + (end - start) + " ms.\n");
+		System.out.println("\nExecution time was " + (end - middle) + " ms.\n");
+		// set result line
+		List<ConsFindingAgentStats> agStats=new ArrayList<ConsFindingAgentStats>();
+		for (ConsFindingAgent ag:pb.tree.getAgents())
+			agStats.add(ag.stats);
+		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, pb.tree.getRoot(),method, end-start, pb.consequences.size(),agStats);
+		return result;
+		}	
+	
+	
+	public static SolProblem setMonoProblem(String problemRad, String variantSuffix, boolean turnToCarc) throws Exception{
+		//load dcf
+		SolProblem pb=new SolProblem(problemRad);
+		//load var if any
+		if (variantSuffix!=null && variantSuffix.length()>0){
+			VariantProblem var=new VariantProblem(problemRad+variantSuffix);
+			pb.setPField(var.variantPField);
+			pb.setDepthLimit(var.depthLimit);
+		}
+		if (turnToCarc){
+			List<IndepClause> top_clauses=pb.getTopClauses(true);
+			pb.getAxioms(true).addAll(top_clauses);
+			top_clauses.clear();
+		}
+		return pb;	
+	}
+	
+	public static ExpeSummary solarCF(SolProblem pb, boolean incremental, boolean trueNewC, String pbName, String method, long deadline){
+		long start = System.currentTimeMillis();
+		ConsFindingAgentStats stat=new ConsFindingAgentStats();
+		Collection<IndepClause> resultingCons=new ArrayList<IndepClause>();
+		long middle = System.currentTimeMillis();
+		CFSolver.solveToIndepClause(pb, deadline, stat.getSolarCtrList(), resultingCons, incremental, trueNewC);
+		long end = System.currentTimeMillis();
+		if (incremental){
+			CNF reducedCons=new CNF();
+			for (IndepClause cl:resultingCons)
+				reducedCons.addAndReduce(cl);
+			resultingCons=reducedCons;
+		}
+		
+		System.out.println(""+resultingCons.size()+" CHARACTERISTIC CLAUSES");
+		System.out.println();
+		for (IndepClause c:resultingCons){
+			System.out.println(c);
+		}
+		System.out.println();
+		System.out.println("\nTotal execution time was " + (end - start) + " ms.\n");
+		System.out.println("\nExecution time was " + (end - middle) + " ms.\n");
+		// set result line
+		List<ConsFindingAgentStats> agStats=new ArrayList<ConsFindingAgentStats>();
+		agStats.add(stat);
+		ExpeSummary result=new ExpeSummary(pbName, "Mono", 0,method, end-start, resultingCons.size(),agStats);
+		return result;		
+	}
+	
+	public static ExpeSummary runExpe(String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis) throws Exception{
+		ExpeSummary result=null;
+		long deadline=-1;
+		List<String> methodOptions=getMethodOptions(method);
+		if (methodOptions.get(0).equalsIgnoreCase("SOLAR")){
+			boolean inc=false;
+			boolean trueNC=false;
+			boolean turnToCarc=false;
+			methodOptions.remove(0);
+			for (String option:methodOptions){
+				if (option.equalsIgnoreCase("Inc"))
+					inc=true;
+				if (option.equalsIgnoreCase("TrueNC"))
+					trueNC=true;
+				if (option.equalsIgnoreCase("Carc"))
+					turnToCarc=true;				
+			}
+			SolProblem problem=setMonoProblem(pbBaseName, variantSuffix, turnToCarc);
+			if (timeLimitMillis!=-1) deadline=System.currentTimeMillis()+timeLimitMillis;
+			result=solarCF(problem, inc, trueNC,pbBaseName+variantSuffix, method, deadline);
+			if (deadline>0 && deadline<System.currentTimeMillis()){
+				System.out.println("------------------  TIME OUT --------------------");
+			}
+		}
+		if (methodOptions.get(0).equalsIgnoreCase("DCF")){
+			DistributedConsequenceFindingProblem<SolProblem> problem=setProblem(pbBaseName, variantSuffix, distributionSuffix);
+			if (methodOptions.size()>2 && methodOptions.get(1).equalsIgnoreCase("PB")){
+				//method
+				int pbMethod=LocalPBProtocol.SEQUENTIAL;
+				if (methodOptions.get(2).equalsIgnoreCase("Par"))
+					pbMethod=LocalPBProtocol.PARALLEL;
+				if (methodOptions.get(2).equalsIgnoreCase("Seq"))
+					pbMethod=LocalPBProtocol.SEQUENTIAL;
+				if (methodOptions.get(2).equalsIgnoreCase("Hyb"))
+					pbMethod=LocalPBProtocol.HYBRID;
+				//root heuristic
+				String rHeuristic="FixedRoot-0";
+				if (methodOptions.size()>3){
+					rHeuristic=method.substring(method.lastIndexOf(methodOptions.get(3)));
+				}
+				//RUN
+				if (timeLimitMillis!=-1) deadline=System.currentTimeMillis()+timeLimitMillis;
+				result=partitionBasedCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pbMethod, rHeuristic, deadline);
+			}
+		}
+		return result;
+	}
+	
+	
+	private static List<String> getMethodOptions(String method){
+		List<String> result=new ArrayList<String>();
+		String head="";
+		String tail=method;
+		int ind=tail.indexOf('-');
+		while (ind>=0){
+			head=tail.substring(0,ind);
+			result.add(head);
+			tail=tail.substring(ind+1);
+			ind=tail.indexOf('-');
+		}
+		result.add(tail);
+		return result;
+	}
+
+	//Methods
+	//  SOLAR
+	//  SOLAR-Carc
+	//  SOLAR-TrueNC
+	//  SOLAR-Inc
+	//  SOLAR-Inc-Carc
+	//  SOLAR-Inc-TrueNC
+	//  DCF-PB-Seq-FixRoot0
+	//  DCF-PB-Par-MaxClSize
+
+	
+////////////////////////////////////////////////////////////
+	
+	
+	private static void exec(String resultFilename, String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis) throws Exception{
+		boolean label=false;
+		
+		ExpeSummary res=runExpe(method, pbBaseName, variantSuffix, distributionSuffix, timeLimitMillis);
+		
+		File accesFichier = new File(resultFilename+".csv") ;  	
+	 	if (!accesFichier.exists()){
+	 		accesFichier.createNewFile();
+	 		label=true;
+	 	}	 		
+	 	PrintStream fileOut = new PrintStream(new FileOutputStream(accesFichier, true));
+	 	if (label) fileOut.println(ExpeSummary.labels());
+		fileOut.println(res.toLine());
+		fileOut.close();
+	}
+	
+	public static void printHelp(){
+		System.out.println("Launch an expe with the given parameters and append the result line to the given outpur file");
+		System.out.println("Usage :");
+		System.out.println("    CFLaucher [Options] baseProblem[.sol] output.csv");
+		System.out.println("Options");
+		System.out.println("-method=xxx use method xxx.");
+		System.out.println("          xxx=SOLAR-Carc (default), SOLAR-Inc-Carc, DCF-PB-Seq-FixedRoot-0, DCF-PB-Par-MaxClSize,...");
+		System.out.println("-t=N  set time limit.");
+		System.out.println("-var=varSuffix  use the variant with given suffix (should begin by \"_\").");
+		System.out.println("-dist=distSuffix  use the distribution with given suffix (should begin by \"_\").");
+		
+	}
+	
+	public static void main(String[] args){
+		
+		String resultFilename="resultIndiv";
+		String method="SOLAR-Carc";
+		String variantSuffix="";
+		String distributionSuffix="";
+		long timeLimitMillis=-1;
+		
+		CFSolver.verbose=false;
+		Tree.verbose=false;
+		CanalComm.verbose=false;
+		
+		int i=0;
+		while (args[i].startsWith("-")) {
+			if (args[i].startsWith("-method=")){
+				method=args[i].substring(args[i].indexOf("=")+1).trim();
+				i++;
+				continue;
+			}
+			if (args[i].startsWith("-verbose")){
+				CFSolver.verbose=true;
+				Tree.verbose=true;
+				CanalComm.verbose=true;
+				i++;
+				continue;
+			}
+			if (args[i].startsWith("-var=")){
+				variantSuffix=args[i].substring(args[i].indexOf("=")+1).trim();
+				i++;
+				continue;
+			}
+			if (args[i].startsWith("-dist=")){
+				distributionSuffix=args[i].substring(args[i].indexOf("=")+1).trim();
+				i++;
+				continue;
+			}
+			if (args[i].startsWith("-t=")){
+				timeLimitMillis=Long.parseLong(args[i].substring(args[i].indexOf("=")+1));
+				i++;
+				continue;
+			}
+			else{
+				printHelp();
+				return;
+			}
+		}
+		
+		String problemFilename=args[i].trim();
+		if (problemFilename.endsWith(".sol"))
+			problemFilename=problemFilename.substring(0,problemFilename.length()-4);
+		if (args.length>i+1){
+			resultFilename=args[i+1].trim();
+			if (resultFilename.endsWith(".csv"))
+				resultFilename=resultFilename.substring(0,resultFilename.length()-4);		
+		}			
+		resultFilename=resultFilename.trim();
+
+		try {
+			exec(resultFilename, method, problemFilename, variantSuffix, distributionSuffix, timeLimitMillis);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+

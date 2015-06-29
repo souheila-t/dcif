@@ -1,0 +1,23 @@
+- faire
+
+  - S'il y a un cycle
+
+    - prendre un cycle le plus petit V1, ..., vc (= v1) (vi in V) dans le graphe
+
+  - sinon
+
+    - retourner G
+
+
+
+  - choisir une arete a ou la somme du nombre de labels entre a et chaque arete 
+
+    du cycle est minimale
+
+  - ajouter le label a toutes les aretes du cycle						toutes les aretes ... ?
+
+  - retirer l'arete
+
+
+
+- iterer

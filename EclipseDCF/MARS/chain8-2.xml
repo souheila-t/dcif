@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Problem>
+<!--  -->
+<Infos>
+<NbAgents>2</NbAgents>
+</Infos>
+   <Common type="fusion">
+     <CommLanguage type="fusion">
+	<ConstantTypes type="unique">
+	   <Pred> P </Pred>
+	</ConstantTypes>
+	<Format type="liste">
+	   <pLitGroup> Pred </pLitGroup>
+	   <pLitGroup> -Pred </pLitGroup>
+	</Format>
+     </CommLanguage>
+     <Weighting type="fusion">
+		<GlobalParams type="unique">
+			<ClauseAggregator>PROD</ClauseAggregator>
+	     	</GlobalParams>
+		<Defaults type="fusion">
+			<PredicateDefaults type="unique">
+				<Weight>0.01</Weight>
+				<Aggregator>PROD</Aggregator>
+				<UseParam>ALL</UseParam>
+				<IntegerWeight>1</IntegerWeight>
+				<VariableWeight>0.95</VariableWeight>
+			</PredicateDefaults>
+		</Defaults>
+		<Symbols type="list">
+			<Predicate weight="0.99">h1</Predicate>
+			<Predicate weight="0.95">h2</Predicate>
+			<Predicate weight="0.05">o1</Predicate>
+			<Predicate weight="0.05">p_o1</Predicate>
+		</Symbols>
+	</Weighting>
+      <Program>     
+pf([h1,h2]&lt;=1).
+      </Program>
+   </Common>
+
+   <Agent i="0">
+      <Program>
+cnf(a,axiom,[-h2,k0]).
+cnf(a,axiom,[-l0,l1]).
+cnf(a,axiom,[-m1,m2]).
+cnf(a,axiom,[-k3,k4]).
+cnf(a,axiom,[-l4,l5]).
+cnf(a,axiom,[-m5,m6]).
+cnf(a,axiom,[-o1,-o2]).
+cnf(a,axiom,[-k1,k2]).
+cnf(a,axiom,[-l2,l3]).
+cnf(a,axiom,[-m3,m4]).
+cnf(a,axiom,[-k5,k6]).
+cnf(a,axiom,[-l6,o1]).
+cnf(a,axiom,[-h1,m0]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [o1]).
+      </Observations>
+      <CommLanguage>
+	<ConstantsDomain>
+	   <P>h1</P>
+	   <P>h2</P>
+	   <P>k0</P>
+	   <P>l0</P>
+	   <P>l1</P>
+	   <P>m1</P>
+	   <P>m2</P>
+	   <P>k3</P>
+	   <P>k4</P>
+	   <P>l4</P>
+	   <P>l5</P>
+	   <P>m5</P>
+	   <P>m6</P>
+	   <P>o1</P>
+	   <P>o2</P>
+	   <P>k1</P>
+	   <P>k2</P>
+	   <P>l2</P>
+	   <P>l3</P>
+	   <P>m3</P>
+	   <P>m4</P>
+	   <P>k5</P>
+	   <P>k6</P>
+	   <P>l6</P>
+	   <P>o1</P>
+	   <P>h1</P>
+	   <P>m0</P>
+	</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+   <Agent i="1">
+      <Program>
+cnf(a,axiom,[-k0,k1]).
+cnf(a,axiom,[-l1,l2]).
+cnf(a,axiom,[-m2,m3]).
+cnf(a,axiom,[-k4,k5]).
+cnf(a,axiom,[-l5,l6]).
+cnf(a,axiom,[-m6,o2]).
+cnf(a,axiom,[-k2,k3]).
+cnf(a,axiom,[-l3,l4]).
+cnf(a,axiom,[-m4,m5]).
+cnf(a,axiom,[-k6,o1]).
+cnf(a,axiom,[-h1,l0]).
+cnf(a,axiom,[-m0,m1]).
+      </Program>
+      <CommLanguage>
+	<ConstantsDomain>
+	   <P>k0</P>
+	   <P>k1</P>
+	   <P>l1</P>
+	   <P>l2</P>
+	   <P>m2</P>
+	   <P>m3</P>
+	   <P>k4</P>
+	   <P>k5</P>
+	   <P>l5</P>
+	   <P>l6</P>
+	   <P>m6</P>
+	   <P>o2</P>
+	   <P>k2</P>
+	   <P>k3</P>
+	   <P>l3</P>
+	   <P>l4</P>
+	   <P>m4</P>
+	   <P>m5</P>
+	   <P>k6</P>
+	   <P>o1</P>
+	   <P>h1</P>
+	   <P>l0</P>
+	   <P>m0</P>
+	   <P>m1</P>
+	</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+
+</Problem>
+

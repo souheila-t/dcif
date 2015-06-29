@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.nabelab.solar.util.Pair"/>
+<fullyQualifiedTypeName name="genLib.tools.Pair"/>
+<fullyQualifiedTypeName name="logicLanguage.IndepClause"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.parser.ParseException"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.ClauseTypes"/>
+<fullyQualifiedTypeName name="solarInterface.IndepPField"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.Literal"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.SymTable"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.PLiteral"/>
+<fullyQualifiedTypeName name="logicLanguage.CNF"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.Env"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.Clause"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.Options"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="org.nabelab.solar.pfield.PField"/>
+<fullyQualifiedTypeName name="agLib.agentCommunicationSystem.Agent"/>
+<fullyQualifiedTypeName name="agLib.agentCommunicationSystem.ThreadAgent"/>
+</qualifiedTypeNameHistroy>

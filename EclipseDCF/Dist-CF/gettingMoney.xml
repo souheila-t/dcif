@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<Problem>
+
+<!--  -->
+
+<Infos>
+
+<NbAgents>3</NbAgents>
+
+</Infos>
+
+   <Common type="fusion">
+
+     <CommLanguage type="fusion">
+
+    <ConstantTypes type="unique">
+
+       <Pred> P </Pred>
+
+    </ConstantTypes>
+
+    <Format type="liste">
+
+       <pLitGroup> Pred </pLitGroup>
+
+       <pLitGroup> -Pred </pLitGroup>
+
+    </Format>
+
+     </CommLanguage>
+
+     <Weighting type="fusion">
+
+        <GlobalParams type="unique">
+
+            <ClauseAggregator>PROD</ClauseAggregator>
+
+            </GlobalParams>
+
+        <Defaults type="fusion">
+
+            <PredicateDefaults type="unique">
+
+                <Weight>0.01</Weight>
+
+                <Aggregator>PROD</Aggregator>
+
+                <UseParam>ALL</UseParam>
+
+                <IntegerWeight>1</IntegerWeight>
+
+                <VariableWeight>0.95</VariableWeight>
+
+            </PredicateDefaults>
+
+        </Defaults>
+
+        <Symbols type="list">
+
+            <Predicate weight="0.99">g</Predicate>
+
+            <Predicate weight="0.95">i</Predicate>
+
+        </Symbols>
+
+    </Weighting>
+
+      <Program>     
+
+pf([i(_),g(_)]&lt;=1).
+
+      </Program>
+
+   </Common>
+
+
+
+   <Agent i="2">
+
+      <Program>
+
+         cnf(a,axiom,[-atm, card, -get_money]).
+
+         cnf(a,axiom,[-need_money, -closed, atm]).
+
+         cnf(a,axiom,[-holiday, closed]).
+
+      </Program>
+
+      <Observations>
+
+      </Observations>
+
+      <CommLanguage>
+
+         <ConstantsDomain>
+
+         </ConstantsDomain>
+
+      </CommLanguage>
+
+   </Agent>
+
+   <Agent i="0">
+
+      <Program>
+
+         cnf(a,axiom,[weekday, holiday]).
+
+         cnf(a,axiom,[-counter, bankbook, -get_money]).
+
+         cnf(a,axiom,[need_money]).
+
+      </Program>
+
+      <CommLanguage>
+
+         <ConstantsDomain>
+
+         </ConstantsDomain>
+
+      </CommLanguage>
+
+   </Agent>
+
+   <Agent i="1">
+
+      <Program>
+
+         cnf(a,axiom,[-need_money, -open, atm, counter]).
+
+         cnf(a,axiom,[get_money]).
+
+         cnf(a,axiom,[-weekday, open]).
+
+      </Program>
+
+      <CommLanguage>
+
+         <ConstantsDomain>
+
+         </ConstantsDomain>
+
+      </CommLanguage>
+
+   </Agent>
+
+
+
+
+
+</Problem>

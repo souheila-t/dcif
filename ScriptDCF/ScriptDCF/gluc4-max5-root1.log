@@ -1,0 +1,405 @@
+Building tree...
+Time for creating graph: 0.058s
+Begin Cyclecut
+[0]
+[0, 1]
+[0, 1, 2]
+removed edge : ((1, 2))
+Remaining Edges : 5
+[0, 1]
+[0, 1, 3]
+removed edge : ((1, 3))
+Remaining Edges : 4
+[0, 1]
+[0]
+[0, 2]
+[0, 2, 3]
+removed edge : ((0, 2))
+Remaining Edges : 3
+Time for cutting cycle: 0.0010s
+Chosen Root : 1
+Time for initializating agents and root: (B)0.0010s
+Tree finished.
+Sys -> ag0 : {New neighbour}
+Sys -> ag1 : {New neighbour}
+Sys -> ag0 : {New neighbour}
+Sys -> ag2 : {New neighbour}
+Sys -> ag0 : {New neighbour}
+Sys -> ag3 : {New neighbour}
+Sys -> ag1 : {New neighbour}
+Sys -> ag2 : {New neighbour}
+Sys -> ag1 : {New neighbour}
+Sys -> ag3 : {New neighbour}
+Sys -> ag2 : {New neighbour}
+Sys -> ag3 : {New neighbour}
+Sys -> ag0 : {Start}
+Sys -> ag1 : {Start}
+Sys -> ag2 : {Start}
+Sys -> ag3 : {Start}
+ag0 <------  {New neighbour}
+ag1 <------  {New neighbour}
+ag3 <------  {New neighbour}
+ag2 <------  {New neighbour}
+ag0 <------  {New neighbour}
+ag1 <------  {New neighbour}
+ag3 <------  {New neighbour}
+ag1 <------  {New neighbour}
+ag0 <------  {New neighbour}
+Sys -> ag2 : {Begin}
+ag0 <------  {Start}
+ag0 -> Sys : {Started}
+ag3 <------  {New neighbour}
+ag2 <------  {New neighbour}
+ag2 <------  {New neighbour}
+ag2 <------  {Start}
+Sys <------  {Started}
+ag1 <------  {Start}
+ag3 <------  {Start}
+ag1 -> Sys : {Started}
+Sys <------  {Started}
+ag2 -> Sys : {Started}
+ag2 <------  {Begin}
+ag3 -> Sys : {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+m_isocitrate, -r_d1d1d1d42_2]
+ [+r_d1d1d1d42_3, -m_isocitrate]
+ [+r_d4d3d1d6_48, -m_betaalanine]
+ [+m_betaalanine, -r_d4d3d1d6_49]
+ [+r_d4d1d1d20_52, -m_betaalanine]
+ [+m_betaalanine, -r_d4d1d1d20_53]
+ [+r_d2d6d1d14_54, -m_betaalanine]
+ [+m_betaalanine, -r_d2d6d1d14_55]
+ [+m_acryloylcoa, -r_d4d2d1d54_46]
+ [+r_d4d2d1d54_47, -m_acryloylcoa]
+ [+m_acryloylcoa, -r_d4d3d1d6_48]
+ [+r_d4d3d1d6_49, -m_acryloylcoa]
+ [+r_d2d1d3d1_50, -m_acryloylcoa]
+ [+m_acryloylcoa, -r_d2d1d3d1_51]
+ [+r_d2d6d1d39_0, -m_l2aminoadipate]
+ [+m_e2oxoglutarate, -r_d2d6d1d39_0]
+ [+r_d2d6d1d39_1, -m_e2oxoglutarate]
+ [+m_l2aminoadipate, -r_d2d6d1d39_1]
+ [+r_d1d1d1d42_2, -m_e2oxoglutarate]
+ [+m_e2oxoglutarate, -r_d1d1d1d42_3]
+ [+r_d2d3d1d61_4, -m_e2oxoglutarate]
+ [+m_succinate, -r_d2d3d1d61_4]
+ [+r_d2d3d1d61_5, -m_succinate]
+ [+m_e2oxoglutarate, -r_d2d3d1d61_5]
+ [+r_d1d3d99d1_10, -m_succinate]
+ [+m_succinate, -r_d1d3d99d1_11]
+ [+r_d1d13d11d16_12, -m_succinate]
+ [+m_hippurate, -r_d1d13d11d16_12]
+ [+r_d1d13d11d16_13, -m_hippurate]
+ [+m_succinate, -r_d1d13d11d16_13]
+ [+m_succinate, -r_d2d1d3d1_50]
+ [+r_d2d1d3d1_51, -m_succinate]
+ [+r_d1d2d1d31_56, -m_l2aminoadipate]
+ [+m_l2aminoadipate, -r_d1d2d1d31_57]
+ [+m_llysine, -r_d4d1d1d20_52]
+ [+r_d4d1d1d20_53, -m_llysine]
+ [+m_llysine, -r_d1d2d1d31_56]
+ [+r_d1d2d1d31_57, -m_llysine]
+Production field:
+ [-r_d4d2d1d54_46, +r_d4d2d1d54_47, -m_isocitrate, +r_d2d6d1d14_54, -r_d2d6d1d14_55, +r_d1d3d99d1_10, -r_d1d3d99d1_11, +m_isocitrate, +m_fumarate, -m_fumarate, +m_citrate, -m_citrate, +m_formaldehyde, -m_formaldehyde, +m_succinate, -m_succinate, +m_ornithine, -m_ornithine]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [170, 34568, 13764, 2462, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 17, 8, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 12, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 12, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 13, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 10, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 10, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 12, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 8, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 10, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 15, 9, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 17, 8, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 17, 8, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 11, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 15, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 8, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 12, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 11, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 15, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 9, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 13, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 11, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 11, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 6, 4, 0, 0, 0, 0, 0]
+ag2 -> ag3 : {Send clause([m_isocitrate, -r_d1d3d99d1_11])}
+ag3 <------  {Send clause([m_isocitrate, -r_d1d3d99d1_11])}
+ag2 -> ag3 : {Send clause([r_d4d2d1d54_47, -m_isocitrate])}
+ag3 <------  {Send clause([r_d4d2d1d54_47, -m_isocitrate])}
+ag2 -> ag3 : {Send clause([m_succinate, -r_d4d2d1d54_46])}
+ag3 <------  {Send clause([m_succinate, -r_d4d2d1d54_46])}
+ag2 -> ag3 : {Send clause([r_d1d3d99d1_10, -m_succinate])}
+ag3 <------  {Send clause([r_d1d3d99d1_10, -m_succinate])}
+ag2 -> ag3 : {Send clause([r_d2d6d1d14_54, -m_succinate])}
+ag3 <------  {Send clause([r_d2d6d1d14_54, -m_succinate])}
+ag2 -> ag3 : {Send clause([m_isocitrate, -r_d2d6d1d14_55])}
+ag3 <------  {Send clause([m_isocitrate, -r_d2d6d1d14_55])}
+ag2 -> ag3 : {Send clause([m_succinate, -m_isocitrate])}
+ag3 <------  {Send clause([m_succinate, -m_isocitrate])}
+ag2 -> ag3 : {Send clause([m_isocitrate, -m_succinate])}
+ag3 <------  {Send clause([m_isocitrate, -m_succinate])}
+ag2 -> ag3 : {End current batch}
+ag3 <------  {End current batch}
+ag2 -> ag3 : {End all batch}
+ag3 <------  {End all batch}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+r_d4d2d1d2_8, -m_citrate]
+ [+m_citrate, -r_d4d2d1d2_9]
+ [+m_citrate, -r_d2d6d1dx_15]
+ [+r_d4d2d1d3_6, -m_isocitrate]
+ [+c_compoundCcitrate_transaconitateC, -r_d4d2d1d3_6]
+ [+m_citrate, -c_compoundCcitrate_transaconitateC]
+ [+m_transaconitate, -c_compoundCcitrate_transaconitateC]
+ [+r_d4d2d1d3_7, -c_compoundCcitrate_transaconitateC]
+ [+c_compoundCcitrate_transaconitateC, -m_citrate, -m_transaconitate]
+ [+m_isocitrate, -r_d4d2d1d3_7]
+ [+m_citrate, -r_d2d3d3d1_64]
+ [+r_d2d3d3d1_65, -m_citrate]
+ [+m_taurine, -r_d2d6d1dx_14]
+ [+r_d2d6d1dx_15, -m_taurine]
+ [+r_d2d6d1dx_14, -m_citrate]
+ [+m_citrate, -r_d2d6d1d14_54]
+ [+r_d2d6d1d14_55, -m_citrate]
+ [+m_acetylcoa, -r_d1d2d4d1_62]
+ [+m_acetylcoa, -r_d6d2d1d1_67]
+ [+m_acetate, -r_d6d2d1d1_66]
+ [+r_d6d2d1d1_67, -m_acetate]
+ [+r_d1d2d4d1_63, -m_acetylcoa]
+ [+r_d2d3d3d1_64, -m_acetylcoa]
+ [+m_acetylcoa, -r_d2d3d3d1_65]
+ [+r_d6d2d1d1_66, -m_acetylcoa]
+ [+r_d2d7d1d69_58, -m_glucose]
+ [+m_pyruvate, -r_d2d7d1d69_58]
+ [+r_d2d7d1d69_59, -m_pyruvate]
+ [+m_glucose, -r_d2d7d1d69_59]
+ [+r_d1d1d1d27_60, -m_pyruvate]
+ [+m_lactate, -r_d1d1d1d27_60]
+ [+r_d1d1d1d27_61, -m_lactate]
+ [+m_pyruvate, -r_d1d1d1d27_61]
+ [+r_d1d2d4d1_62, -m_pyruvate]
+ [+m_pyruvate, -r_d1d2d4d1_63]
+ [+m_lactate, -r_d4d2d1d54_47]
+ [+r_d4d2d1d54_46, -m_lactate]
+ [+m_glucose]
+ [+m_isocitrate, -r_d1d3d99d1_11]
+ [+r_d4d2d1d54_47, -m_isocitrate]
+ [+m_succinate, -r_d4d2d1d54_46]
+ [+r_d1d3d99d1_10, -m_succinate]
+ [+r_d2d6d1d14_54, -m_succinate]
+ [+m_isocitrate, -r_d2d6d1d14_55]
+ [+m_succinate, -m_isocitrate]
+ [+m_isocitrate, -m_succinate]
+Production field:
+ [+r_d4d2d1d2_8, +r_d1d3d99d1_10, -r_d1d3d99d1_11, -r_d4d2d1d2_9, +m_fumarate, -m_fumarate, +m_citrate, -m_citrate, +m_formaldehyde, -m_formaldehyde, +m_succinate, -m_succinate, +m_ornithine, -m_ornithine]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [27, 11892, 4537, 660, 0, 0, 0, 16]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+ag3 -> Sys : {Send consequence([m_citrate])}
+Sys <------  {Send consequence([m_citrate])}
+ag3 -> Sys : {Send consequence([m_succinate])}
+Sys <------  {Send consequence([m_succinate])}
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 3, 1, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 3, 1, 0, 0, 0, 0, 0]
+ag3 -> ag0 : {Send clause([r_d1d3d99d1_10])}
+ag3 -> ag0 : {Send clause([r_d4d2d1d2_8])}
+ag0 <------  {Send clause([r_d1d3d99d1_10])}
+ag3 -> ag0 : {End current batch}
+ag0 <------  {Send clause([r_d4d2d1d2_8])}
+ag0 <------  {End current batch}
+ag3 -> ag0 : {End all batch}
+ag0 <------  {End all batch}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+m_ornithine, -r_d2d1d3d3_24]
+ [+r_d2d1d3d3_25, -m_ornithine]
+ [+c_compoundCurea_ornithineC, -r_d3d5d3d1_26]
+ [+r_d3d5d3d1_28, -c_compoundCurea_ornithineC]
+ [+m_urea, -c_compoundCurea_ornithineC]
+ [+m_ornithine, -c_compoundCurea_ornithineC]
+ [+c_compoundCurea_ornithineC, -m_urea, -m_ornithine]
+ [+r_d2d1d1d2_30, -m_ornithine]
+ [+m_ornithine, -r_d2d1d1d2_31]
+ [+m_citruline, -r_d6d3d4d5_22]
+ [+r_d6d3d4d5_23, -m_citruline]
+ [+r_d2d1d3d3_24, -m_citruline]
+ [+m_citruline, -r_d2d1d3d3_25]
+ [+m_arginine, -r_d3d5d3d1_28]
+ [+r_d3d5d3d1_26, -m_arginine]
+ [+r_d4d3d2d1_16, -c_compoundCarginine_fumarateC]
+ [+c_compoundCarginine_fumarateC, -m_arginine, -m_fumarate]
+ [+m_las, -r_d4d3d2d1_16]
+ [+r_d4d3d2d1_17, -m_las]
+ [+c_compoundCarginine_fumarateC, -r_d4d3d2d1_17]
+ [+m_arginine, -c_compoundCarginine_fumarateC]
+ [+m_fumarate, -c_compoundCarginine_fumarateC]
+ [+r_d2d1d1d1_18, -m_nmnd]
+ [+m_fumarate, -r_d2d1d1d1_18]
+ [+r_d2d1d1d1_19, -m_fumarate]
+ [+m_nmnd, -r_d2d1d1d1_19]
+ [+r_d2d1d1d7_20, -m_nmna]
+ [+m_fumarate, -r_d2d1d1d7_20]
+ [+r_d2d1d1d7_21, -m_fumarate]
+ [+m_nmna, -r_d2d1d1d7_21]
+ [+r_d6d3d4d5_22, -m_las]
+ [+m_las, -r_d6d3d4d5_23]
+ [+m_fumarate, -r_d4d2d1d2_8]
+ [+r_d4d2d1d2_9, -m_fumarate]
+ [+m_fumarate, -r_d1d3d99d1_10]
+ [+r_d1d3d99d1_11, -m_fumarate]
+ [+r_d1d3d99d1_10]
+ [+r_d4d2d1d2_8]
+Production field:
+ [+r_d2d1d1d2_30, -r_d2d1d1d2_31, -m_urea, +m_urea, +m_fumarate, -m_fumarate, +m_citrate, -m_citrate, +m_formaldehyde, -m_formaldehyde, +m_succinate, -m_succinate, +m_ornithine, -m_ornithine]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [27, 14171, 5385, 695, 0, 30, 0, 31]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+ag0 -> Sys : {Send consequence([m_fumarate])}
+Sys <------  {Send consequence([m_fumarate])}
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 9, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 4, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 4, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 7, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+ag0 -> ag1 : {Send clause([-r_d2d1d1d2_31, m_ornithine])}
+ag0 -> ag1 : {Send clause([-m_ornithine, m_urea])}
+ag1 <------  {Send clause([-r_d2d1d1d2_31, m_ornithine])}
+ag0 -> ag1 : {Send clause([r_d2d1d1d2_30, -m_ornithine])}
+ag1 <------  {Send clause([-m_ornithine, m_urea])}
+ag0 -> ag1 : {End current batch}
+ag1 <------  {Send clause([r_d2d1d1d2_30, -m_ornithine])}
+ag1 <------  {End current batch}
+ag0 -> ag1 : {End all batch}
+ag1 <------  {End all batch}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+m_formaldehyde, -r_d1d5d99d1_39]
+ [+r_d1d1d99d8_40, -m_formaldehyde]
+ [+m_formate, -r_d1d1d99d8_40]
+ [+r_d1d1d99d8_41, -m_formate]
+ [+m_formaldehyde, -r_d1d1d99d8_41]
+ [+r_d1d4d99d3_42, -m_formaldehyde]
+ [+m_methylamine, -r_d1d4d99d3_42]
+ [+r_d1d4d99d3_43, -m_methylamine]
+ [+m_formaldehyde, -r_d1d4d99d3_43]
+ [+r_d4d1d2d32_44, -m_tmao]
+ [+c_compoundCformaldehyde_methylamineC, -r_d4d1d2d32_44]
+ [+m_formaldehyde, -c_compoundCformaldehyde_methylamineC]
+ [+m_methylamine, -c_compoundCformaldehyde_methylamineC]
+ [+r_d4d1d2d32_45, -c_compoundCformaldehyde_methylamineC]
+ [+c_compoundCformaldehyde_methylamineC, -m_formaldehyde, -m_methylamine]
+ [+m_tmao, -r_d4d1d2d32_45]
+ [+r_d1d5d99d1_38, -m_formaldehyde]
+ [+m_creatine, -r_d2d1d1d2_30]
+ [+r_d2d1d1d2_31, -m_creatine]
+ [+r_d3d5d3d3_32, -m_creatine]
+ [+c_compoundCurea_sarcosineC, -r_d3d5d3d3_32]
+ [+m_urea, -c_compoundCurea_sarcosineC]
+ [+m_sarcosine, -c_compoundCurea_sarcosineC]
+ [+r_d3d5d3d3_33, -c_compoundCurea_sarcosineC]
+ [+c_compoundCurea_sarcosineC, -m_urea, -m_sarcosine]
+ [+m_creatine, -r_d3d5d3d3_33]
+ [+r_d3d5d2d10_34, -m_creatinine]
+ [+m_creatine, -r_d3d5d2d10_34]
+ [+r_d3d5d2d10_35, -m_creatine]
+ [+m_creatinine, -r_d3d5d2d10_35]
+ [+r_d3d5d1d59_36, -m_creatinine]
+ [+m_creatinine, -r_d3d5d1d59_37]
+ [+m_sarcosine, -r_d1d5d99d1_38]
+ [+r_d1d5d99d1_39, -m_sarcosine]
+ [+m_sarcosine, -r_d3d5d1d59_36]
+ [+r_d3d5d1d59_37, -m_sarcosine]
+ [-r_d2d1d1d2_31, +m_ornithine]
+ [-m_ornithine, +m_urea]
+ [+r_d2d1d1d2_30, -m_ornithine]
+Production field:
+ [+m_fumarate, -m_fumarate, +m_citrate, -m_citrate, +m_formaldehyde, -m_formaldehyde, +m_succinate, -m_succinate, +m_ornithine, -m_ornithine]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [32, 19619, 7800, 360, 0, 60, 0, 122]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+ag1 -> Sys : {Send consequence([-m_formaldehyde, m_ornithine])}
+ag1 -> Sys : {Send consequence([m_formaldehyde, -m_ornithine])}
+Sys <------  {Send consequence([-m_formaldehyde, m_ornithine])}
+Sys <------  {Send consequence([m_formaldehyde, -m_ornithine])}
+ag1 -> Sys : {End all batch}
+Sys <------  {End all batch}
+Sys -> ag0 : {Finish}
+Sys -> ag1 : {Finish}
+Sys -> ag2 : {Finish}
+Sys -> ag3 : {Finish}
+ag2 <------  {Finish}
+ag1 <------  {Finish}
+ag3 <------  {Finish}
+ag0 <------  {Finish}
+5 CHARACTERISTIC CLAUSES
+
+[m_citrate]
+[m_succinate]
+[m_fumarate]
+[-m_formaldehyde, m_ornithine]
+[m_formaldehyde, -m_ornithine]
+
+
+Total execution time was 1075 ms.
+
+
+Execution time was 1006 ms.
+

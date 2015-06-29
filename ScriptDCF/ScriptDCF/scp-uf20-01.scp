@@ -1,0 +1,13 @@
+groupBy(Problem).
+
+problem(uf20-01,_all_ld1-5,_kmet16).
+problem(uf20-01,_all_ld1-5,_kmet4).
+problem(uf20-01,_max-20_ld-1-5,_kmet16).
+problem(uf20-01,_max-20_ld-1-5,_kmet4).
+
+
+
+method(SOLAR-Carc).
+%method(SOLAR-Inc-Carc).
+method(DCF-PB-Seq-MaxClSize).
+method(DCF-PB-Par-MaxClSize).

@@ -1,0 +1,15 @@
+;zTest1_test1storderDist_Ligne_
+Nb Conversations (avg) ;5.0;
+Nb Conversations (std-dev) ;0.0;
+Nb Messages (avg) ;99.0;
+Nb Messages (std-dev) ;0.0;
+Total size of Messages (avg) ;3763.0;
+Total size of Messages (std-dev) ;0.0;
+Nb InferenceSteps (avg) ;0.0;
+Nb InferenceSteps (std-dev) ;0.0;
+Final rule redundancy (avg) ;1.6176470588235294;
+Final rule redundancy (std-dev) ;0.0;
+Final obs redundancy (avg) ;2.5;
+Final obs redundancy (std-dev) ;0.0;
+Proportion of exact hypotheses (avg) ;0.0;
+Proportion of exact hypotheses (std-dev) ;0.0;

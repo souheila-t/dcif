@@ -1,0 +1,6 @@
+%Sol source: SYN084-1
+%Variant name: all_ld5-2
+
+solSource(SYN084-1).
+pf([big_p(_), -big_p(_)]<=5).
+depthLimit(4).

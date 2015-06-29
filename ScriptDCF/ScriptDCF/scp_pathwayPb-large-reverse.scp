@@ -1,0 +1,12 @@
+groupBy(Problem).
+
+problem(pathwayPb-large,_min-5_ld1-6,_kmet64).
+problem(pathwayPb-large,_min-5_ld1-6,_kmet256).
+problem(pathwayPb-large,_all_ld1-3,_kmet64).
+problem(pathwayPb-large,_all_ld1-3,_kmet256).
+
+
+%method(SOLAR-Carc).
+%method(SOLAR-Inc-Carc).
+method(DCF-PB-Seq-MaxClSize).
+%method(DCF-PB-Par-MaxClSize).

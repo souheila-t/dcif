@@ -1,0 +1,96 @@
+- if cycle
+
+  - Cycle Cut Algorithm. 							G -> tree
+
+
+
+- determine communication language between all pairs of partition.		?? Pas seulement les paires qui sont reliées ?
+
+
+
+
+
+- for each leaf Ai
+
+
+
+  - do
+
+    - if Ai root partition
+
+      - Pi original production field P = <L>
+
+    - else parent of Ai, Aj. Pi = <l(i,j)+> where l(i,j)+set of literals	traduction de l(i,j) en set de literal l(i,j)+
+
+      constructed from l(i,j)							construcion du production field
+
+
+
+    - consequence finding in Ai with Pi						trouve theorie
+
+    - Cni = Carc(Ai, Pi)							instantiation ?
+
+    - output each characteristic clause C in Cni if C belongs to the 
+
+      original production field P = <L>						?? output ?
+
+
+
+    - for each clause C in Cni
+
+      - if C in L(l(i,j))							si C appartient a l'ensemble des formules que l'on
+
+										peut construire avec l(i,j)
+
+        - send C to Aj								message(C, Aj)
+
+        - Aj = mu(Aj union {C})							mise a jour de la theorie
+
+        - i = j									On propage au parent
+
+  - while there is a clause to be sent to the parent partition
+
+
+
+
+
+
+
+
+
+
+
+
+
+Graphe (noeud de depart r) -> Arbre (racine r)
+
+-> mise a jour du communication language
+
+-> parcours des feuilles
+
+
+
+
+
+
+
+
+
+
+
+
+
+P = <L> production field where L set of literals closed under instantiation
+
+Th(T) with T clausal theory, set of all consequences of T
+
+Thp(T) with T clausal theory, set of all consequences of T belonging to P (production field)
+
+a clause C belongs to P = <L> if every literal in C belongs to L (L set of literals)
+
+Carc(T, P) = mu Thp(T) where mu is subsomption minimality
+
+Newcarc(T, S, P) = Carc(T union S, P) \ Carc(T, P) nouvelles clauses derivees des clauses S ajoutees a la theorie
+
+L(S) is the set of formulas constructed from the symbols in S with S a set of non-logical symbols,
+

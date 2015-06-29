@@ -1,0 +1,40 @@
+portfolio-based search strategy
+	-> analyze problems : How ?
+=> E have some criteria
+	ML algorithm on training set
+
+general case:
+if CF rather than refut ?
+	need for exahustive search
+
+Future work
+   - extention to CF in general case
+   - parallel processing
+   - efficient composition algo for substitutions
+
+
+Query answering problem : libraries ?
+
+
+
+Shotaro Shimomaki and HIrayama
+
+new asynchronous and complete solver for Dis-SAT
+- Based on Asynchronous Backtracking Algorithm
+- each agents has a complex theorie (and not just one variable as usually)
+- local computation can use any SAT solver
+
+
+latest
+DPLL ABT Ruiz, Alreview 2010, one variable by agent
+
+method : complete, asynchronous, partioned by clause, with complex local problem for each agents.
+
+asynchronous
+	- every agent works asynchronously and in parallel
+	- THE SYSTEM EVENTUALLY IDENTIFIES SAT/UNSAT
+
+Assumption
+- a priority is introduced among agents (arbitrarily)
+
+(HR : + implicit priority between variable of 

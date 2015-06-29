@@ -1,0 +1,6 @@
+%Sol source: HWV034-1
+%Variant name: man-3_ld4--1
+
+solSource(HWV034-1).
+pf([value(_,_), -value(_,_), -connection(_,_)]<=4).
+depthLimit(-1).

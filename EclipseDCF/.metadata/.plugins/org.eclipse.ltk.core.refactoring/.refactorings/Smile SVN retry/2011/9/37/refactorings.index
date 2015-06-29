@@ -1,0 +1,22 @@
+1315140583502	Move compilation unit
+1315207415701	Rename package 'learning.atomic'
+1315207674805	Rename type variable 'Example'
+1315207761329	Rename type variable 'Example'
+1315211916681	Rename package 'learning.process'
+1315225848395	Delete element
+1315259239409	Delete element
+1315259255810	Rename type 'ClassificationProblemARFF_Atomic2'
+1315260821383	Copy compilation unit
+1315331655158	Rename method 'makeClasse'
+1315331669095	Rename method 'makeExemples'
+1315343064056	Delete element
+1315350171412	Rename type variable 'ExempleClasse'
+1315354136079	Infer generic type arguments
+1315354394165	Infer generic type arguments
+1315367906437	Rename local variable 'base'
+1315371897905	Move compilation units
+1315371914003	Move compilation unit
+1315371926733	Move compilation units
+1315371939018	Move compilation unit
+1315635702104	Rename field 'nbElement'
+1315641018710	Move compilation unit

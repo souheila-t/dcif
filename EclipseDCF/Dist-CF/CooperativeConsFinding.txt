@@ -1,0 +1,29 @@
+- Given I set of input clauses. Query or goal clause.
+
+- Ai agent whose axiom set is I.
+
+- Pa = <LitA> stable production field. LitA set of all literals in the language of A.
+
+- Consequence finding in Ai
+
+- N = Carc(Ai, Pa)
+
+
+
+- While new characteristics clauses are derived
+
+  - For each clause C in N, 
+
+    - decide an agent Aj to which C is sent from Ai		Message de C de Ai à Aj
+
+								Mise a jour du communication language
+
+    - i = j							
+
+
+
+    - Consequence finding in Ai with top clause C by SOL.	
+
+    - N = NewCarc(Ai, C, Pa)
+
+    - Ai = mu(Ai union N)

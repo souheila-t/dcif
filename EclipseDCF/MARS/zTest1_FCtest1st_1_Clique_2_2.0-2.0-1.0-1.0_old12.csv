@@ -1,0 +1,15 @@
+;zTest1_FCtest1st_1_Clique_2_2.0-2.0-1.0-1.0
+Nb Conversations (avg) ;1.0;
+Nb Conversations (std-dev) ;0.0;
+Nb Messages (avg) ;34.0;
+Nb Messages (std-dev) ;0.0;
+Total size of Messages (avg) ;1870.0;
+Total size of Messages (std-dev) ;0.0;
+Nb InferenceSteps (avg) ;8593.0;
+Nb InferenceSteps (std-dev) ;0.0;
+Final rule redundancy (avg) ;1.9;
+Final rule redundancy (std-dev) ;0.0;
+Final obs redundancy (avg) ;2.0;
+Final obs redundancy (std-dev) ;0.0;
+Proportion of exact hypotheses (avg) ;1.0;
+Proportion of exact hypotheses (std-dev) ;0.0;

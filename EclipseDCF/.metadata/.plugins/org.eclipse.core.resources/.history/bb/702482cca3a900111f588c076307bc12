@@ -1,0 +1,6 @@
+import org.apache.commons.collections15.Transformer;
+
+
+public class BeliefPaint implements Transformer<I, O> {
+
+}

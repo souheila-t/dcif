@@ -1,0 +1,12 @@
+1314615296382	Move compilation unit
+1314701318578	Rename local variable 'classesValides'
+1314701904942	Rename local variable 'compteur'
+1314701976850	Rename local variable 'ctr'
+1314706358619	Rename method 'decisionAucune'
+1314707229041	Rename method 'plusProcheAucune'
+1314715709885	Rename type 'HypToExDist_Hamiltonian'
+1314777719022	Rename local variable 'listeEx'
+1314777743096	Rename local variable 'listePro'
+1314777809253	Rename local variable 'b'
+1314786706559	Rename method 'specialisationsPossibles'
+1314786780015	Rename local variable 'eL'

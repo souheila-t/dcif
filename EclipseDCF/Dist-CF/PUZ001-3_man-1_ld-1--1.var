@@ -1,0 +1,6 @@
+%Sol source: PUZ001-3
+%Variant name: max-50_ld-1--1
+
+solSource(PUZ001-3).
+pf([killed(_,_)]).
+depthLimit(-1).

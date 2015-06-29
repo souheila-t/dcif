@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Smile SVN retry/diabeInv.arff&apos; to &apos;pima-diabeInv.arff&apos;" description="Rename resource &apos;diabeInv.arff&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="diabeInv.arff" name="pima-diabeInv.arff" stamp="1324447990321" updateReferences="true"/>
+</session>

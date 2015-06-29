@@ -1,0 +1,74 @@
+1Gundam 00 earth drug 	7020		5950
+x2shinigami candidate	7400		6160
+x3Luppi			8820		7560
+x4Evangelion suit	8400(NA)	7340
+x5Allen Walker		7860		6800
+6Otogizoushi		7520		6440
+7Inuyasha		7350		6440
+xKohaku			NA		7840
+Shikamaru		NA		5600
+Rangers			NA		3656/4155
+
+
+1naruto (omoi)		7030
+2Grimmjaw pantera	9100
+3gundam00 bis		8010		6890
+4Lancer			16040		14920*
+5Kanda Yuu		10080		8960
+6Link			6530		7840
+7Inuyasho frere		10920		9860
+8dark sora 		7840
+Reborn Uniform		NA		7280
+90
+
+16wunderweiss		8530
+27tousen		8530
+38air gear camisole	12880		11760
+49full metal alchimist	9160		8040
+50Zaft uniform		7020		5950
+6Inazuma 11 eria	NA		3800
+7Inazuma 11 Zeus	NA		3420
+8Gundam 00 plug suit	NA		7000
+9FF7			8400		7900
+0Gaara			NA		4590
+
+
+FF13
+KH 1 Sora
+KH organisation
+FFX-2 Shujin
+
+Omoi
+G00bis
+Allen	
+
+Eva suit		7340	+++++++++
+Shinigami candidate/Oto	6160	/
+Luppi			7560	
+Kohaku			7840	/
+Allen Walker/Kanda	6800	/
+Inazuma 11			+
+
+rangers(shinboken)	3656	/
+rangers(mahogosei)	4155	/
+black spandex	2659		/
+golem suit	2825		/
+latex surf	5983		/
+New				
+   G00 /drug /zaft/FMA/Reborn	
+   Otogi/Inuyasha/frere		
+   Omoi/Gaara/Shikamaru		
+   KH /orga/dark/Link/AirGear	/
+   FF7/13/shujin/Lancer		
+
+
+Allen Walker		6800
+Kohaku			7840   14440
+Shinigami candidate	6160   20600
+Latex surf		5983   26583
+Shinkenger		3656   30239
+Black spandex		2659   32898
+Sora 1			7280   40178
+Golem suit		2825   43003
+Eva Suit		7340   50343
+

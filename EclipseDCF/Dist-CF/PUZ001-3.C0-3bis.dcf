@@ -1,0 +1,23 @@
+
+
+
+agent(ag2).
+cnf(poorer_killer, axiom, [-killed(X,Y), -richer(X,Y)], ag2).
+cnf(killer_hates_victim, axiom, [-killed(X,Y), hates(X,Y)], ag2).
+cnf(somebody_did_it, axiom, [killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)], ag2).
+
+agent(ag0).
+cnf(agatha, axiom, [lives(agatha)], ag0).
+cnf(different_hates, axiom, [-hates(agatha,X), -hates(charles,X)], ag0).
+cnf(no_one_hates_everyone, axiom, [-hates(X,agatha), -hates(X,butler), -hates(X,charles)], ag0).
+cnf(agatha_hates_agatha, axiom, [hates(agatha,agatha)], ag0).
+cnf(agatha_hates_charles, axiom, [hates(agatha,charles)], ag0).
+
+agent(ag1).
+cnf(butler, axiom, [lives(butler)], ag1).
+cnf(charles, axiom, [lives(charles)], ag1).
+cnf(same_hates, axiom, [-hates(agatha,X), hates(butler,X)], ag1).
+cnf(butler_hates_poor, axiom, [-lives(X), richer(X,agatha), hates(butler,X)], ag1).
+
+
+pf([lives(_0), -lives(_0), -killed(_0,_1), killed(_0,_1), -richer(_0,_1), richer(_0,_1), -hates(_0,_1), hates(_0,_1)]).

@@ -1,0 +1,122 @@
+%Ici on stoque les parametres generaux
+%cependant, on est pas obligé de remplir les valeurs, il existe une version par defaut.
+[general]
+FluxExperiment=false
+FluxPeriodMs=3
+FreeLinks=false
+TrueBC=false
+NbSequences=50
+[fin]
+
+%ici le nombre d'agent voulu
+[agents]
+%1
+10
+%10
+%50
+%100
+[fin]
+
+%ici le nom des topologies (liées au fichier xml du meme nom)
+[topology]
+Clique
+[fin]
+
+%ici la chaine descriptive des protocoles
+[protocol]
+%MCf-- ordered
+%MCf+ ordered
+%MCf+ ordered
+%MCf- ordered
+MCf+
+MCf-
+%MBM+
+%MBM-
+MCfwA-
+MCfwA+
+MCf+i(10m)
+MCf-i(10m)
+%MCf-*
+%MCf+*
+%MCf-
+%MCf+
+%MCf-
+%MCf+i(5m)
+%MCf-i(5m)
+MCf+i(5m)
+MCf-i(5m)
+%MCf+i(5m)
+%MCf-i(5m)
+[fin]
+
+%ici les problemes, l'ordre des arguments est:
+%_le nom du fichier
+%_la frequence
+%_le pourcentage d'exemples apprenants
+%_l'ajout ou nom de la version negative des atomes
+%les deux arguments suivant peuvent etre rajoutés
+%_le traitement d'un probleme monoclasse
+%_la classe "positive"
+[problem]
+%Xor5-5_def.pcfg
+%Xor3-25_L500.pcfg
+%voteMp_def.pcfg
+%tic-tac-toe_def.pcfg
+%heart-statlog_2Cl.pcfg
+%breastw_def.pcfg
+%breastw_2Cl.pcfg
+%iono_def.pcfg
+iono_2Cl.pcfg
+%pima_def.pcfg
+pima_2Cl.pcfg
+%liver_def.pcfg
+liver_2Cl.pcfg
+%diabe_def.pcfg
+%diabe_2Cl.pcfg
+%kr-vs-kp_all.pcfg
+%kr-vs-kp_all2Cl.pcfg
+%M11_def.pcfg
+%M11_L600.pcfg
+%M11-MC_def.pcfg
+%car_def.pcfg
+%%cmc_def.pcfg
+%Xor5-5_def.pcfg
+%voteMp_2Cl.pcfg
+%voteMp_2Cl.pcfg
+%glass_def.pcfg
+%glass_def.pcfg
+%heart-statlog_def.pcfg
+%lymph_def.pcfg
+%lymph_def.pcfg
+%car_def.pcfg
+%car_def.pcfg
+%iris_def.pcfg
+%zoo_def.pcfg
+wine_def.pcfg
+%%segment800_def.pcfg
+%%vowel_def.pcfg
+%tic-tac-toe_2Cl.pcfg
+%waveform-800_def.pcfg
+[fin]
+
+[memory]
+Basic
+%RB-Prio+ 30
+%RB-Prio-IntCE 75
+%RB-Prio-IntCE 100
+%RB-Prio-IntCE 50
+%RB-Prio-IntCE 50
+%RB 75
+%RB 100
+%RB 50
+%RB 50
+[Fin]
+
+%ici l'ordre dans lequel on traitera les argumpents des experiences (la premiere ligne est l'element qui change le plus souvent)
+% possibilitŽ de compteurs joints en mettant plusieurs mots clefs sur la meme ligne, sŽparŽs par une virgule (sans espace apres la virgule)
+[order]
+%memory
+protocol
+problem
+agents
+[fin]

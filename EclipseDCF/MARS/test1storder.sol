@@ -1,0 +1,40 @@
+cnf(a,axiom,[-hyp(1,X,Y),-hyp(3,Y,X)]).
+cnf(a,axiom,[-hyp(1,Y,Y),c(Y)]).
+cnf(a,axiom,[-hyp(2,X,Y),d(X,Y)]).
+cnf(a,axiom,[-hyp(3,X,Y),m(X,Y)]).
+cnf(a,axiom,[-hyp(3,X,X),g(X)]).
+cnf(a,axiom,[-hyp(1,X,Y),p(X,Y)]).
+cnf(a,axiom,[-hyp(2,X,Y),n(Y,X)]).
+cnf(a,axiom,[-d(X,X),-l(X)]).
+cnf(a,axiom,[-d(X,Y),-c(Y),b(X,Y,X)]).
+cnf(a,axiom,[-m(X,Y),i(Y),l(X)]).
+cnf(a,axiom,[-m(X,Y),-n(Y,X),o(X)]).
+cnf(a,axiom,[-b(X,Y,X),-e(X,Y)]).
+cnf(a,axiom,[-b(X,Y,X),a(Y,X)]).
+cnf(a,axiom,[-g(X),-i(Y),e(X,Y)]).
+cnf(a,axiom,[-e(X,Y),-l(Z),f(X,Y,Z)]).
+cnf(a,axiom,[f(X,Y,X),a(Y,X)]).
+cnf(a,axiom,[-o(X),r(X)]).
+cnf(a,axiom,[-p(X,Y),-q(Y),r(X)]).
+cnf(a,axiom,[-f(X,6,X),fact(4,Y,X,X)]).
+cnf(a,axiom,[-fact(X,3,Y,Z),-i(Y),b(X,Z,Y)]).
+cnf(a,axiom,[-fact(1,X,Z,X),l(X)]).
+cnf(a,axiom,[-fact(X,Y,X,Y),m(X,Y)]).
+cnf(a,axiom,[-fact(2,3,X,Z),d(X,X)]).
+cnf(a,axiom,[-fact(X,Y,Z,X),c(Y)]).
+cnf(a,axiom,[-fact(Y,2,X,X),q(Y)]).
+cnf(a,axiom,[-fact(5,5,5,5)]).
+cnf(a,axiom,[-fact(6,3,6,3)]).
+cnf(a,axiom,[-fact(5,1,2,1)]).
+cnf(a,axiom,[-fact(1,2,5,2)]).
+cnf(a,axiom,[-fact(4,2,6,6)]).
+cnf(a,axiom,[-fact(2,3,6,3)]).
+cnf(a,axiom,[-fact(6,4,5,6)]).
+cnf(a,axiom,[-fact(2,3,3,5)]).
+cnf(a,axiom,[-fact(4,5,1,5)]).
+
+pf([a(_,_),b(_,_,_),c(_),d(_,_),e(_,_),f(_,_,_),g(_),i(_),l(_),
+   m(_,_),n(_,_),o(_),p(_,_),q(_),r(_),hyp(_,_,_),fact(_,_,_,_),
+    -a(_,_),-b(_,_,_),-c(_),-d(_,_),-e(_,_),-f(_,_,_),-g(_),-i(_),-l(_),
+  -m(_,_),-n(_,_),-o(_),-p(_,_),-q(_),-r(_),-hyp(_,_,_),-fact(_,_,_,_)]).
+

@@ -1,0 +1,8 @@
+cnf(f1,AXIOM,[belongs(a,c1)]).
+cnf(f2,AXIOM,[belongs(b,c1)]).
+cnf(f3,AXIOM,[belongs(c,c1)]).
+cnf(rule1,AXIOM,[-exchange(C1,X,Y,C2),belongs(Y,C2)]).
+cnf(rule2,AXIOM,[-exchange(C1,X,Y,C2),-belongs(Z,C1),eq(Z,X),belongs(Z,C2)]).
+cnf(tc,TOP_CLAUSE,[exchange(c1,a,d,newComp)]).
+
+pf([belongs(_,_)]).

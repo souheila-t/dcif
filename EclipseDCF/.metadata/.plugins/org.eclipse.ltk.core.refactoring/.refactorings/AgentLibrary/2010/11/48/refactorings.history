@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;agentCommunicationSystem.RunnableAgent.java&apos; to &apos;ThreadAgent.java&apos;&#x0A;- Original project: &apos;AgentLibrary&apos;&#x0A;- Original element: &apos;agentCommunicationSystem.RunnableAgent.java&apos;&#x0A;- Renamed element: &apos;agentCommunicationSystem.ThreadAgent.java&apos;" description="Rename compilation unit &apos;RunnableAgent.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/&lt;agentCommunicationSystem{RunnableAgent.java" name="ThreadAgent.java" references="false" stamp="1290495864106" version="1.0"/>
+</session>

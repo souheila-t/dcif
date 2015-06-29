@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Problem>
+<!--  -->
+<Infos>
+<NbAgents>8</NbAgents>
+</Infos>
+   <Common type="fusion">
+      <Program>     
+pf([ansDay(_),ansStudent(_),ansTutor(_),ansLecturer(_)]).
+      </Program>
+      <CommLanguage type="fusion">
+<ConstantTypes type="unique">
+<Pred> P </Pred>
+</ConstantTypes>
+<Format type="liste">
+   <pLitGroup> Pred </pLitGroup>
+   <pLitGroup> -Pred </pLitGroup>
+</Format>
+      </CommLanguage>
+
+	<Weighting type="fusion">
+		<GlobalParams type="unique">
+			<ClauseAggregator>PROD</ClauseAggregator>
+	     	</GlobalParams>
+		<Defaults type="fusion">
+			<PredicateDefaults type="unique">
+				<Weight>0.01</Weight>
+				<Aggregator>PROD</Aggregator>
+				<UseParam>ALL</UseParam>
+				<IntegerWeight>1</IntegerWeight>
+				<VariableWeight>0.7</VariableWeight>
+			</PredicateDefaults>
+			<ConstantsDefaults type="unique">
+				<Weight>1</Weight>
+			</ConstantsDefaults>
+			<IntegerDefaults type="unique">
+				<Weight>1</Weight>
+			</IntegerDefaults>
+			<VariableDefaults type="unique">
+				<Weight>0.5</Weight>
+			</VariableDefaults>
+		</Defaults>
+		<Symbols type="list">
+	<Predicate weight="0.99">ansDay</Predicate>
+	<Predicate weight="0.99">ansTutor</Predicate>
+	<Predicate weight="0.99">ansStudent</Predicate>
+	<Predicate weight="0.99">ansLecturer</Predicate>
+	<Constant weight="0.995">monday</Constant>
+	<Constant weight="0.994">tuesday</Constant>
+	<Constant weight="0.993">wednesday</Constant>
+	<Constant weight="0.992">thursday</Constant>
+	<Constant weight="0.991">friday</Constant>
+		</Symbols>
+
+	</Weighting>
+
+
+   </Common>
+
+   <Agent i="0" name="Convener">
+      <Program>
+cnf(a,axiom,[conveneMeeting(date), -day1(D),-ansDay(D),-tutorName(T),
+-ansTutor(T),-lecturerName(L),-ansLecturer(L),-studentName(S),-ansStudent(S)]).
+cnf(a,axiom,[day1(tuesday)]).
+cnf(a,axiom,[day1(wednesday)]).
+cnf(a,axiom,[day1(thursday)]).
+cnf(a,axiom,[day1(friday)]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [conveneMeeting(date)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>conveneMeeting(date)</P>
+   <P>day1(D)</P>
+   <P>lecturerName(L)</P>
+   <P>studentName(S)</P>
+   <P>tutorName(T)</P>
+   <P>ansDay(D)</P>
+   <P>ansLecturer(L)</P>
+   <P>ansStudent(S)</P>
+   <P>ansTutor(T)</P>
+ </ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+
+   <Agent i="1" name="TutorPat">
+      <Program>
+cnf(a,axiom,[tutorName(pat)]).
+cnf(a,axiom,[-ansDay(T),-ansTutor(pat),-busy2(T)]).
+cnf(a,axiom,[busy2(X),nursery(X)]).
+cnf(a,axiom,[-ansTutor(pat),-ansStudent(dan)]).
+cnf(a,axiom,[-ansTutor(pat),-ansLecturer(joe)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>ansDay(T)</P>
+   <P>ansTutor(pat)</P>
+   <P>tutorName(pat)</P>
+   <P>busy2(T)</P>
+   <P>ansStudent(dan)</P>
+   <P>ansLecturer(joe)</P>
+   <P>nursery(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="2" name="StudentBen">
+      <Program>
+cnf(a,axiom,[-ansDay(T),-ansStudent(ben),-busy3(T)]).
+cnf(a,axiom,[studentName(ben)]).
+cnf(a,axiom,[busy3(tuesday)]).
+cnf(a,axiom,[busy3(wednesday)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>studentCanAttend(T)</P>
+   <P>studentName(ben)</P>
+   <P>busy3(T)</P>
+   <P>ansStudent(ben)</P>
+   <P>ansDay(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="3" name="StudentDan">
+      <Program>
+cnf(a,axiom,[-ansDay(T),-ansStudent(dan),-busy4(T)]).
+cnf(a,axiom,[studentName(dan)]).
+cnf(a,axiom,[busy4(tuesday)]).
+cnf(a,axiom,[busy4(thursday)]).
+cnf(a,axiom,[busy4(friday)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>studentCanAttend(T)</P>
+   <P>studentName(dan)</P>
+   <P>busy4(T)</P>
+   <P>ansStudent(dan)</P>
+   <P>ansDay(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="4" name="Nursery">
+      <Program>
+cnf(a,axiom,[-nursery(monday)]).
+cnf(a,axiom,[-nursery(tuesday)]).
+cnf(a,axiom,[nursery(wednesday)]).
+cnf(a,axiom,[-nursery(thursday)]).
+cnf(a,axiom,[nursery(friday)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>nursery(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="5" name="LecturerJoe">
+      <Program>
+cnf(a,axiom,[lecturerName(joe)]).
+cnf(a,axiom,[-ansDay(T),-ansLecturer(joe),-hasTeaching(T,joe)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>lecturerName(joe)</P>
+   <P>hasTeaching(T,joe)</P>
+   <P>ansLecturer(joe)</P>
+   <P>ansDay(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="6" name="Timetabler">
+      <Program>
+cnf(a,axiom,[hasTeaching(T,N),-teachingJuniors7(T,N)]).
+cnf(a,axiom,[hasTeaching(T,N),-teachingSeniors7(T,N)]).
+cnf(a,axiom,[teachingSeniors7(thursday,joe)]).
+cnf(a,axiom,[teachingJuniors7(wednesday,rob)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>hasTeaching(T,N)</P>
+   <P>teachingJuniors7(T,N)</P>
+   <P>teachingSeniors7(T,N)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="7" name="LecturerRob">
+      <Program>
+cnf(a,axiom,[lecturerName(rob)]).
+cnf(a,axiom,[-ansDay(T),-ansLecturer(rob),-hasTeaching(T,rob)]).
+cnf(a,axiom,[-ansDay(T),-ansLecturer(rob),-tired8(T)]).
+cnf(a,axiom,[tired8(thursday)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>lecturerName(rob)</P>
+   <P>hasTeaching(T,rob)</P>
+   <P>ansLecturer(rob)</P>
+   <P>ansDay(T)</P>
+   <P>tired8(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+
+</Problem>

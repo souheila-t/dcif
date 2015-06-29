@@ -1,0 +1,902 @@
+Building tree...
+Time for creating graph: 0.065s
+Begin Cyclecut
+Time for cutting cycle: 0.0070s
+Time for initializating agents and root: 0.0010s
+Tree finished.
+Sys -> ag0 : {New neighbour}
+Sys -> ag1 : {New neighbour}
+Sys -> ag0 : {New neighbour}
+Sys -> ag2 : {New neighbour}
+Sys -> ag0 : {New neighbour}
+Sys -> ag3 : {New neighbour}
+Sys -> ag1 : {New neighbour}
+Sys -> ag2 : {New neighbour}
+Sys -> ag1 : {New neighbour}
+Sys -> ag3 : {New neighbour}
+Sys -> ag2 : {New neighbour}
+Sys -> ag3 : {New neighbour}
+Sys -> ag0 : {Start}
+Sys -> ag1 : {Start}
+Sys -> ag2 : {Start}
+Sys -> ag3 : {Start}
+ag0 <------  {New neighbour}
+ag0 <------  {New neighbour}
+ag0 <------  {New neighbour}
+ag0 <------  {Start}
+ag0 -> Sys : {Started}
+ag1 <------  {New neighbour}
+ag1 <------  {New neighbour}
+ag1 <------  {New neighbour}
+ag1 <------  {Start}
+ag1 -> Sys : {Started}
+ag2 <------  {New neighbour}
+ag2 <------  {New neighbour}
+ag2 <------  {New neighbour}
+ag2 <------  {Start}
+ag2 -> Sys : {Started}
+ag3 <------  {New neighbour}
+ag3 <------  {New neighbour}
+ag3 <------  {New neighbour}
+ag3 <------  {Start}
+ag3 -> Sys : {Started}
+Sys -> ag0 : {Begin}
+Sys -> ag1 : {Begin}
+Sys -> ag2 : {Begin}
+Sys -> ag3 : {Begin}
+ag0 <------  {Begin}
+Starting SolveToIndepClause...
+ag1 <------  {Begin}
+Starting SolveToIndepClause...
+ag2 <------  {Begin}
+ag3 <------  {Begin}
+Starting SolveToIndepClause...
+Starting SolveToIndepClause...
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+r_R12a, -m_mmcoa_R]
+ [+r_R14a, -c_glyald_h_nadh]
+ [+c_glyald_h_nadh, -m_glyald, -m_h, -m_nadh]
+ [+c_h_lac_L_nadh, -r_R16a]
+ [+m_h, -c_h_lac_L_nadh]
+ [+r_R18a, -m_arab_L]
+ [+m_rbl_L, -r_R18a]
+ [+r_R19, -c_atp_rbl_L]
+ [+c_atp_rbl_L, -m_atp, -m_rbl_L]
+ [+m_xu5p_D, -r_R20a]
+ [+m_r5p, -r_R26a]
+ [+r_R28, -m_galctn_D]
+ [+m_gal1p, -c_adp_gal1p_h]
+ [+c_5dh4dglc_h2o, -r_R43]
+ [+m_glx, -c_glx_q8h2]
+ [+m_nadh, -c_dha_h_nadh]
+ [+m_h, -c_adp_glyc3p_h]
+ [+m_h, -c_dhap_h_nadph]
+ [+m_nadph, -c_dhap_h_nadph]
+ [+r_R52, -m_5dh4dglc]
+ [+c_2h3oppan_pyr, -r_R52]
+ [+c_dhpppn_h_nadh, -r_R53]
+ [+m_dhpppn, -c_dhpppn_h_nadh]
+ [+m_h, -c_dhpppn_h_nadh]
+ [+m_nadh, -c_dhpppn_h_nadh]
+ [+m_nadh, -c_dhcinnm_h_nadh]
+ [+c_h_nadh_o2_pppn, -m_h, -m_nadh, -m_o2, -m_pppn]
+ [+c_cinnm_h_nadh_o2, -m_cinnm, -m_h, -m_nadh, -m_o2]
+ [+m_2h3oppan, -r_R57a]
+ [+c_5dglcn_h_nadh, -m_5dglcn, -m_h, -m_nadh]
+ [+r_R59, -c_5dglcn_h_nadph]
+ [+m_h, -c_2ddg6p_adp_h]
+ [+r_R90, -m_acnam]
+ [+m_acmana, -c_acmana_pyr]
+ [+c_co2_xu5p_L, -r_R106]
+ [+c_h_nadh_tagur, -r_R117a]
+ [+m_xu5p_D, -c_adp_h_xu5p_D]
+ [+r_R125, -c_25dkglcn_h_nadph]
+ [+c_25dkglcn_h_nadph, -m_25dkglcn, -m_h, -m_nadph]
+ [+c_2dhguln_nadp, -r_R125]
+ [+r_R131, -c_25dkglcn_h_nadph]
+ [+c_5dglcn_nadp, -r_R131]
+ [+m_5dglcn, -c_5dglcn_nadp]
+ [+c_2dhglcn_h_nadh, -m_2dhglcn, -m_h, -m_nadh]
+ [+c_5dglcn_nad, -r_R134]
+ [+m_5dglcn, -c_5dglcn_nad]
+ [+r_R135, -c_2dhguln_h_nadh]
+ [+c_2dhguln_h_nadh, -m_2dhguln, -m_h, -m_nadh]
+ [+c_2dhguln_h_nadph, -m_2dhguln, -m_h, -m_nadph]
+ [+m_glx, -c_glx_succ]
+ [+m_h, -c_coa_h_mal_L]
+ [+m_h, -c_h_pi]
+ [+m_nadh, -c_co2_nadh_pyr]
+ [+m_h, -c_2kmb_for_h_pi]
+ [+m_nadh, -c_h_nadh_succ]
+ [+m_h, -c_5mdr1p_adp_h]
+ [+c_1pyr5c_h_h2o, -r_R153]
+ [+m_1pyr5c, -c_1pyr5c_h_h2o]
+ [+m_nadph, -c_acg5p_h_nadph]
+Production field:
+ [+m_h, -m_h, +m_nadh, -m_nadh, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, -c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+m_h, -c_ac_h_nadh]
+ [+r_R20a, -m_ru5p_L]
+ [+r_R40a, -c_atp_gal]
+ [+m_glx, -c_2dmmql8_glx]
+ [+c_dha_h_nadh, -r_R48]
+ [+c_dhcinnm_h_nadh, -r_R54]
+ [+c_3hcinnm_h_nadh_o2, -m_3hcinnm, -m_h, -m_nadh, -m_o2]
+ [+c_3hpppn_h_nadh_o2, -m_3hpppn, -m_h, -m_nadh, -m_o2]
+ [+r_R86, -c_acald_coa_nad]
+ [+c_accoa_h_nadh, -r_R86]
+ [+m_h, -c_accoa_h_nadh]
+ [+m_nadh, -c_accoa_h_nadh]
+ [+m_h, -c_f6p_h_nadh]
+ [+m_xu5p_L, -c_co2_xu5p_L]
+ [+r_R124, -c_atp_xylu_D]
+ [+c_atp_xylu_D, -m_atp, -m_xylu_D]
+ [+c_adp_h_xu5p_D, -r_R124]
+ [+m_h, -c_adp_h_xu5p_D]
+ [+r_R127, -c_h_hpyr_nadph]
+ [+c_h_hpyr_nadph, -m_h, -m_hpyr, -m_nadph]
+ [+r_R128, -m_glcr]
+ [+r_R134, -c_25dkglcn_h_nadh]
+ [+c_25dkglcn_h_nadh, -m_25dkglcn, -m_h, -m_nadh]
+ [+m_h, -c_h_nadh_succ]
+ [+m_h, -c_1pyr5c_h_h2o]
+ [+m_h, -c_acglu_coa_h]
+Production field:
+ [-c_1pyr5c_h_h2o, -m_h, +c_dhcinnm_h_nadh, +r_R128, -c_atp_gal, +m_nadh, +c_adp_h_xu5p_D, +c_dha_h_nadh, +r_R134, +m_h, -c_ac_h_nadh, -m_nadph, +m_xu5p_L, -m_ru5p_L, +r_R20a, -c_h_nadh_succ, +r_R40a, -c_co2_xu5p_L, -m_nadh, -m_xylu_D, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, -c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+m_pyr]
+ [+m_h, -c_amp_asn_L_h_ppi]
+ [+r_R11a, -m_ru5p_D]
+ [+m_mmcoa_S, -r_R12a]
+ [+m_nadh, -c_h_lac_L_nadh]
+ [+c_ac_h_nadh, -r_R17]
+ [+m_2dh3dgal, -c_2dh3dgal_h2o]
+ [+r_R30, -c_2dh3dgal_atp]
+ [+m_nadh, -c_aacoa_fadh2_h_nadh]
+ [+c_h_nadh_pac, -r_R33]
+ [+m_h, -c_adp_fdp_h]
+ [+m_h, -c_adp_fc1p_h]
+ [+r_R43, -m_galct_D]
+ [+m_5dh4dglc, -c_5dh4dglc_h2o]
+ [+c_h_nadh_tag6p_D, -r_R44a]
+ [+m_h, -c_h_nadh_tag6p_D]
+ [+m_nadh, -c_h_nadh_tag6p_D]
+ [+m_tag6p_D, -c_h_nadh_tag6p_D]
+ [+m_glx, -c_glx_mql8]
+ [+m_h, -c_dha_h_nadh]
+ [+r_R57a, -m_hpyr]
+ [+c_5dglcn_h_nadph, -m_5dglcn, -m_h, -m_nadph]
+ [+m_h, -c_6pgc_adp_h]
+ [+r_R61a, -c_5dglcn_h_nadph]
+ [+m_h, -c_h_op4en_succ]
+ [+m_h, -c_fum_h_op4en]
+ [+c_acmana_pyr, -r_R90]
+ [+m_h, -c_h_tre6p_udp]
+ [+r_R94, -c_atp_tag6p_D]
+ [+c_atp_tag6p_D, -m_atp, -m_tag6p_D]
+ [+c_adp_h_tagdp_D, -r_R94]
+ [+m_h, -c_adp_h_tagdp_D]
+ [+m_tagdp_D, -c_adp_h_tagdp_D]
+ [+m_h, -c_2mcit_coa_h]
+ [+r_R101, -c_atp_rib_D]
+ [+r_R107, -m_xu5p_L]
+ [+m_ru5p_L, -r_R107]
+ [+m_h, -c_aacald_co2_h_so3_succ]
+ [+m_so3, -c_aacald_co2_h_so3_succ]
+ [+m_h, -c_h_nadh_tagur]
+ [+m_nadh, -c_h_nadh_tagur]
+ [+m_tagur, -c_h_nadh_tagur]
+ [+r_R119a, -m_galur]
+ [+m_tagur, -r_R119a]
+ [+c_fruur_h_nadh, -r_R121a]
+ [+m_fruur, -c_fruur_h_nadh]
+ [+m_2dhguln, -c_2dhguln_nadp]
+ [+c_h_hpyr_nadh, -m_h, -m_hpyr, -m_nadh]
+ [+c_h_mmcoa_S, -m_h, -m_mmcoa_S]
+ [+r_R137, -c_23doguln_h_nadh]
+ [+m_nadph, -c_co2_nadph_pyr]
+ [+r_R144, -c_mal_L_nad]
+ [+c_h_nadh_succ, -r_R148]
+ [+c_acg5p_h_nadph, -r_R157a]
+ [+m_acg5p, -c_acg5p_h_nadph]
+ [+m_h, -c_acg5p_h_nadph]
+ [+m_h, -c_amp_argsuc_h_ppi]
+Production field:
+ [-c_aacoa_fadh2_h_nadh, +m_nadh, +m_nadph, +c_h_nadh_pac, -c_2dh3dgal_h2o, +r_R43, +r_R30, +c_acg5p_h_nadph, -r_R12a, -c_5dh4dglc_h2o, +m_h, +r_R144, +c_5dglcn_h_nadph, +m_2dh3dgal, +c_fruur_h_nadh, -m_nadh, +c_acmana_pyr, +m_5dh4dglc, +c_ac_h_nadh, +c_h_nadh_succ, +r_R101, +m_ru5p_L, -c_2dhguln_nadp, +r_R57a, +m_2dhguln, -c_h_lac_L_nadh, -c_2dh3dgal_atp, +c_h_mmcoa_S, -c_h_nadh_tagur, -c_atp_rib_D, -m_5dglcn, -m_nadph, -c_dha_h_nadh, -m_h, -c_23doguln_h_nadh, -m_xu5p_L, -r_R90, +r_R11a, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+m_h, -c_amp_asn_L_glu_L_h_ppi]
+ [+m_ara5p, -r_R11a]
+ [+m_lac_L, -c_h_lac_L_nadh]
+ [+m_nadh, -c_ac_h_nadh]
+ [+c_adp_h_ru5p_L, -r_R19]
+ [+m_h, -c_adp_h_ru5p_L]
+ [+m_ru5p_L, -c_adp_h_ru5p_L]
+ [+c_2dh3dgal_h2o, -r_R28]
+ [+c_2dh3dgal_atp, -m_2dh3dgal, -m_atp]
+ [+c_2dh3dgal6p_adp_h, -r_R30]
+ [+m_h, -c_2dh3dgal6p_adp_h]
+ [+r_R32, -c_btcoa_fad_h2o_nad]
+ [+c_aacoa_fadh2_h_nadh, -r_R32]
+ [+m_h, -c_aacoa_fadh2_h_nadh]
+ [+m_h, -c_h_nadh_pac]
+ [+m_nadh, -c_h_nadh_pac]
+ [+m_pac, -c_h_nadh_pac]
+ [+r_R38a, -c_h_lald_L_nadh]
+ [+c_h_lald_L_nadh, -m_h, -m_lald_L, -m_nadh]
+ [+c_atp_gal, -m_atp, -m_gal]
+ [+c_adp_gal1p_h, -r_R40a]
+ [+m_h, -c_adp_gal1p_h]
+ [+c_g1p_h_utp, -m_g1p, -m_h, -m_utp]
+ [+m_2h3oppan, -c_2h3oppan_pyr]
+ [+m_h, -c_dhcinnm_h_nadh]
+ [+r_R58a, -c_5dglcn_h_nadh]
+ [+m_nadh, -c_f6p_h_nadh]
+ [+c_atp_rib_D, -m_atp, -m_rib_D]
+ [+c_adp_h_r5p, -r_R101]
+ [+m_h, -c_adp_h_r5p]
+ [+m_r5p, -c_adp_h_r5p]
+ [+m_h, -c_adp_h_rml1p]
+ [+r_R106, -c_3dgulnp_h]
+ [+c_3dgulnp_h, -m_3dgulnp, -m_h]
+ [+r_R118a, -m_glcur]
+ [+m_fruur, -r_R118a]
+ [+m_h, -c_fruur_h_nadh]
+ [+m_nadh, -c_fruur_h_nadh]
+ [+r_R123a, -m_xyl_D]
+ [+m_xylu_D, -r_R123a]
+ [+c_5dh4dglc_h2o, -r_R128]
+ [+r_R129, -c_h_mmcoa_S]
+ [+c_2dhglcn_h_nadph, -m_2dhglcn, -m_h, -m_nadph]
+ [+r_R136, -c_2dhguln_h_nadph]
+ [+c_23doguln_h_nadh, -m_23doguln, -m_h, -m_nadh]
+ [+m_h, -c_h_oaa_pi]
+ [+c_co2_nadh_pyr, -r_R144]
+ [+c_4abut_h_nadh, -r_R149]
+ [+m_4abut, -c_4abut_h_nadh]
+ [+m_h, -c_4abut_h_nadh]
+ [+m_nadh, -c_4abut_h_nadh]
+Production field:
+ [-r_R12a, -m_nadph, -r_R28, -c_h_lac_L_nadh, +c_adp_h_xu5p_D, +m_2dhguln, -c_1pyr5c_h_h2o, -c_h_nadh_tagur, -c_2dhguln_h_nadph, -c_2h3oppan_pyr, +r_R57a, -c_2dhguln_nadp, +c_co2_nadh_pyr, +r_R20a, +r_R43, +c_acmana_pyr, +m_5dh4dglc, +m_nadh, +c_adp_gal1p_h, -r_R19, +c_h_nadh_succ, -c_5dh4dglc_h2o, +c_dhcinnm_h_nadh, +m_nadph, +r_R134, -r_R90, +m_h, -c_co2_xu5p_L, -m_h, +c_acg5p_h_nadph, -c_5dglcn_h_nadh, -m_nadh, +c_dha_h_nadh, -m_5dglcn, +r_R106, +c_5dglcn_h_nadph, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+>>>>>>>>>>>> Solve - measure : [13, 145, 71, 1, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solve - measure : [8, 171, 79, 7, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+ag0 -> ag3 : {Send clause([-r_R19, m_h])}
+ag0 -> ag3 : {End current batch}
+ag3 <------  {Send clause([-r_R19, m_h])}
+ag3 <------  {End current batch}
+Starting SolveToIndepClause...
+>>>>>>>>>>>> Solve - measure : [30, 163, 64, 20, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solve - measure : [1, 9, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [29, 434, 161, 69, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+ag2 -> Sys : {Send consequence([m_tagur, -c_h_nadh_tagur])}
+Sys <------  {Send consequence([m_tagur, -c_h_nadh_tagur])}
+ag2 -> Sys : {Send consequence([-c_h_nadh_tagur, m_h])}
+Sys <------  {Send consequence([-c_h_nadh_tagur, m_h])}
+ag2 -> Sys : {Send consequence([-c_h_nadh_tagur, m_nadh])}
+Sys <------  {Send consequence([-c_h_nadh_tagur, m_nadh])}
+>>>>>>>>>>>> Solve - measure : [1, 9, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 9, 4, 0, 0, 0, 0, 0]
+ag1 -> ag0 : {Send clause([-c_1pyr5c_h_h2o, m_h])}
+ag1 -> ag0 : {Send clause([r_R40a, -c_atp_gal])}
+ag1 -> ag0 : {Send clause([m_xu5p_L, -c_co2_xu5p_L])}
+ag1 -> ag0 : {Send clause([r_R20a, -m_ru5p_L])}
+ag1 -> ag0 : {Send clause([-c_ac_h_nadh, m_h])}
+ag1 -> ag0 : {Send clause([-c_h_nadh_succ, m_h])}
+ag1 -> ag0 : {End current batch}
+ag1 -> ag0 : {End all batch}
+ag0 <------  {Send clause([-c_1pyr5c_h_h2o, m_h])}
+ag0 <------  {Send clause([r_R40a, -c_atp_gal])}
+ag0 <------  {Send clause([m_xu5p_L, -c_co2_xu5p_L])}
+ag0 <------  {Send clause([r_R20a, -m_ru5p_L])}
+ag0 <------  {Send clause([-c_ac_h_nadh, m_h])}
+ag0 <------  {Send clause([-c_h_nadh_succ, m_h])}
+ag0 <------  {End current batch}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+r_R12a, -m_mmcoa_R]
+ [+r_R14a, -c_glyald_h_nadh]
+ [+c_glyald_h_nadh, -m_glyald, -m_h, -m_nadh]
+ [+c_h_lac_L_nadh, -r_R16a]
+ [+m_h, -c_h_lac_L_nadh]
+ [+r_R18a, -m_arab_L]
+ [+m_rbl_L, -r_R18a]
+ [+r_R19, -c_atp_rbl_L]
+ [+c_atp_rbl_L, -m_atp, -m_rbl_L]
+ [+m_xu5p_D, -r_R20a]
+ [+m_r5p, -r_R26a]
+ [+r_R28, -m_galctn_D]
+ [+m_gal1p, -c_adp_gal1p_h]
+ [+c_5dh4dglc_h2o, -r_R43]
+ [+m_glx, -c_glx_q8h2]
+ [+m_nadh, -c_dha_h_nadh]
+ [+m_h, -c_adp_glyc3p_h]
+ [+m_h, -c_dhap_h_nadph]
+ [+m_nadph, -c_dhap_h_nadph]
+ [+r_R52, -m_5dh4dglc]
+ [+c_2h3oppan_pyr, -r_R52]
+ [+c_dhpppn_h_nadh, -r_R53]
+ [+m_dhpppn, -c_dhpppn_h_nadh]
+ [+m_h, -c_dhpppn_h_nadh]
+ [+m_nadh, -c_dhpppn_h_nadh]
+ [+m_nadh, -c_dhcinnm_h_nadh]
+ [+c_h_nadh_o2_pppn, -m_h, -m_nadh, -m_o2, -m_pppn]
+ [+c_cinnm_h_nadh_o2, -m_cinnm, -m_h, -m_nadh, -m_o2]
+ [+m_2h3oppan, -r_R57a]
+ [+c_5dglcn_h_nadh, -m_5dglcn, -m_h, -m_nadh]
+ [+r_R59, -c_5dglcn_h_nadph]
+ [+m_h, -c_2ddg6p_adp_h]
+ [+r_R90, -m_acnam]
+ [+m_acmana, -c_acmana_pyr]
+ [+c_co2_xu5p_L, -r_R106]
+ [+c_h_nadh_tagur, -r_R117a]
+ [+m_xu5p_D, -c_adp_h_xu5p_D]
+ [+r_R125, -c_25dkglcn_h_nadph]
+ [+c_25dkglcn_h_nadph, -m_25dkglcn, -m_h, -m_nadph]
+ [+c_2dhguln_nadp, -r_R125]
+ [+r_R131, -c_25dkglcn_h_nadph]
+ [+c_5dglcn_nadp, -r_R131]
+ [+m_5dglcn, -c_5dglcn_nadp]
+ [+c_2dhglcn_h_nadh, -m_2dhglcn, -m_h, -m_nadh]
+ [+c_5dglcn_nad, -r_R134]
+ [+m_5dglcn, -c_5dglcn_nad]
+ [+r_R135, -c_2dhguln_h_nadh]
+ [+c_2dhguln_h_nadh, -m_2dhguln, -m_h, -m_nadh]
+ [+c_2dhguln_h_nadph, -m_2dhguln, -m_h, -m_nadph]
+ [+m_glx, -c_glx_succ]
+ [+m_h, -c_coa_h_mal_L]
+ [+m_h, -c_h_pi]
+ [+m_nadh, -c_co2_nadh_pyr]
+ [+m_h, -c_2kmb_for_h_pi]
+ [+m_nadh, -c_h_nadh_succ]
+ [+m_h, -c_5mdr1p_adp_h]
+ [+c_1pyr5c_h_h2o, -r_R153]
+ [+m_1pyr5c, -c_1pyr5c_h_h2o]
+ [+m_nadph, -c_acg5p_h_nadph]
+ [-r_R19, +m_h]
+Top clauses:
+ [-r_R19, +m_h]
+Production field:
+ [+m_h, -m_h, +m_nadh, -m_nadh, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, -c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+m_h, -c_amp_asn_L_glu_L_h_ppi]
+ [+m_ara5p, -r_R11a]
+ [+m_lac_L, -c_h_lac_L_nadh]
+ [+m_nadh, -c_ac_h_nadh]
+ [+c_adp_h_ru5p_L, -r_R19]
+ [+m_h, -c_adp_h_ru5p_L]
+ [+m_ru5p_L, -c_adp_h_ru5p_L]
+ [+c_2dh3dgal_h2o, -r_R28]
+ [+c_2dh3dgal_atp, -m_2dh3dgal, -m_atp]
+ [+c_2dh3dgal6p_adp_h, -r_R30]
+ [+m_h, -c_2dh3dgal6p_adp_h]
+ [+r_R32, -c_btcoa_fad_h2o_nad]
+ [+c_aacoa_fadh2_h_nadh, -r_R32]
+ [+m_h, -c_aacoa_fadh2_h_nadh]
+ [+m_h, -c_h_nadh_pac]
+ [+m_nadh, -c_h_nadh_pac]
+ [+m_pac, -c_h_nadh_pac]
+ [+r_R38a, -c_h_lald_L_nadh]
+ [+c_h_lald_L_nadh, -m_h, -m_lald_L, -m_nadh]
+ [+c_atp_gal, -m_atp, -m_gal]
+ [+c_adp_gal1p_h, -r_R40a]
+ [+m_h, -c_adp_gal1p_h]
+ [+c_g1p_h_utp, -m_g1p, -m_h, -m_utp]
+ [+m_2h3oppan, -c_2h3oppan_pyr]
+ [+m_h, -c_dhcinnm_h_nadh]
+ [+r_R58a, -c_5dglcn_h_nadh]
+ [+m_nadh, -c_f6p_h_nadh]
+ [+c_atp_rib_D, -m_atp, -m_rib_D]
+ [+c_adp_h_r5p, -r_R101]
+ [+m_h, -c_adp_h_r5p]
+ [+m_r5p, -c_adp_h_r5p]
+ [+m_h, -c_adp_h_rml1p]
+ [+r_R106, -c_3dgulnp_h]
+ [+c_3dgulnp_h, -m_3dgulnp, -m_h]
+ [+r_R118a, -m_glcur]
+ [+m_fruur, -r_R118a]
+ [+m_h, -c_fruur_h_nadh]
+ [+m_nadh, -c_fruur_h_nadh]
+ [+r_R123a, -m_xyl_D]
+ [+m_xylu_D, -r_R123a]
+ [+c_5dh4dglc_h2o, -r_R128]
+ [+r_R129, -c_h_mmcoa_S]
+ [+c_2dhglcn_h_nadph, -m_2dhglcn, -m_h, -m_nadph]
+ [+r_R136, -c_2dhguln_h_nadph]
+ [+c_23doguln_h_nadh, -m_23doguln, -m_h, -m_nadh]
+ [+m_h, -c_h_oaa_pi]
+ [+c_co2_nadh_pyr, -r_R144]
+ [+c_4abut_h_nadh, -r_R149]
+ [+m_4abut, -c_4abut_h_nadh]
+ [+m_h, -c_4abut_h_nadh]
+ [+m_nadh, -c_4abut_h_nadh]
+ [-r_R19, +m_h]
+ [-c_1pyr5c_h_h2o, +m_h]
+ [+r_R40a, -c_atp_gal]
+ [+m_xu5p_L, -c_co2_xu5p_L]
+ [+r_R20a, -m_ru5p_L]
+ [-c_ac_h_nadh, +m_h]
+ [-c_h_nadh_succ, +m_h]
+Top clauses:
+ [-c_1pyr5c_h_h2o, +m_h]
+ [+r_R40a, -c_atp_gal]
+ [+m_xu5p_L, -c_co2_xu5p_L]
+ [+r_R20a, -m_ru5p_L]
+ [-c_ac_h_nadh, +m_h]
+ [-c_h_nadh_succ, +m_h]
+Production field:
+ [-r_R12a, -m_nadph, -r_R28, -c_h_lac_L_nadh, +c_adp_h_xu5p_D, +m_2dhguln, -c_1pyr5c_h_h2o, -c_h_nadh_tagur, -c_2dhguln_h_nadph, -c_2h3oppan_pyr, +r_R57a, -c_2dhguln_nadp, +c_co2_nadh_pyr, +r_R20a, +r_R43, +c_acmana_pyr, +m_5dh4dglc, +m_nadh, +c_adp_gal1p_h, -r_R19, +c_h_nadh_succ, -c_5dh4dglc_h2o, +c_dhcinnm_h_nadh, +m_nadph, +r_R134, -r_R90, +m_h, -c_co2_xu5p_L, -m_h, +c_acg5p_h_nadph, -c_5dglcn_h_nadh, -m_nadh, +c_dha_h_nadh, -m_5dglcn, +r_R106, +c_5dglcn_h_nadph, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+>>>>>>>>>>>> Solve - measure : [3, 7, 3, 0, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+Pruning NewCarc...
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solve - measure : [3, 55, 22, 6, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+Pruning NewCarc...
+>>>>>>>>>>>> Solve - measure : [2, 10, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : [1, 21, 10, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : []
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 8, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 9, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+ag0 -> ag3 : {Send clause([-c_1pyr5c_h_h2o, m_h])}
+ag0 -> ag3 : {Send clause([r_R20a, -r_R19])}
+ag0 -> ag3 : {End current batch}
+ag3 <------  {Send clause([-c_1pyr5c_h_h2o, m_h])}
+ag3 <------  {Send clause([r_R20a, -r_R19])}
+ag3 <------  {End current batch}
+Starting SolveToIndepClause...
+ag0 <------  {End all batch}
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+r_R12a, -m_mmcoa_R]
+ [+r_R14a, -c_glyald_h_nadh]
+ [+c_glyald_h_nadh, -m_glyald, -m_h, -m_nadh]
+ [+c_h_lac_L_nadh, -r_R16a]
+ [+m_h, -c_h_lac_L_nadh]
+ [+r_R18a, -m_arab_L]
+ [+m_rbl_L, -r_R18a]
+ [+r_R19, -c_atp_rbl_L]
+ [+c_atp_rbl_L, -m_atp, -m_rbl_L]
+ [+m_xu5p_D, -r_R20a]
+ [+m_r5p, -r_R26a]
+ [+r_R28, -m_galctn_D]
+ [+m_gal1p, -c_adp_gal1p_h]
+ [+c_5dh4dglc_h2o, -r_R43]
+ [+m_glx, -c_glx_q8h2]
+ [+m_nadh, -c_dha_h_nadh]
+ [+m_h, -c_adp_glyc3p_h]
+ [+m_h, -c_dhap_h_nadph]
+ [+m_nadph, -c_dhap_h_nadph]
+ [+r_R52, -m_5dh4dglc]
+ [+c_2h3oppan_pyr, -r_R52]
+ [+c_dhpppn_h_nadh, -r_R53]
+ [+m_dhpppn, -c_dhpppn_h_nadh]
+ [+m_h, -c_dhpppn_h_nadh]
+ [+m_nadh, -c_dhpppn_h_nadh]
+ [+m_nadh, -c_dhcinnm_h_nadh]
+ [+c_h_nadh_o2_pppn, -m_h, -m_nadh, -m_o2, -m_pppn]
+ [+c_cinnm_h_nadh_o2, -m_cinnm, -m_h, -m_nadh, -m_o2]
+ [+m_2h3oppan, -r_R57a]
+ [+c_5dglcn_h_nadh, -m_5dglcn, -m_h, -m_nadh]
+ [+r_R59, -c_5dglcn_h_nadph]
+ [+m_h, -c_2ddg6p_adp_h]
+ [+r_R90, -m_acnam]
+ [+m_acmana, -c_acmana_pyr]
+ [+c_co2_xu5p_L, -r_R106]
+ [+c_h_nadh_tagur, -r_R117a]
+ [+m_xu5p_D, -c_adp_h_xu5p_D]
+ [+r_R125, -c_25dkglcn_h_nadph]
+ [+c_25dkglcn_h_nadph, -m_25dkglcn, -m_h, -m_nadph]
+ [+c_2dhguln_nadp, -r_R125]
+ [+r_R131, -c_25dkglcn_h_nadph]
+ [+c_5dglcn_nadp, -r_R131]
+ [+m_5dglcn, -c_5dglcn_nadp]
+ [+c_2dhglcn_h_nadh, -m_2dhglcn, -m_h, -m_nadh]
+ [+c_5dglcn_nad, -r_R134]
+ [+m_5dglcn, -c_5dglcn_nad]
+ [+r_R135, -c_2dhguln_h_nadh]
+ [+c_2dhguln_h_nadh, -m_2dhguln, -m_h, -m_nadh]
+ [+c_2dhguln_h_nadph, -m_2dhguln, -m_h, -m_nadph]
+ [+m_glx, -c_glx_succ]
+ [+m_h, -c_coa_h_mal_L]
+ [+m_h, -c_h_pi]
+ [+m_nadh, -c_co2_nadh_pyr]
+ [+m_h, -c_2kmb_for_h_pi]
+ [+m_nadh, -c_h_nadh_succ]
+ [+m_h, -c_5mdr1p_adp_h]
+ [+c_1pyr5c_h_h2o, -r_R153]
+ [+m_1pyr5c, -c_1pyr5c_h_h2o]
+ [+m_nadph, -c_acg5p_h_nadph]
+ [-r_R19, +m_h]
+ [-c_1pyr5c_h_h2o, +m_h]
+ [+r_R20a, -r_R19]
+Top clauses:
+ [-c_1pyr5c_h_h2o, +m_h]
+ [+r_R20a, -r_R19]
+Production field:
+ [+m_h, -m_h, +m_nadh, -m_nadh, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, -c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+>>>>>>>>>>>> Solve - measure : [1, 9, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 17, 8, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [2, 9, 4, 0, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+Pruning NewCarc...
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solve - measure : [1, 13, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 9, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 7, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 11, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 11, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 13, 6, 0, 0, 0, 0, 0]
+ag2 -> ag0 : {Send clause([m_tagur, -c_h_nadh_tagur])}
+ag2 -> ag0 : {Send clause([-m_5dglcn, c_5dglcn_h_nadph, -m_nadph, -m_h])}
+ag2 -> ag0 : {Send clause([-c_h_lac_L_nadh, m_nadh])}
+ag2 -> ag0 : {Send clause([r_R30, -c_2dh3dgal_atp])}
+ag2 -> ag0 : {Send clause([m_5dh4dglc, -c_5dh4dglc_h2o])}
+ag2 -> ag0 : {Send clause([m_2dhguln, -c_2dhguln_nadp])}
+ag2 -> ag0 : {Send clause([r_R101, -c_atp_rib_D])}
+ag2 -> ag0 : {Send clause([m_ru5p_L, -m_xu5p_L])}
+ag2 -> ag0 : {Send clause([c_acmana_pyr, -r_R90])}
+ag2 -> ag0 : {Send clause([-c_h_nadh_tagur, m_h])}
+ag2 -> ag0 : {Send clause([c_h_mmcoa_S, -r_R12a, -m_h])}
+ag2 -> ag0 : {Send clause([-c_dha_h_nadh, m_h])}
+ag2 -> ag0 : {Send clause([-c_aacoa_fadh2_h_nadh, m_nadh])}
+ag2 -> ag0 : {Send clause([-c_h_nadh_tagur, m_nadh])}
+ag2 -> ag0 : {Send clause([m_2dh3dgal, -c_2dh3dgal_h2o])}
+ag2 -> ag0 : {End current batch}
+ag2 -> ag0 : {End all batch}
+ag0 <------  {Send clause([m_tagur, -c_h_nadh_tagur])}
+ag0 <------  {Send clause([-m_5dglcn, c_5dglcn_h_nadph, -m_nadph, -m_h])}
+ag0 <------  {Send clause([-c_h_lac_L_nadh, m_nadh])}
+ag0 <------  {Send clause([r_R30, -c_2dh3dgal_atp])}
+ag0 <------  {Send clause([m_5dh4dglc, -c_5dh4dglc_h2o])}
+ag0 <------  {Send clause([m_2dhguln, -c_2dhguln_nadp])}
+ag0 <------  {Send clause([r_R101, -c_atp_rib_D])}
+ag0 <------  {Send clause([m_ru5p_L, -m_xu5p_L])}
+ag0 <------  {Send clause([c_acmana_pyr, -r_R90])}
+ag0 <------  {Send clause([-c_h_nadh_tagur, m_h])}
+ag0 <------  {Send clause([c_h_mmcoa_S, -r_R12a, -m_h])}
+ag0 <------  {Send clause([-c_dha_h_nadh, m_h])}
+ag0 <------  {Send clause([-c_aacoa_fadh2_h_nadh, m_nadh])}
+ag0 <------  {Send clause([-c_h_nadh_tagur, m_nadh])}
+ag0 <------  {Send clause([m_2dh3dgal, -c_2dh3dgal_h2o])}
+ag0 <------  {End current batch}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+m_h, -c_amp_asn_L_glu_L_h_ppi]
+ [+m_ara5p, -r_R11a]
+ [+m_lac_L, -c_h_lac_L_nadh]
+ [+m_nadh, -c_ac_h_nadh]
+ [+c_adp_h_ru5p_L, -r_R19]
+ [+m_h, -c_adp_h_ru5p_L]
+ [+m_ru5p_L, -c_adp_h_ru5p_L]
+ [+c_2dh3dgal_h2o, -r_R28]
+ [+c_2dh3dgal_atp, -m_2dh3dgal, -m_atp]
+ [+c_2dh3dgal6p_adp_h, -r_R30]
+ [+m_h, -c_2dh3dgal6p_adp_h]
+ [+r_R32, -c_btcoa_fad_h2o_nad]
+ [+c_aacoa_fadh2_h_nadh, -r_R32]
+ [+m_h, -c_aacoa_fadh2_h_nadh]
+ [+m_h, -c_h_nadh_pac]
+ [+m_nadh, -c_h_nadh_pac]
+ [+m_pac, -c_h_nadh_pac]
+ [+r_R38a, -c_h_lald_L_nadh]
+ [+c_h_lald_L_nadh, -m_h, -m_lald_L, -m_nadh]
+ [+c_atp_gal, -m_atp, -m_gal]
+ [+c_adp_gal1p_h, -r_R40a]
+ [+m_h, -c_adp_gal1p_h]
+ [+c_g1p_h_utp, -m_g1p, -m_h, -m_utp]
+ [+m_2h3oppan, -c_2h3oppan_pyr]
+ [+m_h, -c_dhcinnm_h_nadh]
+ [+r_R58a, -c_5dglcn_h_nadh]
+ [+m_nadh, -c_f6p_h_nadh]
+ [+c_atp_rib_D, -m_atp, -m_rib_D]
+ [+c_adp_h_r5p, -r_R101]
+ [+m_h, -c_adp_h_r5p]
+ [+m_r5p, -c_adp_h_r5p]
+ [+m_h, -c_adp_h_rml1p]
+ [+r_R106, -c_3dgulnp_h]
+ [+c_3dgulnp_h, -m_3dgulnp, -m_h]
+ [+r_R118a, -m_glcur]
+ [+m_fruur, -r_R118a]
+ [+m_h, -c_fruur_h_nadh]
+ [+m_nadh, -c_fruur_h_nadh]
+ [+r_R123a, -m_xyl_D]
+ [+m_xylu_D, -r_R123a]
+ [+c_5dh4dglc_h2o, -r_R128]
+ [+r_R129, -c_h_mmcoa_S]
+ [+c_2dhglcn_h_nadph, -m_2dhglcn, -m_h, -m_nadph]
+ [+r_R136, -c_2dhguln_h_nadph]
+ [+c_23doguln_h_nadh, -m_23doguln, -m_h, -m_nadh]
+ [+m_h, -c_h_oaa_pi]
+ [+c_co2_nadh_pyr, -r_R144]
+ [+c_4abut_h_nadh, -r_R149]
+ [+m_4abut, -c_4abut_h_nadh]
+ [+m_h, -c_4abut_h_nadh]
+ [+m_nadh, -c_4abut_h_nadh]
+ [-r_R19, +m_h]
+ [-c_1pyr5c_h_h2o, +m_h]
+ [+r_R20a, -r_R19]
+ [-c_1pyr5c_h_h2o, +m_h]
+ [+r_R40a, -c_atp_gal]
+ [+m_xu5p_L, -c_co2_xu5p_L]
+ [+r_R20a, -m_ru5p_L]
+ [-c_ac_h_nadh, +m_h]
+ [-c_h_nadh_succ, +m_h]
+ [+m_tagur, -c_h_nadh_tagur]
+ [-m_5dglcn, +c_5dglcn_h_nadph, -m_nadph, -m_h]
+ [-c_h_lac_L_nadh, +m_nadh]
+ [+r_R30, -c_2dh3dgal_atp]
+ [+m_5dh4dglc, -c_5dh4dglc_h2o]
+ [+m_2dhguln, -c_2dhguln_nadp]
+ [+r_R101, -c_atp_rib_D]
+ [+m_ru5p_L, -m_xu5p_L]
+ [+c_acmana_pyr, -r_R90]
+ [-c_h_nadh_tagur, +m_h]
+ [+c_h_mmcoa_S, -r_R12a, -m_h]
+ [-c_dha_h_nadh, +m_h]
+ [-c_aacoa_fadh2_h_nadh, +m_nadh]
+ [-c_h_nadh_tagur, +m_nadh]
+ [+m_2dh3dgal, -c_2dh3dgal_h2o]
+Top clauses:
+ [+m_tagur, -c_h_nadh_tagur]
+ [-m_5dglcn, +c_5dglcn_h_nadph, -m_nadph, -m_h]
+ [-c_h_lac_L_nadh, +m_nadh]
+ [+r_R30, -c_2dh3dgal_atp]
+ [+m_5dh4dglc, -c_5dh4dglc_h2o]
+ [+m_2dhguln, -c_2dhguln_nadp]
+ [+r_R101, -c_atp_rib_D]
+ [+m_ru5p_L, -m_xu5p_L]
+ [+c_acmana_pyr, -r_R90]
+ [-c_h_nadh_tagur, +m_h]
+ [+c_h_mmcoa_S, -r_R12a, -m_h]
+ [-c_dha_h_nadh, +m_h]
+ [-c_aacoa_fadh2_h_nadh, +m_nadh]
+ [-c_h_nadh_tagur, +m_nadh]
+ [+m_2dh3dgal, -c_2dh3dgal_h2o]
+Production field:
+ [-r_R12a, -m_nadph, -r_R28, -c_h_lac_L_nadh, +c_adp_h_xu5p_D, +m_2dhguln, -c_1pyr5c_h_h2o, -c_h_nadh_tagur, -c_2dhguln_h_nadph, -c_2h3oppan_pyr, +r_R57a, -c_2dhguln_nadp, +c_co2_nadh_pyr, +r_R20a, +r_R43, +c_acmana_pyr, +m_5dh4dglc, +m_nadh, +c_adp_gal1p_h, -r_R19, +c_h_nadh_succ, -c_5dh4dglc_h2o, +c_dhcinnm_h_nadh, +m_nadph, +r_R134, -r_R90, +m_h, -c_co2_xu5p_L, -m_h, +c_acg5p_h_nadph, -c_5dglcn_h_nadh, -m_nadh, +c_dha_h_nadh, -m_5dglcn, +r_R106, +c_5dglcn_h_nadph, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+>>>>>>>>>>>> Solve - measure : [5, 245, 90, 39, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+Pruning NewCarc...
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+SolveToIndepClause Finished!
+ag0 -> Sys : {Send consequence([-c_h_nadh_tagur, m_nadh])}
+ag0 -> Sys : {Send consequence([-c_h_nadh_tagur, m_h])}
+ag0 -> Sys : {Send consequence([m_tagur, -c_h_nadh_tagur])}
+Sys <------  {Send consequence([-c_h_nadh_tagur, m_nadh])}
+Sys <------  {Send consequence([-c_h_nadh_tagur, m_h])}
+Sys <------  {Send consequence([m_tagur, -c_h_nadh_tagur])}
+>>>>>>>>>>>> Solve - measure : [1, 7, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 13, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 11, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 45, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 27, 13, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 45, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 15, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 10, 5, 0, 0, 0, 0, 0]
+ag0 -> ag3 : {Send clause([-c_h_nadh_tagur, m_nadh])}
+ag0 -> ag3 : {Send clause([-m_5dglcn, c_5dglcn_h_nadph, -m_nadph, -c_1pyr5c_h_h2o])}
+ag3 <------  {Send clause([-c_h_nadh_tagur, m_nadh])}
+ag3 <------  {Send clause([-m_5dglcn, c_5dglcn_h_nadph, -m_nadph, -c_1pyr5c_h_h2o])}
+ag0 -> ag3 : {Send clause([-m_5dglcn, c_5dglcn_h_nadph, -m_nadph, -m_h])}
+ag0 -> ag3 : {Send clause([c_acmana_pyr, -r_R90])}
+ag0 -> ag3 : {Send clause([r_R20a, -c_co2_xu5p_L])}
+ag0 -> ag3 : {Send clause([m_5dh4dglc, -c_5dh4dglc_h2o])}
+ag0 -> ag3 : {Send clause([m_2dhguln, -c_2dhguln_nadp])}
+ag0 -> ag3 : {Send clause([-m_5dglcn, c_5dglcn_h_nadph, -m_nadph, -r_R19])}
+ag0 -> ag3 : {Send clause([-c_h_nadh_tagur, m_h])}
+ag0 -> ag3 : {Send clause([m_tagur, -c_h_nadh_tagur])}
+ag0 -> ag3 : {Send clause([-c_h_lac_L_nadh, m_nadh])}
+ag0 -> ag3 : {End current batch}
+ag3 <------  {Send clause([-m_5dglcn, c_5dglcn_h_nadph, -m_nadph, -m_h])}
+ag3 <------  {Send clause([c_acmana_pyr, -r_R90])}
+ag3 <------  {Send clause([r_R20a, -c_co2_xu5p_L])}
+ag3 <------  {Send clause([m_5dh4dglc, -c_5dh4dglc_h2o])}
+ag3 <------  {Send clause([m_2dhguln, -c_2dhguln_nadp])}
+ag3 <------  {Send clause([-m_5dglcn, c_5dglcn_h_nadph, -m_nadph, -r_R19])}
+ag3 <------  {Send clause([-c_h_nadh_tagur, m_h])}
+ag3 <------  {Send clause([m_tagur, -c_h_nadh_tagur])}
+ag3 <------  {Send clause([-c_h_lac_L_nadh, m_nadh])}
+ag3 <------  {End current batch}
+Starting SolveToIndepClause...
+ag0 <------  {End all batch}
+ag0 -> ag3 : {End all batch}
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+r_R12a, -m_mmcoa_R]
+ [+r_R14a, -c_glyald_h_nadh]
+ [+c_glyald_h_nadh, -m_glyald, -m_h, -m_nadh]
+ [+c_h_lac_L_nadh, -r_R16a]
+ [+m_h, -c_h_lac_L_nadh]
+ [+r_R18a, -m_arab_L]
+ [+m_rbl_L, -r_R18a]
+ [+r_R19, -c_atp_rbl_L]
+ [+c_atp_rbl_L, -m_atp, -m_rbl_L]
+ [+m_xu5p_D, -r_R20a]
+ [+m_r5p, -r_R26a]
+ [+r_R28, -m_galctn_D]
+ [+m_gal1p, -c_adp_gal1p_h]
+ [+c_5dh4dglc_h2o, -r_R43]
+ [+m_glx, -c_glx_q8h2]
+ [+m_nadh, -c_dha_h_nadh]
+ [+m_h, -c_adp_glyc3p_h]
+ [+m_h, -c_dhap_h_nadph]
+ [+m_nadph, -c_dhap_h_nadph]
+ [+r_R52, -m_5dh4dglc]
+ [+c_2h3oppan_pyr, -r_R52]
+ [+c_dhpppn_h_nadh, -r_R53]
+ [+m_dhpppn, -c_dhpppn_h_nadh]
+ [+m_h, -c_dhpppn_h_nadh]
+ [+m_nadh, -c_dhpppn_h_nadh]
+ [+m_nadh, -c_dhcinnm_h_nadh]
+ [+c_h_nadh_o2_pppn, -m_h, -m_nadh, -m_o2, -m_pppn]
+ [+c_cinnm_h_nadh_o2, -m_cinnm, -m_h, -m_nadh, -m_o2]
+ [+m_2h3oppan, -r_R57a]
+ [+c_5dglcn_h_nadh, -m_5dglcn, -m_h, -m_nadh]
+ [+r_R59, -c_5dglcn_h_nadph]
+ [+m_h, -c_2ddg6p_adp_h]
+ [+r_R90, -m_acnam]
+ [+m_acmana, -c_acmana_pyr]
+ [+c_co2_xu5p_L, -r_R106]
+ [+c_h_nadh_tagur, -r_R117a]
+ [+m_xu5p_D, -c_adp_h_xu5p_D]
+ [+r_R125, -c_25dkglcn_h_nadph]
+ [+c_25dkglcn_h_nadph, -m_25dkglcn, -m_h, -m_nadph]
+ [+c_2dhguln_nadp, -r_R125]
+ [+r_R131, -c_25dkglcn_h_nadph]
+ [+c_5dglcn_nadp, -r_R131]
+ [+m_5dglcn, -c_5dglcn_nadp]
+ [+c_2dhglcn_h_nadh, -m_2dhglcn, -m_h, -m_nadh]
+ [+c_5dglcn_nad, -r_R134]
+ [+m_5dglcn, -c_5dglcn_nad]
+ [+r_R135, -c_2dhguln_h_nadh]
+ [+c_2dhguln_h_nadh, -m_2dhguln, -m_h, -m_nadh]
+ [+c_2dhguln_h_nadph, -m_2dhguln, -m_h, -m_nadph]
+ [+m_glx, -c_glx_succ]
+ [+m_h, -c_coa_h_mal_L]
+ [+m_h, -c_h_pi]
+ [+m_nadh, -c_co2_nadh_pyr]
+ [+m_h, -c_2kmb_for_h_pi]
+ [+m_nadh, -c_h_nadh_succ]
+ [+m_h, -c_5mdr1p_adp_h]
+ [+c_1pyr5c_h_h2o, -r_R153]
+ [+m_1pyr5c, -c_1pyr5c_h_h2o]
+ [+m_nadph, -c_acg5p_h_nadph]
+ [-r_R19, +m_h]
+ [-c_1pyr5c_h_h2o, +m_h]
+ [+r_R20a, -r_R19]
+ [-c_h_nadh_tagur, +m_nadh]
+ [-m_5dglcn, +c_5dglcn_h_nadph, -m_nadph, -c_1pyr5c_h_h2o]
+ [-m_5dglcn, +c_5dglcn_h_nadph, -m_nadph, -m_h]
+ [+c_acmana_pyr, -r_R90]
+ [+r_R20a, -c_co2_xu5p_L]
+ [+m_5dh4dglc, -c_5dh4dglc_h2o]
+ [+m_2dhguln, -c_2dhguln_nadp]
+ [-m_5dglcn, +c_5dglcn_h_nadph, -m_nadph, -r_R19]
+ [-c_h_nadh_tagur, +m_h]
+ [+m_tagur, -c_h_nadh_tagur]
+ [-c_h_lac_L_nadh, +m_nadh]
+Top clauses:
+ [-c_h_nadh_tagur, +m_nadh]
+ [-m_5dglcn, +c_5dglcn_h_nadph, -m_nadph, -c_1pyr5c_h_h2o]
+ [-m_5dglcn, +c_5dglcn_h_nadph, -m_nadph, -m_h]
+ [+c_acmana_pyr, -r_R90]
+ [+r_R20a, -c_co2_xu5p_L]
+ [+m_5dh4dglc, -c_5dh4dglc_h2o]
+ [+m_2dhguln, -c_2dhguln_nadp]
+ [-m_5dglcn, +c_5dglcn_h_nadph, -m_nadph, -r_R19]
+ [-c_h_nadh_tagur, +m_h]
+ [+m_tagur, -c_h_nadh_tagur]
+ [-c_h_lac_L_nadh, +m_nadh]
+Production field:
+ [+m_h, -m_h, +m_nadh, -m_nadh, +c_23dhb_h_nadh, -c_23dhb_h_nadh, +c_13dpg_h_nadh, -c_13dpg_h_nadh, +c_h_nadh_tagur, -c_h_nadh_tagur, +m_tagur, -m_tagur, +c_h_nadh_ohpb, -c_h_nadh_ohpb, +c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, +c_h_pap_so3_trdox, -c_h_pap_so3_trdox]
+
+>>>>>>>>>>>> Solve - measure : [3, 96, 43, 6, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+Pruning NewCarc...
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+>>>>>>>>>>>> Solve - measure : []
+SolveToIndepClause Finished!
+ag3 -> Sys : {Send consequence([m_tagur, -c_h_nadh_tagur])}
+ag3 -> Sys : {Send consequence([-c_h_nadh_tagur, m_nadh])}
+ag3 -> Sys : {Send consequence([-c_h_nadh_tagur, m_h])}
+ag3 <------  {End all batch}
+ag3 -> Sys : {End all batch}
+Sys <------  {Send consequence([m_tagur, -c_h_nadh_tagur])}
+Sys <------  {Send consequence([-c_h_nadh_tagur, m_nadh])}
+Sys <------  {Send consequence([-c_h_nadh_tagur, m_h])}
+Sys <------  {End all batch}
+Sys -> ag0 : {Finish}
+Sys -> ag1 : {Finish}
+Sys -> ag2 : {Finish}
+Sys -> ag3 : {Finish}
+ag3 <------  {Finish}
+ag0 <------  {Finish}
+ag1 <------  {Finish}
+ag2 <------  {Finish}
+3 CHARACTERISTIC CLAUSES
+
+[m_tagur, -c_h_nadh_tagur]
+[-c_h_nadh_tagur, m_nadh]
+[-c_h_nadh_tagur, m_h]
+
+
+Total execution time was 1088 ms.
+
+
+Execution time was 1007 ms.
+

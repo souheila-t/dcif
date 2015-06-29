@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Problem>
+<!--  -->
+<Infos>
+<NbAgents>3</NbAgents>
+</Infos>
+   <Common type="fusion">
+      <Program>     
+cnf(a,axiom,[-hyp(1,X,Y),-hyp(3,Y,X)]).
+cnf(a,axiom,[fact(5,1,2,1)]).
+cnf(a,axiom,[fact(4,5,1,5)]).
+pf([hyp(_,_,_)]&lt;=4).
+      </Program>
+      <CommLanguage type="fusion">
+<ConstantTypes type="unique">
+<Hind> NumberHyp </Hind>
+<Pred1> Predicate1 </Pred1>
+<Pred2> Predicate2 </Pred2>
+<Pred3> Predicate3 </Pred3>
+</ConstantTypes>
+<ConstantsDomain type="liste">
+   <NumberHyp> 1 </NumberHyp>
+   <NumberHyp> 2 </NumberHyp>
+   <NumberHyp> 3 </NumberHyp>
+   <Dice> 1 </Dice>
+   <Dice> 2 </Dice>
+   <Dice> 3 </Dice>
+   <Dice> 4 </Dice>
+   <Dice> 5 </Dice>
+   <Dice> 6 </Dice>
+</ConstantsDomain>
+
+<Format type="liste">
+   <pLitGroup> Pred1(X) </pLitGroup>
+   <pLitGroup> Pred2(X,Y) </pLitGroup>
+   <pLitGroup> Pred3(X,Y,Z) </pLitGroup>
+   <pLitGroup> -Pred1(X) </pLitGroup>
+   <pLitGroup> -Pred2(X,Y) </pLitGroup>
+   <pLitGroup> -Pred3(X,Y,Z) </pLitGroup>
+</Format>
+      </CommLanguage>
+
+
+	<Weighting type="fusion">
+		<GlobalParams type="unique">
+			<ClauseAggregator>PROD</ClauseAggregator>
+	     	</GlobalParams>
+		<Defaults type="fusion">
+			<PredicateDefaults type="unique">
+				<Weight>0.01</Weight>
+				<Aggregator>PROD</Aggregator>
+				<UseParam>ALL</UseParam>
+				<IntegerWeight>1</IntegerWeight>
+				<VariableWeight>0.95</VariableWeight>
+			</PredicateDefaults>
+			<ConstantsDefaults type="unique">
+				<Weight>1</Weight>
+			</ConstantsDefaults>
+			<IntegerDefaults type="unique">
+				<Weight>1</Weight>
+			</IntegerDefaults>
+			<VariableDefaults type="unique">
+				<Weight>0.8</Weight>
+			</VariableDefaults>
+		</Defaults>
+		<Symbols type="list">
+	<Predicate weight="0.9">h</Predicate>
+		</Symbols>
+
+	</Weighting>
+
+
+   </Common>
+
+   <Agent i="0">
+      <Program>
+cnf(a,axiom,[-o(X),r(X)]).
+cnf(a,axiom,[-m(X,Y),-n(Y,X),o(X)]).
+cnf(a,axiom,[-hyp(3,X,Y),m(X,Y)]).
+cnf(a,axiom,[-hyp(1,X,Y),p(X,Y)]).
+cnf(a,axiom,[-hyp(2,X,Y),n(Y,X)]).
+cnf(a,axiom,[-p(X,Y),-q(Y),r(X)]).
+cnf(a,axiom,[-fact(X,Y,X,Y),m(X,Y)]).
+cnf(a,axiom,[-fact(Y,2,X,X),q(Y)]).
+cnf(a,axiom,[fact(5,5,5,5)]).
+cnf(a,axiom,[fact(6,3,6,3)]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [r(6)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Predicate1>o</Predicate1>
+   <Predicate1>q</Predicate1>
+   <Predicate1>r</Predicate1>
+   <Predicate2>m</Predicate2>
+   <Predicate2>n</Predicate2>
+   <Predicate2>p</Predicate2>
+   <Predicate3>unknown0</Predicate3>
+</ConstantsDomain>
+<Format>
+   <pLitGroup> hyp(Hind,X,Y) </pLitGroup>
+   <pLitGroup> -hyp(Hind,X,Y) </pLitGroup>
+   <pLitGroup> fact(X,Y,X,Y) </pLitGroup>
+   <pLitGroup> -fact(X,Y,X,Y) </pLitGroup>
+   <pLitGroup> fact(Z,2,X,X) </pLitGroup>
+   <pLitGroup> -fact(Z,2,X,X) </pLitGroup>
+</Format>
+      </CommLanguage>
+   </Agent>
+
+
+   <Agent i="1">
+      <Program>
+cnf(a,axiom,[-hyp(3,X,X),g(X)]).
+cnf(a,axiom,[-m(X,Y),i(Y),l(X)]).
+cnf(a,axiom,[-b(X,Y,X),-e(X,Y)]).
+cnf(a,axiom,[-g(X),-i(Y),e(X,Y)]).
+cnf(a,axiom,[-e(X,Y),-l(Z),f(X,Y,Z)]).
+cnf(a,axiom,[-f(X,6,X),-fact(4,Y,X,X)]).
+cnf(a,axiom,[-fact(X,3,Y,Z),-i(Y),b(X,Z,Y)]).
+cnf(a,axiom,[-fact(1,X,Z,X),l(X)]).
+cnf(a,axiom,[fact(1,2,5,2)]).
+cnf(a,axiom,[fact(4,2,6,6)]).
+cnf(a,axiom,[fact(2,3,6,3)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Predicate1>g</Predicate1>
+   <Predicate1>i</Predicate1>
+   <Predicate1>l</Predicate1>
+   <Predicate2>e</Predicate2>
+   <Predicate2>m</Predicate2>
+   <Predicate3>b</Predicate3>
+   <Predicate3>f</Predicate3>
+</ConstantsDomain>
+<Format>
+   <pLitGroup> hyp(3,X,X) </pLitGroup>
+   <pLitGroup> -hyp(3,X,X) </pLitGroup>
+   <pLitGroup> fact(4,Z,X,X) </pLitGroup>
+   <pLitGroup> fact(X,3,Y,Z) </pLitGroup>
+   <pLitGroup> fact(1,X,Z,X) </pLitGroup>
+   <pLitGroup> -fact(4,Z,X,X) </pLitGroup>
+   <pLitGroup> -fact(X,3,Y,Z) </pLitGroup>
+   <pLitGroup> -fact(1,X,Z,X) </pLitGroup>
+</Format>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="2">
+      <Program>
+cnf(a,axiom,[-hyp(1,Y,Y),c(Y)]).
+cnf(a,axiom,[-hyp(2,X,Y),d(X,Y)]).
+cnf(a,axiom,[-d(X,X),-l(X)]).
+cnf(a,axiom,[-d(X,Y),-c(Y),b(X,Y,X)]).
+cnf(a,axiom,[-b(X,Y,X),a(Y,X)]).
+cnf(a,axiom,[f(X,Y,X),-a(Y,X)]).
+cnf(a,axiom,[-fact(2,3,X,Z),d(X,X)]).
+cnf(a,axiom,[-fact(X,Y,Z,X),c(Y)]).
+cnf(a,axiom,[fact(6,4,5,6)]).
+cnf(a,axiom,[fact(2,3,3,5)]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [a(3,6)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Predicate1>c</Predicate1>
+   <Predicate1>l</Predicate1>
+   <Predicate2>a</Predicate2>
+   <Predicate2>d</Predicate2>
+   <Predicate3>unkown3</Predicate3>
+</ConstantsDomain>
+<Format>
+   <pLitGroup> hyp(1,X,X) </pLitGroup>
+   <pLitGroup> -hyp(1,X,X) </pLitGroup>
+   <pLitGroup> -hyp(2,X,Y) </pLitGroup>
+   <pLitGroup> fact(X,Y,Z,X) </pLitGroup>
+   <pLitGroup> fact(2,3,X,Y) </pLitGroup>
+   <pLitGroup> -fact(2,3,X,Y) </pLitGroup>
+   <pLitGroup> -fact(X,Y,Z,X) </pLitGroup>
+   <pLitGroup> b(X,Y,X) </pLitGroup>
+   <pLitGroup> -b(X,Y,X) </pLitGroup>
+   <pLitGroup> f(X,Y,X) </pLitGroup>
+   <pLitGroup> -f(X,Y,X) </pLitGroup>
+</Format>
+      </CommLanguage>
+   </Agent>
+</Problem>

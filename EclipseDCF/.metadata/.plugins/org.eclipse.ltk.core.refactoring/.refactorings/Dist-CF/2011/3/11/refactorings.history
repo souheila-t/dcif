@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;tree&apos; in &apos;main.CooperativeConsFinding&apos; to &apos;society&apos;&#x0A;- Original project: &apos;Dist-CF&apos;&#x0A;- Original element: &apos;main.CooperativeConsFinding.tree&apos;&#x0A;- Renamed element: &apos;main.CooperativeConsFinding.society&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;tree&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;main{CooperativeConsFinding.java[CooperativeConsFinding^tree" name="society" references="true" setter="false" stamp="1299948467155" textual="false" version="1.0"/>
+</session>

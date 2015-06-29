@@ -1,0 +1,8 @@
+SOLAR
+
+term depth ?
+
+can we know the max term depth of the theory ?
+are the term depth conditions working ?
+
+

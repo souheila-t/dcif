@@ -1,0 +1,13 @@
+TODO
+
+Classes SubsumptionMinimalClauseSet
+
+ne pas introduire les manifestations dans le calcul du contexte:
+-> si a<->b et a est une manif, pb apres si on a un inform(b)]
+=> les ôter ensuite du contexte sans "inform" ?
+
+quand verif completude, pas besoin d'assurer newCarc (si c'est dans carc, bon aussi)
+
+ordre des hypotheses
+
+voir si necessaire de virer les manifs avant tout calcul ne devant absolument pas lles virer

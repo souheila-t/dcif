@@ -1,0 +1,10 @@
+(1a)p->sol || (1b) cnf-> sol 
+(2)sol -> gra (3)-> gra.partN (4)-> dcf
+(5)sol -> var
+
+(1a): p2sol
+(1b): cnfsat2sol
+(2):  buildGraph
+(3):  kmetis
+(4):  graph2dcf
+(5):  makeSolVariant

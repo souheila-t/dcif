@@ -1,0 +1,8 @@
+cnf(c1, axiom, [hasSymptom(fever), -hasDisease(flu)]).
+cnf(c2, axiom, [hasSymptom(throatache), -hasDisease(angina)]).
+cnf(c3, axiom, [hasSymptom(fever), -hasDisease(angina)]).
+cnf(c4, axiom, [hasSymptom(mucus), -hasDisease(flu)]).
+cnf(c5, axiom, [hasSymptom(mucus), -hasDisease(rhino)]).
+cnf(t1, top_clause, [hasSymptom(fever)]).
+pf([hasSymptom(_)] < 2).
+

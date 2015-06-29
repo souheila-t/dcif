@@ -1,0 +1,512 @@
+/**
+
+ * 
+
+ */
+
+package main;
+
+
+
+import java.util.ArrayList;
+
+import java.util.HashSet;
+
+import java.util.Iterator;
+
+import java.util.Vector;
+
+
+
+import linkingGraph.LinkingGraph;
+
+import logicLanguage.CNF;
+
+import logicLanguage.IndepClause;
+
+import masStats.BasicAgentCommStats;
+
+import problemDistribution.DistributionParameters;
+
+import problemDistribution.XMLDistributedProblem;
+
+import solarInterface.CFSolver;
+
+import solarInterface.IndepPField;
+
+import stats.ConsFindingAgentStats;
+
+import stats.ConsFindingSystemStats;
+
+import theory.ConsFindingLocalTheory;
+
+import agentCommunicationSystem.Agent;
+
+import agentCommunicationSystem.CanalComm;
+
+import agentCommunicationSystem.CommunicationModule;
+
+import agentCommunicationSystem.Network;
+
+import agentCommunicationSystem.SystemMessage;
+
+import agentCommunicationSystem.SystemMessageTypes;
+
+import agentCommunicationSystem.protocols.LocalProtocol;
+
+import agents.CooperativeAgent;
+
+import agents.CooperativeDiagnoser;
+
+
+
+import communication.PBMessageTypes;
+
+import communication.protocol.LocalCooperativeProtocol;
+
+import communication.protocol.MainCooperativeProtocol;
+
+
+
+
+
+/**
+
+ * @author Viel Charlotte
+
+ *
+
+ */
+
+public class CooperativeConsFinding implements Agent, SystemMessageTypes, PBMessageTypes, 
+
+	Runnable, CooperativeDiagnoser<CNF> {
+
+	
+
+	/**
+
+	 * 
+
+	 * @param filenameNoExt
+
+	 * @param grapheName
+
+	 * @param nbAgents
+
+	 */
+
+	public CooperativeConsFinding(String filenameNoExt, String grapheName,
+
+			int nbAgents, IndepPField pField) {
+
+		
+
+		agents = new ArrayList<CooperativeAgent>();
+
+		stats = new ConsFindingSystemStats();
+
+		agSystemStats = new BasicAgentCommStats();
+
+		
+
+		CanalComm syst = new CanalComm(toString());
+
+		LinkingGraph graph = new LinkingGraph(grapheName.concat(Integer.toString(nbAgents)));
+
+		Network net = new Network(graph, syst, Network.NET_STATIC);	
+
+		cSys = new CommunicationModule(syst, syst, net, agSystemStats);
+
+		
+
+		LocalProtocol baseLocalProt = new LocalCooperativeProtocol(cSys, this);
+
+		MainCooperativeProtocol gbProtocol = new MainCooperativeProtocol(cSys, baseLocalProt);
+
+		solver = new CFSolver();
+
+		cSys.setProtocol(gbProtocol);
+
+		data = new XMLDistributedProblem(filenameNoExt, graph, false);
+
+		for (int i = 0; i < data.nbAgents; i++) {
+
+			ConsFindingLocalTheory theory = new ConsFindingLocalTheory(data.getDistTheory().get(i), i);
+
+			CooperativeAgent agent = new CooperativeAgent("ag" + i, theory,
+
+					cSys.getComm(), net, new ConsFindingAgentStats(), nbAgents, pField);
+
+			agents.add(agent);
+
+		}
+
+		
+
+		int i = 0;
+
+		for (Iterator<Vector<Integer>> iterator = data.graph.ConnectGraph.iterator(); iterator.hasNext();) {
+
+			Vector<Integer> neighbors = iterator.next();
+
+			for (Iterator<Integer> iterator2 = neighbors.iterator(); iterator2.hasNext();) {
+
+				Integer neighbor = (Integer) iterator2.next();
+
+				agents.get(i).addNeighbor(agents.get(neighbor).getComm());
+
+			}
+
+			i++;
+
+		}
+
+		
+
+		startExpe();
+
+	}
+
+
+
+	public synchronized void startExpe(){
+
+		this.start();
+
+		while (!finished){
+
+			try {
+
+				wait(500);
+
+			} catch (InterruptedException e) { }	
+
+		}
+
+	}
+
+	
+
+	public static void main(String [] args) {
+
+		
+
+//		String filenameNoExt="exEcai-3ag";
+
+//		String grapheName = "Clique_";
+
+//		int nbAgents = 3;
+
+		
+
+//		String filenameNoExt = "test";
+
+//		String grapheName = "test_";
+
+//		int nbAgents = 10;
+
+		
+
+//		String filenameNoExt = "DAREschedule";
+
+//		String grapheName = "DARE_";
+
+//		int nbAgents = 8;
+
+		
+
+		String filenameNoExt = "gettingMoney";
+
+		String grapheName = "Clique_";
+
+		int nbAgents = 3;
+
+		IndepPField pField = IndepPField.parse("[+bankbook, -bankbook, +card, -card]");
+
+		
+
+		new CooperativeConsFinding(filenameNoExt, grapheName, nbAgents, pField);
+
+		
+
+	}
+
+	
+
+	public String toString() {
+
+		return "Sys";
+
+	}
+
+	
+
+	/* (non-Javadoc)
+
+	 * @see agentCommunicationSystem.Agent#getComm()
+
+	 */
+
+	
+	public CanalComm getComm() {
+
+		return sys;
+
+	}
+
+
+
+	/* (non-Javadoc)
+
+	 * @see agentCommunicationSystem.Agent#isAlive()
+
+	 */
+
+	
+	public boolean isAlive() {
+
+		if (systemThread==null) {
+
+			getComm().die();
+
+		}
+
+		return systemThread!=null;
+
+	}
+
+
+
+	/* (non-Javadoc)
+
+	 * @see agentCommunicationSystem.Agent#isDormant()
+
+	 */
+
+	
+	public boolean isDormant() {
+
+		return false;
+
+	}
+
+
+
+	/* (non-Javadoc)
+
+	 * @see agentCommunicationSystem.Agent#setDormant(boolean)
+
+	 */
+
+	
+	public void setDormant(boolean val) {}
+
+	
+
+	public void start() {
+
+		for (CooperativeAgent agent : agents) {
+
+			agent.start();
+
+		}
+
+
+
+		if (systemThread == null) {
+
+			systemThread = new Thread(this,"System");
+
+			systemThread.start();
+
+		}
+
+	}
+
+
+
+	/* (non-Javadoc)
+
+	 * @see java.lang.Runnable#run()
+
+	 */
+
+	
+	public synchronized void run() {
+
+		long start = System.currentTimeMillis();
+
+		Thread myThread = Thread.currentThread();
+
+		while (systemThread == myThread && !finished){
+
+			try {
+
+				//wait for other agents to put value
+
+				wait(50);
+
+			} catch (InterruptedException e) { }
+
+			finished = true;
+
+			for (CooperativeAgent ag:agents) {
+
+				if (!ag.isDormant()) {
+
+					finished = false;
+
+					break;
+
+				}
+
+			}
+
+		}
+
+		for (CooperativeAgent ag:agents) cSys.send(new SystemMessage(SYS_FINISH,cSys.getComm()),ag.getComm());
+
+		System.out.println(" Finished !");
+
+		long end = System.currentTimeMillis();
+
+		
+
+		System.out.println("\nExecution time was " + (end - start) + " ms.");
+
+		for (CooperativeAgent agent : agents) {
+
+			System.out.println(agent.name + " :");
+
+			System.out.println("  Inference steps\t:" + agent.stats.inferenceSteps.value);
+
+			System.out.println("  Sent messages\t:" + agent.stats.sentMessages.nb);
+
+			System.out.println("  Sent clauses\t\t: " + agent.stats.clausesSent.nb);
+
+			System.out.println("  Received messages\t:" + agent.stats.receivedMessages.nb);
+
+		}
+
+		
+
+	}
+
+
+
+	/* (non-Javadoc)
+
+	 * @see agents.PBDiagnoser#addToTheory(java.lang.Object, agentCommunicationSystem.CanalComm)
+
+	 */
+
+	
+	public boolean addToTheory(CNF ruleSet, CanalComm from) {
+
+		return false;
+
+	}
+
+	
+
+	/* (non-Javadoc)
+
+	 * @see agents.CooperativeDiagnoser#askAllLiterals(agentCommunicationSystem.CanalComm)
+
+	 */
+
+	
+	public void askAllLiterals(CanalComm ag) {}
+
+
+
+	/* (non-Javadoc)
+
+	 * @see agents.CooperativeDiagnoser#sendAllLiterals(agentCommunicationSystem.CanalComm)
+
+	 */
+
+	
+	public void sendAllLiterals(CanalComm ag) {}
+
+
+
+	/* (non-Javadoc)
+
+	 * @see agents.CooperativeDiagnoser#updateCommLanguage(agentCommunicationSystem.CanalComm, java.util.ArrayList)
+
+	 */
+
+	
+	public void updateCommLanguage(CanalComm ag,
+
+			HashSet<String> listeLit) {}
+
+	
+
+	/* (non-Javadoc)
+
+	 * @see agents.CooperativeDiagnoser#beginExchange()
+
+	 */
+
+	
+	public void consFinding(ArrayList<IndepClause> topClauses, boolean addConsToTheory) {}
+
+	
+
+	/* (non-Javadoc)
+
+	 * @see agents.CooperativeDiagnoser#getNbNeighbors()
+
+	 */
+
+	
+	public int getNbNeighbors() {
+
+		return 0;
+
+	}
+
+
+
+	/* (non-Javadoc)
+
+	 * @see agents.CooperativeDiagnoser#addToListClausesSent(agentCommunicationSystem.CanalComm, logicLanguage.IndepClause)
+
+	 */
+
+	
+	public boolean addToListClausesSent(CanalComm sender, IndepClause clause) {
+
+		return false;
+
+	}
+
+
+
+	private volatile Thread systemThread = null;
+
+	protected DistributionParameters distParam;
+
+	protected CFSolver solver;
+
+	protected XMLDistributedProblem data;
+
+	protected Network net;
+
+	protected CommunicationModule cSys;
+
+	protected ArrayList<CooperativeAgent> agents;
+
+	protected ConsFindingSystemStats stats;
+
+	protected BasicAgentCommStats agSystemStats;
+
+	protected boolean finished=false;
+
+	protected CanalComm sys;
+
+}
+

@@ -1,0 +1,6 @@
+%Sol source: GRP123-1.005
+%Variant name: man-2_ld1-3
+
+solSource(GRP123-1.005).
+pf([-product(_,_,_)]<=1).
+depthLimit(3).

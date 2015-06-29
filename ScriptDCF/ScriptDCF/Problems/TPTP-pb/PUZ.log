@@ -1,0 +1,439 @@
+Time for creating graph: 0.048s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Ag0 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Ag0 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Sys -> Ag2 : {Start}
+Ag3 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag1 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag2 <------  {New neighbour}
+Ag1 -> Sys : {Started}
+Sys -> Ag3 : {Start}
+Ag2 <------  {New neighbour}
+Sys -> Ag0 : {Launch}
+Ag0 <------  {Launch}
+Ag3 <------  {New neighbour}
+Ag3 <------  {Start}
+Ag3 -> Sys : {Started}
+Ag2 <------  {Start}
+Sys <------  {Started}
+Ag2 -> Sys : {Started}
+Ag0 receives []
+After pruning []
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Ag0: updated receivedCl []
+updated lstCsq []
+Ag0 -> Ag3 : Send Clauses: Forward Clauses = []
+Ag3 <------  Send Clauses: Forward Clauses = []
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [30, 7, 3, 0, 0, 0, 0, 0]
+Ag3 receives [[killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)]]
+After pruning [[killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-killed(_0,_1), -richer(_0,_1)]
+ [-lives(_0), +richer(_0,agatha), +hates(butler,_0)]
+ [+killed(agatha,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+Top clauses:
+ [+killed(agatha,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+Production field:
+ [+hates(_0,_1), +killed(_0,_1), -lives(_0)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [12, 65, 15, 21, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag3: updated receivedCl [[killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)]]
+updated lstCsq [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)]]
+Ag3 -> Ag2 : Send Clauses: Forward {N [Ag3]} Clauses = [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)]]
+Ag2 <------  Send Clauses: Forward {N [Ag3]} Clauses = [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 23, 11, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 23, 11, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 21, 10, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 25, 12, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 21, 10, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 21, 10, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 23, 11, 0, 0, 0, 0, 0]
+Ag2 receives [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)]]
+After pruning [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+lives(agatha)]
+ [+lives(butler)]
+ [+lives(charles)]
+ [-lives(agatha), +hates(butler,agatha), -lives(butler), +hates(butler,butler), +killed(charles,agatha)]
+ [-lives(agatha), +hates(butler,agatha), +killed(butler,agatha), -lives(charles), +hates(butler,charles)]
+ [-lives(agatha), +hates(butler,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [-lives(agatha), +hates(butler,agatha), -lives(butler), +hates(butler,butler), -lives(charles), +hates(butler,charles)]
+ [+killed(agatha,agatha), -lives(butler), +hates(butler,butler), +killed(charles,agatha)]
+ [+killed(agatha,agatha), +killed(butler,agatha), -lives(charles), +hates(butler,charles)]
+ [+killed(agatha,agatha), -lives(butler), +hates(butler,butler), -lives(charles), +hates(butler,charles)]
+Top clauses:
+ [-lives(agatha), +hates(butler,agatha), -lives(butler), +hates(butler,butler), +killed(charles,agatha)]
+ [-lives(agatha), +hates(butler,agatha), +killed(butler,agatha), -lives(charles), +hates(butler,charles)]
+ [-lives(agatha), +hates(butler,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [-lives(agatha), +hates(butler,agatha), -lives(butler), +hates(butler,butler), -lives(charles), +hates(butler,charles)]
+ [+killed(agatha,agatha), -lives(butler), +hates(butler,butler), +killed(charles,agatha)]
+ [+killed(agatha,agatha), +killed(butler,agatha), -lives(charles), +hates(butler,charles)]
+ [+killed(agatha,agatha), -lives(butler), +hates(butler,butler), -lives(charles), +hates(butler,charles)]
+Production field:
+ [+lives(_0), +hates(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 74, 7, 21, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag2: updated receivedCl [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)]]
+updated lstCsq [[hates(butler,agatha), killed(butler,agatha), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), hates(butler,charles)], [hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), hates(butler,charles)]]
+Ag2 -> Ag1 : Send Clauses: Forward {N [Ag3]} Clauses = [[hates(butler,agatha), killed(butler,agatha), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), hates(butler,charles)], [hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), hates(butler,charles)]]
+Ag1 <------  Send Clauses: Forward {N [Ag3]} Clauses = [[hates(butler,agatha), killed(butler,agatha), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), hates(butler,charles)], [hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), hates(butler,charles)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 10, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 8, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 22, 9, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 25, 11, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 5, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 19, 8, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 3, 2, 0, 0, 0, 0, 0]
+Ag1 receives [[hates(butler,agatha), killed(butler,agatha), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), hates(butler,charles)], [hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), hates(butler,charles)]]
+After pruning [[hates(butler,agatha), killed(butler,agatha), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), hates(butler,charles)], [hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), hates(butler,charles)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-hates(_0,agatha), -hates(_0,butler), -hates(_0,charles)]
+ [+hates(agatha,charles)]
+ [-hates(agatha,_0), +hates(butler,_0)]
+ [+hates(butler,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [+hates(butler,agatha), +hates(butler,butler), +killed(charles,agatha)]
+ [+killed(agatha,agatha), +hates(butler,butler), +killed(charles,agatha)]
+Top clauses:
+ [+hates(butler,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [+hates(butler,agatha), +hates(butler,butler), +killed(charles,agatha)]
+ [+killed(agatha,agatha), +hates(butler,butler), +killed(charles,agatha)]
+Production field:
+ [+hates(_0,_1), -hates(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 110, 22, 30, 0, 4, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag1: updated receivedCl [[hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), hates(butler,butler), killed(charles,agatha)]]
+updated lstCsq [[killed(charles,agatha), -hates(agatha,butler), killed(butler,agatha)], [killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(agatha,agatha), killed(charles,agatha), -hates(butler,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), killed(butler,agatha)], [killed(charles,agatha), hates(butler,agatha), hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)], [killed(agatha,agatha), killed(charles,agatha), hates(butler,butler)]]
+Ag1 -> Ag0 : Send Clauses: Forward {N [Ag3]} Clauses = [[killed(charles,agatha), -hates(agatha,butler), killed(butler,agatha)], [killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(agatha,agatha), killed(charles,agatha), -hates(butler,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), killed(butler,agatha)], [killed(charles,agatha), hates(butler,agatha), hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)], [killed(agatha,agatha), killed(charles,agatha), hates(butler,butler)]]
+Ag0 <------  Send Clauses: Forward {N [Ag3]} Clauses = [[killed(charles,agatha), -hates(agatha,butler), killed(butler,agatha)], [killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(agatha,agatha), killed(charles,agatha), -hates(butler,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), killed(butler,agatha)], [killed(charles,agatha), hates(butler,agatha), hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)], [killed(agatha,agatha), killed(charles,agatha), hates(butler,butler)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 32, 13, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 40, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 21, 9, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 24, 10, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 10, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 12, 6, 0, 0, 0, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 27, 13, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 36, 13, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 14, 7, 0, 0, 0, 0, 0]
+Ag0 receives [[killed(charles,agatha), -hates(agatha,butler), killed(butler,agatha)], [killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(agatha,agatha), killed(charles,agatha), -hates(butler,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), killed(butler,agatha)], [killed(charles,agatha), hates(butler,agatha), hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)], [killed(agatha,agatha), killed(charles,agatha), hates(butler,butler)]]
+After pruning [[killed(charles,agatha), -hates(agatha,butler), killed(butler,agatha)], [killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(agatha,agatha), killed(charles,agatha), -hates(butler,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), killed(butler,agatha)], [killed(charles,agatha), hates(butler,agatha), hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)], [killed(agatha,agatha), killed(charles,agatha), hates(butler,butler)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-hates(agatha,_0), -hates(charles,_0)]
+ [+hates(agatha,agatha)]
+ [-killed(_0,_1), +hates(_0,_1)]
+ [+killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)]
+ [+killed(butler,agatha), +killed(charles,agatha), -hates(butler,butler)]
+ [+killed(agatha,agatha), +killed(charles,agatha), -hates(agatha,agatha)]
+ [+killed(butler,agatha), +killed(charles,agatha), +hates(butler,agatha)]
+Top clauses:
+ [+killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)]
+ [+killed(butler,agatha), +killed(charles,agatha), -hates(butler,butler)]
+ [+killed(agatha,agatha), +killed(charles,agatha), -hates(agatha,agatha)]
+ [+killed(butler,agatha), +killed(charles,agatha), +hates(butler,agatha)]
+Production field:
+ [-killed(_0,_1), -hates(_0,_1), +hates(_0,_1), -hates(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 68, 14, 15, 0, 1, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag0: updated receivedCl [[killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)]]
+updated lstCsq [[killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)]]
+Ag0 -> Ag3 : Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)]]
+Ag3 <------  Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 11, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 7, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 9, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 3, 1, 0, 0, 0, 0, 0]
+Ag3 receives [[killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)]]
+After pruning [[killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-killed(_0,_1), -richer(_0,_1)]
+ [-lives(_0), +richer(_0,agatha), +hates(butler,_0)]
+ [+killed(agatha,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [+killed(butler,agatha), -killed(butler,butler)]
+ [-killed(agatha,butler)]
+ [+killed(butler,agatha), -hates(butler,butler)]
+ [+killed(agatha,agatha)]
+ [-hates(agatha,butler)]
+Top clauses:
+ [+killed(butler,agatha), -killed(butler,butler)]
+ [-killed(agatha,butler)]
+ [+killed(butler,agatha), -hates(butler,butler)]
+ [+killed(agatha,agatha)]
+ [-hates(agatha,butler)]
+Production field:
+ [+hates(_0,_1), +killed(_0,_1), -lives(_0)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 35, 11, 7, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag3: updated receivedCl [[killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)], [killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)]]
+updated lstCsq [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha)]]
+Ag3 -> Ag2 : Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[-lives(agatha), hates(butler,agatha)]]
+Ag2 <------  Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[-lives(agatha), hates(butler,agatha)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 11, 5, 0, 0, 0, 0, 0]
+Ag2 receives [[-lives(agatha), hates(butler,agatha)]]
+After pruning [[-lives(agatha), hates(butler,agatha)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+lives(agatha)]
+ [+lives(butler)]
+ [+lives(charles)]
+ [-lives(agatha), +hates(butler,agatha), -lives(butler), +hates(butler,butler), +killed(charles,agatha)]
+ [-lives(agatha), +hates(butler,agatha), +killed(butler,agatha), -lives(charles), +hates(butler,charles)]
+ [-lives(agatha), +hates(butler,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [-lives(agatha), +hates(butler,agatha), -lives(butler), +hates(butler,butler), -lives(charles), +hates(butler,charles)]
+ [+killed(agatha,agatha), -lives(butler), +hates(butler,butler), +killed(charles,agatha)]
+ [+killed(agatha,agatha), +killed(butler,agatha), -lives(charles), +hates(butler,charles)]
+ [+killed(agatha,agatha), -lives(butler), +hates(butler,butler), -lives(charles), +hates(butler,charles)]
+ [-lives(agatha), +hates(butler,agatha)]
+Top clauses:
+ [-lives(agatha), +hates(butler,agatha)]
+Production field:
+ [+lives(_0), +hates(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 6, 1, 1, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag2: updated receivedCl [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha)]]
+updated lstCsq [[hates(butler,agatha), killed(butler,agatha), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), hates(butler,charles)], [hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), hates(butler,charles)], [killed(agatha,agatha), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), hates(butler,charles)], [hates(butler,agatha)]]
+Ag2 -> Ag1 : Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[hates(butler,agatha)]]
+Ag1 <------  Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[hates(butler,agatha)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 9, 4, 0, 0, 0, 0, 0]
+Ag1 receives [[hates(butler,agatha)]]
+After pruning [[hates(butler,agatha)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-hates(_0,agatha), -hates(_0,butler), -hates(_0,charles)]
+ [+hates(agatha,charles)]
+ [-hates(agatha,_0), +hates(butler,_0)]
+ [+hates(butler,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [+hates(butler,agatha), +hates(butler,butler), +killed(charles,agatha)]
+ [+killed(agatha,agatha), +hates(butler,butler), +killed(charles,agatha)]
+ [+hates(butler,agatha)]
+Top clauses:
+ [+hates(butler,agatha)]
+Production field:
+ [+hates(_0,_1), -hates(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 30, 7, 8, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag1: updated receivedCl [[hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [hates(butler,agatha), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), hates(butler,butler), killed(charles,agatha)], [hates(butler,agatha)]]
+updated lstCsq [[killed(charles,agatha), -hates(agatha,butler), killed(butler,agatha)], [killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(agatha,agatha), killed(charles,agatha), -hates(butler,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), killed(butler,agatha)], [killed(charles,agatha), hates(butler,agatha), hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)], [killed(agatha,agatha), killed(charles,agatha), hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha)], [-hates(butler,butler)], [hates(butler,agatha)], [-hates(agatha,butler)]]
+Ag1 -> Ag0 : Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[killed(agatha,agatha), killed(charles,agatha)], [-hates(butler,butler)], [hates(butler,agatha)], [-hates(agatha,butler)]]
+Ag0 <------  Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[killed(agatha,agatha), killed(charles,agatha)], [-hates(butler,butler)], [hates(butler,agatha)], [-hates(agatha,butler)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 4, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 6, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 7, 5, 0, 0, 0, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 10, 6, 0, 0, 0, 0, 0]
+Ag0 receives [[killed(agatha,agatha), killed(charles,agatha)], [-hates(butler,butler)], [hates(butler,agatha)], [-hates(agatha,butler)]]
+After pruning [[killed(agatha,agatha), killed(charles,agatha)], [-hates(butler,butler)], [hates(butler,agatha)], [-hates(agatha,butler)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-hates(agatha,_0), -hates(charles,_0)]
+ [+hates(agatha,agatha)]
+ [-killed(_0,_1), +hates(_0,_1)]
+ [+killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)]
+ [+killed(butler,agatha), +killed(charles,agatha), -hates(butler,butler)]
+ [+killed(agatha,agatha), +killed(charles,agatha), -hates(agatha,agatha)]
+ [+killed(butler,agatha), +killed(charles,agatha), +hates(butler,agatha)]
+ [-hates(butler,butler)]
+Top clauses:
+ [-hates(butler,butler)]
+Production field:
+ [-killed(_0,_1), -hates(_0,_1), +hates(_0,_1), -hates(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 7, 2, 2, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag0: updated receivedCl [[killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)], [-hates(butler,butler)]]
+updated lstCsq [[killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)], [-hates(butler,butler)], [-killed(butler,butler)]]
+Ag0 -> Ag3 : Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[-hates(butler,butler)], [-killed(butler,butler)]]
+Ag3 <------  Send Clauses: Forward {N [Ag0, Ag3]} Clauses = [[-hates(butler,butler)], [-killed(butler,butler)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 8, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 11, 5, 0, 0, 0, 0, 0]
+Ag3 receives [[-hates(butler,butler)], [-killed(butler,butler)]]
+After pruning [[-hates(butler,butler)], [-killed(butler,butler)]]
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-killed(_0,_1), -richer(_0,_1)]
+ [-lives(_0), +richer(_0,agatha), +hates(butler,_0)]
+ [+killed(agatha,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [+killed(butler,agatha), -killed(butler,butler)]
+ [-killed(agatha,butler)]
+ [+killed(butler,agatha), -hates(butler,butler)]
+ [+killed(agatha,agatha)]
+ [-hates(agatha,butler)]
+ [-hates(butler,butler)]
+ [-killed(butler,butler)]
+Top clauses:
+ [-hates(butler,butler)]
+ [-killed(butler,butler)]
+Production field:
+ [+hates(_0,_1), +killed(_0,_1), -lives(_0)]
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 11, 4, 1, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+Ag3: updated receivedCl [[killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)], [killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)], [-hates(butler,butler)], [-killed(butler,butler)]]
+updated lstCsq [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha)], [killed(agatha,agatha)]]
+Ag3 -> Ag0 : Send Clauses: Backward {C [Ag0]} Clauses = [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha)], [killed(agatha,agatha)]]
+Ag0 <------  Send Clauses: Backward {C [Ag0]} Clauses = [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha)], [killed(agatha,agatha)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 5, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 12, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 14, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 4, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 11, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 12, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 12, 6, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 10, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 7, 5, 0, 0, 0, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 6, 4, 0, 0, 0, 0, 0]
+Ag0 receives [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha)], [killed(agatha,agatha)]]
+After pruning [[-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), killed(butler,agatha), killed(charles,agatha)], [-lives(agatha), hates(butler,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), killed(charles,agatha)], [killed(agatha,agatha), killed(butler,agatha), -lives(charles), hates(butler,charles)], [killed(agatha,agatha), -lives(butler), hates(butler,butler), -lives(charles), hates(butler,charles)], [-lives(agatha), hates(butler,agatha)], [killed(agatha,agatha)]]
+Ag0: updated receivedCl [[killed(charles,agatha), -hates(agatha,butler), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), -hates(butler,butler)], [killed(agatha,agatha), killed(charles,agatha), -hates(agatha,agatha)], [killed(butler,agatha), killed(charles,agatha), hates(butler,agatha)], [-hates(butler,butler)]]
+updated lstCsq [[killed(butler,agatha), -killed(butler,butler)], [-killed(agatha,butler)], [killed(butler,agatha), -hates(butler,butler)], [killed(agatha,agatha)], [-hates(agatha,butler)], [-hates(butler,butler)], [-killed(butler,butler)], [hates(butler,agatha)], [killed(butler,agatha), -hates(butler,butler)], [-hates(agatha,butler)], [-hates(butler,butler)]]
+Ag0 -> Ag1 : Send Clauses: Backward Clauses = [[hates(butler,agatha)], [killed(butler,agatha), -hates(butler,butler)], [-hates(agatha,butler)], [-hates(butler,butler)]]
+Ag1 <------  Send Clauses: Backward Clauses = [[hates(butler,agatha)], [killed(butler,agatha), -hates(butler,butler)], [-hates(agatha,butler)], [-hates(butler,butler)]]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 2, 1, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 2, 1, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 3, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [0, 5, 3, 0, 0, 0, 0, 0]
+Ag1 receives [[hates(butler,agatha)], [killed(butler,agatha), -hates(butler,butler)], [-hates(agatha,butler)], [-hates(butler,butler)]]
+After pruning [[hates(butler,agatha)], [killed(butler,agatha), -hates(butler,butler)], [-hates(agatha,butler)], [-hates(butler,butler)]]
+Ag1 -> Sys : Send Consequences : [[killed(agatha,agatha), killed(charles,agatha), killed(butler,agatha)], [killed(agatha,agatha), killed(charles,agatha)]]
+Sys <------  Send Consequences : [[killed(agatha,agatha), killed(charles,agatha), killed(butler,agatha)], [killed(agatha,agatha), killed(charles,agatha)]]
+Ag1 -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Ag0 <------  {Finish}
+Ag1 <------  {Finish}
+Sys -> Ag2 : {Finish}
+Ag2 <------  {Finish}
+Sys -> Ag3 : {Finish}
+Ag3 <------  {Finish}
+1 (NEW) CHARACTERISTIC CLAUSES
+
+[killed(agatha,agatha), killed(charles,agatha)]
+
+
+Total execution time was 1065 ms.
+
+
+Execution time was 1003 ms.
+

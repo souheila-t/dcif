@@ -1,0 +1,619 @@
+options {
+  JDK_VERSION = "1.5";
+  STATIC = false;
+}
+
+PARSER_BEGIN(Parser)
+/************************************************************************
+ Copyright 2003-2009, University of Yamanashi. All rights reserved. 
+ By using this software the USER indicates that he or she has read,
+ understood and will comply with the following:
+
+ --- University of Yamanashi hereby grants USER non-exclusive permission
+ to use, copy and/or modify this software for internal, non-commercial,
+ research purposes only. Any distribution, including commercial sale or
+ license, of this software, copies of the software, its associated
+ documentation and/or modifications of either is strictly prohibited
+ without the prior consent of University of Yamanashi. Title to
+ copyright to this software and its associated documentation shall at
+ all times remain with University of Yamanashi.  Appropriate copyright
+ notice shall be placed on all software copies, and a complete copy of
+ this notice shall be included in all copies of the associated
+ documentation. No right is granted to use in advertising, publicity or
+ otherwise any trademark, service mark, or the name of University of
+ Yamanashi.
+
+ --- This software and any associated documentation is provided "as is"
+
+ UNIVERSITY OF YAMANASHI MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS
+ OR IMPLIED, INCLUDING THOSE OF MERCHANTABILITY OR FITNESS FOR A
+ PARTICULAR PURPOSE, OR THAT USE OF THE SOFTWARE, MODIFICATIONS, OR
+ ASSOCIATED DOCUMENTATION WILL NOT INFRINGE ANY PATENTS, COPYRIGHTS,
+ TRADEMARKS OR OTHER INTELLECTUAL PROPERTY RIGHTS OF A THIRD PARTY.
+
+ University of Yamanashi shall not be liable under any circumstances for
+ any direct, indirect, special, incidental, or consequential damages
+ with respect to any claim by USER or any third party on account of or
+ arising from the use, or inability to use, this software or its
+ associated documentation, even if University of Yamanashi has been
+ advised of the possibility of those damages.
+************************************************************************/
+
+package org.nabelab.solar.parser;
+
+import java.io.File;
+import java.io.Reader;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.nabelab.solar.*;
+import org.nabelab.solar.pfield.*;
+
+/**
+ * A consequence finding problem description parser.
+ */
+public class Parser implements OptionTypes {
+
+  /**
+   * Constructs a parser object.
+   * @param env the environment.
+   * @param opt the options.
+   */
+  public Parser(Env env, Options opt) {
+  	this(env, opt, null);
+  }
+  
+  /**
+   * Constructs a parser object for a consequence finding problem description.
+   * @param env the environment.
+   * @param opt the options.   
+   * @param cfp the consequence finding problem.
+   */
+  public Parser(Env env, Options opt, CFP cfp) {
+  	this(System.in);
+  	this.env = env;
+  	this.opt = opt;
+  	this.cfp = cfp;
+  	this.symTable = env.getSymTable(); 
+  	this.varNameMap = new VarNameMap();
+  	this.usedClauseDB = new HashMap<Clause,Clause>();
+  }
+
+  /**
+   * Parse a consequence finding problem with the specified reader.
+   * @param reader the reader.
+   * @param source the name of source.
+   * @param base   the base directory for the "include" directives. 
+   */
+  public void parse(Reader reader, String source, String base) throws ParseException {
+    try {
+      ReInit(reader);
+      problem(base);
+    } catch (ParseException e) {
+      if (source != null)
+        throw new ParseException(source + ": " + e.getMessage());
+      else
+        throw e;
+    }
+  }
+
+  /**
+   * Parse a consequence finding problem with the specified reader.
+   * @param reader the reader.
+   * @param source the name of source.
+   */
+  public void parse(Reader reader, String source) throws ParseException {
+    parse(reader, source, null);
+  }
+  
+  /**
+   * Parse a consequence finding problem with the specified reader.
+   * @param reader the reader.
+   */
+  public void parse(Reader reader) throws ParseException {
+    parse(reader, null);
+  }
+  
+  /**
+   * Parse a literal with the specified reader.
+   * @param reader the reader.
+   * @return the literal.
+   */
+  public Literal literal(Reader reader) throws ParseException {
+    ReInit(reader);
+    return literal();
+  }
+  
+  /**
+   * Parse literals with the specified reader.
+   * @param reader the reader.
+   * @return the literals.
+   */
+  public List<Literal> literals(Reader reader) throws ParseException {
+    ReInit(reader);
+    return literals();
+  }
+  
+  /**
+   * Parse a term with the specified reader.
+   * @param reader the reader.
+   * @return the term.
+   */
+  public Term term(Reader reader) throws ParseException {
+    ReInit(reader);
+    return term().toTerm();
+  }
+  
+  /**
+   * Parse a productoin field literal with the specified reader.
+   * @param reader the reader.
+   * @return the production field literal.
+   */
+  public PLiteral pliteral(Reader reader) throws ParseException {
+    ReInit(reader);
+    return pliteral();
+  }
+  
+  /**
+   * Parse a productoin field with the specified reader.
+   * @param reader the reader.
+   * @return the production field.
+   */
+  public PField pfield(Reader reader) throws ParseException {
+    ReInit(reader);
+    return pfield();
+  }
+  
+  /** Parses a problem description without the base directory specification. */
+  public void problem() throws ParseException { problem(null); }
+  
+  /**
+   * Parse a set of consequences.
+   * @param reader the reader.
+   * @return a set of consequences.
+   */
+  public List<Conseq> conseqs(Reader reader) throws ParseException {
+    ReInit(reader);
+    return conseqs();
+  }
+  
+  /** The environment. */
+  private Env env = null;
+  /** The options. */
+  private Options opt = null;
+  /** The consequence finding problem. */
+  private CFP cfp = null;
+  /** The symbol table of the consequence finding problem. */
+  private SymTable symTable = null;
+  /** The mapping from variable names to variable numbers. */
+  private VarNameMap varNameMap = null;
+  /** The set of used clauses to generate consequences. */
+  private HashMap<Clause,Clause> usedClauseDB = null;
+  
+}
+PARSER_END(Parser)
+
+SKIP :
+{
+  " "
+| "\t"
+| "\n"
+| "\r"
+| <"%" (~["\n","\r"])* ("\n" | "\r" | "\r\n")>
+| <"#" (~["\n","\r"])* ("\n" | "\r" | "\r\n")>
+| <"//" (~["\n","\r"])* ("\n" | "\r" | "\r\n")> 
+| <"/*" (~["*"])* "*" ("*" | ~["*","/"] (~["*"])* "*")* "/">
+}
+
+TOKEN : /* RESERVED WORDS */
+{
+  <INCLUDE:                         "include"                 >
+| <CNF:                             "cnf" | "input_clause"    >
+| <PRODUCTION_FIELD:                "pf" | "production_field" > 
+| <ALL:                             "ALL"                     >
+| <ALL_POS:                         "POS"                     >
+| <ALL_NEG:                         "NEG"                     >
+| <CONSEQ:                          "conseq"                  >
+| <USED:                            "used"                    >
+}
+
+// NOTE: It is not allowed to use the reserved words as names of predicates, functions or constants. 
+
+TOKEN : /* IDENTIFIERS */
+{
+  <CONSTANT:   ((<LOWERCASE>) (<LETTER> | <DIGIT>)*)     >
+| <INTEGER:    (("+"|"-")?(<DIGIT>)+)                    >
+| <VARIABLE:   ((<UPPERCASE> (<LETTER> | <DIGIT>)*) | ("_" (<DIGIT>)+)) >
+| <ANONYMOUS:  ("_")                                     >
+| <#NAME:      (<LETTER> (<LETTER> | <DIGIT>)*)          >
+| <#LOWERCASE: ["a"-"z"]                                 >
+| <#LETTER:    ["A"-"Z","_","a"-"z"]                     >
+| <#DIGIT:     ["0"-"9"]                                 >
+| <#UPPERCASE: ["A"-"Z"]                                 >
+}
+
+TOKEN : /* SYMBOLS */
+{
+  <PERIOD:     (".")                                     >
+| <POS:        ("+"|"++")                                >
+| <NEG:        ("-"|"--")                                >
+| <POS_NEG:    ("+-"|"++--")                             >
+| <NOT:        ("\\+")                                   >
+| <FILENAME:   ("'" (~["'"])+ "'")                       > // for exclusive use
+}
+
+void problem(String base) : 
+{
+  Clause clause = null;
+}
+{
+  (
+    clause = cnf() { cfp.addClause(clause); }
+  | pfield()
+  | include(base) 
+  ) *
+  <EOF>
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// include directive
+////////////////////////////////////////////////////////////////////////////////
+
+void include(String base) :
+{
+  Token  nameToken = null;
+  String name      = null;
+  String full      = null;
+}
+{
+  <INCLUDE> "(" nameToken = <FILENAME> ")" <PERIOD>
+  {
+    try {
+      // Removes "'" which surround the name.
+      name = nameToken.image.substring(1, nameToken.image.length() - 1);
+
+      // If the base directory is specified, then uses it.
+      if (base == null)
+        full = name;
+      else
+        full = base + File.separator + name;
+
+      new Parser(env, opt, cfp).parse(new BufferedReader(new FileReader(full)), name);
+
+    } catch (FileNotFoundException e) {
+      throw new ParseException("'" + full + "' is not found at line " + 
+                                token.beginLine + ", column " +  token.beginColumn + ".");
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// production field directive
+////////////////////////////////////////////////////////////////////////////////
+
+PField pfield() : 
+{
+  PField pfield = (cfp != null) ? cfp.getPField() : new PField(env, opt);
+  int    depth  = 0;
+  int    length = 0;
+}
+{
+  <PRODUCTION_FIELD>  
+  "("
+    "[" ( pfieldConds(pfield) ) ? "]" 
+    ( depth  = termDepth() { pfield.setMaxTermDepth(depth); } ) ?
+    ( length = length()    { pfield.setMaxLength(length);   } ) ?
+  ")" <PERIOD> { return pfield; }
+}
+
+void pfieldConds(PField pfield) : {}
+{
+  pfieldCond(pfield) ( LOOKAHEAD(2) "," pfieldCond(pfield) ) * [ "," ]	
+}
+
+void pfieldCond(PField pfield) :
+{
+  PLiteral plit   = null;
+  int      depth  = 0;
+  int      length = 0;
+}
+{
+  (
+    <ALL>     { plit = new PLiteral(PLiteral.BOTH); }
+  | <ALL_POS> { plit = new PLiteral(PLiteral.POS);  }
+  | <ALL_NEG> { plit = new PLiteral(PLiteral.NEG);  }
+  | plit = pliteral()
+  )
+  ( depth  = termDepth() { plit.setMaxTermDepth(depth); } ) ?
+  ( length = length()    { plit.setMaxLength(length);   } ) ?
+  { pfield.add(plit); }
+}
+
+PLiteral pliteral() :
+{
+  TreeTerm pred = null;
+  varNameMap.clear();
+}
+{
+  ( (<POS>)?   pred = predicate() { return new PLiteral(PLiteral.POS,  pred.toTerm()); } )
+| (  <NEG>     pred = predicate() { return new PLiteral(PLiteral.NEG,  pred.toTerm()); } )
+| (  <POS_NEG> pred = predicate() { return new PLiteral(PLiteral.BOTH, pred.toTerm()); } )
+}
+
+int termDepth() : 
+{
+  int depth = 0; 
+}
+{
+  ":" depth = integer()
+  {
+    if (depth <= 0)
+      throw new ParseException("Invalid value (" + depth + ") for term depth at line " + 
+                                token.beginLine + ", column " +  token.beginColumn + ".");
+    return depth;
+  }
+}
+
+int length() :
+{
+  int length = 0;
+}
+{
+  ( "<" length = integer() ) 
+  {
+    if (length < 1)
+      throw new ParseException("Invalid value (" + length + ") for length at line " + 
+                                token.beginLine + ", column " +  token.beginColumn + ".");
+    return length - 1;
+  }
+| ( "<=" length = integer() ) 
+  {
+    if (length < 0)
+      throw new ParseException("Invalid value (" + length + ") for length at line " + 
+                                token.beginLine + ", column " +  token.beginColumn + ".");
+    return length;
+  }
+}
+
+int integer() : {}
+{
+  <INTEGER>
+  {
+    // Removes the plus sign.
+    String num = token.image;
+    if (num.charAt(0) == '+')
+      num = num.substring(1);
+    return Integer.parseInt(num);  
+  }
+}
+  
+////////////////////////////////////////////////////////////////////////////////
+// cnf directive
+////////////////////////////////////////////////////////////////////////////////
+
+Clause cnf() :
+{
+  String name = null;
+  int    type = 0;
+  Clause clause = null;
+}
+{
+  <CNF> "(" name = clauseName() "," type = clauseType() "," clause = clause(name, type) ")" <PERIOD> 
+  { return clause; }
+}
+
+String clauseName() :
+{}
+{
+  <CONSTANT> 
+  { return token.image; }
+}
+
+int clauseType() :
+{
+  String type = null;
+}
+{
+  <CONSTANT>
+  {
+    type = token.image;
+    if (type.equals("axiom"))
+      return ClauseTypes.AXIOM;
+    if (type.equals("hypothesis"))
+      return ClauseTypes.HYPOTHESIS;
+    if (type.equals("conjecture"))
+      return ClauseTypes.CONJECTURE;
+    if (type.equals("top_clause"))
+      return ClauseTypes.TOP_CLAUSE;
+
+    throw new ParseException("Invalid type (" + type + ") of a clause at line " + 
+                              token.beginLine + ", column " +  token.beginColumn + ".");    
+  }
+}
+
+Clause clause(String name, int type) :
+{
+  ArrayList<Literal> literals = null;
+}
+{ 
+  literals = literals()
+  {
+    return new Clause(env, name, type, literals);
+  }
+}
+
+ArrayList<Literal> literals() :
+{
+  ArrayList<Literal> literals = new ArrayList<Literal>();
+  Literal            literal  = null;	
+  varNameMap.clear();
+}
+{
+  "["
+    literal = literal() { literals.add(literal); }
+    ( LOOKAHEAD(2) "," literal = literal() { literals.add(literal); } ) *
+    [ "," ]
+  "]"
+  {
+  	return literals;
+  }	
+}
+
+Literal literal() :
+{
+  TreeTerm pred = null;
+}
+{
+  ( (<POS>)? pred = predicate() { return new Literal(env, true , pred.toTerm()); } )
+| 
+  (  <NEG>   pred = predicate() { return new Literal(env, false, pred.toTerm()); } )
+| 
+  LOOKAHEAD(3) ( not() (<POS>)? pred = predicate() {	return new Literal(env, true, true, pred.toTerm()); } ) 
+| 
+  LOOKAHEAD(3) ( not()  <NEG>   pred = predicate() {	return new Literal(env, true, false, pred.toTerm()); } )  
+}
+
+void not() :
+{}
+{
+  <NOT>
+  {
+    if (!opt.use(USE_NEGATION_AS_FAILURE))
+      throw new ParseException("\"\\+\" (negation as failure) is not supported at line " + 
+                                token.beginLine + ", column " +  token.beginColumn + ".");    	
+  }	
+}
+
+TreeTerm predicate() :
+{
+  Token          name = null;
+  List<TreeTerm> args = null;
+}
+{
+  name = <CONSTANT> ( "(" args = termArgs() ")" ) ?
+  { 
+    if (args != null)
+      return TreeTerm.newPredicate(env, symTable.putPredicate(name.image, args.size()), args);
+    else
+      return TreeTerm.newPredicate(env, symTable.putPredicate(name.image, 0));
+  }
+}
+
+List<TreeTerm> termArgs() :
+{
+  TreeTerm       t    = null;
+  List<TreeTerm> args = new ArrayList<TreeTerm>();
+}
+{
+  t = term() 
+  {
+    args.add(t);
+  }
+  ( "," t = term() { args.add(t); } ) *
+  {
+    return args;
+  }
+}
+
+TreeTerm term() :
+{
+  Token          name = null;
+  List<TreeTerm> args = null;
+  int            num = 0;	
+}
+{
+  ( name = <CONSTANT> ( "(" args = termArgs() ")" ) ? )
+  {
+    if (args != null) 
+      return TreeTerm.newFunction(env, symTable.putFunction(name.image, args.size()), args);
+    else
+      return TreeTerm.newConstant(env, symTable.putConstant(token.image)); 
+  } 
+| num = integer()
+  {
+    return TreeTerm.newInteger(env, num);
+  }
+| <VARIABLE> 
+  {
+    return TreeTerm.newVariable(env, varNameMap.put(token.image)); 
+  }
+| <ANONYMOUS> 
+  {
+    return TreeTerm.newVariable(env, varNameMap.put());
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// conseq directive
+////////////////////////////////////////////////////////////////////////////////
+
+ArrayList<Conseq> conseqs() :
+{
+  ArrayList<Conseq> conseqs = new ArrayList<Conseq>();
+  Conseq            conseq  = null;
+}
+{
+    conseq = conseq() { conseqs.add(conseq); }
+  ( conseq = conseq() { conseqs.add(conseq); } ) *
+  {    
+    return conseqs; 
+  }
+}
+
+Conseq conseq() :
+{
+  ArrayList<Literal> literals    = null;
+}
+{
+  <CONSEQ> "(" literals = literals() 
+  { 
+    Conseq conseq = new Conseq(env, literals);
+  }
+  conseqOp(conseq) ")" <PERIOD> 
+  {    
+    return conseq; 
+  }
+}
+
+void conseqOp(Conseq conseq) :
+{
+  ArrayList<Clause> clauses = null;
+}
+{
+  ( "," <USED> "(" clauses = clauses() ")" 
+    {
+  	  ArrayList<Clause> usedClauses = new ArrayList<Clause>();
+  	  for (Clause c : clauses) {
+  	  	Clause same = usedClauseDB.get(c);
+  	  	if (same != null) {
+  	  	  usedClauses.add(same);
+  	  	}
+  	  	else {
+  	  	  usedClauses.add(c);
+          usedClauseDB.put(c, c);
+  	  	}
+  	  }
+  	  conseq.setUsedClauses(usedClauses); 
+    }
+  )* 
+}
+
+ArrayList<Clause> clauses() :
+{
+  ArrayList<Clause>  clauses  = new ArrayList<Clause>();
+  ArrayList<Literal> literals = null;
+}
+{
+  "["
+    literals = literals() { clauses.add(new Clause(env, literals)); }
+    ( LOOKAHEAD(2) "," literals = literals() { clauses.add(new Clause(env, literals)); } ) *
+    [ "," ]
+  "]"
+  {
+    return clauses;
+  } 
+}

@@ -1,0 +1,15 @@
+;zTest1_FCtest1st_1_Ligne_3_2.0-2.0-1.0-1.0
+Nb Conversations (avg) ;5.0;
+Nb Conversations (std-dev) ;0.0;
+Nb Messages (avg) ;117.0;
+Nb Messages (std-dev) ;0.0;
+Total size of Messages (avg) ;6875.0;
+Total size of Messages (std-dev) ;0.0;
+Nb InferenceSteps (avg) ;16772.0;
+Nb InferenceSteps (std-dev) ;0.0;
+Final rule redundancy (avg) ;2.6;
+Final rule redundancy (std-dev) ;0.0;
+Final obs redundancy (avg) ;3.0;
+Final obs redundancy (std-dev) ;0.0;
+Proportion of exact hypotheses (avg) ;1.0;
+Proportion of exact hypotheses (std-dev) ;0.0;

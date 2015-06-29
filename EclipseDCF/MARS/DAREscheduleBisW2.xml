@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Problem>
+<!--  -->
+<Infos>
+<NbAgents>8</NbAgents>
+</Infos>
+   <Common type="fusion">
+      <Program>     
+pf([lecturerName(_),studentName(_),tutorName(_),ans(_),
+notTeaching7(_,_),notTired8(_)]).
+      </Program>
+      <CommLanguage type="fusion">
+<ConstantTypes type="unique">
+<Pred> P </Pred>
+</ConstantTypes>
+<Format type="liste">
+   <pLitGroup> Pred </pLitGroup>
+   <pLitGroup> -Pred </pLitGroup>
+</Format>
+      </CommLanguage>
+
+	<Weighting type="fusion">
+		<GlobalParams type="unique">
+			<ClauseAggregator>PROD</ClauseAggregator>
+	     	</GlobalParams>
+		<Defaults type="fusion">
+			<PredicateDefaults type="unique">
+				<Weight>0.1</Weight>
+				<Aggregator>PROD</Aggregator>
+				<UseParam>ALL</UseParam>
+				<IntegerWeight>1</IntegerWeight>
+				<VariableWeight>0.7</VariableWeight>
+			</PredicateDefaults>
+			<ConstantsDefaults type="unique">
+				<Weight>1</Weight>
+			</ConstantsDefaults>
+			<IntegerDefaults type="unique">
+				<Weight>1</Weight>
+			</IntegerDefaults>
+			<VariableDefaults type="unique">
+				<Weight>0.5</Weight>
+			</VariableDefaults>
+		</Defaults>
+		<Symbols type="list">
+	<Predicate weight="0.999">ans</Predicate>
+	<Predicate weight="0.999">tutorName</Predicate>
+	<Predicate weight="0.999">studentName</Predicate>
+	<Predicate weight="0.999">lecturerName</Predicate>
+	<Predicate weight="1">notTeaching7</Predicate>
+	<Predicate weight="1">notTired8</Predicate>
+	<Constant weight="0.9991">monday</Constant>
+	<Constant weight="0.9992">tuesday</Constant>
+	<Constant weight="0.9993">wednesday</Constant>
+	<Constant weight="0.9994">thursday</Constant>
+	<Constant weight="0.9995">friday</Constant>
+	<Predicate weight="0.0001">tutorCanAttend</Predicate>
+	<Predicate weight="0.0001">studentCanAttend</Predicate>
+	<Predicate weight="0.0001">lecturerCanAttend</Predicate>
+	<Predicate weight="0.0001">p_tutorCanAttend</Predicate>
+	<Predicate weight="0.0001">p_studentCanAttend</Predicate>
+	<Predicate weight="0.0001">p_lecturerCanAttend</Predicate>
+		</Symbols>
+
+	</Weighting>
+
+
+   </Common>
+
+   <Agent i="0" name="Convener">
+      <Program>
+cnf(a,axiom,[conveneMeeting(date), -day1(T),-ans(T),-studentCanAttend(T),-tutorCanAttend(T),-lecturerCanAttend(T)]).
+cnf(a,axiom,[day1(tuesday)]).
+cnf(a,axiom,[day1(wednesday)]).
+cnf(a,axiom,[day1(thursday)]).
+cnf(a,axiom,[day1(friday)]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [conveneMeeting(date)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>conveneMeeting(t)</P>
+   <P>day1(T)</P>
+   <P>ans(T)</P>
+   <P>studentCanAttend(T)</P>
+   <P>tutorCanAttend(T)</P>
+   <P>lecturerCanAttend(T)</P>
+   <P>lecturerName(T)</P>
+   <P>studentName(T)</P>
+   <P>tutorName(T)</P>
+   <P>notTeaching7(T,N)</P>
+   <P>notTired8(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+
+   <Agent i="1" name="TutorPat">
+      <Program>
+cnf(a,axiom,[tutorCanAttend(T),-tutorName(pat),-free2(T)]).
+cnf(a,axiom,[free2(X),-nursery(X)]).
+cnf(a,axiom,[-tutorName(pat),-studentName(dan)]).
+cnf(a,axiom,[-tutorName(pat),-lecturerName(joe)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>tutorCanAttend(T)</P>
+   <P>tutorName(pat)</P>
+   <P>free2(T)</P>
+   <P>studentName(dan)</P>
+   <P>lecturerName(joe)</P>
+   <P>nursery(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="2" name="StudentBen">
+      <Program>
+cnf(a,axiom,[studentCanAttend(T),-studentName(ben),-free3(T)]).
+cnf(a,axiom,[free3(monday)]).
+cnf(a,axiom,[free3(thursday)]).
+cnf(a,axiom,[free3(friday)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>studentCanAttend(T)</P>
+   <P>studentName(ben)</P>
+   <P>free3(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="3" name="StudentDan">
+      <Program>
+cnf(a,axiom,[studentCanAttend(T),-studentName(dan),-free4(T)]).
+cnf(a,axiom,[free4(monday)]).
+cnf(a,axiom,[free4(wednesday)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>studentCanAttend(T)</P>
+   <P>studentName(dan)</P>
+   <P>free4(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="4" name="Nursery">
+      <Program>
+cnf(a,axiom,[nursery(wednesday)]).
+cnf(a,axiom,[nursery(friday)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>nursery(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="5" name="LecturerJoe">
+      <Program>
+cnf(a,axiom,[lecturerCanAttend(T),-lecturerName(joe),-freefromTeaching(T,joe)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>lecturerCanAttend(T)</P>
+   <P>lecturerName(joe)</P>
+   <P>freefromTeaching(T,joe)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="6" name="Timetabler">
+      <Program>
+cnf(a,axiom,[freefromTeaching(T,N),-notTeaching7(T,N)]).
+cnf(a,axiom,[-notTeaching7(T,N),-teachingJuniors7(T,N)]).
+cnf(a,axiom,[-notTeaching7(T,N),-teachingSeniors7(T,N)]).
+cnf(a,axiom,[teachingSeniors7(thursday,joe)]).
+cnf(a,axiom,[teachingJuniors7(wednesday,rob)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>freefromTeaching(T,N)</P>
+   <P>notTeaching7(T,N)</P>
+   <P>teachingJuniors7(T,N)</P>
+   <P>teachingSeniors7(T,N)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="7" name="LecturerRob">
+      <Program>
+cnf(a,axiom,[lecturerCanAttend(T),-lecturerName(rob),-freefromTeaching(T,rob),-notTired8(T)]).
+cnf(a,axiom,[-notTired8(thursday)]).
+      </Program>
+      <Observations>
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <P>lecturerCanAttend(T)</P>
+   <P>lecturerName(rob)</P>
+   <P>freefromTeaching(T,rob)</P>
+   <P>notTired8(T)</P>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+
+</Problem>

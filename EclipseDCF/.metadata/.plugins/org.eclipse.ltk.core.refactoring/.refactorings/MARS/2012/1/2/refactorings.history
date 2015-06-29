@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Clique_4.xml&apos; to &apos;DCF-refactor&apos;&#x0A;- Original project: &apos;MARS&apos;&#x0A;- Destination element: &apos;DCF-refactor&apos;&#x0A;- Original element: &apos;Clique_4.xml&apos;" description="Copy file" destination="=DCF-refactor" element1="Clique_4.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1326469466096" units="0" version="1.0"/>
+</session>

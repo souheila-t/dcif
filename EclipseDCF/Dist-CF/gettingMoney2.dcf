@@ -1,0 +1,19 @@
+
+pf([bankbook,card,-bankbook,-card]).
+
+agent(ag0).         
+cnf(a,axiom,[-atm, card, -get_money],ag0).
+cnf(a,axiom,[-need_money, -closed, atm],ag0).         
+cnf(a,axiom,[-holiday, closed],ag0).
+
+agent(ag1).
+cnf(a,axiom,[-need_money, -open, atm, counter],ag1).
+cnf(a,axiom,[get_money],ag1).
+cnf(a,axiom,[-weekday, open],ag1).
+cnf(a,axiom,[-get_money, open],ag1).
+
+agent(ag2).
+cnf(a,axiom,[weekday, holiday],ag2).
+cnf(a,axiom,[-counter, bankbook, -get_money],ag2).
+cnf(a,axiom,[need_money],ag2).
+

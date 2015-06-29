@@ -1,0 +1,10 @@
+cnf(f1, axiom,[belongs(a,c1)]).
+cnf(f2, axiom,[belongs(b,c1)]).
+cnf(f3, axiom,[belongs(c,c1)]).
+cnf(rule1, axiom,[-exchange(C1,X,Y,C2),belongs(Y,C2)]).
+cnf(rule2, axiom,[-exchange(C1,X,Y,C2),-belongs(Z,C1),eq2(Z,X),belongs(Z,C2)]).
+cnf(tc, axiom,[exchange(c1,a,d,newComp)]).
+cnf(f4, axiom,[-eq2(c,a)]).
+
+
+pf([belongs(_,_)]<=1).

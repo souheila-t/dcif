@@ -1,0 +1,7 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+PUZ001-3_all_ld-1--1;_kmet3;3;DCF-PB-Seq-MaxClSize;1;0;1183;88;254;811;0;11;19;365;55;101;330;0;7;10;219;14;52;157;0;0;2;2;14;101;330;0;0;2;2
+PUZ001-3_all_ld-1--1;_kmet3;3;DCF-PB-Seq-MaxClSize;1;26;1357283;116;254;811;26;11;45;1333;71;101;330;26;7;28;970;21;52;157;0;0;7;144;21;101;330;26;0;28;970
+PUZ001-3_all_ld-1--1;_kmet3;3;DCF-PB-Seq-MaxClSize;1;37;6270;110;389;1290;56;12;76;2300;61;224;785;32;8;34;1206;23;52;157;8;0;15;375;26;224;785;32;0;34;1206
+PUZ001-3_all_ld-1--1;_kmet3;3;DCF-PB-Seq-MaxClSize;1;37;4011;106;389;1290;56;12;76;2300;57;224;785;32;8;34;1206;23;52;157;8;0;15;375;26;224;785;32;0;34;1206
+PUZ001-3_all_ld-1--1;_kmet3;3;DCF-PB-Seq-MaxClSize;1;37;3671;105;389;1290;56;12;76;2300;55;224;785;32;8;34;1206;24;52;157;8;0;15;375;26;224;785;32;0;34;1206
+SET777-1_all_ld2-3;_kmet2;2;DCF-PB-Seq-MaxClSize;0;7;1088;113;806;2463;11;3;19;525;60;725;2126;7;3;10;269;53;81;337;4;0;9;256;53;725;2126;7;0;9;256

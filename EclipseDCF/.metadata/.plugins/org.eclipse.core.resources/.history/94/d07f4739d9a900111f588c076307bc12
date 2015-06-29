@@ -1,0 +1,65 @@
+import java.awt.Dimension;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import javax.swing.JFrame;
+
+import edu.uci.ics.jung.algorithms.layout.*;
+import edu.uci.ics.jung.visualization.BasicVisualizationServer;
+
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		// Graph structure
+		AgentGraph g=new AgentGraph();
+		//g.loadFromXml(args[0]);
+		g.loadFromXml("src/XmlGraphs/Ligne_10");
+		
+		// Beliefs initialisation
+		for (AgentNode ag:g.getVertices()){
+			Random r=new Random();
+			int val=r.nextInt(3)-1;
+			ag.setBelief(new Belief(val));
+		}
+		
+		// The Layout<V, E> is parameterized by the vertex and edge types
+		Layout<AgentNode, BasicEdge> layout = new FRLayout<AgentNode,BasicEdge>(g);
+		layout.setSize(new Dimension(500,500)); // sets the initial size of the space
+		// The BasicVisualizationServer<V,E> is parameterized by the edge types
+		BasicVisualizationServer<AgentNode,BasicEdge> vv = new BasicVisualizationServer<AgentNode,BasicEdge>(layout);
+		vv.setPreferredSize(new Dimension(660,660)); //Sets the viewing area size
+		
+		vv.getRenderContext().setVertexFillPaintTransformer(new BeliefPaint());
+		
+		int n=0;
+		List<JFrame> frameL=new ArrayList<JFrame>();
+		frameL.add(new JFrame("Simple Graph View "+n));
+		frameL.get(n).setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameL.get(n).getContentPane().add(vv);
+		frameL.get(n).pack();
+		frameL.get(n).setVisible(true);
+		
+		boolean converge=false;
+		while (!converge && n<20){
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {e.printStackTrace();}
+		
+			converge=!g.updateBelief(new BeliefUpdater());
+			if (converge) continue;
+			n++;			
+			frameL.add(new JFrame("Simple Graph View "+n));
+			//frameL.get(n).setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frameL.get(n).getContentPane().add(vv);
+			frameL.get(n).pack();
+			frameL.get(n).setVisible(true);
+		}
+	}
+
+}

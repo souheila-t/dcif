@@ -1,0 +1,47 @@
+Version check
+
+0.3.11
+	correction de bug sur ComputeExtendedHyp (did not use inverse entailment field).
+0.3.12
+	correction de bugs (manif were not added to narrowed field
+						need to unblock avec withdraw-incomplete)
+0.3.13
+	correction de bugs:
+		refonte du calcul de contexte et extHyp par language, car la sŽparation compromettait la
+			soundness
+		Debuggage de cette refonte, en assurant notamment que l'adaptation du langage au graphe soit
+			bien prise en compte.
+0.3.135
+	correction bug correspondance entre computeCtx() et computeCtx(hyp,prev, tt,pf)
+	(dans DiagAgentUsingCommLan.computeCtx(...))
+0.3.136
+	correction bug mise ˆ jour sur adoption d'une hypotheses complete apres une hypothese partielle
+	(mise a jour de partialHyp dans LocalTheory.setFavHypothesis 
+	et ajout de if (updatedCand) dans LocalTheory.unblockAllHyp())
+	suppression de updatedCtx=False dans unblock (as the hypothesis
+		 might stays the same, leaving the context valid)
+	 error on willProposeEmpty at start.
+	 error on computeFavExtHyp : semi-partial hypotheses were not considered (added PField to it)
+0.3.137
+	partial hyp field : need to include mixed partial hyp (to solve subgoals even when not sufficient)
+		uses partlyBelongsTo instead of belongsTo when pruning partial hyp
+	need to add new clauses to extHypField	to have all candidates from argue in computeExtHyp
+0.3.138
+	change addTheory to deal with Inform that cause partial Hyp not to be relevant for testing 
+		(for ex if the only literal of that hyp that is in the commLanguage is confirmed to be true)
+	ensure partial hyp with non blocked abd are proposed even if partial 
+		(as hypfield removed from pruning) -> finally cancelled
+			-> replaced by requiring one agent to declare all hypothesis field in its initial language
+	ensure partial hyp whose literals in comm. language are all blocked are pruned out
+0.3.139
+	limit refutation to subhyp concerned
+	put off the 'Exlcusive' characteristic of the solver
+0.3.1395
+	correction of limit refutation : keep hyp and not top clauses
+	NOTE on language : 
+		- one agent should have all hyp field in its individual language 
+			(to ensure different part of a common solution have a path to rejoin)
+		- observations should have slightly higher weight than the other non-abductible
+			it ensures that when an agent settle on a partial hyp, it stays 
+				the same regardless of its neighbour
+	 	  	 

@@ -1,0 +1,20 @@
+1323132615654	Rename type 'Graph'
+1323316419498	Rename method 'setLabels'
+1323322438121	Move compilation unit
+1323322448825	Move compilation unit
+1323322964060	Rename type 'ClauseSetMessage'
+1323324778878	Rename type 'PBMessage'
+1323324789303	Rename type 'PBMessageTypes'
+1323327840397	Copy compilation unit
+1323327855847	Rename type 'AsyncProtocol'
+1323327908651	Copy compilation units
+1323327923186	Rename type 'CFMessage'
+1323327937024	Rename type 'CFMessageTypes'
+1323336978863	Move compilation unit
+1323336992811	Rename package 'distNewCarc.partitionbased.asynchronous'
+1323337007297	Rename package 'distNewCarc.partitionbased.starbased'
+1323337018070	Rename package 'distNewCarc.partitionbased.tokenbased'
+1323337041714	Move compilation units
+1323337047618	Delete element
+1323338519579	Move compilation unit
+1323363080810	Rename local variable 'cycle'

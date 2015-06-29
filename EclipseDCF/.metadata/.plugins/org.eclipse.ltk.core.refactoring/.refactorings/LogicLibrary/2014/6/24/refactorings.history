@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 packages to &apos;Tache/src&apos;&#x0D;&#x0A;- Original project: &apos;LogicLibrary&apos;&#x0D;&#x0A;- Destination element: &apos;Tache/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     LogicLibrary/src/solarInterface&#x0D;&#x0A;     LogicLibrary/src/mars.reasoning&#x0D;&#x0A;     LogicLibrary/src/answerSetProgramming&#x0D;&#x0A;     LogicLibrary/src/logicLanguage" description="Copy packages" destination="=Tache/src" element1="/src&lt;solarInterface" element2="/src&lt;mars.reasoning" element3="/src&lt;answerSetProgramming" element4="/src&lt;logicLanguage" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1402688458980" version="1.0"/>
+</session>

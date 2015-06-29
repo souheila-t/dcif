@@ -1,0 +1,11 @@
+groupBy(Problem).
+
+%problem(glucolysis,full,metis6).
+%problem(glucolysis,min5,metis6).
+problem(medium,Min-5_ld3-5,metis9).
+
+
+method(SOLAR-Carc).
+method(SOLAR-Inc-Carc).
+method(DCF-PB-Seq-MaxClSize).
+method(DCF-PB-Par-MaxClSize).

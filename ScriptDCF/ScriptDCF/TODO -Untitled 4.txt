@@ -1,0 +1,39 @@
+TODO
+
+- analyse root et distrib: 
+	choisir quelques problemes et se donner les parametres
+	- stats tree + pf
+	- stats dcf
+
+- script et time out ? fix the pb
+
+- apprentissage auto de la racine ?
+	-mise en pratique d'apprentissage auto ?
+
+- generer problemes SAT pour Hirayama
+
+- resumé meeting projet et suite...
+
+
+
+- Resource bounded Smile 
+- JAIR : expe multisource ?
+
+- DCF sans cycle-cut (multiple parents, mais une seule racine)
+
+- recapitulatif methodes DCF et New DCF
+	
+_ version synchrone de l'algo d'Hirayama ?
+
+- SOLAR ++ ?
+	- multiple PFields
+	- merged PFields
+	- interruptible - et reprenable
+	- interface avec DCF... Env épuré ? (substitution free ou function aplanir)
+	- limitation sur longeur de preuve ? (nb used clauses ou Nb Resolve ?) parait plus intuitif que profondeur de l'arbre...
+
+- reponter Tina
+
+- mail a stagiaire BioInfo
+
+- mariage Laurent

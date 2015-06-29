@@ -1,0 +1,26 @@
+%unnamed
+%Problem: 
+%Status: 
+%Type: 
+
+agent(ag0).
+cnf(c0,axiom,[-a],ag0).
+cnf(c1,axiom,[-b,e,g],ag0).
+cnf(c2,axiom,[a,-f],ag0).
+
+agent(ag1).
+
+
+agent(ag2).
+cnf(c3,axiom,[e,b,-c],ag2).
+cnf(c4,axiom,[-d,-c,-e],ag2).
+cnf(c5,axiom,[b,a,f],ag2).
+
+agent(ag3).
+cnf(c6,axiom,[c],ag3).
+cnf(c7,axiom,[-b,d],ag3).
+
+
+
+% target and conditional sources
+pf([g]<=1).

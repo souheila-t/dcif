@@ -1,0 +1,80 @@
+import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import org.xml.sax.helpers.DefaultHandler;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+
+import edu.uci.ics.jung.graph.SparseGraph;
+
+
+public class AgentGraph extends SparseGraph<AgentNode, BasicEdge> {
+	
+	public AgentGraph(){
+		super();
+	}
+
+	public void loadFromXml(String filenameXMLSansExt){
+		String graphXML=filenameXMLSansExt.concat(".xml");
+		//handler = new XMLHandlet(); = this
+		SAXParserFactory factory = SAXParserFactory.newInstance();
+		factory.setNamespaceAware(true);
+		factory.setValidating(true);
+		try {
+			SAXParser parser = factory.newSAXParser();
+			parser.parse(graphXML,new Handler(this));
+		} catch (SAXException ex) {
+			ex.printStackTrace();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} catch (ParserConfigurationException ex) {
+			ex.printStackTrace();
+		}
+	}
+	
+	public AgentNode getAgent(int ind){
+		for (AgentNode node:this.getVertices()){
+			if (node.id==ind){
+				return node;
+			}
+		}
+		return null;
+	}
+	
+	
+	
+	public void setAgentBelief(int ind,Belief b){
+		AgentNode ag=getAgent(ind);
+		if (ag!=null)
+			ag.setBelief(b);
+	}
+	
+	//XMLHandler
+	public class Handler extends DefaultHandler{
+		AgentGraph g;
+		public Handler(AgentGraph graph){
+			g=graph;
+		}
+		public void startElement(String uri, String name, String qname, Attributes attr){
+			int n,i,j;
+			if (name.equals("NbAgent")) {
+				n=Integer.parseInt(attr.getValue("n"));
+				for (int k=0;k<n;k++)
+					g.addVertex(new AgentNode(k));			
+			}
+			
+			if (name.equals("Arc")) {
+				i=Integer.parseInt(attr.getValue("i"));
+				j=Integer.parseInt(attr.getValue("j"));
+				g.addEdge(new BasicEdge(), g.getAgent(i), g.getAgent(j));			
+			}
+		}
+	}
+	
+	
+	
+}
+	

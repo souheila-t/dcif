@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Problem>
+<!--  -->
+<Infos>
+<NbAgents>6</NbAgents>
+</Infos>
+   <Common type="fusion">
+      <Program>
+cnf(an, axiom, [concentration(X, down, Y), -reactionnode(X, Z, W), -inhibited(Z, t, W, X, Y)]).
+cnf(an, axiom, [concentration(X, down, Y), -reactionnode(X, Z, W), -inhibited(Z, f, W, X, Y), -concentration(W, down, Y)]).
+cnf(an, axiom, [concentration(X, up, Y), -reactionnode(Z, W, X), -inhibited(W, t, X, Z, Y)]).
+cnf(an, axiom, [concentration(X, up, Y), -reactionnode(X, Z, W), -inhibited(Z, f, W, X, Y), -concentration(W, up, Y)]).
+cnf(an, axiom, [-concentration(X, up, Y), -concentration(X, down, Y)]).
+cnf(an, axiom, [-inhibited(X, t, Y, Z, W), -inhibited(X, f, Y, Z, W)]).
+cnf(an, axiom, [-inhibited(X, f, Y, Z, W), -inhibited(X, f, Z, Y, W)]).
+pf([inhibited(_,_,_,_,_)] &lt;= 15).
+      </Program>
+      <CommLanguage type="fusion" >
+<ConstantTypes type="unique">
+   <X> Metabolite </X>
+</ConstantTypes>
+<Format type="list">
+   <pLitGroup> concentration(X,_,_) </pLitGroup>
+   <pLitGroup> -concentration(X,_,_) </pLitGroup>
+</Format>
+      </CommLanguage>
+
+	<Weighting type="fusion">
+		<GlobalParams type="unique">
+			<ClauseAggregator>PROD</ClauseAggregator>
+	     	</GlobalParams>
+		<Defaults type="fusion">
+			<PredicateDefaults type="unique">
+				<Weight>0.01</Weight>
+				<Aggregator>PROD</Aggregator>
+				<UseParam>ALL</UseParam>
+				<IntegerWeight>1</IntegerWeight>
+				<VariableWeight>1</VariableWeight>
+			</PredicateDefaults>
+			<FunctionDefaults type="unique">
+				<Weight>1</Weight>
+				<Aggregator>PROD</Aggregator>
+				<UseParam>ALL</UseParam>
+				<IntegerWeight>1</IntegerWeight>
+				<VariableWeight>1</VariableWeight>
+			</FunctionDefaults>
+			<ConstantsDefaults type="unique">
+				<Weight>1</Weight>
+			</ConstantsDefaults>
+			<IntegerDefaults type="unique">
+				<Weight>1</Weight>
+			</IntegerDefaults>
+			<VariableDefaults type="unique">
+				<Weight>1</Weight>
+			</VariableDefaults>
+		</Defaults>
+		<Classes  type="fusion">
+			<PredicateClasses type="fusion">
+				<HypBasicPred type="unique">	
+					<Weight>0.99</Weight>
+				</HypBasicPred>
+			</PredicateClasses>
+		</Classes>
+		<Symbols type="list">
+	<Predicate weight="0.001" agg="PROD" useParam="ALL" intW="1" varW="1">concentration</Predicate>
+	<Predicate class="HypBasicPred">inhibited</Predicate>	
+	<Constant weight="0.9015991"> d1d5d99d1 </Constant>
+	<Constant weight="0.9011998"> d1d1d99d8 </Constant>
+	<Constant weight="0.9014993"> d1d4d99d3 </Constant>
+	<Constant weight="0.9041232"> d4d1d2d32 </Constant>
+	<Constant weight="0.902133"> d2d1d3d3 </Constant>
+	<Constant weight="0.903531"> d3d5d3d1 </Constant>
+	<Constant weight="0.902112"> d2d1d1d2 </Constant>
+	<Constant weight="0.903533"> d3d5d3d3 </Constant>
+	<Constant weight="0.9035210"> d3d5d2d10 </Constant>
+	<Constant weight="0.9035159"> d3d5d1d59 </Constant>
+	<Constant weight="0.9026139"> d2d6d1d39 </Constant>
+	<Constant weight="0.9011142"> d1d1d1d42 </Constant>
+	<Constant weight="0.9023161"> d2d3d1d61 </Constant>
+	<Constant weight="0.901131116"> d1d13d11d16 </Constant>
+	<Constant weight="0.902131"> d2d1d3d1 </Constant>
+	<Constant weight="0.9012131"> d1d2d1d31 </Constant>
+	<Constant weight="0.904212"> d4d2d1d2 </Constant>
+	<Constant weight="0.9013991"> d1d3d99d1 </Constant>
+	<Constant weight="0.904321"> d4d3d2d1 </Constant>
+	<Constant weight="0.902111"> d2d1d1d1 </Constant>
+	<Constant weight="0.902117"> d2d1d1d7 </Constant>
+	<Constant weight="0.906345"> d6d3d4d5 </Constant>
+	<Constant weight="0.904213"> d4d2d1d3 </Constant>
+	<Constant weight="0.90261"> d2d6d1dx </Constant>
+	<Constant weight="0.9026114"> d2d6d1d14 </Constant>
+	<Constant weight="0.902331"> d2d3d3d1 </Constant>
+	<Constant weight="0.906211"> d6d2d1d1 </Constant>
+	<Constant weight="0.9042154"> d4d2d1d54 </Constant>
+	<Constant weight="0.904316"> d4d3d1d6 </Constant>
+	<Constant weight="0.904112"> d4d1d1d20 </Constant>
+	<Constant weight="0.9027169"> d2d7d1d69 </Constant>
+	<Constant weight="0.9011127"> d1d1d1d27 </Constant>
+	<Constant weight="0.901241"> d1d2d4d1 </Constant>
+		</Symbols>
+
+	</Weighting>
+   </Common>
+
+   <Agent i="0">
+      <Program>
+cnf(an, axiom, [reactionnode(formaldehyde, d1d5d99d1, sarcosine)]).
+cnf(an, axiom, [reactionnode(sarcosine, d1d5d99d1, formaldehyde)]).
+cnf(an, axiom, [reactionnode(formaldehyde, d1d1d99d8, formate)]).
+cnf(an, axiom, [reactionnode(formate, d1d1d99d8, formaldehyde)]).
+cnf(an, axiom, [reactionnode(formaldehyde, d1d4d99d3, methylamine)]).
+cnf(an, axiom, [reactionnode(methylamine, d1d4d99d3, formaldehyde)]).
+cnf(an, axiom, [reactionnode(tmao, d4d1d2d32, formaldehyde)]).
+cnf(an, axiom, [reactionnode(tmao, d4d1d2d32, methylamine)]).
+cnf(an, axiom, [reactionnode(formaldehyde, d4d1d2d32, tmao)]).
+cnf(an, axiom, [reactionnode(methylamine, d4d1d2d32, tmao)]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [concentration(formate, down, 8)]).
+cnf(o1, top_clause, [concentration(methylamine, up, 8)]).
+cnf(o1, top_clause, [concentration(tmao, down, 8)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Metabolite> formaldehyde </Metabolite>
+   <Metabolite> methylamine </Metabolite>
+   <Metabolite> tmao </Metabolite>
+   <Metabolite> formate </Metabolite>
+   <Metabolite> sarcosine </Metabolite>
+   <Grouzouk> aaa </Grouzouk>	
+   <Grouzouk> bbb </Grouzouk>	
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="1">
+      <Program>
+cnf(an, axiom, [reactionnode(citruline, d2d1d3d3, ornithine)]).
+cnf(an, axiom, [reactionnode(ornithine, d2d1d3d3, citruline)]).
+cnf(an, axiom, [reactionnode(arginine, d3d5d3d1, urea)]).
+cnf(an, axiom, [reactionnode(arginine, d3d5d3d1, ornithine)]).
+cnf(an, axiom, [reactionnode(urea, d3d5d3d1, arginine)]).
+cnf(an, axiom, [reactionnode(ornithine, d3d5d3d1, arginine)]).
+cnf(an, axiom, [reactionnode(ornithine, d2d1d1d2, creatine)]).
+cnf(an, axiom, [reactionnode(creatine, d2d1d1d2, ornithine)]).
+cnf(an, axiom, [reactionnode(creatine, d3d5d3d3, urea)]).
+cnf(an, axiom, [reactionnode(creatine, d3d5d3d3, sarcosine)]).
+cnf(an, axiom, [reactionnode(urea, d3d5d3d3, creatine)]).
+cnf(an, axiom, [reactionnode(sarcosine, d3d5d3d3, creatine)]).
+cnf(an, axiom, [reactionnode(creatinine, d3d5d2d10, creatine)]).
+cnf(an, axiom, [reactionnode(creatine, d3d5d2d10, creatinine)]).
+cnf(an, axiom, [reactionnode(creatinine, d3d5d1d59, sarcosine)]).
+cnf(an, axiom, [reactionnode(sarcosine, d3d5d1d59, creatinine)]).
+
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [concentration(creatinine, down, 8)]).
+cnf(o1, top_clause, [concentration(creatine, up, 8)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Metabolite> ornithine </Metabolite>
+   <Metabolite> urea </Metabolite>
+   <Metabolite> creatine </Metabolite>
+   <Metabolite> creatinine </Metabolite>
+   <Metabolite> sarcosine </Metabolite>
+   <Metabolite> citruline </Metabolite> 
+   <Metabolite> arginine </Metabolite>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="2">
+      <Program>
+cnf(an, axiom, [reactionnode(citrate, d4d2d1d2, fumarate)]).
+cnf(an, axiom, [reactionnode(fumarate, d4d2d1d2, citrate)]).
+cnf(an, axiom, [reactionnode(succinate, d1d3d99d1, fumarate)]).
+cnf(an, axiom, [reactionnode(fumarate, d1d3d99d1, succinate)]).
+cnf(an, axiom, [reactionnode(arginine, d4d3d2d1, las)]).
+cnf(an, axiom, [reactionnode(las, d4d3d2d1, arginine)]).
+cnf(an, axiom, [reactionnode(fumarate, d4d3d2d1, las)]).
+cnf(an, axiom, [reactionnode(las, d4d3d2d1, fumarate)]).
+cnf(an, axiom, [reactionnode(nmnd, d2d1d1d1, fumarate)]).
+cnf(an, axiom, [reactionnode(fumarate, d2d1d1d1, nmnd)]).
+cnf(an, axiom, [reactionnode(nmna, d2d1d1d7, fumarate)]).
+cnf(an, axiom, [reactionnode(fumarate, d2d1d1d7, nmna)]).
+cnf(an, axiom, [reactionnode(las, d6d3d4d5, citruline)]).
+cnf(an, axiom, [reactionnode(citruline, d6d3d4d5, las)]).
+
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [concentration(nmna, down, 8)]).
+cnf(o1, top_clause, [concentration(nmnd, up, 8)]).
+cnf(o1, top_clause, [concentration(las, up, 8)]).
+cnf(o1, top_clause, [concentration(fumarate, down, 8)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Metabolite> nmna </Metabolite> 
+   <Metabolite> nmnd </Metabolite>
+   <Metabolite> las </Metabolite> 
+   <Metabolite> fumarate </Metabolite>
+   <Metabolite> succinate </Metabolite> 
+   <Metabolite> citrate </Metabolite>
+   <Metabolite> citruline </Metabolite> 
+   <Metabolite> arginine </Metabolite>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="3">
+      <Program>
+cnf(an, axiom, [reactionnode(isocitrate, d4d2d1d3, citrate)]).
+cnf(an, axiom, [reactionnode(citrate, d4d2d1d3, isocitrate)]).
+cnf(an, axiom, [reactionnode(isocitrate, d4d2d1d3, transaconitate)]).
+cnf(an, axiom, [reactionnode(transaconitate, d4d2d1d3, isocitrate)]).
+cnf(an, axiom, [reactionnode(citrate, d2d6d1dx, taurine)]).
+cnf(an, axiom, [reactionnode(taurine, d2d6d1dx, citrate)]).
+cnf(an, axiom, [reactionnode(betaalanine, d2d6d1d14, citrate)]).
+cnf(an, axiom, [reactionnode(citrate, d2d6d1d14, betaalanine)]).
+cnf(an, axiom, [reactionnode(acetylcoa, d2d3d3d1, citrate)]).
+cnf(an, axiom, [reactionnode(citrate, d2d3d3d1, acetylcoa)]).
+cnf(an, axiom, [reactionnode(acetylcoa, d6d2d1d1, acetate)]).
+cnf(an, axiom, [reactionnode(acetate, d6d2d1d1, acetylcoa)]).
+
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [concentration(transaconitate, up, 8)]).
+cnf(o1, top_clause, [concentration(taurine, up, 8)]).
+cnf(o1, top_clause, [concentration(acetate, up, 8)]).
+cnf(o1, top_clause, [concentration(citrate, down, 8)]).
+     </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Metabolite> acetate </Metabolite> 
+   <Metabolite> taurine </Metabolite>
+   <Metabolite> transaconitate </Metabolite> 
+   <Metabolite> acetylcoa </Metabolite>
+   <Metabolite> betaalanine </Metabolite> 
+   <Metabolite> isocitrate </Metabolite>
+   <Metabolite> citrate </Metabolite>
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="4">
+      <Program>
+cnf(an, axiom, [reactionnode(lactate, d4d2d1d54, acryloylcoa)]).
+cnf(an, axiom, [reactionnode(acryloylcoa, d4d2d1d54, lactate)]).
+cnf(an, axiom, [reactionnode(betaalanine, d4d3d1d6, acryloylcoa)]).
+cnf(an, axiom, [reactionnode(acryloylcoa, d4d3d1d6, betaalanine)]).
+cnf(an, axiom, [reactionnode(betaalanine, d4d1d1d20, llysine)]).
+cnf(an, axiom, [reactionnode(llysine, d4d1d1d20, betaalanine)]).
+cnf(an, axiom, [reactionnode(glucose, d2d7d1d69, pyruvate)]).
+cnf(an, axiom, [reactionnode(pyruvate, d2d7d1d69, glucose)]).
+cnf(an, axiom, [reactionnode(pyruvate, d1d1d1d27, lactate)]).
+cnf(an, axiom, [reactionnode(lactate, d1d1d1d27, pyruvate)]).
+cnf(an, axiom, [reactionnode(pyruvate, d1d2d4d1, acetylcoa)]).
+cnf(an, axiom, [reactionnode(acetylcoa, d1d2d4d1, pyruvate)]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [concentration(glucose, up, 8)]).
+cnf(o1, top_clause, [concentration(lactate, up, 8)]).
+cnf(o1, top_clause, [concentration(betaalanine, up, 8)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Metabolite> glucose </Metabolite> 
+   <Metabolite> pyruvate </Metabolite>
+   <Metabolite> lactate </Metabolite> 
+   <Metabolite> acryloylcoa </Metabolite> 
+   <Metabolite> llysine </Metabolite>
+   <Metabolite> acetylcoa </Metabolite>
+   <Metabolite> betaalanine </Metabolite> 
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+   <Agent i="5">
+      <Program>
+cnf(an, axiom, [reactionnode(l2aminoadipate, d2d6d1d39, e2oxoglutarate)]).
+cnf(an, axiom, [reactionnode(e2oxoglutarate, d2d6d1d39, l2aminoadipate)]).
+cnf(an, axiom, [reactionnode(e2oxoglutarate, d1d1d1d42, isocitrate)]).
+cnf(an, axiom, [reactionnode(isocitrate, d1d1d1d42, e2oxoglutarate)]).
+cnf(an, axiom, [reactionnode(e2oxoglutarate, d2d3d1d61, succinate)]).
+cnf(an, axiom, [reactionnode(succinate, d2d3d1d61, e2oxoglutarate)]).
+cnf(an, axiom, [reactionnode(succinate, d1d13d11d16, hippurate)]).
+cnf(an, axiom, [reactionnode(hippurate, d1d13d11d16, succinate)]).
+cnf(an, axiom, [reactionnode(acryloylcoa, d2d1d3d1, succinate)]).
+cnf(an, axiom, [reactionnode(succinate, d2d1d3d1, acryloylcoa)]).
+cnf(an, axiom, [reactionnode(l2aminoadipate, d1d2d1d31, llysine)]).
+cnf(an, axiom, [reactionnode(llysine, d1d2d1d31, l2aminoadipate)]).
+      </Program>
+      <Observations>
+cnf(o1, top_clause, [concentration(l2aminoadipate, up, 8)]).
+cnf(o1, top_clause, [concentration(hippurate, down, 8)]).
+cnf(o1, top_clause, [concentration(e2oxoglutarate, down, 8)]).
+cnf(o1, top_clause, [concentration(succinate, down, 8)]).
+      </Observations>
+      <CommLanguage>
+<ConstantsDomain>
+   <Metabolite> l2aminoadipate </Metabolite> 
+   <Metabolite> e2oxoglutarate </Metabolite>
+   <Metabolite> hippurate </Metabolite> 
+   <Metabolite> isocitrate </Metabolite> 
+   <Metabolite> succinate </Metabolite>
+   <Metabolite> acryloylcoa </Metabolite> 
+   <Metabolite> llysine </Metabolite>
+   <Grouzouk> aaa </Grouzouk>	
+   <Grouzouk> bbb </Grouzouk>	
+</ConstantsDomain>
+      </CommLanguage>
+   </Agent>
+
+</Problem>
+
+
+
+
+

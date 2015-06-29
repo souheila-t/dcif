@@ -1,0 +1,100 @@
+package main;
+
+import problemDistribution.DCFProblem;
+import problemDistribution.DistributedConsequenceFindingProblem;
+import agLib.agentCommunicationSystem.BasicAgent;
+import agLib.agentCommunicationSystem.CanalComm;
+import agLib.agentCommunicationSystem.CommunicationModule;
+
+import communication.protocol.LocalPBProtocol;
+
+import solarInterface.IndepPField;
+import solarInterface.SolProblem;
+import systemStructure.Tree;
+import cnfPb.PFieldGenerator;
+import cnfPb.VariantProblem;
+
+public class makeTree {
+
+	public static void printHelp(){
+		System.out.println("This tools make and save the proper labeled tree corresponding to a dcf problem");
+		System.out.println("Usage :");
+		System.out.println("    makeTree [Options] filename.dcf [filename2.tree]");
+		System.out.println("Options");
+		System.out.println("-replace  replace the produced .tree if it already exists.");
+		System.out.println("-verbose  print each edge cut.");
+	}
+	
+	public static void exec(String filenameNoExt,String varName, String output, boolean replace){
+		try {
+			CanalComm sys = new CanalComm(new BasicAgent());
+			CommunicationModule cSys=null;
+			int typeConsFinding = LocalPBProtocol.SEQUENTIAL;
+			System.out.println("Building tree...");
+			int root=0;
+			int lengthLimit=-1;
+			DCFProblem dcf=new DCFProblem(filenameNoExt);
+			//load var if any
+			if (varName!=null && varName.length()>0){
+				VariantProblem var=new VariantProblem(varName);
+				dcf.setGbPField(var.variantPField);
+				dcf.setMaxDepth(var.depthLimit);
+			}
+			Tree tree = new Tree(dcf, "Clique_", root, cSys, sys, typeConsFinding, -1);
+			//Tree.TreeFromDcf(filenameNoExt, "Clique_", root, cSys, sys, typeConsFinding, lengthLimit);
+			tree.save(output,replace);
+		} catch (Exception e) {
+			System.err.println("Error.");
+			//e.printStackTrace();
+		}
+	}	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int i=0;
+		boolean replace=false;
+		Tree.useVariantCycleCut=false;
+		Tree.verbose=false;
+		String variantName=null;
+		while (args[i].startsWith("-")) {
+			if (args[i].trim().equals("-replace")){
+				replace=true;
+				i++;
+				continue;
+			}
+			if (args[i].trim().equals("-verbose")){
+				Tree.verbose=true;
+				i++;
+				continue;
+			}
+			if (args[i].trim().equals("-varPF=")){
+				variantName=args[i].substring(args[i].indexOf("=")+1).trim();
+				i++;
+				continue;
+			}
+			if (args[i].trim().equals("-varCut")){
+				Tree.useVariantCycleCut=true;
+				i++;
+				continue;
+			}
+			else{
+				printHelp();
+				return;
+			}
+		}
+		
+		String problemFilename=args[i].trim();
+		if (problemFilename.endsWith(".dcf"))
+			problemFilename=problemFilename.substring(0,problemFilename.length()-4);
+		String outputFilename=problemFilename;
+		if (args.length>i+1){
+			outputFilename=args[i+1].trim();
+			if (outputFilename.endsWith(".tree"))
+				outputFilename=outputFilename.substring(0,outputFilename.length()-5);
+			
+		}			
+		outputFilename=outputFilename.trim();
+		exec(problemFilename, variantName, outputFilename, replace);	}
+
+}

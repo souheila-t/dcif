@@ -1,0 +1,37 @@
+Idees murder
+
+hopital psychiatre
+
+conseil de classe
+
+Exil
+
+Cahier des charges
+ - personnages 
+ - eviter le blocage orga
+ - intrigues non triviales
+	- avoir des choses
+ - densité 
+ - fin ouverte:
+	- impact des actions des joueurs
+	- minimiser les morts/ déception (sf si significatif)
+	- ne pas faire tout reposer sur peu de joueurs
+ - avoir de quoi meubler les temps morts
+	- evenements faisant autre chose que de generer la pression
+	- PNJ d'ambiance, PNJ qui pose des questions
+	- invalider une fausse pistes, ajouter des indices
+ - a eviter : 
+	- qu'un groupe donné s'isole longtemps
+	- permettre communication et isolement
+	- quasi interdire les lieux non représentés
+	- time stops (resolution/utilisation de pouvoir,
+		        attente d'orga-question)
+	- eviter trop forte polarisation en camp
+		eviter l'incitation a "je veux pas lui parler"
+Plus de détails sur les relations entre les gens.
+ - faire intervenir les autres personnages dans le dossier (modalités d'intéractions)
+ - aider la prise en main du perso
+ - etre robuste au "allez, on va torcher la murder" (conscient ou non).
+	- soit provoqué par trop de pression
+	- soit par frustrations de pas avancer, ennui 
+	- designation de coupable obligée : eviter le bouc émissaire aléatoire

@@ -1,0 +1,29 @@
+
+agent(ag0).
+cnf(unique_value, axiom, [-value(P,V1), -value(P,V2), equal_value(V1,V2)], ag0).
+cnf(equal_value1, axiom, [-equal_value(n0,n1)], ag0).
+cnf(equal_value2, axiom, [-equal_value(n1,n0)], ag0).
+
+agent(ag1).
+cnf(not_ok_and_abnormal, axiom, [-mode(K,ok), -mode(K,abnormal)], ag1).
+cnf(ok_or_abnormal, axiom, [-type(K,Any), mode(K,ok), mode(K,abnormal)], ag1).
+cnf(and_0x_0, axiom, [-mode(K,ok), -type(K,and), -value(in(Any,K),n0), value(out(n1,K),n0)], ag1).
+cnf(and_11_1, axiom, [-mode(K,ok), -type(K,and), -value(in(n1,K),n1), -value(in(n2,K),n1), value(out(n1,K),n1)], ag1).
+cnf(and_0_00, axiom, [-mode(K,ok), -type(K,and), -value(out(n1,K),n0), value(in(n1,K),n0), value(in(n2,K),n0)], ag1).
+cnf(and_1_1x, axiom, [-mode(K,ok), -type(K,and), -value(out(n1,K),n1), value(in(n1,K),n1)], ag1).
+
+agent(ag2).
+cnf(and_1_x1, axiom, [-mode(K,ok), -type(K,and), -value(out(n1,K),n1), value(in(n2,K),n1)], ag2).
+cnf(or_1x_1, axiom, [-mode(K,ok), -type(K,or), -value(in(Any,K),n1), value(out(n1,K),n1)], ag2).
+cnf(or_00_0, axiom, [-mode(K,ok), -type(K,or), -value(in(n1,K),n0), -value(in(n2,K),n0), value(out(n1,K),n0)], ag2).
+cnf(or_1_11, axiom, [-mode(K,ok), -type(K,or), -value(out(n1,K),n1), value(in(n1,K),n1), value(in(n2,K),n1)], ag2).
+
+agent(ag3).
+cnf(or_0_0x, axiom, [-mode(K,ok), -type(K,or), -value(out(n1,K),n0), value(in(n1,K),n0)], ag3).
+cnf(or_0_01, axiom, [-mode(K,ok), -type(K,or), -value(out(n1,K),n0), value(in(n2,K),n0)], ag3).
+cnf(not_0_1_fw, axiom, [-mode(K,ok), -type(K,not), -value(in(n1,K),n0), value(out(n1,K),n1)], ag3).
+cnf(not_1_0_fw, axiom, [-mode(K,ok), -type(K,not), -value(in(n1,K),n1), value(out(n1,K),n0)], ag3).
+cnf(not_0_1_bw, axiom, [-mode(K,ok), -type(K,not), -value(out(n1,K),n0), value(in(n1,K),n1)], ag3).
+cnf(not_1_0_bw, axiom, [-mode(K,ok), -type(K,not), -value(out(n1,K),n1), value(in(n1,K),n0)], ag3).
+
+pf([-connection(_0,_1), connection(_0,_1), -value(_0,_1), value(_0,_1), equal_value(_0,_1), -equal_value(_0,_1), -mode(_0,_1), mode(_0,_1), -type(_0,_1), type(_0,_1)]).

@@ -1,0 +1,5 @@
+cnf(clause1, top_clause, [p(a), r(b)]).
+cnf(clause2, axiom, [q(X, Y),-p(X)]).
+cnf(clause3, axiom, [-s(Y)]).
+cnf(clause4, axiom, [-p(X),-q(Z, X),r(Z)]).
+pf([POS] < 2).
