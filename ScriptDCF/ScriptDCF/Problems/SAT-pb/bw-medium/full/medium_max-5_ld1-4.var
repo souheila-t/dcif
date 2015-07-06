@@ -1,6 +1,0 @@
-%Sol source: medium
-%Variant name: max-5_ld1-4
-
-solSource(medium).
-pf([p69, -p69, p76, -p76, p82, -p82, p88, -p88, p32, -p32]).
-depthLimit(4).

@@ -1,6 +1,0 @@
-%Sol source: uf20-01
-%Variant name: min-20_ld1-5
-
-solSource(uf20-01).
-pf([p6, -p6, p3, -p3, p8, -p8, p16, -p16]).
-depthLimit(5).

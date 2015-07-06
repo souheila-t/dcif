@@ -1,6 +1,0 @@
-%Sol source: sub-ii8a1_div4k123
-%Variant name: max-5_ld-1--1
-
-solSource(sub-ii8a1_div4k123).
-pf([p49, -p49, p50, -p50]).
-depthLimit(-1).

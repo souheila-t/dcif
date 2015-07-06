@@ -1,6 +1,0 @@
-%Sol source: uf20-01
-%Variant name: max-5_ld2-4
-
-solSource(uf20-01).
-pf([p15, -p15]).
-depthLimit(4).

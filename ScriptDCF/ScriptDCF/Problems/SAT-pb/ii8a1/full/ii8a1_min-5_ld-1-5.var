@@ -1,6 +1,0 @@
-%Sol source: ii8a1
-%Variant name: min-5_ld2-5
-
-solSource(ii8a1).
-pf([p7, -p7, p23, -p23, p39, -p39]).
-depthLimit(5).

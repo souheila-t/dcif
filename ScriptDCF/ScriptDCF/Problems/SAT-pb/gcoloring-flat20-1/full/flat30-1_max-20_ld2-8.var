@@ -1,6 +1,0 @@
-%Sol source: flat30-1
-%Variant name: max-20_ld2-6
-
-solSource(flat30-1).
-pf([p13, -p13, p14, -p14, p15, -p15, p19, -p19, p20, -p20, p21, -p21, p22, -p22, p23, -p23, p24, -p24, p58, -p58, p59, -p59, p60, -p60, p73, -p73, p74, -p74, p75, -p75, p76, -p76, p77, -p77, p78, -p78]<=2).
-depthLimit(8).

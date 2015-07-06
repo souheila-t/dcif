@@ -1,6 +1,0 @@
-%Sol source: par8-1-c
-%Variant name: max-5_ld2-4
-
-solSource(par8-1-c).
-pf([p36, -p36, p33, -p33, p35, -p35]).
-depthLimit(7).

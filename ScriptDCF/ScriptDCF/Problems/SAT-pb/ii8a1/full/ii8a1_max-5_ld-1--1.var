@@ -1,6 +1,0 @@
-%Sol source: ii8a1
-%Variant name: max-5_ld-1--1
-
-solSource(ii8a1).
-pf([p49, -p49, p50, -p50, p51, -p51]).
-depthLimit(-1).

@@ -1,6 +1,0 @@
-%Sol source: sub-medium_div8k0
-%Variant name: max-5_ld-1--1
-
-solSource(sub-medium_div8k0).
-pf([p65, -p65, p70, -p70]).
-depthLimit(-1).

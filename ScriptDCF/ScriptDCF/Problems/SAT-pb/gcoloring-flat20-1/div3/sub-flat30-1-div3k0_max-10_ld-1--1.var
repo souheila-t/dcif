@@ -1,6 +1,0 @@
-%Sol source: sub-flat30-1-div3k0
-%Variant name: max-10_ld-1--1
-
-solSource(sub-flat30-1-div3k0).
-pf([p25, -p25, p26, -p26, p31, -p31, p32, -p32, p33, -p33]).
-depthLimit(-1).
