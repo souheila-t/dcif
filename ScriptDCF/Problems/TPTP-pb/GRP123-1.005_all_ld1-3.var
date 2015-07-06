@@ -1,0 +1,6 @@
+%Sol source: GRP123-1.005
+%Variant name: all_ld1--1
+
+solSource(GRP123-1.005).
+pf([group_element(_), -equalish(_,_), -group_element(_), product(_,_,_), -product(_,_,_), equalish(_,_)]<=1).
+depthLimit(3).

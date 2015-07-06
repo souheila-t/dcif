@@ -1,0 +1,13 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+par8-1-c_all_ld2-3;Mono;1;SOLAR-Carc;0;250;1054;604;129693;355655;0;0;0;0;604;129693;355655;0;0;0;0;604;129693;355655;0;0;0;0;604;129693;355655;0;0;0;0
+par8-1-c_all_ld2-3;_kmet16;16;DCF-PB-Seq-MaxClSize;2;150;656029;33975;2810987;16458188;208;186;430;5153;18412;1622998;8658733;89;36;124;1265;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+par8-1-c_all_ld2-3;_kmet16;16;DCF-PB-Par-MaxClSize;2;123;641848;25193;2463347;13422418;142;248;429;5741;10638;1399111;5917202;28;25;46;503;17;536;1960;0;0;19;198;10638;1399111;5917202;18;0;19;198
+par8-1-c_all_ld2-3;Mono;1;SOLAR-Carc;0;250;5369;555;129693;355655;0;0;0;0;555;129693;355655;0;0;0;0;555;129693;355655;0;0;0;0;555;129693;355655;0;0;0;0
+par8-1-c_all_ld2-3;_kmet4;4;DCF-PB-Seq-MaxClSize;1;0;600099;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+par8-1-c_all_ld2-3;_kmet4;4;DCF-PB-Par-MaxClSize;1;0;600002;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+par8-1-c_max-5_ld-1-7;Mono;1;SOLAR-Carc;0;4;247029;17398;4407608;11653346;0;0;0;0;17398;4407608;11653346;0;0;0;0;17398;4407608;11653346;0;0;0;0;17398;4407608;11653346;0;0;0;0
+par8-1-c_max-5_ld-1-7;_kmet16;16;DCF-PB-Seq-MaxClSize;2;0;600004;21868;1796619;10259017;0;180;216;2811;7549;605483;4102277;0;35;38;609;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+par8-1-c_max-5_ld-1-7;_kmet16;16;DCF-PB-Par-MaxClSize;2;0;618220;21976;1906002;11468497;0;221;262;3587;10159;960240;4672532;0;42;46;478;2;211;773;0;0;1;0;5;1000;3602;0;0;1;0
+par8-1-c_max-5_ld-1-7;Mono;1;SOLAR-Carc;0;4;320475;17253;4407608;11653346;0;0;0;0;17253;4407608;11653346;0;0;0;0;17253;4407608;11653346;0;0;0;0;17253;4407608;11653346;0;0;0;0
+par8-1-c_max-5_ld-1-7;_kmet4;4;DCF-PB-Seq-MaxClSize;1;0;600006;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+par8-1-c_max-5_ld-1-7;_kmet4;4;DCF-PB-Par-MaxClSize;1;0;600006;2831;426779;1707639;0;0;4;0;2831;426779;1707639;0;0;1;0;0;0;0;0;0;1;0;2831;426779;1707639;0;0;1;0

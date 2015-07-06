@@ -1,0 +1,6 @@
+%Sol source: HWV034-1
+%Variant name: all_ld2--1
+
+solSource(HWV034-1).
+pf([-connection(_,_), -value(_,_), value(_,_), equal_value(_,_), -equal_value(_,_), -mode(_,_), -type(_,_), mode(_,_)]<=2).
+depthLimit(-1).

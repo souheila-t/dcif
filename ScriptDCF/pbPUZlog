@@ -1,0 +1,150 @@
+Building tree...
+Time for creating graph: 0.051s
+Begin Cyclecut
+Time for cutting cycle: 0.0010s
+Time for initializating agents and root: 0.02s
+Tree finished.
+Sys -> ag0 : {New neighbour}
+Sys -> ag1 : {New neighbour}
+Sys -> ag0 : {New neighbour}
+Sys -> ag2 : {New neighbour}
+Sys -> ag1 : {New neighbour}
+Sys -> ag2 : {New neighbour}
+Sys -> ag0 : {Start}
+Sys -> ag1 : {Start}
+Sys -> ag2 : {Start}
+ag0 <------  {New neighbour}
+ag1 <------  {New neighbour}
+ag2 <------  {New neighbour}
+ag1 <------  {New neighbour}
+ag0 <------  {New neighbour}
+ag0 <------  {Start}
+ag0 -> Sys : {Started}
+ag2 <------  {New neighbour}
+ag2 <------  {Start}
+ag2 -> Sys : {Started}
+Sys -> ag0 : {Begin}
+ag0 <------  {Begin}
+ag1 <------  {Start}
+ag1 -> Sys : {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-hates(_0,agatha), -hates(_0,butler), -hates(_0,charles)]
+ [+hates(agatha,agatha)]
+ [+hates(agatha,charles)]
+ [-hates(agatha,_0), +hates(butler,_0)]
+Production field:
+ [-hates(_0,_1), +hates(_0,_1), +lives(_0), -killed(_0,_1), -richer(_0,_1), -hates(_0,_1), +hates(_0,_1), -lives(_0), +richer(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solve - measure : [43, 124, 35, 33, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solve - measure : [2, 3, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [2, 3, 1, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 3, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 3, 1, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [2, 3, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [0, 7, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 6, 4, 0, 0, 0, 0, 0]
+ag0 -> ag2 : {Send clause([-hates(agatha,_0), hates(butler,_0)])}
+ag0 -> ag2 : {Send clause([-hates(_0,butler), -hates(_0,agatha), -hates(_0,charles)])}
+ag2 <------  {Send clause([-hates(agatha,_0), hates(butler,_0)])}
+ag0 -> ag2 : {Send clause([hates(agatha,agatha)])}
+ag0 -> ag2 : {Send clause([hates(agatha,charles)])}
+ag2 <------  {Send clause([-hates(_0,butler), -hates(_0,agatha), -hates(_0,charles)])}
+ag0 -> ag2 : {End current batch}
+ag2 <------  {Send clause([hates(agatha,agatha)])}
+ag0 -> ag2 : {End all batch}
+ag2 <------  {Send clause([hates(agatha,charles)])}
+ag2 <------  {End current batch}
+ag2 <------  {End all batch}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+lives(agatha)]
+ [+lives(butler)]
+ [+lives(charles)]
+ [-hates(agatha,_0), -hates(charles,_0)]
+ [-lives(_0), +richer(_0,agatha), +hates(butler,_0)]
+ [-hates(agatha,_0), +hates(butler,_0)]
+ [-hates(_0,butler), -hates(_0,agatha), -hates(_0,charles)]
+ [+hates(agatha,agatha)]
+ [+hates(agatha,charles)]
+Production field:
+ [+richer(_0,_1), -hates(_0,_1), +lives(_0), -killed(_0,_1), -richer(_0,_1), -hates(_0,_1), +hates(_0,_1), -lives(_0), +richer(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solve - measure : [13, 285, 86, 85, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+>>>>>>>>>>>> Solve - measure : [1, 3, 1, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 7, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 7, 3, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 6, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 6, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [1, 5, 2, 0, 0, 0, 0, 0]
+ag2 -> ag1 : {Send clause([-hates(butler,butler)])}
+ag2 -> ag1 : {Send clause([-hates(charles,agatha)])}
+ag2 -> ag1 : {Send clause([-hates(charles,charles)])}
+ag2 -> ag1 : {Send clause([-hates(charles,_0), -hates(agatha,_0)])}
+ag2 -> ag1 : {Send clause([-hates(agatha,butler)])}
+ag2 -> ag1 : {Send clause([-hates(_0,butler), -hates(_0,agatha), -hates(_0,charles)])}
+ag2 -> ag1 : {Send clause([richer(butler,agatha)])}
+ag2 -> ag1 : {End current batch}
+ag2 -> ag1 : {End all batch}
+ag1 <------  {Send clause([-hates(butler,butler)])}
+ag1 <------  {Send clause([-hates(charles,agatha)])}
+ag1 <------  {Send clause([-hates(charles,charles)])}
+ag1 <------  {Send clause([-hates(charles,_0), -hates(agatha,_0)])}
+ag1 <------  {Send clause([-hates(agatha,butler)])}
+ag1 <------  {Send clause([-hates(_0,butler), -hates(_0,agatha), -hates(_0,charles)])}
+ag1 <------  {Send clause([richer(butler,agatha)])}
+ag1 <------  {End current batch}
+ag1 <------  {End all batch}
+Starting SolveToIndepClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-killed(_0,_1), -richer(_0,_1)]
+ [-killed(_0,_1), +hates(_0,_1)]
+ [+killed(agatha,agatha), +killed(butler,agatha), +killed(charles,agatha)]
+ [-hates(butler,butler)]
+ [-hates(charles,agatha)]
+ [-hates(charles,charles)]
+ [-hates(charles,_0), -hates(agatha,_0)]
+ [-hates(agatha,butler)]
+ [-hates(_0,butler), -hates(_0,agatha), -hates(_0,charles)]
+ [+richer(butler,agatha)]
+Production field:
+ [+lives(_0), -killed(_0,_1), -richer(_0,_1), -hates(_0,_1), +hates(_0,_1), -lives(_0), +richer(_0,_1), +killed(_0,_1)]
+
+>>>>>>>>>>>> Solve - measure : [14, 330, 101, 94, 0, 0, 0, 0]
+Solver finished.
+Converting to IndepClause...
+SolveToIndepClause Finished!
+ag1 -> Sys : {End all batch}
+Sys <------  {End all batch}
+Sys -> ag0 : {Finish}
+ag0 <------  {Finish}
+Sys -> ag1 : {Finish}
+Sys -> ag2 : {Finish}
+ag1 <------  {Finish}
+ag2 <------  {Finish}
+0 CHARACTERISTIC CLAUSES
+
+
+
+Total execution time was 1082 ms.
+
+
+Execution time was 1003 ms.
+

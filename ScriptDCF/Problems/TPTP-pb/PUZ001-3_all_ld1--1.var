@@ -1,0 +1,6 @@
+%Sol source: PUZ001-3
+%Variant name: all_ld1--1
+
+solSource(PUZ001-3).
+pf([lives(_), -killed(_,_), -richer(_,_), -hates(_,_), hates(_,_), -lives(_), richer(_,_), killed(_,_)]<=1).
+depthLimit(-1).

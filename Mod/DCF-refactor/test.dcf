@@ -1,0 +1,8 @@
+agent(a0).
+cnf(o1, top_clause, [a]).
+cnf(c1, axiom, [b, c]).
+agent(a1).
+cnf(o2, top_clause, [-d]).
+cnf(c2, axiom, [-a,-b, d]).
+
+pf([c]).

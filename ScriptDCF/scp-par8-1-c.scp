@@ -1,0 +1,12 @@
+groupBy(Problem).
+
+problem(par8-1-c,_all_ld2-3,_kmet16).
+problem(par8-1-c,_all_ld2-3,_kmet4).
+problem(par8-1-c,_max-5_ld-1-7,_kmet16).
+problem(par8-1-c,_max-5_ld-1-7,_kmet4).
+
+
+method(SOLAR-Carc).
+%method(SOLAR-Inc-Carc).
+method(DCF-PB-Seq-MaxClSize).
+method(DCF-PB-Par-MaxClSize).
