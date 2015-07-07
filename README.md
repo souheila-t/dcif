@@ -1,8 +1,8 @@
 # DICF
 Distributed Incremental Consequence Finding project
 
-Origine : Merge de DCF original et des Modifications implémentées par Pedro.
+Origin : Modifications implemented by Pedro, extended.
 
-Réalisation d'étude expérimentale.
+Goal : Experimental Study
 
 
