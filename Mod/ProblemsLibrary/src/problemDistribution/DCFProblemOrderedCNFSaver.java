@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import logicLanguage.IndepClause;
 import logicLanguage.IndepLiteral;
 
-import solarInterface.SolProblem;
+import old_solarInterface.SolProblem;
 import genLib.io.LoaderTool;
 import genLib.io.Saver;
 
