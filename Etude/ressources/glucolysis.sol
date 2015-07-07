@@ -159,6 +159,7 @@ cnf(activd4d1d1d20_53, axiom, [r_d4d1d1d20_53, -m_llysine]).
 cnf(prodd1d2d1d31_56, axiom, [m_llysine, -r_d1d2d1d31_56]).
 cnf(activd1d2d1d31_57, axiom, [r_d1d2d1d31_57, -m_llysine]).
 
+cnf(source1,top_clause,[m_glucose]).
 %cnf(source1,axiom,[m_l2aminoadipate]).
 %sources
 %reactions

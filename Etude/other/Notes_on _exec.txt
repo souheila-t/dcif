@@ -14,6 +14,8 @@ Usage :
 'filename.sol'  is the file of the program whose graph should be generated.
 'filename2.gra'  is the output file, by default,same name as filename with .gra extension.
 
+RQ. On ne peut pas passer l'Argument booléen "replace", donc quand le fichier de graph existe déjà, cela renvoie le message error (ca peut etre utile pour optimiser si on utilise toujours le meme partitionnement mais comme ce n'est pas le cas, on decide de supprimer le fichier s'il existe)
+
 #########################
 java -jar cnfsat2sol.jar -
 This tools convert a cnf sat problem into a solar consequence finding problem (pfield is set to get all consequences)

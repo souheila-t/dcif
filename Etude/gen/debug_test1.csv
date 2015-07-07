@@ -1,3 +1,14 @@
 problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
-ressources/glucolysis;Mono;1;SOLAR-Carc;0;73;1217;1187;98825;272100;0;0;0;0;1187;98825;272100;0;0;0;0;1187;98825;272100;0;0;0;0;1187;98825;272100;0;0;0;0
-ressources/glucolysis;Mono;1;SOLAR-Carc;0;73;1223;1193;98825;272100;0;0;0;0;1193;98825;272100;0;0;0;0;1193;98825;272100;0;0;0;0;1193;98825;272100;0;0;0;0
+ressources/glucolysis_max-4_ld-1--1;;2;DICF-PB-Token-FixedOrder-1-0;0;0;10204;66;1;4;0;0;2;0;66;1;4;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+ressources/glucolysis_max-4_ld-1--1;;4;DICF-PB-Token-FixedOrder-3-2-1-0;0;3;2188;1126;87787;246435;0;0;33;89;723;75770;213031;0;0;10;33;55;68;168;0;0;6;15;55;68;168;0;0;8;17
+ressources/glucolysis_max-4_ld-1--1;;2;DICF-PB-Token-FixedOrder-1-0;0;0;10217;55;1;4;0;0;2;0;55;1;4;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+ressources/glucolysis_max-4_ld-1--1;;2;DICF-PB-Token-FixedOrder-0-1;0;0;10208;0;0;0;0;0;3;0;0;0;0;0;0;2;0;0;0;0;0;0;1;0;0;0;0;0;0;2;0
+ressources/glucolysis_max-4_ld-1--1;;2;DICF-PB-Token;0;0;10232;0;0;0;0;0;3;0;0;0;0;0;0;2;0;0;0;0;0;0;1;0;0;0;0;0;0;2;0
+ressources/glucolysis_max-4_ld-1--1;;4;DICF-PB-Token-FixedOrder-3-2-1-0;0;3;2203;1377;87787;246435;0;0;33;89;963;75770;213031;0;0;10;33;51;68;168;0;0;6;15;51;68;168;0;0;8;17
+ressources/glucolysis_max-4_ld-1--1;;8;DICF-PB-Token;0;0;10424;4040;954943;3229373;0;0;64;388;1691;503094;1677038;0;0;9;86;41;71;255;0;0;7;28;44;71;255;0;0;8;37
+ressources/glucolysis_max-4_ld-1--1;;4;DICF-PB-Token;0;3;1179;859;15922;44800;0;0;37;133;533;12818;35276;0;0;10;40;54;57;176;0;0;8;26;152;1649;5328;0;0;10;34
+ressources/glucolysis_backup_max-4_ld-1--1;;4;DICF-PB-Token;0;3;2190;1191;87788;246451;0;0;36;86;728;75772;213038;0;0;12;36;47;51;124;0;0;7;11;47;51;124;0;0;7;11
+ressources/glucolysis_max-4_ld-1--1;;4;DICF-PB-Token;0;3;2213;871;15922;44800;0;0;37;133;533;12818;35276;0;0;10;40;57;57;176;0;0;8;26;158;1649;5328;0;0;10;34
+ressources/glucolysis_backup_max-4_ld-1--1;;4;DICF-PB-Token;0;3;2194;1079;87788;246451;0;0;36;86;693;75772;213038;0;0;12;36;53;51;124;0;0;7;11;53;51;124;0;0;7;11
+ressources/glucolysis_backup_max-4_ld-1--1;;4;DICF-PB-Token;0;3;2184;1461;87788;246451;0;0;36;86;1042;75772;213038;0;0;12;36;55;51;124;0;0;7;11;55;51;124;0;0;7;11
+ressources/glucolysis_backup_max-4_ld-1--1;;4;DICF-PB-Token;0;0;1169;0;0;0;0;0;9;0;0;0;0;0;0;3;0;0;0;0;0;0;2;0;0;0;0;0;0;3;0

@@ -1,0 +1,83 @@
+Time for creating graph: 0.036s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Ag0 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Ag3 <------  {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Sys -> Ag0 : {Start}
+Ag1 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag0 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Sys -> Ag1 : {Start}
+Ag3 <------  {New neighbour}
+Sys -> Ag2 : {Start}
+Ag1 <------  {Start}
+Ag0 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag0 -> Sys : {Started}
+Sys -> Ag3 : {Start}
+Ag2 <------  {Start}
+Sys -> Ag0 : {Launch}
+Ag2 -> Sys : {Started}
+Ag0 <------  {Launch}
+Ag3 <------  {Start}
+Sys <------  {Started}
+Ag3 -> Sys : {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Ag0 receives []
+After pruning []
+Input Languages : {Ag1=[+r_d4d2d1d2_8, -r_d2d6d1d39_1, -r_d4d2d1d2_9, -m_isocitrate, +r_d2d6d1d39_0, -r_d2d1d3d1_51, +m_isocitrate, +r_d2d1d3d1_50], Ag3=[+r_d2d3d3d1_65, -r_d2d3d3d1_64, -r_d4d2d1d54_46, +r_d4d2d1d54_47]}
+Ag0: updated receivedCl []
+updated lstCsq []
+Ag0 -> Ag1 : Send Clauses: Forward Clauses = []
+Ag1 <------  Send Clauses: Forward Clauses = []
+Ag1 receives []
+After pruning []
+Input Languages : {Ag2=[-r_d4d3d2d1_17, +m_arginine, -m_arginine, +r_d4d3d2d1_16], Ag0=[+r_d2d6d1d39_1, +r_d4d2d1d2_9, -r_d4d2d1d2_8, -r_d2d1d3d1_50, -m_isocitrate, +r_d2d1d3d1_51, -r_d2d6d1d39_0, +m_isocitrate]}
+Ag1: updated receivedCl []
+updated lstCsq []
+Ag1 -> Ag2 : Send Clauses: Forward Clauses = []
+Ag2 <------  Send Clauses: Forward Clauses = []
+Ag2 receives []
+After pruning []
+Input Languages : {Ag1=[+r_d4d3d2d1_17, -r_d4d3d2d1_16, +m_arginine, -m_arginine], Ag3=[+r_d1d5d99d1_39, -r_d1d5d99d1_38]}
+Ag2: updated receivedCl []
+updated lstCsq []
+Ag2 -> Ag3 : Send Clauses: Forward Clauses = []
+Ag3 <------  Send Clauses: Forward Clauses = []
+Ag3 receives []
+After pruning []
+Input Languages : {Ag2=[+r_d1d5d99d1_38, -r_d1d5d99d1_39], Ag0=[-r_d2d3d3d1_65, +r_d2d3d3d1_64, -r_d4d2d1d54_47, +r_d4d2d1d54_46]}
+Ag3: updated receivedCl []
+updated lstCsq []
+Ag3 -> Ag0 : Send Clauses: Forward Clauses = []
+Ag0 <------  Send Clauses: Forward Clauses = []
+Ag0 receives []
+After pruning []
+Input Languages : {Ag1=[+r_d4d2d1d2_8, -r_d2d6d1d39_1, -r_d4d2d1d2_9, -m_isocitrate, +r_d2d6d1d39_0, -r_d2d1d3d1_51, +m_isocitrate, +r_d2d1d3d1_50], Ag3=[+r_d2d3d3d1_65, -r_d2d3d3d1_64, -r_d4d2d1d54_46, +r_d4d2d1d54_47]}
+Ag0 -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Ag0 <------  {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Ag1 <------  {Finish}
+Sys -> Ag3 : {Finish}
+Ag3 <------  {Finish}
+Ag2 <------  {Finish}
+0 (NEW) CHARACTERISTIC CLAUSES
+
+Total execution time was 1169 ms.
+
+Execution time was 1002 ms.
+
+
