@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ExternalProjectImportWizard">
-		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\pedro_000\Desktop\SOLAR\Mod"/>
-			<item value="C:\Users\pedro_000\Desktop\SOLAR\Mod1"/>
+			<item value="/home/magma/Documents"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

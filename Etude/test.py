@@ -79,7 +79,11 @@ parser.add_argument('--par', choices=['naive_eq', 'naive_indent','kmetis'], defa
                     help = 'type de partitionnement')
     
 
-                                   
+
+#class ArgHolder :
+#    pass
+#argHolder = ArgHolder()                          
+#args = parser.parse_args(namespace=argHolder                                   
 args = parser.parse_args()
 argsDict = vars(args)
 print argsDict
@@ -117,22 +121,27 @@ print newDict
 
 ##############################################################################
 #######SOIT
-
-if  argsDict['par'] ==  'kmetis':
-    print 'KMETIS'     
-    ########On utilise un partitionnement un peu opti:
-    temp_graph_filename=GEN_PATH + 'temp_graph'
-    ########buildGraph
-    args = [BUILDGRAPH_JAR, argsDict['infile'], temp_graph_filename ]
-    result = jarWrapper(*args)
+from naiveAgentPartitioning import *
+def flowPar():
+    if  argsDict['par'] ==  'kmetis':
+        print 'KMETIS'     
+        ########On utilise un partitionnement un peu opti:
+        temp_graph_filename=GEN_PATH + 'temp_graph'
+        ########buildGraph
+        args = [BUILDGRAPH_JAR, argsDict['infile'], temp_graph_filename ]
+        result = jarWrapper(*args)
+        
+        ########kMetis
+        args = [KMETIS_EX, temp_graph_filename+'.gra', str(argsDict['numagent']) ]
+        result = exWrapper(*args)
+        ########graph2DCF
+        args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
+        result = jarWrapper(*args)
+    elif argsDict['par'] == 'naive_eq' :
+        divEqu(argsDict['infile'], argsDict['numagent'])
     
-    ########kMetis
-    args = [KMETIS_EX, temp_graph_filename+'.gra', str(argsDict['numagent']) ]
-    result = exWrapper(*args)
-    ########graph2DCF
-    args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
-    result = jarWrapper(*args)
 
+flowPar()
 #IF NONE
 #######SOIT
 ########on fait un partitionnemnt naïf
@@ -177,3 +186,7 @@ f.close()
 
 #and compare the result with what we should have had
 #python test.py ressources/glucolysis.sol debug_test1.csv -n 4 --var _max-4_ld-1--1 --verbose -t 10000
+##
+#//-var=_max-4_ld-1--1 -method=DICF-PB-Token-FixedOrder-3-2-1-0 -dist=_kmet4 -verbose glucolysis.sol debugGluc.csv
+#//-var=_max-4_ld-1--1 -method=DICF-PB-Async -dist=_kmet12 -verbose -t=3000 glucolysis.sol debugGluc.csv
+#//-method=DICF-PB-Async -dist=_def -verbose toy-pb1.sol debugi.csv
