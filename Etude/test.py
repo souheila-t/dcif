@@ -4,18 +4,17 @@
 #/home/magma/Documents/dcif/ScriptDCF/tools/graph2dcf.jar
 
 
-
 import sys
-PROJECT_PATH = "/home/magma/Documents/dcif/Etude/"
+PROJECT_PATH = "/home/magma/projects/dcif/Etude/"
 RSRC_PATH = PROJECT_PATH + 'ressources/'
 GEN_PATH = PROJECT_PATH + 'gen/'
-TOOLS_PATH = "/home/magma/Documents/dcif/ScriptDCF/tools/"
+TOOLS_PATH = "/home/magma/projects/dcif/ScriptDCF/tools/"
 
 BUILDGRAPH_JAR = TOOLS_PATH + "buildGraph.jar"
 KMETIS_EX = TOOLS_PATH + "metis-4.0.3/kmetis"
 GRAPH2DCF_JAR = TOOLS_PATH + "graph2dcf.jar"
 MAKESOLVARIANT_JAR = TOOLS_PATH + "makeSolVariant.jar"
-CFLAUNCHER_JAR =RSRC_PATH + 'CFLauncher_1.jar'
+CFLAUNCHER_JAR =RSRC_PATH + 'CFLauncher_4.jar'
 
 
 from subprocess import *
@@ -24,6 +23,7 @@ def jarWrapper(*args):
         http://stackoverflow.com/questions/7372592/python-how-can-execute-a-jar-file-through-a-python-script
         RQ : *args signifie ici un nombre variable d'arguments
     '''
+    print list(args)
     process = Popen(['java', '-jar']+list(args), stdout=PIPE, stderr=PIPE)
     ret = []
     while process.poll() is None:
@@ -38,6 +38,7 @@ def jarWrapper(*args):
     print ret
     return ret
 def exWrapper(*args):
+    print args
     process = Popen(list(args), stdout=PIPE, stderr=PIPE)
     ret = []
     while process.poll() is None:
@@ -49,6 +50,7 @@ def exWrapper(*args):
     if stderr != '':
         ret += stderr.split('\n')
     ret.remove('')
+    print ret
     return ret
 
 
@@ -61,8 +63,8 @@ parser.add_argument('infile',
 parser.add_argument('outfile', 
                     help='output file for the debug (ext .csv will be added)')
 
-parser.add_argument('-m', '--method', default='DICF-PB-Async',choices=['DICF-PB-Async', 'DICF-PB-Token', 'DICF-PB-Star'],
-help='method used for DCIF : Async,  token, or star-based')
+parser.add_argument('-m', '--method', default='DICF-PB-Async',
+help='method used for DCIF : Async,  token, or star-based \nchoices=[DICF-PB-Async, DICF-PB-Token, DICF-PB-Star\]')
 
 parser.add_argument('-v', '--verbose', action='store_true')
 
@@ -86,7 +88,7 @@ parser.add_argument('--par', choices=['naive_eq', 'naive_indent','kmetis'], defa
 #args = parser.parse_args(namespace=argHolder                                   
 args = parser.parse_args()
 argsDict = vars(args)
-print argsDict
+print 'les arguments passés sont :', argsDict
 def is_a_file(f):
     try:
         f.read()
@@ -121,26 +123,39 @@ print newDict
 
 ##############################################################################
 #######SOIT
-from naiveAgentPartitioning import *
+from agentPartitioning import *
+import os
 def flowPar():
+    temp_graph_filename=GEN_PATH + 'temp_graph'
     if  argsDict['par'] ==  'kmetis':
-        print 'KMETIS'     
         ########On utilise un partitionnement un peu opti:
-        temp_graph_filename=GEN_PATH + 'temp_graph'
-        ########buildGraph
+        ########buildGraph    
+        try:
+            os.remove(temp_graph_filename+'.gra')
+            print 'removing old temporary file'
+        except OSError:
+            pass
+        print 'buildGRAPH ################################################'   
+        # on supprime le fichier s'il existe.       
+        #
         args = [BUILDGRAPH_JAR, argsDict['infile'], temp_graph_filename ]
         result = jarWrapper(*args)
         
         ########kMetis
+        print 'kMETIS ################################################'  
         args = [KMETIS_EX, temp_graph_filename+'.gra', str(argsDict['numagent']) ]
         result = exWrapper(*args)
         ########graph2DCF
+        print 'graph2DCF ################################################'  
         args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
         result = jarWrapper(*args)
     elif argsDict['par'] == 'naive_eq' :
-        divEqu(argsDict['infile'], argsDict['numagent'])
-    
-
+        print 'naivePARTITIONING ################################################'  
+        divEquNaive(argsDict['infile'], temp_graph_filename, argsDict['numagent'])
+        ########graph2DCF
+        print 'graph2DCF ################################################' 
+        args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
+        result = jarWrapper(*args)
 flowPar()
 #IF NONE
 #######SOIT
@@ -155,7 +170,7 @@ flowPar()
 #RSRC_PATH+argsDict['outfile'].name, '-method=DICF-PB-Async',
 # '-verbose','var=_max-4_ld-1--1' ]
 
-args = [CFLAUNCHER_JAR, argsDict['infile'], GEN_PATH+argsDict['outfile'], 
+args = [CFLAUNCHER_JAR, 
         '-method='+argsDict['method']]
 
 if argsDict['verbose'] == True :
@@ -167,7 +182,10 @@ if argsDict['timeout'] != None :
 if argsDict['var'] != None :
     print argsDict['var']
     args.append('-var='+argsDict['var'])
+#adding arguments at the end because (cf CfLauncher.java ^^).
+args = args +[argsDict['infile'], GEN_PATH+argsDict['outfile']]
 
+print 'CFLAUNCHER ################################################' 
 result = jarWrapper(*args)  
 
 import os
