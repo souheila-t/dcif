@@ -354,7 +354,6 @@ public class CFLauncher {
 	}
 	
 	public static void main(String[] args){
-		
 		String resultFilename="resultIndiv";
 		String method="SOLAR-Carc";
 		String variantSuffix="";
@@ -425,7 +424,6 @@ public class CFLauncher {
 				resultFilename=resultFilename.substring(0,resultFilename.length()-4);	//Removes file extension
 		}			
 		resultFilename=resultFilename.trim();
-
 		try {
 			exec(resultFilename, method, problemFilename, variantSuffix, distributionSuffix, timeLimitMillis);	//Starts execution
 		} catch (Exception e) {

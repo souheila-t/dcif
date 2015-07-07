@@ -1,8 +1,11 @@
 package cnfPb;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.nabelab.solar.Env;
 import org.nabelab.solar.Options;
@@ -35,7 +38,13 @@ public class VariantProblem implements Saver, Parser{
 	
 	public void load(String filename) throws Exception{
 		LoaderTool.load(filename, ".var", this);
-		initialPb=new SolProblem(env, opt, solFilename);
+		//Modified by BR the 7/07/15
+		//initialPb=new SolProblem(env, opt, solFilename);
+		
+		File accesFichier = new File(filename) ;
+		Path p = Paths.get(accesFichier.getAbsolutePath());
+		Path folder = p.getParent();
+		initialPb=new SolProblem(env, opt, folder.toString()+"/"+solFilename);
 	 }	
 	
 	public void parse(BufferedReader bIn) throws IOException {

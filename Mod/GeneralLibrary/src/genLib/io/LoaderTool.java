@@ -19,7 +19,7 @@ public class LoaderTool{
 	
 	public static void load(String filename,String extension, Parser parser) throws Exception{
 		
-		File accesFichier = new File(filename+extension) ;  	
+		File accesFichier = new File(filename+extension) ;
 	 	if (!accesFichier.exists())
 	 		throw new Exception("File " + accesFichier.getAbsolutePath() + 
 	 				          " does not exist !") ;
