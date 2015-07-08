@@ -10,3 +10,11 @@
 # Temporary Files
 #################
 *~
+
+
+# Environment Settings
+#################
+.spyderworkspace
+.project
+.metadata
+.gradle
