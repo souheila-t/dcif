@@ -10,15 +10,18 @@ dans la premiere partie on ne s'occupe pas des TOP CLAUSES
 def annotateLines(f):
     '''
     annotate lines with information used for partitioning
-    TODO: add TOP CLAUSES information
     '''
     l = []
-    i=0
+    nbClauses=0
+    nLines=0
     for line in f:
         print line
         if line[:3] == 'cnf':
-            l.append(('cnf',line,i))
-            i += 1
+            if 'top_clause' in line :
+                l.append(('cnf',line,nbClauses,'top_clause'))
+            else:
+                l.append(('cnf',line,nbClauses,'axiom'))
+            nbClauses += 1
         elif line[:1] == '%':
             pass
         elif line[:2] == 'pf':
@@ -27,8 +30,9 @@ def annotateLines(f):
             l.append(('blank',''))
         else:
             print 'error : .sol file contains invalid or unknown lines'
-    print 'nb de clauses : ',i
-    return l, i
+        nLines+=1
+    print 'nb de clauses : ',nbClauses
+    return l, nbClauses
     
 def filterClauses(l):
     '''
@@ -74,8 +78,7 @@ def divEqu_test(f, nbAgents, filename):
     1ere naive : divides the clauses equally between the agents
     '''
     lines, nbClauses = annotateLines(f)
-    lines = filterClauses(lines)
-    
+    lines = filterClauses(lines)   
     
     sizeAgent = nbClauses/nbAgents    
     outfilename = filename+'.gro.part.'+str(nbAgents)
@@ -88,7 +91,6 @@ def divEqu_test(f, nbAgents, filename):
             outfile.write(str(i))
         i += 1
     outfile.close()    
-    
     return 
     
 def test_div():
