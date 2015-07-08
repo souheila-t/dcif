@@ -58,27 +58,38 @@ def exWrapper(*args):
 import argparse
 parser = argparse.ArgumentParser(description='Process to test the DCIF.')
 parser.add_argument('infile', 
-                    help='input file with ext .sol')
+                    help='input file with ext .sol \n For better project \
+                    organization, it is recommended to put the .sol file in \
+                    the ressources folder and to add the raltive path as an \
+                    argumeent such as ressrouces/mock.sol')
                     
 parser.add_argument('outfile', 
                     help='output file for the debug (ext .csv will be added)')
 
 parser.add_argument('-m', '--method', default='DICF-PB-Async',
-help='method used for DCIF : Async,  token, or star-based \nchoices=[DICF-PB-Async, DICF-PB-Token, DICF-PB-Star\]')
+                    help='method used for DCIF : Async,  token, or star-based\
+                    \nchoices=[DICF-PB-Async, DICF-PB-Token, DICF-PB-Star\]')
 
 parser.add_argument('-v', '--verbose', action='store_true')
 
 parser.add_argument('-n', '--numagent',type=int , required=True,
-                    help = 'an integer for the number of agents on which it is distributed')
+                    help = 'an integer for the number of agents on which it is\
+                    distributed')
 
 parser.add_argument('-t', '--timeout',type=int , 
                     help = 'an integer for the timeout')
 
 parser.add_argument('--var', 
-                    help = 'var=varSuffix  use the variant with given suffix (should begin by _).')
+                    help = 'var=varSuffix  use the variant with given suffix \
+                    (should begin by _).')
 
-parser.add_argument('--par', choices=['naive_eq', 'naive_indent','kmetis'], default = 'kmetis',
-                    help = 'type de partitionnement')
+parser.add_argument('--par', choices=['naive_eq', 'naive_indent','kmetis_hybrid','kmetis'], default = 'kmetis',
+                    help = 'type de partitionnement \n\
+                    naive_eq= divise les clauses equitablement (ne regarde pas si top_clauses ou axiom) \n\
+                    naive_indent= divise les clauses selon l indentation du fichier sol d origine (pareil que dessus)\n\
+                    eq_par= répartit équitablement ET les axiomes ET les Top_clauses
+                    kmetis_hybrid
+                    ,kmetis)
     
 
 
@@ -125,38 +136,48 @@ print newDict
 #######SOIT
 from agentPartitioning import *
 import os
-def flowPar():
-    temp_graph_filename=GEN_PATH + 'temp_graph'
-    if  argsDict['par'] ==  'kmetis':
-        ########On utilise un partitionnement un peu opti:
-        ########buildGraph    
-        try:
-            os.remove(temp_graph_filename+'.gra')
-            print 'removing old temporary file'
-        except OSError:
-            pass
-        print 'buildGRAPH ################################################'   
-        # on supprime le fichier s'il existe.       
-        #
-        args = [BUILDGRAPH_JAR, argsDict['infile'], temp_graph_filename ]
-        result = jarWrapper(*args)
+
+def flow():
+    if (argsDict['numagent'] == None) or (argsDict['numagent'] == 1 ) :
+        print 'MONO AGENT, by default'
+        #check if method basée est bien celle la : facultatif
+        if  argsDict['method'] != 'SOLAR-Inc-Carc'
+            print 'Methode Mono Agent non passée, mis par défaut en mode Mono'
+            argsDict['method'] = 'SOLAR-Inc-Carc'
+                
         
-        ########kMetis
-        print 'kMETIS ################################################'  
-        args = [KMETIS_EX, temp_graph_filename+'.gra', str(argsDict['numagent']) ]
-        result = exWrapper(*args)
-        ########graph2DCF
-        print 'graph2DCF ################################################'  
-        args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
-        result = jarWrapper(*args)
-    elif argsDict['par'] == 'naive_eq' :
-        print 'naivePARTITIONING ################################################'  
-        divEquNaive(argsDict['infile'], temp_graph_filename, argsDict['numagent'])
-        ########graph2DCF
-        print 'graph2DCF ################################################' 
-        args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
-        result = jarWrapper(*args)
-flowPar()
+    else:
+        temp_graph_filename=GEN_PATH + 'temp_graph'
+        if  argsDict['par'] ==  'kmetis':
+            ########On utilise un partitionnement un peu opti:
+            ########buildGraph    
+            try:
+                os.remove(temp_graph_filename+'.gra')
+                print 'removing old temporary file'
+            except OSError:
+                pass
+            print 'buildGRAPH ################################################'   
+            # on supprime le fichier s'il existe.       
+            #
+            args = [BUILDGRAPH_JAR, argsDict['infile'], temp_graph_filename ]
+            result = jarWrapper(*args)
+            
+            ########kMetis
+            print 'kMETIS ################################################'  
+            args = [KMETIS_EX, temp_graph_filename+'.gra', str(argsDict['numagent']) ]
+            result = exWrapper(*args)
+            ########graph2DCF
+            print 'graph2DCF ################################################'  
+            args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
+            result = jarWrapper(*args)
+        elif argsDict['par'] == 'naive_eq' :
+            print 'naivePARTITIONING ################################################'  
+            divEquNaive(argsDict['infile'], temp_graph_filename, argsDict['numagent'])
+            ########graph2DCF
+            print 'graph2DCF ################################################' 
+            args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
+            result = jarWrapper(*args)
+flow()
 #IF NONE
 #######SOIT
 ########on fait un partitionnemnt naïf
@@ -183,11 +204,13 @@ if argsDict['var'] != None :
     print argsDict['var']
     args.append('-var='+argsDict['var'])
 #adding arguments at the end because (cf CfLauncher.java ^^).
-args = args +[argsDict['infile'], GEN_PATH+argsDict['outfile']]
+args = args + [argsDict['infile'], GEN_PATH+argsDict['outfile']]
 
 print 'CFLAUNCHER ################################################' 
 result = jarWrapper(*args)  
-
+#problem : ici ON GARDE TOUTES LES TRACES D'EXÉCUTION EN MÉMOIRE, IL FAUDRAIT LES ECRIRE AU FUR ET A MESURE DANS UN FICHIER
+#ET ON RECUPEREAIT ENSUITE SEULEMENT CE QUI NOUS INTERESSERAIT
+#TODO REECRIRE JARwRAPPER, AVEC EN ARG UN OUTFILEnAME
 import os
 char_clauses = result
 print len(result)
