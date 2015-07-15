@@ -24,6 +24,7 @@ import solarInterface.CFSolver;
 import solarInterface.IndepPField;
 import solarInterface.SolProblem;
 import stats.ConsFindingAgentStats;
+import stats.CsqHolder;
 import stats.ExpeSummary;
 import systemStructure.Tree;
 import agLib.agentCommunicationSystem.CanalComm;
@@ -77,6 +78,10 @@ public class CFLauncher {
 		System.out.println("Execution time was " + (end - middle) + " ms.\n");
 		if(!finished)
 			System.out.println("---System Timeout---");
+		
+		//ouput in csq file for checking results
+		saveConsequences(consequences,pbName + "_" + method);
+		
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
@@ -111,11 +116,19 @@ public class CFLauncher {
 		System.out.println("Execution time was " + (end - middle) + " ms.\n");
 		if(!finished)
 			System.out.println("---System Timeout---");
+
+		//ouput in csq file for checking results
+		saveConsequences(consequences,pbName + "_" + method);
+		
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
 		return result;
 	}	
+	public static void saveConsequences(Collection<Clause> consequences, String name ) throws Exception{
+		CsqHolder csqH = new CsqHolder(consequences);
+		csqH.save(name, true);
+	}
 
 	public static ExpeSummary partitionBasedTokenIncCF(DistributedConsequenceFindingProblem<SolProblem> problem,
 			String pbName, String distribSuffix, String method, String methodOrder, boolean useNC, boolean pruneCsq, long deadline) throws Exception{
@@ -153,6 +166,10 @@ public class CFLauncher {
 		System.out.println("Execution time was " + (end - middle) + " ms.\n");
 		if(!finished)
 			System.out.println("---System Timeout---");
+		
+
+		//ouput in csq file for checking results
+		saveConsequences(consequences,pbName + "_" + method);
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
@@ -179,7 +196,7 @@ public class CFLauncher {
 		return pb;	
 	}
 	
-	public static ExpeSummary solarCF(SolProblem pb, boolean incremental, boolean trueNewC, String pbName, String method, long deadline) throws ParseException{
+	public static ExpeSummary solarCF(SolProblem pb, boolean incremental, boolean trueNewC, String pbName, String method, long deadline) throws Exception{
 		long start = System.currentTimeMillis();
 		ConsFindingAgentStats stat=new ConsFindingAgentStats();
 		Collection<Clause> resultingCons=new ArrayList<Clause>();
@@ -201,6 +218,11 @@ public class CFLauncher {
 		System.out.println();
 		System.out.println("\nTotal execution time was " + (end - start) + " ms.\n");
 		System.out.println("\nExecution time was " + (end - middle) + " ms.\n");
+		
+
+		//ouput in csq file for checking results
+		saveConsequences(resultingCons,pbName + "_" + method);
+		
 		// set result line
 		List<ConsFindingAgentStats> agStats=new ArrayList<ConsFindingAgentStats>();
 		agStats.add(stat);
