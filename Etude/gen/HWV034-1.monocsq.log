@@ -1,0 +1,78 @@
+Time for creating graph: 0.033s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Ag0 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Ag3 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Ag0 <------  {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Ag1 <------  {New neighbour}
+Ag0 <------  {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Ag2 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Sys -> Ag0 : {Start}
+Ag2 <------  {New neighbour}
+Ag3 <------  {New neighbour}
+Ag3 <------  {New neighbour}
+Ag0 <------  {Start}
+Sys -> Ag1 : {Start}
+Ag0 -> Sys : {Started}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Sys -> Ag2 : {Start}
+Sys -> Ag3 : {Start}
+Sys -> Ag0 : {Launch}
+Ag0 <------  {Launch}
+Ag3 <------  {Start}
+Ag2 <------  {Start}
+Sys -> Ag1 : {Launch}
+Ag3 -> Sys : {Started}
+Ag2 -> Sys : {Started}
+Sys -> Ag2 : {Launch}
+Ag1 <------  {Launch}
+Sys -> Ag3 : {Launch}
+Ag2 <------  {Launch}
+Ag3 <------  {Launch}
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Ag0 receives [[-connection(_0,_1), -value(_0,_2), +value(_1,_2)]]
+After pruning [[-connection(_0,_1), -value(_0,_2), +value(_1,_2)]]
+Input Languages : {Ag2=[+value(_0,_1), -mode(_0,_1), -value(_0,_1)], Ag3=[+value(_0,_1), +mode(_0,_1), -value(_0,_1)], Ag1=[+value(_0,_1), +mode(_0,_1), -value(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-connection(_0,_1), -value(_1,_2), +value(_0,_2)]
+ [-mode(_0,ok), -type(_0,and), -value(in(n1,_0),n1), -value(in(n2,_0),n1), +value(out(n1,_0),n1)]
+ [-mode(_0,ok), -type(_0,and), -value(out(n1,_0),n1), +value(in(n1,_0),n1)]
+ [-mode(_0,ok), -type(_0,or), -value(out(n1,_0),n0), +value(in(n2,_0),n0)]
+ [-connection(_0,_1), -value(_0,_2), +value(_1,_2)]
+Top clauses:
+ [-connection(_0,_1), -value(_0,_2), +value(_1,_2)]
+Production field:
+ [+value(_0,_1), -mode(_0,_1), -value(_0,_1), -connection(_0,_1), +value(_0,_1) <= 4, -value(_0,_1) <= 4, +mode(_0,_1) <= 4, -mode(_0,_1) <= 4]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+Sys -> Sys : {Time up!}
+Sys -> Sys : {Finish}
+Sys <------  {Time up!}
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 10204 ms.
+
+Execution time was 10106 ms.
+
+---System Timeout---
+
