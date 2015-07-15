@@ -14,20 +14,20 @@ cmp(x, y)
 '''
 
 
-class Cnf :
+class Clause :
     '''
-    a Cnf is a disjonction of one or more Propositions or Pred
-    the Cnf arg is a list
+    a Clause is a disjonction of one or more Propositions or Pred
+    the Clause arg is a list
     on ne vaut pas trier les CNF (ou alors pour optimiser mais seulement pouvoir 
     verifier egalite et subsumption entre elles et pour cela ce sont ses arguments qui sont triés)
     '''
     def __init__(self,args):
         self.args = args 
         
-    def subsumes(self,cnf):
+    def subsumes(self,clause):
         for obj1 in self.args :
             is_in = False
-            for obj2 in cnf.args :
+            for obj2 in clause.args :
                 if obj1.is_eq(obj2):
                     is_in = True
                     break
@@ -35,11 +35,11 @@ class Cnf :
                 return False
         return True
         
-    def is_subsumed(self, cnf):
-        cnf.subsumes(self)
+    def is_subsumed(self, clause):
+        clause.subsumes(self)
 
 '''
-QUESTION : EST CE QU 'ono peut AVOIR DES PROP ET DES PRED DANS UNE MEME Cnf ???
+QUESTION : EST CE QU 'ono peut AVOIR DES PROP ET DES PRED DANS UNE MEME Clause ???
 REGARDER DANS LES FICHIERS DE REPONSES 
 '''
 
@@ -57,7 +57,10 @@ class Prop():
             return False
         else :
             return True
-
+    def __eq__(self, other):
+        if isinstance(other, Prop):
+            return self.foo == other.foo
+        return NotImplemented
 class Pred():
     '''
         prend un nombre variable d'arguments
@@ -133,32 +136,32 @@ def comp_Vars(pred1,pred2):
         if e1 > e2 :return 1
     return 0 
 
-def algo_TRI_Cnf(cnfs):
+def algo_TRI_Clause(cnfs):
     '''
     Input : file1=result( MonoAgent ou MultiAgent = même ecriture ??)
     
     On parse les fichiers et on les stocke sous forme d'objets
-    chaque ligne -> Cnf
-    chaque Cnf -> (Pred|Prop)+
+    chaque ligne -> Clause
+    chaque Clause -> (Pred|Prop)+
     
     
     On trie chaque fichier 
     (Rq, avec notre implémentation ce n'est pas nécessaire de sorter les lignes
     mais ça permet une meilleure efficacité dans la recherche de certains types
-    de Cnfs).
+    de Clauses).
     Chaque ligne doit être triée : on fait appel au sort interne de python et il
-    faut implémenter une comparaison entre les objets de chaque Cnf
+    faut implémenter une comparaison entre les objets de chaque Clause
 
         1ere PARTIE du TRI : COMP_NOM
         différents cas pour (obj1, obj2) : (if obj1 < obj2 return -1 else if == return 0 else 1)
             if obj1 isProp and obj2 isPred, return -1
             if obj1 is Pred and obj2 isProp, return 1
             if (obj1 isProp and obj2 isProp) or (if obj1 isPred and obj 2 is pred), return COMPARAISOMLexicographique de (obj1.getname,obj2.getname)
-        => Cnfs à peu près triées mais pas pour les predicats
+        => Clauses à peu près triées mais pas pour les predicats
          
         
         2eme PARTIE du TRI : 
-        pour chaque Cnf : on coupe la queue à partir du premier predicat. (trié dans ordre propr < pred)
+        pour chaque Clause : on coupe la queue à partir du premier predicat. (trié dans ordre propr < pred)
         et pour chaque queue, on numérote dans l'ordre d'apparition les VAR et on les renomme (type: int)
         on sorte ensuite la liste des VARs (arg) (sort numérique simple)
         on sorte ensuite les pred avec comp_Pred(pred1,pred2) ici (qui utilise comp_Vars)
@@ -174,7 +177,7 @@ def algo_TRI_Cnf(cnfs):
                 if e1 > e2 return 1
             return 0 
         
-        puis on prend la liste des pred triées et on la reappend à la liste des prop pour la Cnf
+        puis on prend la liste des pred triées et on la reappend à la liste des prop pour la Clause
         
         
         
@@ -207,5 +210,65 @@ def algo_TRI_Cnf(cnfs):
         preds.sort(cmp=comp_Pred)
     
 def algo_CHECK_RESULTS():
-#    on a deux listes de CNF TTRIEes t onc ompar
+#    on a deux listes de CNF chacune aves ses arg triés
+    
+
+
     pass    
+
+import re
+def open_csq(filename):
+    '''
+    TODO : OPTI :il faut compiler les expressions regulieres avant
+    '''
+    #cnf
+    f = open(filename, 'r')
+    cnf = []    
+    iter_f = f.__iter__()
+    for line in iter_f :
+        if 'CHARACTERISTIC CLAUSES' in line :
+            nbClauses = int(re.findall('\d+', line)[0])
+            print 'il y a : ', nbClauses, 'new clauses'  
+            break
+    for line in iter_f:
+        if nbClauses == 0:
+            print 'no more clauses to read'            
+            break
+        #ici on n'a pas besoin de savoir ce que veut dire + ou -, on verifier
+        # juste legalite des string
+        clauses = re.findall('[\-|\+]?[\w]+(\(.*\))?',line)
+        print clauses
+        #ROBUSTE
+        args_clause = []
+        for p_str in clauses :
+            print p_str
+            if '(' in p_str:
+                print 'predicat'
+                name = re.findall('[\-|\+]?[\w]',p_str)
+                print 'pred name', name.group()
+                args  = re.sub('[\-|\+]?[\w]','',p_str)
+                print args
+                args = re.findall('\w+',args)
+                print args
+                p = Pred(name, args)                
+                #parser predicat
+                #p = new Pred()
+            else:
+                print 'prop'
+                p = Prop(p_str)
+            args_clause.append(p)
+        clause = Clause(args_clause)
+        cnf.append(clause)
+        nbClauses -=1
+    
+    return cnf
+filename = '/home/magma/projects/dcif/Etude/gen' + '/glucolysis_mono.csq'
+filename = '/home/magma/projects/dcif/Etude/gen' + '/test_pred.csq'
+cnf = open_csq (filename)
+
+for c in cnf :
+    for p in c.args :
+        print p.name
+        if p.is_pred():
+            for v in p.variables:
+                print v
