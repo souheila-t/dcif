@@ -19,3 +19,11 @@
 .project
 .metadata
 .gradle
+
+*.metadata
+Mod/.metadata/
+Mod/.project/
+Mod/.gradle/
+
+.*
+!/.gitignore
