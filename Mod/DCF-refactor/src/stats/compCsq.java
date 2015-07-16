@@ -1,13 +1,10 @@
 package stats;
 
-<<<<<<< HEAD
 import java.io.File;
 import java.io.PrintStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-=======
 import java.io.PrintStream;
->>>>>>> 68c4466bc683c56cc55590c40150b9574e388b3e
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -36,17 +33,12 @@ public class compCsq {
 				+ ", the files contain csq in the form of a .sol file.\n"
 				);
 	}
-<<<<<<< HEAD
+
 	private static String getShortFilename(String filename){
 		File accesFichier = new File(filename) ;
 		return accesFichier.getName();
 	}
 	private static String getParentFolder(String filename){
-=======
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
->>>>>>> 68c4466bc683c56cc55590c40150b9574e388b3e
 
 		File accesFichier = new File(filename) ;		
 		Path p = Paths.get(accesFichier.getAbsolutePath());
@@ -72,17 +64,11 @@ public class compCsq {
 		
 		
 
-<<<<<<< HEAD
 		String outputFilename=getParentFolder(filename1)+compCsq.getShortFilename(filename1) + "_" +compCsq.getShortFilename(filename2) + "_csqstats"+".csv";
 		if (args.length>i+1)
 			outputFilename=args[i+1].trim();
 		if (outputFilename.endsWith("_csqstats"+".csv"))
-=======
-		String outputFilename=filename1 + "_" +filename2 + "_csqstats"+".csv";
-		if (args.length>i+1)
-			outputFilename=args[i+1].trim();
-		if (outputFilename.endsWith(".csv"))
->>>>>>> 68c4466bc683c56cc55590c40150b9574e388b3e
+
 			outputFilename=outputFilename.substring(0,outputFilename.length()-13);
 
 		// MAIN
