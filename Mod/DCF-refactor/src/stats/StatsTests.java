@@ -20,5 +20,5 @@ public class StatsTests {
 		assertEquals("0 equals 0", 0, 0);
 	}
 
-} 
+}
 

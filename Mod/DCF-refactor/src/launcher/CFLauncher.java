@@ -45,7 +45,7 @@ public class CFLauncher {
 	public static final int DICF_ASYNC=0;
 	public static final int DICF_STAR=1;
 	public static final int DICF_TOKEN=2;
-	
+
 
 	public static DistributedConsequenceFindingProblem<SolProblem> setProblem(String problemRad, String variantSuffix, String distribSuffix) throws Exception{
 		//load dcf
@@ -58,8 +58,8 @@ public class CFLauncher {
 		}
 		return dcf;	
 	}
-	
-	
+
+
 	public static ExpeSummary partitionBasedAsyncIncCF(DistributedConsequenceFindingProblem<SolProblem> problem,
 			String pbName, String distribSuffix, String method, boolean useNC, boolean pruneCsq, long deadline) throws Exception{
 		long start = System.currentTimeMillis();
@@ -79,15 +79,15 @@ public class CFLauncher {
 		System.out.println("Execution time was " + (end - middle) + " ms.\n");
 		if(!finished)
 			System.out.println("---System Timeout---");
-		
+
 		//ouput in csq file for checking results
 		saveConsequences(consequences,pbName + "_" + method,!finished);
-		
+
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
 		return result;
-		}	
+	}	
 
 	public static ExpeSummary partitionBasedStarIncCF(DistributedConsequenceFindingProblem<SolProblem> problem,
 			String pbName, String distribSuffix, String method, String methodRoot, boolean useNC, boolean pruneCsq, long deadline) throws Exception{
@@ -99,12 +99,12 @@ public class CFLauncher {
 		if (methodRoot.startsWith("FixedRoot-")){
 			root=Integer.parseInt(methodRoot.substring(methodRoot.indexOf("-")+1));
 		}
-		
+
 		PBStarIncConsFinding pb=new PBStarIncConsFinding(problem, useNC, pruneCsq, root, deadline);
 		long middle = System.currentTimeMillis();
 		boolean finished = pb.startExpe(deadline);
 		long end = System.currentTimeMillis();
-		
+
 		// print some outpur
 		Collection<Clause> consequences=pb.getOutput();
 		System.out.println(""+consequences.size()+" (NEW) CHARACTERISTIC CLAUSES");
@@ -120,7 +120,7 @@ public class CFLauncher {
 
 		//ouput in csq file for checking results
 		saveConsequences(consequences,pbName + "_" + method,!finished);
-		
+
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
@@ -136,7 +136,7 @@ public class CFLauncher {
 		long start = System.currentTimeMillis();
 		//root
 		List<Integer> order=new ArrayList<Integer>();
-		
+
 		if (methodOrder==null || methodOrder.length()==0 || methodOrder.equalsIgnoreCase("DefaultOrder")){
 			methodOrder="DefaultOrder";
 			for (int i=0;i<problem.getNbAgents();i++)
@@ -149,12 +149,12 @@ public class CFLauncher {
 				order.add(num);
 			}
 		}
-		
+
 		PBTokenIncConsFinding pb=new PBTokenIncConsFinding(problem, useNC, pruneCsq, order, deadline);
 		long middle = System.currentTimeMillis();
 		boolean finished = pb.startExpe(deadline);
 		long end = System.currentTimeMillis();
-		
+
 		// print some outpur
 		Collection<Clause> consequences=pb.getOutput();
 		System.out.println(""+consequences.size()+" (NEW) CHARACTERISTIC CLAUSES");
@@ -167,7 +167,7 @@ public class CFLauncher {
 		System.out.println("Execution time was " + (end - middle) + " ms.\n");
 		if(!finished)
 			System.out.println("---System Timeout---");
-		
+
 
 		//ouput in csq file for checking results
 		saveConsequences(consequences,pbName + "_" + method,!finished);
@@ -176,8 +176,8 @@ public class CFLauncher {
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
 		return result;
 	}	
-	
-	
+
+
 	public static SolProblem setMonoProblem(String problemRad, String variantSuffix, boolean turnToCarc) throws Exception{
 		//load dcf
 		SolProblem pb=new SolProblem(problemRad);
@@ -196,7 +196,7 @@ public class CFLauncher {
 		}
 		return pb;	
 	}
-	
+
 	public static ExpeSummary solarCF(SolProblem pb, boolean incremental, boolean trueNewC, String pbName, String method, long deadline) throws Exception{
 		long start = System.currentTimeMillis();
 		ConsFindingAgentStats stat=new ConsFindingAgentStats();
@@ -210,7 +210,7 @@ public class CFLauncher {
 				reducedCons.addAndReduce(cl);
 			resultingCons=reducedCons;
 		}
-		
+
 		System.out.println(""+resultingCons.size()+" CHARACTERISTIC CLAUSES");
 		System.out.println();
 		for (Clause c:resultingCons){
@@ -219,20 +219,23 @@ public class CFLauncher {
 		System.out.println();
 		System.out.println("\nTotal execution time was " + (end - start) + " ms.\n");
 		System.out.println("\nExecution time was " + (end - middle) + " ms.\n");
-		
+
 		boolean finished = true;
-		if (status == ExitStatus.UNKNOWN)
+		System.out.println("status "+Integer.toString(status));
+		if (status == ExitStatus.UNKNOWN){
 			finished = false;
+			System.out.println("---System Timeout---");
+		}
 		//ouput in csq file for checking results
 		saveConsequences(resultingCons,pbName + "_" + method,!finished);
-		
+
 		// set result line
 		List<ConsFindingAgentStats> agStats=new ArrayList<ConsFindingAgentStats>();
 		agStats.add(stat);
 		ExpeSummary result=new ExpeSummary(pbName, "Mono", 0,method, end-start, resultingCons.size(),agStats);
 		return result;		
 	}
-	
+
 	public static ExpeSummary runExpe(String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis) throws Exception{
 		ExpeSummary result=null;
 		long deadline=-1;
@@ -300,24 +303,24 @@ public class CFLauncher {
 				if (timeLimitMillis!=-1) deadline=System.currentTimeMillis()+timeLimitMillis;
 				switch(pbMethod){
 				case DICF_ASYNC:
-						result=partitionBasedAsyncIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, useNC, pruneCsq, deadline);
-						break;
+					result=partitionBasedAsyncIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, useNC, pruneCsq, deadline);
+					break;
 				case DICF_STAR:
-						result=partitionBasedStarIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pHeuristic, useNC, pruneCsq, deadline);
-						break;
+					result=partitionBasedStarIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pHeuristic, useNC, pruneCsq, deadline);
+					break;
 				case DICF_TOKEN:
 					result=partitionBasedTokenIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pHeuristic, useNC, pruneCsq, deadline);
 					break;
-					
+
 				}
-				
-				
+
+
 			}
 		}
 		return result;
 	}
-	
-	
+
+
 	private static List<String> getMethodOptions(String method){
 		List<String> result=new ArrayList<String>();
 		String head="";
@@ -343,29 +346,29 @@ public class CFLauncher {
 	//  DCF-PB-Seq-FixRoot0
 	//  DCF-PB-Par-MaxClSize
 
-	
-////////////////////////////////////////////////////////////
-	
-	
+
+	////////////////////////////////////////////////////////////
+
+
 	private static void exec(String resultFilename, String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis) throws Exception{
 		boolean label=false;
-		
+
 		ExpeSummary res=runExpe(method, pbBaseName, variantSuffix, distributionSuffix, timeLimitMillis);
 		//pbName = pbBaseName+variantSuffix
 		//resultfilename = pbName + "_" + method
 		//tout est passé dans le result filename
 		File accesFichier = new File(resultFilename+".csv") ;  	
-	 	if (!accesFichier.exists()){
-	 		//Creates output file if it doesn't already exist
-	 		accesFichier.createNewFile();
-	 		label=true;											//I do not know what this does
-	 	}	 		
-	 	PrintStream fileOut = new PrintStream(new FileOutputStream(accesFichier, true));
-	 	if (label) fileOut.println(ExpeSummary.labels());		//prints something
+		if (!accesFichier.exists()){
+			//Creates output file if it doesn't already exist
+			accesFichier.createNewFile();
+			label=true;											//I do not know what this does
+		}	 		
+		PrintStream fileOut = new PrintStream(new FileOutputStream(accesFichier, true));
+		if (label) fileOut.println(ExpeSummary.labels());		//prints something
 		fileOut.println(res.toLine());							//prints something else
 		fileOut.close();
 	}
-	
+
 	public static void printHelp(){
 		System.out.println("Launch an expe with the given parameters and append the result line to the given outpur file");
 		System.out.println("Usage :");
@@ -377,20 +380,20 @@ public class CFLauncher {
 		System.out.println("-t=N  set time limit.");
 		System.out.println("-var=varSuffix  use the variant with given suffix (should begin by \"_\").");
 		System.out.println("-dist=distSuffix  use the distribution with given suffix (should begin by \"_\").");
-		
+
 	}
-	
+
 	public static void main(String[] args){
 		String resultFilename="resultIndiv";
 		String method="SOLAR-Carc";
 		String variantSuffix="";
 		String distributionSuffix="";
 		long timeLimitMillis=-1;
-		
+
 		CFSolver.verbose=false;
 		Tree.verbose=false;
 		CanalComm.verbose=false;
-		
+
 		int i=0;
 		//Starts processing arguments
 		while (args[i].startsWith("-")) {
@@ -441,7 +444,7 @@ public class CFLauncher {
 				return;
 			}
 		}
-		
+
 		String problemFilename=args[i].trim();											//Gets input filename
 		if (problemFilename.endsWith(".sol"))
 			problemFilename=problemFilename.substring(0,problemFilename.length()-4);	//Removes file extension
@@ -458,20 +461,20 @@ public class CFLauncher {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 

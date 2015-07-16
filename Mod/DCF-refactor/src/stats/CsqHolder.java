@@ -6,7 +6,6 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collection;
 
-
 import org.nabelab.solar.Clause;
 import org.nabelab.solar.ClauseTypes;
 import org.nabelab.solar.Env;
@@ -32,9 +31,10 @@ public class CsqHolder implements Parser, Saver {
 		this();		
 		load(filenameNoExt);
 	}
-	public CsqHolder (Collection<Clause> clauses) throws Exception{
+	public CsqHolder (Collection<Clause> clauses, boolean timeOut) throws Exception{
 		this();
 		this.clauses=clauses;
+		this.timeOut = timeOut;
 	}
 	
 	//load .sol
@@ -60,6 +60,10 @@ public class CsqHolder implements Parser, Saver {
     
     }
 	public void parseSolFileLine(String line) throws ParseException{
+		if (line.startsWith("nb csq"))
+			parseNbCsq(line);
+		if (line.startsWith("timeout"))
+			parseTimeOut(line);
 		if (line.startsWith("cnf"))
 			parseCnf(line);
 		if (line.startsWith("pf"))
@@ -68,6 +72,20 @@ public class CsqHolder implements Parser, Saver {
 	/*
 	 * all csq are axioms here
 	 */
+	private void parseTimeOut(String line) {
+		// TODO Auto-generated method stub
+		String s = line.substring(8);
+		int t = Integer.parseInt(s);
+		if (t == 1)
+			this.timeOut = true;
+		else
+			this.timeOut = false;			
+	}
+
+	private void parseNbCsq(String line) {
+		//do nothing		
+	}
+
 	private void parseCnf(String line) throws ParseException{
 		PbFormula temp=PbFormula.parseFormulaBlock(line,"SOLAR");
 		Clause clause=temp.toClause(env);
@@ -86,7 +104,7 @@ public class CsqHolder implements Parser, Saver {
 	
 	@Override
 	public void save(PrintStream p){
-		//printHeader(p);
+		printHeader(p);
 		for(Clause cl:getClauses()){
 			if (cl != null)
 				p.println(IndepClause.toSolFileLine(cl, "axiom"));
@@ -94,10 +112,22 @@ public class CsqHolder implements Parser, Saver {
 	//	p.println();
 		//p.println(IndepPField.toSolFileLine(getPField()));
 	}
+	
+	private void printHeader(PrintStream p) {
+		p.println("nb csq "+Integer.toString(this.getClauses().size()));
+		String t;
+		if (this.timeOut == true)
+			t = "1" ;
+		else 
+			t = "0";
+		p.println("timeout "+t);
+	}
+
 	private Collection<Clause> clauses = new ArrayList<Clause>();
 	private PField pfield = null;
 	private Env env;
 	private Options opt;
+	private boolean timeOut;
 	public Collection<Clause> getClauses(){
 		return this.clauses;
 	}
