@@ -1,5 +1,16 @@
 package stats;
 
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
+
+import logicLanguage.IndepClause;
+import genLib.io.LoaderTool;
+import genLib.io.Saver;
+
 import org.nabelab.solar.Clause;
 
 
@@ -16,7 +27,7 @@ public class compCsq {
 				+ ", the files contain csq in the form of a .sol file.\n"
 				);
 	}
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -35,16 +46,14 @@ public class compCsq {
 		if (filename2.endsWith(".csq"))
 			filename2=filename2.substring(0,filename2.length()-4);
 
-		String outputFilename=filename1 + "_" +filename2 + ".csqstats";
+		String outputFilename=filename1 + "_" +filename2 + "_csqstats"+".csv";
 		if (args.length>i+1)
 			outputFilename=args[i+1].trim();
-		if (outputFilename.endsWith(".csqstats"))
-			outputFilename=outputFilename.substring(0,outputFilename.length()-9);
+		if (outputFilename.endsWith(".csv"))
+			outputFilename=outputFilename.substring(0,outputFilename.length()-13);
 
 		// MAIN
 		try {
-			
-			
 			//C2 subsumes potentially c1 (if double reciproque = equality)
 
 			System.out.println("here");
@@ -56,60 +65,43 @@ public class compCsq {
 
 			//nb de clauses de c1
 			int nbCl_c1 = csqH1.getClauses().size();//
-
 			//nb de clauses de c2
 			int nbCl_c2 = csqH2.getClauses().size();//
 
 			//c2 : solutions finales du MONO AGENT
 			//nb de clauses de c1 totalement(exactement) présentes dans c2 (et inversement)
 			int nbCl_c1_tot_present = 0;//
-
-
 			//permet de mieux voir les redondances
 			//nb de fois que des clauses de c2 subsument des clauses de c1
 			int nbTimesCl_subs_non_min = 0;//
-
 			//nb de fois que des clauses de c2 subsument des clauses de c1 (strict)
 			int nbTimesCl_subs_min = 0;//
 
 
-
-
-
 			//nb de clauses de c1 qui ne sont subsumées par aucune clause de c2
-			int nbCl_c1_non_sub = 0;//
-
+			int nbCl_c1_non_subsumed = 0;//
 			//nb de clauses de c1 qui sont subsumées par des clauses de c2 (strict)
-			int nbCl_c1_sub_min = 0;
-
+			int nbCl_c1_subsumed_min = 0;
 			//nb de clauses de c1 qui sont subsumées par des clauses de c2 
-			int nbCl_c1_sub_non_min = 0;
-
-
-
-
+			int nbCl_c1_subsumed_non_min = 0;
 
 
 			//nb de clauses de c2 qui ne subsument aucune clause de c1
 			int nbCl_c2_non_sub =0;
-
 			//nb de clauses de c2 qui subsument au moins une clause de c1
 			int nbCl_c2_sub_non_min =0;
-
 			//nb de clauses de c2 qui subsument au moins une clause de c1 (strict)
 			int nbCl_c2_sub_min =0;
 
 
-
-
 			//normalement pas de doublons : clauses toutes différentes
 			for(Clause c1: csqH1.getClauses()){
-				boolean isSub = false;
+				boolean isSubsumed = false;
 				boolean isEqual = false;
 				for (Clause c2 : csqH2.getClauses()){
 
 					if (c2.subsumes(c1)){
-						isSub = true;
+						isSubsumed = true;
 						nbTimesCl_subs_non_min++;
 						if (c1.subsumes(c2)){
 							isEqual = true;
@@ -119,28 +111,28 @@ public class compCsq {
 							nbTimesCl_subs_min++;
 					}
 				} 
-				if (!isSub)
-					nbCl_c1_non_sub++;
+				if (!isSubsumed)
+					nbCl_c1_non_subsumed++;
 				else {
 					if (isEqual)
-						nbCl_c1_sub_non_min++;
+						nbCl_c1_subsumed_non_min++;
 					else
-						nbCl_c1_sub_min++;
+						nbCl_c1_subsumed_min++;
 				}
 			}
 
 			for(Clause c2: csqH2.getClauses()){
-				boolean isSub = false;
+				boolean doSub = false;
 				boolean isEqual = false;
 				for (Clause c1 : csqH1.getClauses()){
 					if (c2.subsumes(c1)){
-						isSub = true;
+						doSub = true;
 						if (c1.subsumes(c2)){
 							isEqual = true;
 						}
 					}
 				} 
-				if (!isSub)
+				if (!doSub)
 					nbCl_c2_non_sub++;
 				else {
 					if (isEqual)
@@ -150,7 +142,7 @@ public class compCsq {
 				}
 			}
 			//Rq on peut enlever le calcul de is equal mais permet de verifier l'integrité des operations
-
+			//remplacer ca par autre chose de moins laid
 			System.out.println(
 					"//nb de clauses de c1\n"+
 							nbCl_c1 +"\n"+
@@ -173,13 +165,13 @@ public class compCsq {
 
 
 					"//nb de clauses de c1 qui ne sont subsumées par aucune clause de c2\n"+
-					nbCl_c1_non_sub+"\n"+
+					nbCl_c1_non_subsumed+"\n"+
 
 					"//nb de clauses de c1 qui sont subsumées par des clauses de c2 (strict)\n"+
-					nbCl_c1_sub_min +"\n"+
+					nbCl_c1_subsumed_min +"\n"+
 
 					"//nb de clauses de c1 qui sont subsumées par des clauses de c2 \n"+
-					nbCl_c1_sub_non_min +"\n"+
+					nbCl_c1_subsumed_non_min +"\n"+
 
 
 					"//nb de clauses de c2 qui ne subsument aucune clause de c1\n"+
@@ -189,16 +181,53 @@ public class compCsq {
 					nbCl_c2_sub_non_min +"\n"+
 
 					"//nb de clauses de c2 qui subsument au moins une clause de c1(strict)\n"+
-					nbCl_c2_sub_min +"\n"
-					);
-
+					nbCl_c2_sub_min +"\n");
+			
+			OutputCompHolder outputHolder= new OutputCompHolder();
+			outputHolder.addEntry(
+					"nbCl_c1",
+					nbCl_c1 );
+			outputHolder.addEntry(
+					"nbCl_c2",
+					nbCl_c2 );
+			outputHolder.addEntry(
+					"nbCl_c1_tot_present",
+					nbCl_c1_tot_present);
+			outputHolder.addEntry(
+					"nbTimesCl_subs_non_min",
+					nbTimesCl_subs_non_min);
+			outputHolder.addEntry(
+					"nbTimesCl_subs_min",
+					nbTimesCl_subs_min);
+			outputHolder.addEntry(
+					"nbCl_c1_non_subsumed",
+					nbCl_c1_non_subsumed);
+			outputHolder.addEntry(
+					"nbCl_c1_subsumed_min",
+					nbCl_c1_subsumed_min);
+			outputHolder.addEntry(
+					"nbCl_c1_subsumed_non_min",
+					nbCl_c1_subsumed_non_min);
+			outputHolder.addEntry(
+					"nbCl_c2_non_sub",
+					nbCl_c2_non_sub);
+			outputHolder.addEntry(
+					"nbCl_c2_sub_non_min",
+					nbCl_c2_sub_non_min);
+			outputHolder.addEntry(
+					"nbCl_c2_sub_min",
+					nbCl_c2_sub_min);		
+			
+			outputHolder.save(outputFilename,true);
 			// save output to CSV
-			//output.save(outputFilename,replace);
 		} catch (Exception e) {
-			System.err.println("Error");
+			System.err.println("Error while saving");
 			//e.printStackTrace();
 		}
 	}
 
 
 }
+
+
+
