@@ -116,7 +116,11 @@ public class CsqHolder implements Parser, Saver {
 	private void printHeader(PrintStream p) {
 		p.println("nb csq "+Integer.toString(this.getClauses().size()));
 		String t;
+<<<<<<< HEAD
 		if (this.timeOut == true)
+=======
+		if (this.timeOut)
+>>>>>>> 68c4466bc683c56cc55590c40150b9574e388b3e
 			t = "1" ;
 		else 
 			t = "0";
