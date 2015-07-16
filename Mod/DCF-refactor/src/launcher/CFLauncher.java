@@ -61,7 +61,7 @@ public class CFLauncher {
 
 
 	public static ExpeSummary partitionBasedAsyncIncCF(DistributedConsequenceFindingProblem<SolProblem> problem,
-			String pbName, String distribSuffix, String method, boolean useNC, boolean pruneCsq, long deadline) throws Exception{
+			String pbName, String distribSuffix, String method, boolean useNC, boolean pruneCsq, long deadline, String outputCsqFilename) throws Exception{
 		long start = System.currentTimeMillis();
 		PBAsyncIncConsFinding pb=new PBAsyncIncConsFinding(problem, useNC, pruneCsq, deadline);
 		long middle = System.currentTimeMillis();
@@ -81,7 +81,7 @@ public class CFLauncher {
 			System.out.println("---System Timeout---");
 
 		//ouput in csq file for checking results
-		saveConsequences(consequences,pbName + "_" + method,!finished);
+		saveConsequences(consequences,outputCsqFilename,!finished);
 
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
@@ -90,7 +90,7 @@ public class CFLauncher {
 	}	
 
 	public static ExpeSummary partitionBasedStarIncCF(DistributedConsequenceFindingProblem<SolProblem> problem,
-			String pbName, String distribSuffix, String method, String methodRoot, boolean useNC, boolean pruneCsq, long deadline) throws Exception{
+			String pbName, String distribSuffix, String method, String methodRoot, boolean useNC, boolean pruneCsq, long deadline,String outputCsqFilename) throws Exception{
 		long start = System.currentTimeMillis();
 		//root
 		int root=0;
@@ -119,7 +119,7 @@ public class CFLauncher {
 			System.out.println("---System Timeout---");
 
 		//ouput in csq file for checking results
-		saveConsequences(consequences,pbName + "_" + method,!finished);
+		saveConsequences(consequences, outputCsqFilename,!finished);
 
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
@@ -132,7 +132,7 @@ public class CFLauncher {
 	}
 
 	public static ExpeSummary partitionBasedTokenIncCF(DistributedConsequenceFindingProblem<SolProblem> problem,
-			String pbName, String distribSuffix, String method, String methodOrder, boolean useNC, boolean pruneCsq, long deadline) throws Exception{
+			String pbName, String distribSuffix, String method, String methodOrder, boolean useNC, boolean pruneCsq, long deadline,String outputCsqFilename) throws Exception{
 		long start = System.currentTimeMillis();
 		//root
 		List<Integer> order=new ArrayList<Integer>();
@@ -170,7 +170,7 @@ public class CFLauncher {
 
 
 		//ouput in csq file for checking results
-		saveConsequences(consequences,pbName + "_" + method,!finished);
+		saveConsequences(consequences, outputCsqFilename,!finished);
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
@@ -197,7 +197,7 @@ public class CFLauncher {
 		return pb;	
 	}
 
-	public static ExpeSummary solarCF(SolProblem pb, boolean incremental, boolean trueNewC, String pbName, String method, long deadline) throws Exception{
+	public static ExpeSummary solarCF(SolProblem pb, boolean incremental, boolean trueNewC, String pbName, String method, long deadline,String outputCsqFilename) throws Exception{
 		long start = System.currentTimeMillis();
 		ConsFindingAgentStats stat=new ConsFindingAgentStats();
 		Collection<Clause> resultingCons=new ArrayList<Clause>();
@@ -227,7 +227,7 @@ public class CFLauncher {
 			System.out.println("---System Timeout---");
 		}
 		//ouput in csq file for checking results
-		saveConsequences(resultingCons,pbName + "_" + method,!finished);
+		saveConsequences(resultingCons,outputCsqFilename,!finished);
 
 		// set result line
 		List<ConsFindingAgentStats> agStats=new ArrayList<ConsFindingAgentStats>();
@@ -236,7 +236,7 @@ public class CFLauncher {
 		return result;		
 	}
 
-	public static ExpeSummary runExpe(String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis) throws Exception{
+	public static ExpeSummary runExpe(String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis,String outputCsqFilename) throws Exception{
 		ExpeSummary result=null;
 		long deadline=-1;
 		List<String> methodOptions=getMethodOptions(method);
@@ -258,7 +258,7 @@ public class CFLauncher {
 			}
 			SolProblem problem=setMonoProblem(pbBaseName, variantSuffix, turnToCarc);				//Set the problem
 			if (timeLimitMillis!=-1) deadline=System.currentTimeMillis()+timeLimitMillis;
-			result=solarCF(problem, inc, trueNC,pbBaseName+variantSuffix, method, deadline);
+			result=solarCF(problem, inc, trueNC,pbBaseName+variantSuffix, method, deadline, outputCsqFilename);
 			if (deadline>0 && deadline<System.currentTimeMillis()){
 				System.out.println("------------------  TIME OUT --------------------");
 			}
@@ -303,13 +303,13 @@ public class CFLauncher {
 				if (timeLimitMillis!=-1) deadline=System.currentTimeMillis()+timeLimitMillis;
 				switch(pbMethod){
 				case DICF_ASYNC:
-					result=partitionBasedAsyncIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, useNC, pruneCsq, deadline);
+					result=partitionBasedAsyncIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, useNC, pruneCsq, deadline, outputCsqFilename);
 					break;
 				case DICF_STAR:
-					result=partitionBasedStarIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pHeuristic, useNC, pruneCsq, deadline);
+					result=partitionBasedStarIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pHeuristic, useNC, pruneCsq, deadline, outputCsqFilename);
 					break;
 				case DICF_TOKEN:
-					result=partitionBasedTokenIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pHeuristic, useNC, pruneCsq, deadline);
+					result=partitionBasedTokenIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pHeuristic, useNC, pruneCsq, deadline, outputCsqFilename);
 					break;
 
 				}
@@ -350,10 +350,10 @@ public class CFLauncher {
 	////////////////////////////////////////////////////////////
 
 
-	private static void exec(String resultFilename, String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis) throws Exception{
+	private static void exec(String resultFilename, String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis,String outputCsqFilename) throws Exception{
 		boolean label=false;
 
-		ExpeSummary res=runExpe(method, pbBaseName, variantSuffix, distributionSuffix, timeLimitMillis);
+		ExpeSummary res=runExpe(method, pbBaseName, variantSuffix, distributionSuffix, timeLimitMillis, outputCsqFilename);
 		//pbName = pbBaseName+variantSuffix
 		//resultfilename = pbName + "_" + method
 		//tout est passé dans le result filename
@@ -380,6 +380,7 @@ public class CFLauncher {
 		System.out.println("-t=N  set time limit.");
 		System.out.println("-var=varSuffix  use the variant with given suffix (should begin by \"_\").");
 		System.out.println("-dist=distSuffix  use the distribution with given suffix (should begin by \"_\").");
+		System.out.println("-csq=outputCsq  output the consequences in this file\"_\").");
 
 	}
 
@@ -389,6 +390,7 @@ public class CFLauncher {
 		String variantSuffix="";
 		String distributionSuffix="";
 		long timeLimitMillis=-1;
+		String outputCsqFilename = "";
 
 		CFSolver.verbose=false;
 		Tree.verbose=false;
@@ -438,6 +440,12 @@ public class CFLauncher {
 				i++;
 				continue;
 			}
+			if (args[i].startsWith("-csq=")){
+				//Sets output file for consequences
+				outputCsqFilename=args[i].substring(args[i].indexOf("=")+1).trim();
+				i++;
+				continue;
+			}
 			else{
 				//Prints help in case no allowed argument was detected
 				printHelp();
@@ -455,7 +463,7 @@ public class CFLauncher {
 		}			
 		resultFilename=resultFilename.trim();
 		try {
-			exec(resultFilename, method, problemFilename, variantSuffix, distributionSuffix, timeLimitMillis);	//Starts execution
+			exec(resultFilename, method, problemFilename, variantSuffix, distributionSuffix, timeLimitMillis,outputCsqFilename);	//Starts execution
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

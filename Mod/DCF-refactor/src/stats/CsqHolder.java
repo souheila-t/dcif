@@ -21,6 +21,7 @@ import genLib.io.Parser;
 import genLib.io.Saver;
 
 public class CsqHolder implements Parser, Saver {
+	//problem;distrib;nbAg+;method
 	public CsqHolder (){
 		super();
 		this.env = new Env();
