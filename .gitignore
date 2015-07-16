@@ -25,5 +25,6 @@ Mod/.metadata/
 Mod/.project/
 Mod/.gradle/
 
+*/.*
 .*
 !/.gitignore

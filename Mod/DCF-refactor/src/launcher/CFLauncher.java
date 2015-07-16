@@ -14,6 +14,7 @@ import java.util.Collection;
 import java.util.List;
 
 import org.nabelab.solar.Clause;
+import org.nabelab.solar.ExitStatus;
 import org.nabelab.solar.parser.ParseException;
 
 import logicLanguage.CNF;
@@ -80,7 +81,7 @@ public class CFLauncher {
 			System.out.println("---System Timeout---");
 		
 		//ouput in csq file for checking results
-		saveConsequences(consequences,pbName + "_" + method);
+		saveConsequences(consequences,pbName + "_" + method,!finished);
 		
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
@@ -118,15 +119,15 @@ public class CFLauncher {
 			System.out.println("---System Timeout---");
 
 		//ouput in csq file for checking results
-		saveConsequences(consequences,pbName + "_" + method);
+		saveConsequences(consequences,pbName + "_" + method,!finished);
 		
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
 		return result;
 	}	
-	public static void saveConsequences(Collection<Clause> consequences, String name ) throws Exception{
-		CsqHolder csqH = new CsqHolder(consequences);
+	public static void saveConsequences(Collection<Clause> consequences, String name,boolean timeOut ) throws Exception{
+		CsqHolder csqH = new CsqHolder(consequences, timeOut);
 		csqH.save(name, true);
 	}
 
@@ -169,7 +170,7 @@ public class CFLauncher {
 		
 
 		//ouput in csq file for checking results
-		saveConsequences(consequences,pbName + "_" + method);
+		saveConsequences(consequences,pbName + "_" + method,!finished);
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
@@ -201,7 +202,7 @@ public class CFLauncher {
 		ConsFindingAgentStats stat=new ConsFindingAgentStats();
 		Collection<Clause> resultingCons=new ArrayList<Clause>();
 		long middle = System.currentTimeMillis();
-		CFSolver.solveToClause(pb, deadline, stat.getSolarCtrList(), resultingCons, incremental, trueNewC);
+		int status = CFSolver.solveToClause(pb, deadline, stat.getSolarCtrList(), resultingCons, incremental, trueNewC);
 		long end = System.currentTimeMillis();
 		if (incremental){
 			CNF reducedCons=new CNF();
@@ -219,9 +220,11 @@ public class CFLauncher {
 		System.out.println("\nTotal execution time was " + (end - start) + " ms.\n");
 		System.out.println("\nExecution time was " + (end - middle) + " ms.\n");
 		
-
+		boolean finished = true;
+		if (status == ExitStatus.UNKNOWN)
+			finished = false;
 		//ouput in csq file for checking results
-		saveConsequences(resultingCons,pbName + "_" + method);
+		saveConsequences(resultingCons,pbName + "_" + method,!finished);
 		
 		// set result line
 		List<ConsFindingAgentStats> agStats=new ArrayList<ConsFindingAgentStats>();
@@ -348,7 +351,9 @@ public class CFLauncher {
 		boolean label=false;
 		
 		ExpeSummary res=runExpe(method, pbBaseName, variantSuffix, distributionSuffix, timeLimitMillis);
-		
+		//pbName = pbBaseName+variantSuffix
+		//resultfilename = pbName + "_" + method
+		//tout est passé dans le result filename
 		File accesFichier = new File(resultFilename+".csv") ;  	
 	 	if (!accesFichier.exists()){
 	 		//Creates output file if it doesn't already exist
