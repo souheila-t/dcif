@@ -37,7 +37,13 @@ def addToLog(log_file, toAdd) :
     for line in toAdd :
         log_file.write(line + '\n')
         print line
-        
+'''
+def addToLog(log_filename, toAdd) :
+    with open(log_filename + '.log', 'w') as log_file :
+        for line in toAdd :
+            log_file.write(line + '\n')
+            print line
+'''                    
 def jarWrapper(*args):
     '''    
         http://stackoverflow.com/questions/7372592/python-how-can-execute-a-jar-file-through-a-python-script

@@ -4,22 +4,28 @@
 import unittest
 from partitioning import *
 
+    
+TEST_PATH ='tests/partitioning/'
+fDCF = 'glucolysis_kmet4'
+fSol = 'glucolysis'
+fSol_unvalid = 'glucolysis_withoutTP'
+
 TEST_PATH ='tests/partitioning/'
 class TestStringMethods(unittest.TestCase):
     def setUp(self):
         self.sol_filename = 'glucolysis' 
         self.dcf_filename = 'glucolysis_kmet4'
         self.sol_unvalid_filename ='glucolysis_withoutTP'
-        self.f1 = FileSol(TEST_PATH+fSol)
+        self.f1 = FileSol(TEST_PATH,fSol)
         self.f1.load()
         
     def test_load_save(self):
-        f1 = FileSol(TEST_PATH+fSol)
+        f1 = FileSol(TEST_PATH,fSol)
         f1.load()
         
         temp_outfilename = 'tempSol'
-        f1.save(filename = TEST_PATH+temp_outfilename)
-        f2 = FileSol(TEST_PATH+temp_outfilename)
+        f1.save(path=TEST_PATH,filename=temp_outfilename)
+        f2 = FileSol(TEST_PATH,temp_outfilename)
         f2.load()
         for line1,line2 in zip(f1.lines, f2.lines):
             self.assertEqual(line1.data,line2.data)
@@ -30,7 +36,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertFalse(self.f1.is_valid())
        # self.f1.save(TEST_PATH+'TESTS')
     def test_TPdistribution1(self):
-        res=self.f1.create_a_FileSol_wit_a_TP_distribution_naiveShort(10)
+        res,nb=self.f1.create_a_FileSol_wit_a_TP_distribution_naiveShort(10)
         res.save()
     def test_Agdistribution1(self):
 
@@ -45,33 +51,33 @@ class TestStringMethods(unittest.TestCase):
         with self.assertRaises(TypeError):
     '''
     def test_dcf_valid(self):
-        file_sol_unvalid = FileSol(TEST_PATH+self.sol_unvalid_filename)
+        file_sol_unvalid = FileSol(TEST_PATH,self.sol_unvalid_filename)
         file_sol_unvalid.load()
         file_dcf_unvalid = file_sol_unvalid.create_dcf_Agent_distribution(2)     
         file_dcf_unvalid.load()
         
-        self.assertFalse( file_dcf_unvalid.isValid())
-        file_dcf = FileDCF(TEST_PATH+self.dcf_filename)
+        self.assertFalse( file_dcf_unvalid.is_valid())
+        file_dcf = FileDCF(TEST_PATH,self.dcf_filename)
         file_dcf.load()
         
-        self.assertTrue(file_dcf.isValid())
+        self.assertTrue(file_dcf.is_valid())
     def test_dcf_to_sol(self):
-        file_sol_unvalid = FileSol(TEST_PATH+self.sol_unvalid_filename)
+        file_sol_unvalid = FileSol(TEST_PATH,self.sol_unvalid_filename)
         file_sol_unvalid.load()
         file_dcf_unvalid = file_sol_unvalid.create_dcf_Agent_distribution(2)     
         file_dcf_unvalid.save()
         
-        file_dcf = FileDCF(TEST_PATH+file_dcf)
+        file_dcf = FileDCF(TEST_PATH,self.dcf_filename)
         file_dcf.load()
         
         solres=file_dcf.toSol()
-        solres.save(TEST_PATH+'test1tosol')
+        solres.save(path=TEST_PATH,filename='test1tosol')
         solres = file_dcf_unvalid.toSol() 
-        solres.save(TEST_PATH+'test2tosol')
+        solres.save(path=TEST_PATH,filename='test2tosol')
         
     def test_TPdistributionEachAgent(self):
         
-        file_dcf = FileDCF(TEST_PATH+file_dcf)
+        file_dcf = FileDCF(TEST_PATH,self.dcf_filename)
         file_dcf.load()        
         solres = file_dcf.create_a_FileSol_wit_a_TPdistribution_for_each_agent(20)
         solres.save()        

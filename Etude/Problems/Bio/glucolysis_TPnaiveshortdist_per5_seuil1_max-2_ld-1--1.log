@@ -9,105 +9,105 @@ ressources/CFLauncher_7.jar
 -verbose
 -t=5000
 -var=_max-2_ld-1--1
--csq=Problems/Bio/glucolysis_max-2_ld-1--1_MONO
-Problems/Bio/glucolysis
-Problems/Bio/glucolysis_max-2_ld-1--1
+-csq=Problems/Bio/glucolysis_TPnaiveshortdist_per5_seuil1_max-2_ld-1--1_MONO
+Problems/Bio/glucolysis_TPnaiveshortdist_per5_seuil1
+Problems/Bio/glucolysis_TPnaiveshortdist_per5_seuil1_max-2_ld-1--1
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [41, 1, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 1, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [43, 1, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 1, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [12, 10, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [3, 1, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 37, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 10, 4, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 37, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 37, 16, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [7, 37, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 37, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 37, 16, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [6, 17, 7, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [10, 129, 56, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [11, 129, 56, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [12, 129, 56, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [10, 129, 56, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [6, 24, 10, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [21, 277, 120, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [20, 277, 120, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [18, 277, 120, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [19, 277, 120, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 30, 12, 1, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [9, 30, 12, 1, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [39, 596, 252, 11, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [41, 596, 252, 11, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [39, 596, 252, 11, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [10, 61, 25, 1, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [8, 61, 25, 1, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 37, 14, 1, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 37, 14, 1, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [71, 1098, 447, 19, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [99, 1098, 447, 19, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [14, 39, 15, 2, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [19, 39, 15, 2, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [71, 1592, 642, 45, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [63, 1592, 642, 45, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [7, 82, 33, 3, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [52, 1842, 749, 37, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [62, 1842, 749, 37, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [8, 113, 46, 2, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [92, 3036, 1232, 58, 0, 0, 0, 8]
+>>>>>>>>>>>> Solve - measure : [83, 3036, 1232, 58, 0, 0, 0, 8]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 172, 70, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 172, 70, 4, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [143, 5499, 2232, 132, 0, 3, 0, 13]
+>>>>>>>>>>>> Solve - measure : [224, 5499, 2232, 132, 0, 3, 0, 13]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [113, 5499, 2232, 132, 0, 3, 0, 13]
+>>>>>>>>>>>> Solve - measure : [184, 5499, 2232, 132, 0, 3, 0, 13]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [66, 5499, 2232, 132, 0, 3, 0, 13]
+>>>>>>>>>>>> Solve - measure : [141, 5499, 2232, 132, 0, 3, 0, 13]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 188, 77, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 188, 77, 4, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [49, 7477, 3059, 154, 0, 3, 0, 16]
+>>>>>>>>>>>> Solve - measure : [118, 7477, 3059, 154, 0, 3, 0, 16]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [45, 7477, 3059, 154, 0, 3, 0, 16]
+>>>>>>>>>>>> Solve - measure : [93, 7477, 3059, 154, 0, 3, 0, 16]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [39, 7477, 3059, 154, 0, 3, 0, 16]
+>>>>>>>>>>>> Solve - measure : [62, 7477, 3059, 154, 0, 3, 0, 16]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 315, 129, 5, 0, 2, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 315, 129, 5, 0, 2, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 345, 148, 8, 0, 2, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [8, 345, 148, 8, 0, 2, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [10, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
@@ -117,121 +117,45 @@ Problems/Bio/glucolysis_max-2_ld-1--1
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [10, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [13, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [9, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [10, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [12, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [11, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
@@ -239,6 +163,46 @@ Problems/Bio/glucolysis_max-2_ld-1--1
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [9, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
@@ -246,6 +210,44 @@ Problems/Bio/glucolysis_max-2_ld-1--1
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
@@ -271,155 +273,152 @@ Problems/Bio/glucolysis_max-2_ld-1--1
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [10, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 SolveToClause Finished!
 2 CHARACTERISTIC CLAUSES
 [-m_fumarate, +m_citrate]
 [-m_citrate, +m_fumarate]
 
 
-Total execution time was 5034 ms.
+Total execution time was 4777 ms.
 
 
-Execution time was 5028 ms.
+Execution time was 4770 ms.
 
 status 103
 ---System Timeout---
-Problems/Bio/glucolysis_max-2_ld-1--1_MONO
-------------------  TIME OUT --------------------
+Problems/Bio/glucolysis_TPnaiveshortdist_per5_seuil1_max-2_ld-1--1_MONO
 
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [41, 1, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 1, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [43, 1, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 1, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [12, 10, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [3, 1, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 37, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 10, 4, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 37, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 37, 16, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [7, 37, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 37, 16, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 37, 16, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [6, 17, 7, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [10, 129, 56, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [11, 129, 56, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [12, 129, 56, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [10, 129, 56, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [6, 24, 10, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [21, 277, 120, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [20, 277, 120, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [18, 277, 120, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [19, 277, 120, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 30, 12, 1, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [9, 30, 12, 1, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [39, 596, 252, 11, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [41, 596, 252, 11, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [39, 596, 252, 11, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [10, 61, 25, 1, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [8, 61, 25, 1, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 37, 14, 1, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 37, 14, 1, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [71, 1098, 447, 19, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [99, 1098, 447, 19, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [14, 39, 15, 2, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [19, 39, 15, 2, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [71, 1592, 642, 45, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [63, 1592, 642, 45, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [7, 82, 33, 3, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [52, 1842, 749, 37, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [62, 1842, 749, 37, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [8, 113, 46, 2, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [92, 3036, 1232, 58, 0, 0, 0, 8]
+>>>>>>>>>>>> Solve - measure : [83, 3036, 1232, 58, 0, 0, 0, 8]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 172, 70, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 172, 70, 4, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [143, 5499, 2232, 132, 0, 3, 0, 13]
+>>>>>>>>>>>> Solve - measure : [224, 5499, 2232, 132, 0, 3, 0, 13]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [113, 5499, 2232, 132, 0, 3, 0, 13]
+>>>>>>>>>>>> Solve - measure : [184, 5499, 2232, 132, 0, 3, 0, 13]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [66, 5499, 2232, 132, 0, 3, 0, 13]
+>>>>>>>>>>>> Solve - measure : [141, 5499, 2232, 132, 0, 3, 0, 13]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 188, 77, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 188, 77, 4, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [49, 7477, 3059, 154, 0, 3, 0, 16]
+>>>>>>>>>>>> Solve - measure : [118, 7477, 3059, 154, 0, 3, 0, 16]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [45, 7477, 3059, 154, 0, 3, 0, 16]
+>>>>>>>>>>>> Solve - measure : [93, 7477, 3059, 154, 0, 3, 0, 16]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [39, 7477, 3059, 154, 0, 3, 0, 16]
+>>>>>>>>>>>> Solve - measure : [62, 7477, 3059, 154, 0, 3, 0, 16]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 315, 129, 5, 0, 2, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 315, 129, 5, 0, 2, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 345, 148, 8, 0, 2, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [8, 345, 148, 8, 0, 2, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [10, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
@@ -429,121 +428,45 @@ Problems/Bio/glucolysis_max-2_ld-1--1_MONO
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [10, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [13, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [9, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [10, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [12, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [11, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [6, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
@@ -551,6 +474,46 @@ Problems/Bio/glucolysis_max-2_ld-1--1_MONO
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [9, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
@@ -558,6 +521,44 @@ Problems/Bio/glucolysis_max-2_ld-1--1_MONO
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
@@ -583,63 +584,100 @@ Problems/Bio/glucolysis_max-2_ld-1--1_MONO
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [11, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solve - measure : [7, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [8, 0, 0, 0, 0, 0, 0, 0]
 >>>>>>>>>>>> Solving at depth : -1( real 0)
 >>>>>>>>>>>> Solve - measure : [10, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
->>>>>>>>>>>> Solving at depth : -1( real 0)
->>>>>>>>>>>> Solve - measure : [5, 0, 0, 0, 0, 0, 0, 0]
 SolveToClause Finished!
 2 CHARACTERISTIC CLAUSES
 [-m_fumarate, +m_citrate]
 [-m_citrate, +m_fumarate]
 
 
-Total execution time was 5034 ms.
+Total execution time was 4777 ms.
 
 
-Execution time was 5028 ms.
+Execution time was 4770 ms.
 
 status 103
 ---System Timeout---
-Problems/Bio/glucolysis_max-2_ld-1--1_MONO
-------------------  TIME OUT --------------------
+Problems/Bio/glucolysis_TPnaiveshortdist_per5_seuil1_max-2_ld-1--1_MONO
 
 NO TIME OUT#################################
 output to finishing problems################
 GENERATE DISTRIBUTION#######################
 ICICICIICICICICCICICCICIICN#######################
-dist_file already exist, nothing is done
-dist_file already exist, nothing is done
+temporary file did not exist
+buildGraph #########################################
+File loaded, Now making graph...
+temporary file did not exist
+kMETIS #############################################
+**********************************************************************
+  METIS 4.0.3 Copyright 1998, Regents of the University of Minnesota
+Graph Information ---------------------------------------------------
+  Name: Problems/Bio/glucolysis_TPnaiveshortdist_per5_seuil1temp_graph_kmet2.gra, #Vertices: 148, #Edges: 290, #Parts: 2
+
+K-way Partitioning... -----------------------------------------------
+  2-way Edge-Cut:       4, Balance:  1.03 
+
+Timing Information --------------------------------------------------
+  I/O:          		   0.001
+  Partitioning: 		   0.001   (KMETIS time)
+  Total:        		   0.002
+**********************************************************************
+
+graph2DCF ##########################################
+File loaded, Now saving...
+temporary file did not exist
+buildGraph #########################################
+File loaded, Now making graph...
+temporary file did not exist
+kMETIS #############################################
+**********************************************************************
+  METIS 4.0.3 Copyright 1998, Regents of the University of Minnesota
+Graph Information ---------------------------------------------------
+  Name: Problems/Bio/glucolysis_TPnaiveshortdist_per5_seuil1temp_graph_kmet4.gra, #Vertices: 148, #Edges: 290, #Parts: 4
+
+K-way Partitioning... -----------------------------------------------
+  4-way Edge-Cut:      20, Balance:  1.03 
+
+Timing Information --------------------------------------------------
+  I/O:          		   0.000
+  Partitioning: 		   0.000   (KMETIS time)
+  Total:        		   0.001
+**********************************************************************
+
+graph2DCF ##########################################
+File loaded, Now saving...
 removing temp .csv#########################

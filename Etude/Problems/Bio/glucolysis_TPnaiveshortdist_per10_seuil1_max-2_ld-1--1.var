@@ -1,0 +1,6 @@
+%Sol source: Problems/Bio/glucolysis_TPnaiveshortdist_per10_seuil1
+%Variant name: max-2_ld-1--1
+
+solSource(Problems/Bio/glucolysis_TPnaiveshortdist_per10_seuil1).
+pf([m_citrate, -m_citrate, m_fumarate, -m_fumarate]).
+depthLimit(-1).

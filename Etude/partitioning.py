@@ -70,15 +70,18 @@ def chunks(l, n):
         yield l[i:i+n]
         
 class FileBase(object):
-    def __init__(self,filename, ext):
+    def __init__(self,path, filename, ext):
         self.filename = filename
         self.ext =ext
-    def load(self,filename = None):
+        self.path = path
+    def load(self,path = None,filename = None,):
         if filename == None:
             filename = self.filename
-        if not (os.path.isfile(filename+self.ext)):
-            raise Exception( 'erreur, fichier :', filename+self.ext,'non present')
-        f = open(filename+self.ext, 'r')
+        if path == None :
+            path = self.path
+        if not (os.path.isfile(path+filename+self.ext)):
+            raise Exception( 'erreur, fichier :', path+filename+self.ext,'non present')
+        f = open(path+filename+self.ext, 'r')
         self.lines=[]        
         
         for index, line in enumerate(f):
@@ -86,15 +89,19 @@ class FileBase(object):
                 self.lines.append(Clause(index,line))
             else:                
                 self.lines.append(IndexedLine(index,line)) 
+
+    
     def reset_all_to_axioms(self):
         for line in self.lines:
             if isinstance(line, Clause):
                 line.transformToAxiom()
             
-    def save(self,filename= None):
+    def save(self, path = None,filename= None):
         if filename == None :
             filename = self.filename
-        f = open(filename+self.ext, 'w')
+        if path == None :
+            path = self.path
+        f = open(path+filename+self.ext, 'w')
         #let us sort our lines by index
         self.lines.sort(cmp=comp_index)# trie la liste 
         for index,line in enumerate(self.lines):
@@ -104,8 +111,8 @@ class FileBase(object):
         f.close()  
         
 class FileSol(FileBase):
-    def __init__(self,filename, ext ='.sol', lines = None):
-        FileBase.__init__(self,filename, ext)
+    def __init__(self, path, filename,ext ='.sol', lines = None):
+        FileBase.__init__(self, path, filename, ext)
         self.lines  = lines
         
     '''
@@ -148,7 +155,7 @@ class FileSol(FileBase):
         distributed_lines = clauses + otherlines   #on ne sort pas car on s'en fout, çaa sera fait après
         distrib_name =  '_TPnaiveshortdist_per'+str(perc)+'_'+'seuil'+str(seuilMin)
         filename = self.filename + distrib_name
-        return FileSol(filename = filename,lines=distributed_lines)
+        return FileSol(self.path,filename = filename,lines=distributed_lines), int(nbTP)
     def is_valid(self):
         '''doit contenir au moins une top_clause pour etre valide
         '''
@@ -170,7 +177,7 @@ class FileSol(FileBase):
         elif method == 'naive_indent':
             dcf_lines = self.naive_indent(nbAgents)
             filename += '_AgDistNaiveIndent_nbag'+str(nbAgents)
-        return FileDCF(filename,lines= dcf_lines )
+        return FileDCF(self.path,filename,lines= dcf_lines )
             
     def naive_eq(self,nbAgents):
         clauses = []
@@ -252,10 +259,10 @@ class FileSol(FileBase):
         return dcf_lines
         
 class FileDCF(FileBase):
-    def __init__(self,filename, ext = '.dcf',lines = None):
-        FileBase.__init__(self,filename,ext)
+    def __init__(self,path,filename, ext = '.dcf',lines = None):
+        FileBase.__init__(self,path,filename,ext)
         self.lines  = lines
-    def isValid(self):
+    def is_valid(self):
         '''
         est valide si tous les agents ont au moins une clause et si au moins
         un agent a une Top_clause
@@ -355,7 +362,7 @@ class FileDCF(FileBase):
                 indexesTP = random.sample(range(len(agentClauses)), sizesample)
             elif method == 'short':
                 agentClauses.sort(cmp = comp_length_clauses)
-                indexesTP = agentClauses[:sizesample]
+                indexesTP = range(sizesample)
             #prendre les npremeirs
             #permet de reset et de controler les vertiables parametres
             for c in agentClauses :
@@ -384,7 +391,7 @@ class FileDCF(FileBase):
         sol_lines = comments + merge_inner_lists(allAgentsClauses) + pf
         if filename == None:
             filename = self.filename+'_TPuniform'+method+'dist_per'+str(percTotal)+'_'+'seuil'+str(seuilMin)
-        return FileSol(filename,ext = '.sol', lines = sol_lines )
+        return FileSol(self.path,filename,ext = '.sol', lines = sol_lines )
                 
 def merge_inner_lists(list_of_lists):
     merged_list = []
@@ -422,21 +429,6 @@ def dcf2sol(dcfFile):
         sol_lines.append(new_line)
         
     sol_filename = dcfFile.filename
-    return FileSol(sol_filename,ext='.sol',lines = sol_lines)
-    
-    
-TEST_PATH ='tests/partitioning/'
-fDCF = 'glucolysis_kmet4'
-fSol = 'glucolysis'
-fSol_unvalid = 'glucolysis_withoutTP'
+    return FileSol(dcfFile.path,sol_filename,ext='.sol',lines = sol_lines)
 
-def testSave_and_load():
-    f1 = FileSol(TEST_PATH+fSol)
-    f1.load()    
-    file_dcf = FileDCF(TEST_PATH+fDCF)
-    file_dcf.load()
-    solres = file_dcf.create_a_FileSol_wit_a_TPdistribution_for_each_agent(20)
-    solres.save()
-    
-testSave_and_load()
     

@@ -1,6 +1,0 @@
-%Sol source: Problems/Bio/glucolysis
-%Variant name: min-4_ld4--1
-
-solSource(Problems/Bio/glucolysis).
-pf([r_d2d6d1d39_0, -r_d2d6d1d39_0, r_d2d6d1d39_1, -r_d2d6d1d39_1, r_d1d1d1d42_2, -r_d1d1d1d42_2, r_d1d1d1d42_3, -r_d1d1d1d42_3]).
-depthLimit(-1).

@@ -1,6 +1,0 @@
-%Sol source: Problems/Bio/glucolysis
-%Variant name: min-10_ld-1--1
-
-solSource(Problems/Bio/glucolysis).
-pf([r_d2d6d1d39_0, -r_d2d6d1d39_0, r_d2d6d1d39_1, -r_d2d6d1d39_1, r_d1d1d1d42_2, -r_d1d1d1d42_2, r_d1d1d1d42_3, -r_d1d1d1d42_3, r_d2d3d1d61_4, -r_d2d3d1d61_4, r_d2d3d1d61_5, -r_d2d3d1d61_5, r_d4d2d1d3_6, -r_d4d2d1d3_6, m_transaconitate, -m_transaconitate, r_d4d2d1d3_7, -r_d4d2d1d3_7, r_d4d2d1d2_8, -r_d4d2d1d2_8]).
-depthLimit(-1).
