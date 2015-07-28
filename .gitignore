@@ -12,6 +12,9 @@
 #################
 *~
 
+#generated and problems Files
+################
+Etude/Problems/
 
 # Environment Settings
 #################
@@ -24,6 +27,8 @@
 Mod/.metadata/
 Mod/.project/
 Mod/.gradle/
+
+
 
 */.*
 .*
