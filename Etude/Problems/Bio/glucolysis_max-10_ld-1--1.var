@@ -1,0 +1,6 @@
+%Sol source: Problems/Bio/glucolysis
+%Variant name: max-10_ld-1--1
+
+solSource(Problems/Bio/glucolysis).
+pf([m_citrate, -m_citrate, m_fumarate, -m_fumarate, m_succinate, -m_succinate, m_formaldehyde, -m_formaldehyde, m_e2oxoglutarate, -m_e2oxoglutarate, m_ornithine, -m_ornithine, m_creatine, -m_creatine, m_sarcosine, -m_sarcosine, m_acryloylcoa, -m_acryloylcoa, m_betaalanine, -m_betaalanine]).
+depthLimit(-1).

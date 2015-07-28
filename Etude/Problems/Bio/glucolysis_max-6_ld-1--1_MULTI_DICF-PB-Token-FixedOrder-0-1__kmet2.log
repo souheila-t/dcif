@@ -1,0 +1,217 @@
+LAUNCH MULTI PROBLEM############################
+-d64
+-Xms512m
+-Xmx2g
+-jar
+ressources/CFLauncher_7.jar
+-method=DICF-PB-Token-FixedOrder-0-1
+-verbose
+-t=25000
+-var=_max-6_ld-1--1
+-dist=_kmet2
+-csq=Problems/Bio/glucolysis_max-6_ld-1--1_MULTI_DICF-PB-Token-FixedOrder-0-1
+Problems/Bio/glucolysis
+Problems/Bio/glucolysis_max-6_ld-1--1_MULTI_DICF-PB-Token-FixedOrder-0-1
+Time for creating graph: 0.135s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag0 : {Launch}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag0 <------  {Launch}
+Ag0 receives [[+m_glucose]]
+After pruning [[+m_glucose]]
+Input Languages : {Ag1=[-m_fumarate, +m_succinate, +m_tmao, +r_d2d6d1dx_15, -m_citrate, -r_d4d1d2d32_45, +m_citrate]}
+Starting SolveToClause...
+Launching solver...
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+----------------------------------------------------------------------
+Clauses:
+ [+r_d2d6d1d39_0, -m_l2aminoadipate]
+ [+m_e2oxoglutarate, -r_d2d6d1d39_0]
+ [+r_d2d6d1d39_1, -m_e2oxoglutarate]
+ [+m_l2aminoadipate, -r_d2d6d1d39_1]
+ [+r_d1d1d1d42_2, -m_e2oxoglutarate]
+ [+m_isocitrate, -r_d1d1d1d42_2]
+ [+r_d1d1d1d42_3, -m_isocitrate]
+ [+m_e2oxoglutarate, -r_d1d1d1d42_3]
+ [+r_d2d3d1d61_4, -m_e2oxoglutarate]
+ [+m_succinate, -r_d2d3d1d61_4]
+ [+r_d2d3d1d61_5, -m_succinate]
+ [+m_e2oxoglutarate, -r_d2d3d1d61_5]
+ [+r_d4d2d1d3_6, -m_isocitrate]
+ [+c_compoundCcitrate_transaconitateC, -r_d4d2d1d3_6]
+ [+m_citrate, -c_compoundCcitrate_transaconitateC]
+ [+m_transaconitate, -c_compoundCcitrate_transaconitateC]
+ [+r_d4d2d1d3_7, -c_compoundCcitrate_transaconitateC]
+ [+c_compoundCcitrate_transaconitateC, -m_citrate, -m_transaconitate]
+ [+m_isocitrate, -r_d4d2d1d3_7]
+ [+r_d4d2d1d2_9, -m_fumarate]
+ [+m_citrate, -r_d4d2d1d2_9]
+ [+r_d1d3d99d1_11, -m_fumarate]
+ [+m_succinate, -r_d1d3d99d1_11]
+ [+r_d1d13d11d16_12, -m_succinate]
+ [+m_hippurate, -r_d1d13d11d16_12]
+ [+r_d1d13d11d16_13, -m_hippurate]
+ [+m_succinate, -r_d1d13d11d16_13]
+ [+r_d2d6d1dx_14, -m_citrate]
+ [+m_taurine, -r_d2d6d1dx_14]
+ [+r_d2d6d1dx_15, -m_taurine]
+ [+m_tmao, -r_d4d1d2d32_45]
+ [+r_d4d2d1d54_46, -m_lactate]
+ [+m_acryloylcoa, -r_d4d2d1d54_46]
+ [+r_d4d2d1d54_47, -m_acryloylcoa]
+ [+m_lactate, -r_d4d2d1d54_47]
+ [+r_d4d3d1d6_48, -m_betaalanine]
+ [+m_acryloylcoa, -r_d4d3d1d6_48]
+ [+r_d4d3d1d6_49, -m_acryloylcoa]
+ [+m_betaalanine, -r_d4d3d1d6_49]
+ [+r_d2d1d3d1_50, -m_acryloylcoa]
+ [+m_succinate, -r_d2d1d3d1_50]
+ [+r_d2d1d3d1_51, -m_succinate]
+ [+m_acryloylcoa, -r_d2d1d3d1_51]
+ [+r_d4d1d1d20_52, -m_betaalanine]
+ [+m_llysine, -r_d4d1d1d20_52]
+ [+r_d4d1d1d20_53, -m_llysine]
+ [+m_betaalanine, -r_d4d1d1d20_53]
+ [+r_d2d6d1d14_54, -m_betaalanine]
+ [+m_citrate, -r_d2d6d1d14_54]
+ [+r_d2d6d1d14_55, -m_citrate]
+ [+m_betaalanine, -r_d2d6d1d14_55]
+ [+r_d1d2d1d31_56, -m_l2aminoadipate]
+ [+m_llysine, -r_d1d2d1d31_56]
+ [+r_d1d2d1d31_57, -m_llysine]
+ [+m_l2aminoadipate, -r_d1d2d1d31_57]
+ [+r_d2d7d1d69_58, -m_glucose]
+ [+m_pyruvate, -r_d2d7d1d69_58]
+ [+r_d2d7d1d69_59, -m_pyruvate]
+ [+m_glucose, -r_d2d7d1d69_59]
+ [+r_d1d1d1d27_60, -m_pyruvate]
+ [+m_lactate, -r_d1d1d1d27_60]
+ [+r_d1d1d1d27_61, -m_lactate]
+ [+m_pyruvate, -r_d1d1d1d27_61]
+ [+r_d1d2d4d1_62, -m_pyruvate]
+ [+m_acetylcoa, -r_d1d2d4d1_62]
+ [+r_d1d2d4d1_63, -m_acetylcoa]
+ [+m_pyruvate, -r_d1d2d4d1_63]
+ [+r_d2d3d3d1_64, -m_acetylcoa]
+ [+m_citrate, -r_d2d3d3d1_64]
+ [+r_d2d3d3d1_65, -m_citrate]
+ [+m_acetylcoa, -r_d2d3d3d1_65]
+ [+r_d6d2d1d1_66, -m_acetylcoa]
+ [+m_acetate, -r_d6d2d1d1_66]
+ [+r_d6d2d1d1_67, -m_acetate]
+ [+m_acetylcoa, -r_d6d2d1d1_67]
+ [+m_glucose]
+Top clauses:
+ [+m_glucose]
+Production field:
+ [-m_fumarate, +m_succinate, +m_tmao, +r_d2d6d1dx_15, -m_citrate, -r_d4d1d2d32_45, +m_citrate, +m_glucose, +m_citrate, -m_citrate, +m_fumarate, -m_fumarate, +m_succinate, -m_succinate, +m_formaldehyde, -m_formaldehyde, +m_e2oxoglutarate, -m_e2oxoglutarate, +m_ornithine, -m_ornithine]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+Sys <------  {Started}
+Sys <------  {Started}
+>>>>>>>>>>>> Solve - measure : [215, 1205, 488, 35, 0, 0, 0, 4]
+Solver finished.
+SolveToClause Finished!
+Sys -> Sys : {Time up!}
+Sys <------  {Time up!}
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 25490 ms.
+
+Execution time was 25121 ms.
+
+---System Timeout---
+Problems/Bio/glucolysis_max-6_ld-1--1_MULTI_DICF-PB-Token-FixedOrder-0-1
+
+Exception in thread "Ag0" java.lang.NullPointerException
+	at solarInterface.IndepPField.partlyBelongsTo(IndepPField.java:628)
+	at distNewCarc.partition.IncConsFindingAgent.canResolve(IncConsFindingAgent.java:133)
+	at distNewCarc.partition.tokenbased.TokenProtocol.receiveCl(TokenProtocol.java:127)
+	at distNewCarc.partition.tokenbased.TokenProtocol.receiveMessage(TokenProtocol.java:69)
+	at agLib.agentCommunicationSystem.CommunicationModule.receiveMessage(CommunicationModule.java:55)
+	at agLib.agentCommunicationSystem.BasicAgent.run(BasicAgent.java:58)
+	at java.lang.Thread.run(Thread.java:745)
+
+LAUNCH CMP CSQ##################################
+here
+there
+//nb de clauses de c1
+0
+//nb de clauses de c2
+6
+//c2 : solutions finales du MONO AGENT
+//nb de clauses de c1 totalement(exactement) présentes dans c2 (et inversement)
+0
+//permet de mieux voir les redondances
+//nb de fois que des clauses de c2 subsument des clauses de c1
+0
+//nb de fois que des clauses de c2 subsument des clauses de c1 (strict)
+0
+//nb de clauses de c1 qui ne sont subsumées par aucune clause de c2
+0
+//nb de clauses de c1 qui sont subsumées par des clauses de c2 (strict)
+0
+//nb de clauses de c1 qui sont subsumées par des clauses de c2 
+0
+//nb de clauses de c2 qui ne subsument aucune clause de c1
+6
+//nb de clauses de c2 qui subsument au moins une clause de c1
+0
+//nb de clauses de c2 qui subsument au moins une clause de c1(strict)
+0
+Problems/Bio/glucolysis_max-6_ld-1--1_MULTI_DICF-PB-Token-FixedOrder-0-1_CMP
+nbCl_c1_non_subsumed;nbCl_c1;nbCl_c2;nbCl_c2_non_sub;nbTimesCl_subs_min;nbTimesCl_subs_non_min;nbCl_c1_subsumed_non_min;nbCl_c1_subsumed_min;nbCl_c2_sub_min;nbCl_c2_sub_non_min;nbCl_c1_tot_present
+0;0;6;6;0;0;0;0;0;0;0
+
+MERGE STATS####################################
+file does exist at this time
+
+Problems/Bio/glucolysis_max-6_ld-1--1_MULTI_DICF-PB-Token-FixedOrder-0-1.csq
+1
+timeout occured
+max CPU time by SOLAR
+min consequences sent
+nbAg+
+root-extensions
+min CPU time by SOLAR
+distrib
+min total size messages
+inferences
+min extensions
+max inferences
+nbConsequencesFound
+root-CPU time by SOLAR
+nb Messages
+root-total size messages
+max total size messages
+max nb Messages
+CPU time by SOLAR
+max extensions
+max clauses sents
+consequences sent
+method
+root-clauses sents
+nbCl_c1_non_subsumed;nbCl_c1;nbCl_c2;nbCl_c2_non_sub;nbTimesCl_subs_min;nbTimesCl_subs_non_min;nbCl_c1_subsumed_non_min;nbCl_c1_subsumed_min;nbCl_c2_sub_min;nbCl_c2_sub_non_min;nbCl_c1_tot_present
+min nb Messages
+root-consequences sent
+var
+root-nb Messages
+min clauses sents
+root-inferences
+total time
+root
+clauses sents
+max consequences sent
+timed_out
+min inferences
+infile
+extensions
+problem
+total size messages

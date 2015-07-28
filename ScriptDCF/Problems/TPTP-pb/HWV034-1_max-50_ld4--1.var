@@ -1,6 +1,0 @@
-%Sol source: HWV034-1
-%Variant name: max-50_ld4--1
-
-solSource(HWV034-1).
-pf([value(_,_), -value(_,_), mode(_,_), -mode(_,_)]<=4).
-depthLimit(-1).

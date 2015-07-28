@@ -1,0 +1,9 @@
+java.lang.Exception: File /home/magma/projects/dcif/Etude/ressources/glucolysis_all_ld4--1.var does not exist !
+	at genLib.io.LoaderTool.load(LoaderTool.java:24)
+	at cnfPb.VariantProblem.load(VariantProblem.java:40)
+	at cnfPb.VariantProblem.<init>(VariantProblem.java:36)
+	at launcher.CFLauncher.setMonoProblem(CFLauncher.java:199)
+	at launcher.CFLauncher.runExpe(CFLauncher.java:277)
+	at launcher.CFLauncher.exec(CFLauncher.java:374)
+	at launcher.CFLauncher.main(CFLauncher.java:484)
+

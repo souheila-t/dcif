@@ -13,3 +13,32 @@ print P2SOL_JAR
 print CNFSAT2SOL_JAR
 
 print GEN_PATH
+
+
+#divides the clauses between Axioms et top_clauses
+def func():
+    '''
+    a posteriori 
+    '''
+    pass
+
+
+'''
+USE SOL2DCF !!!!!
+.sol -> repartit les clauses entre agents
+
+puis repartir les top clauses et axioms entre agents
+'''
+#divides the clauses between Axioms et top_clauses for each agent (each agent has its own clauses)
+def func():
+    '''
+    a posteriori 
+    '''
+    pass
+
+#divides the clauses between Axioms et top_clauses for each agent (each agent has its own clauses)
+def func():
+    '''
+    a posteriori 
+    '''
+    pass

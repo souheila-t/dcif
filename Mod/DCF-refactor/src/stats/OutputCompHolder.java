@@ -21,7 +21,7 @@ public class OutputCompHolder implements Saver{
 	}
 	public void save(String filename, boolean replace) throws Exception{
 		System.out.println(filename);
-		LoaderTool.save(filename, "_csqstats"+".csv", this, replace);
+		LoaderTool.save(filename, ".csv", this, replace);
 	}
 
 	@Override

@@ -39,12 +39,13 @@ public class VariantProblem implements Saver, Parser{
 	public void load(String filename) throws Exception{
 		LoaderTool.load(filename, ".var", this);
 		//Modified by BR the 7/07/15
-		//initialPb=new SolProblem(env, opt, solFilename);
-		
+		initialPb=new SolProblem(env, opt, solFilename);
+		/**
 		File accesFichier = new File(filename) ;
 		Path p = Paths.get(accesFichier.getAbsolutePath());
 		Path folder = p.getParent();
 		initialPb=new SolProblem(env, opt, folder.toString()+"/"+solFilename);
+		**/
 	 }	
 	
 	public void parse(BufferedReader bIn) throws IOException {

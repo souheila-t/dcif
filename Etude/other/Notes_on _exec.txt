@@ -44,7 +44,7 @@ Usage :
     makeSolVariant filename.sol [filename2.var]
 Options
 -replace  replace the produced .var if it already exists.
--meth=xxx  use variant xxx.
+-method=xxx  use variant xxx.
           xxx=min-N / max-N / all
 -len=N  set length limit.
 -d=N  set depth limit.
@@ -90,4 +90,41 @@ Options
 -dist=distSuffix  use the distribution with given suffix (should begin by "_").
 
 
+##########################
+System.out.println("Usage :");
+		System.out.println("    sol2dcf -nbAg=N [Options] filename.sol [filename2.dcf]");
+		System.out.println("-nbAg=N  indicate the number of agents of output distributed CFP.");
+		System.out.println("'filename.sol'  is the file of the program that should be distributed.");
+		System.out.println("Options");
+		System.out.println("-replace  replace the produced .sol if it already exists.");	
+		System.out.println("-dist=filename3  use the ASP base distribution program 'filename3.asp' " +
+						"instead of the default on 'cut-distribute.asp'.");
+		System.out.println("-asp=name  choose the ASP solver (CLASP or DLV). " +
+		"default is CLASP");
+		System.out.println("-minProp=R indicates the minimal proportion of the clauses " +
+				"given to each agents (between 0 and 1/nbAg). default is 2/3nbAg");
+		System.out.println("-maxProp=R indicates the maximal proportion of the clauses " +
+		"given to each agents (between 1/nbAg and 1). default is 3/2nbAg (max 1)");
 
+REMQRAU PERSO ICI : max = 1 et min = 1/nbAg => tres desequilibré
+		    max = 1/nbAg ou min = 1/nbAf => très bien réparti
+comment adapter la répartition de toutes ces clauses à un faible pourcentage:
+METHOD 1 NAIVE=
+	prendre un pourcentage des premiers plus courtes clauses (et un seuilmin) 		et les transformer en top_clauses
+	=> ensuite n'importe quelle methde de partitionnement (indentation 		préservée donc naive_eq, naive_indent ou KMETIS)
+
+METHOD 2 KMETIS ROUND TRIP =
+	faire le partitionnement entre agents
+	et pour chaque agent, donner un pourcentage du pourcentage de nb Total de TOPCLauses.
+	parametres= pourcentage total de top_clauses => nb Max de TopClauses, 		seuilMin (au moins une top clause)
+	minProp et maxProp (use ) 
+PARAMS= pourcentage de TOP_CLAUSES:
+	pourcentage de top_clause
+
+METHOD 2 SOL2DCF ROUNDTRIP = 
+	pareil que KMETIS mais avec un autre partitionnement des agents préalable
+	
+
+FAIRE DESSINS DE TOUT CA
+	
+EST CE QUE SOL2DCF conserve les TOP CLAUSES ??

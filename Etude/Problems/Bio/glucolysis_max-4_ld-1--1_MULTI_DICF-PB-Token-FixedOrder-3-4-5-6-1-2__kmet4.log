@@ -1,0 +1,31 @@
+LAUNCH MULTI PROBLEM############################
+-d64
+-Xms512m
+-Xmx10g
+-jar
+ressources/CFLauncher_7.jar
+-method=DICF-PB-Token-FixedOrder-3-4-5-6-1-2
+-verbose
+-t=600000
+-var=_max-4_ld-1--1
+-dist=_kmet4
+-csq=Problems/Bio/glucolysis_max-4_ld-1--1_MULTI_DICF-PB-Token-FixedOrder-3-4-5-6-1-2
+Problems/Bio/glucolysis
+Problems/Bio/glucolysis_max-4_ld-1--1_MULTI_DICF-PB-Token-FixedOrder-3-4-5-6-1-2
+Time for creating graph: 0.136s
+java.lang.IndexOutOfBoundsException: Index: 6, Size: 6
+	at java.util.ArrayList.rangeCheck(ArrayList.java:635)
+	at java.util.ArrayList.get(ArrayList.java:411)
+	at systemStructure.PartitionGraph.getForwardBackwardPath(PartitionGraph.java:516)
+	at systemStructure.PartitionGraph.makeCircuitFormation(PartitionGraph.java:505)
+	at distNewCarc.partition.tokenbased.PBTokenIncConsFinding.<init>(PBTokenIncConsFinding.java:75)
+	at launcher.CFLauncher.partitionBasedTokenIncCF(CFLauncher.java:159)
+	at launcher.CFLauncher.runExpe(CFLauncher.java:326)
+	at launcher.CFLauncher.exec(CFLauncher.java:370)
+	at launcher.CFLauncher.main(CFLauncher.java:480)
+
+LAUNCH CMP CSQ##################################
+here
+Error while saving
+
+MERGE STATS####################################

@@ -1,0 +1,520 @@
+generate VARIANT################################
+launch MONO#####################################
+-d64
+-Xms512m
+-Xmx10g
+-jar
+ressources/CFLauncher_7.jar
+-method=SOLAR-Inc-Carc
+-verbose
+-t=1200000
+-var=_min-15_ld3--1
+-csq=Problems/Bio/glucolysis_min-15_ld3--1_MONO
+Problems/Bio/glucolysis
+Problems/Bio/glucolysis_min-15_ld3--1
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [44, 1, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 1, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [15, 8, 2, 2, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 18, 6, 3, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 14, 4, 3, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [16, 142, 48, 26, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 19, 6, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [10, 79, 27, 14, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 23, 7, 5, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [60, 757, 257, 147, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 28, 9, 6, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [18, 171, 58, 33, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 32, 10, 7, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [153, 2265, 767, 456, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [113, 2265, 767, 456, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 37, 12, 8, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 37, 12, 8, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [26, 688, 204, 122, 0, 7, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [19, 333, 110, 63, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 44, 14, 9, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [223, 8924, 2971, 1705, 0, 8, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 49, 16, 10, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [56, 2501, 807, 466, 0, 8, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 56, 17, 12, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [43, 1618, 529, 315, 0, 29, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 104, 33, 22, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [99, 4575, 1484, 871, 0, 12, 0, 6]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 112, 35, 24, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 115, 36, 25, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [647, 99902, 32585, 20291, 0, 156, 0, 101]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [20, 5335, 1726, 1032, 0, 13, 0, 7]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [213, 143887, 47017, 28652, 0, 203, 0, 137]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [260, 143887, 47017, 28652, 0, 203, 0, 137]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [201, 143887, 47017, 28652, 0, 203, 0, 137]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [39, 16588, 5380, 3275, 0, 26, 0, 17]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [301, 191417, 63781, 35795, 0, 242, 0, 165]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [404, 191417, 63781, 35795, 0, 242, 0, 165]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [340, 191417, 63781, 35795, 0, 242, 0, 165]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [265, 191417, 63781, 35795, 0, 242, 0, 165]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 10, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 13, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 13, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [370, 249475, 85743, 38139, 0, 369, 0, 169]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [372, 249475, 85743, 38139, 0, 369, 0, 169]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [492, 249475, 85743, 38139, 0, 369, 0, 169]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [36, 10933, 3837, 1674, 0, 103, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [565, 273807, 94987, 42712, 0, 386, 0, 188]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [408, 273807, 94987, 42712, 0, 386, 0, 188]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [414, 273807, 94987, 42712, 0, 386, 0, 188]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [26, 11570, 4110, 1674, 0, 103, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [478, 319804, 112194, 47537, 0, 427, 0, 207]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [477, 319804, 112194, 47537, 0, 427, 0, 207]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [478, 319804, 112194, 47537, 0, 427, 0, 207]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 20, 8, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [570, 344099, 122322, 47762, 0, 427, 0, 209]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [783, 344099, 122322, 47762, 0, 427, 0, 209]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [764, 344099, 122322, 47762, 0, 427, 0, 209]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 27, 11, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [596, 370472, 133367, 48010, 0, 427, 0, 211]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [520, 370472, 133367, 48010, 0, 427, 0, 211]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [534, 370472, 133367, 48010, 0, 427, 0, 211]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 34, 14, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [746, 549191, 204441, 53248, 0, 760, 0, 214]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 3631, 1388, 124, 0, 0, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 38, 15, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1286, 962107, 361713, 60554, 0, 1179, 0, 457]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1233, 962107, 361713, 60554, 0, 1179, 0, 457]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1673, 962107, 361713, 60554, 0, 1179, 0, 457]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 72, 29, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1917, 1296622, 497214, 63925, 0, 1385, 0, 463]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1649, 1296622, 497214, 63925, 0, 1385, 0, 463]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 74, 30, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2663, 2071182, 809114, 72026, 0, 1907, 0, 1451]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2644, 2071182, 809114, 72026, 0, 1907, 0, 1451]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 79, 32, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 82, 33, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3883, 3064458, 1194284, 84359, 0, 2367, 0, 976]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3938, 3064458, 1194284, 84359, 0, 2367, 0, 976]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3908, 3064458, 1194284, 84359, 0, 2367, 0, 976]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [323, 249783, 99355, 3308, 0, 206, 0, 8]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5182, 4120782, 1623866, 94304, 0, 2985, 0, 1000]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 148, 60, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7017, 5744210, 2280223, 107238, 0, 3816, 0, 1039]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 181, 73, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11116, 10361584, 4106827, 134130, 0, 5203, 0, 1108]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11005, 10361584, 4106827, 134130, 0, 5203, 0, 1108]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11112, 10361584, 4106827, 134130, 0, 5203, 0, 1108]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1127, 1007810, 405066, 6508, 0, 412, 0, 13]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [14934, 13799748, 5491767, 147110, 0, 6027, 0, 1362]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [14892, 13799748, 5491767, 147110, 0, 6027, 0, 1362]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [14878, 13799748, 5491767, 147110, 0, 6027, 0, 1362]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 197, 80, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [18930, 16584558, 6631765, 160068, 0, 6851, 0, 1388]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [21339, 16584558, 6631765, 160068, 0, 6851, 0, 1388]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [20501, 16584558, 6631765, 160068, 0, 6851, 0, 1388]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 204, 83, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [27123, 20591580, 8268720, 179534, 0, 8087, 0, 1427]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [26679, 20591580, 8268720, 179534, 0, 8087, 0, 1427]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [26954, 20591580, 8268720, 179534, 0, 8087, 0, 1427]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [24938, 20591580, 8268720, 179534, 0, 8087, 0, 1427]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [25522, 20591580, 8268720, 179534, 0, 8087, 0, 1427]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2990, 2214903, 889836, 12980, 0, 824, 0, 26]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3262, 2260240, 907962, 12944, 0, 824, 0, 26]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [39714, 30973825, 12438158, 218366, 0, 10559, 0, 6863]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [39427, 30973825, 12438158, 218366, 0, 10559, 0, 6863]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [40764, 30973825, 12438158, 218366, 0, 10559, 0, 6863]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 10, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [40198, 30973861, 12438174, 218366, 0, 10559, 0, 6863]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [41624, 30973861, 12438174, 218366, 0, 10559, 0, 6863]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [20504, 14228886, 5729824, 73916, 0, 4719, 0, 5249]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+SolveToClause Finished!
+196 CHARACTERISTIC CLAUSES
+[+r_d4d2d1d2_8, -r_d2d3d1d61_5]
+[+r_d4d2d1d2_8, -r_d1d1d1d42_2]
+[-r_d2d6d1d39_0, +r_d1d13d11d16_12]
+[+r_d1d3d99d1_11, -r_d4d2d1d2_8]
+[+r_d1d13d11d16_12, -r_d4d2d1d2_8]
+[+r_d4d2d1d3_6, -r_d1d3d99d1_10]
+[+r_d2d3d1d61_5, -r_d4d2d1d3_7]
+[+r_d1d13d11d16_12, -r_d4d2d1d3_7]
+[+r_d1d1d1d42_2, -r_d2d6d1d39_1]
+[-r_d2d6d1d39_0, +r_d2d3d1d61_5]
+[+r_d1d13d11d16_12, -r_d1d3d99d1_10]
+[-r_d4d2d1d2_9, +r_d4d2d1d2_8]
+[+r_d1d3d99d1_11, -r_d2d3d1d61_5]
+[+r_d2d6d1d39_1, -r_d1d1d1d42_3]
+[+m_transaconitate, -r_d4d2d1d2_9]
+[-r_d1d3d99d1_11, +r_d2d6d1d39_1]
+[+r_d1d3d99d1_11, -r_d2d3d1d61_4]
+[-r_d1d3d99d1_11, +r_d4d2d1d3_6]
+[-r_d1d3d99d1_11, +m_hippurate]
+[+m_transaconitate, -r_d4d2d1d3_6]
+[+m_transaconitate, -r_d2d3d1d61_4]
+[+r_d1d1d1d42_2, -r_d4d2d1d2_9]
+[+r_d4d2d1d3_7, -r_d4d2d1d2_9]
+[+r_d4d2d1d3_6, -r_d2d6d1d39_0]
+[+r_d1d3d99d1_11, -r_d4d2d1d3_6]
+[+r_d2d3d1d61_5, -r_d1d13d11d16_12]
+[+r_d4d2d1d2_9, -r_d2d3d1d61_4]
+[-r_d1d3d99d1_11, +r_d2d6d1d39_0]
+[+r_d4d2d1d2_9, -r_d1d1d1d42_2]
+[+r_d1d1d1d42_2, -r_d1d1d1d42_3]
+[+r_d1d3d99d1_11, -r_d4d2d1d3_7]
+[+m_hippurate, -r_d1d13d11d16_12]
+[+m_transaconitate, -m_hippurate]
+[-r_d1d3d99d1_11, +r_d1d3d99d1_10]
+[+r_d2d6d1d39_1, -r_d4d2d1d2_8]
+[-r_d2d6d1d39_0, +m_hippurate]
+[+r_d2d6d1d39_1, -r_d1d13d11d16_12]
+[+r_d1d1d1d42_3, -r_d4d2d1d2_9]
+[+r_d2d6d1d39_0, -r_d2d6d1d39_1]
+[-r_d2d6d1d39_0, +r_d2d6d1d39_1]
+[+r_d4d2d1d2_9, -r_d2d6d1d39_1]
+[-r_d2d6d1d39_1, +r_d2d3d1d61_4]
+[+r_d2d6d1d39_0, -r_d1d13d11d16_12]
+[-r_d4d2d1d3_6, +r_d1d1d1d42_3]
+[-r_d2d6d1d39_0, +r_d1d1d1d42_3]
+[+r_d1d3d99d1_11, -r_d1d13d11d16_12]
+[-r_d2d6d1d39_0, +r_d4d2d1d3_7]
+[+r_d2d6d1d39_0, -r_d1d1d1d42_3]
+[+r_d4d2d1d2_9, -m_hippurate]
+[+r_d4d2d1d3_6, -r_d4d2d1d3_7]
+[+r_d4d2d1d2_9, -r_d2d3d1d61_5]
+[+r_d4d2d1d3_6, -r_d4d2d1d2_8]
+[-r_d1d3d99d1_11, +r_d1d1d1d42_2]
+[+r_d4d2d1d3_6, -m_hippurate]
+[+m_hippurate, -r_d2d3d1d61_4]
+[+r_d2d3d1d61_5, -r_d2d3d1d61_4]
+[+r_d4d2d1d2_9, -r_d2d6d1d39_0]
+[-r_d4d2d1d3_6, +r_d2d3d1d61_4]
+[-r_d1d1d1d42_2, +r_d1d1d1d42_3]
+[+r_d4d2d1d2_9, -r_d1d3d99d1_10]
+[-r_d1d1d1d42_2, +r_d2d6d1d39_0]
+[+r_d1d3d99d1_10, -r_d1d13d11d16_12]
+[+r_d4d2d1d2_8, -r_d2d3d1d61_4]
+[+r_d4d2d1d2_9, -r_d1d13d11d16_12]
+[-r_d2d3d1d61_5, +m_hippurate]
+[-r_d1d3d99d1_11, +r_d1d13d11d16_12]
+[+r_d2d3d1d61_5, -r_d1d1d1d42_3]
+[-r_d2d6d1d39_0, +r_d1d3d99d1_10]
+[-r_d1d3d99d1_11, +r_d2d3d1d61_5]
+[+m_hippurate, -r_d4d2d1d3_7]
+[+r_d2d6d1d39_1, -m_hippurate]
+[+r_d2d3d1d61_4, -m_hippurate]
+[-r_d4d2d1d3_6, +m_hippurate]
+[-r_d1d3d99d1_11, +r_d4d2d1d3_7]
+[+r_d2d3d1d61_5, -r_d4d2d1d2_9]
+[-r_d2d6d1d39_0, +r_d2d3d1d61_4]
+[+m_transaconitate, -r_d2d6d1d39_1]
+[+r_d4d2d1d2_9, -r_d1d3d99d1_11]
+[+r_d4d2d1d3_6, -r_d2d3d1d61_4]
+[+r_d1d13d11d16_12, -r_d2d3d1d61_4]
+[+m_transaconitate, -r_d2d6d1d39_0]
+[+m_hippurate, -r_d1d1d1d42_3]
+[+r_d2d6d1d39_1, -r_d1d3d99d1_10]
+[-r_d2d3d1d61_5, +r_d1d3d99d1_10]
+[+r_d2d6d1d39_1, -r_d4d2d1d3_7]
+[+r_d1d1d1d42_2, -r_d1d3d99d1_10]
+[+r_d4d2d1d2_8, -r_d2d6d1d39_0]
+[+r_d2d6d1d39_0, -r_d1d3d99d1_10]
+[+r_d1d1d1d42_3, -r_d4d2d1d2_8]
+[-r_d4d2d1d3_6, +r_d2d3d1d61_5]
+[+r_d1d1d1d42_3, -r_d4d2d1d3_7]
+[+r_d1d3d99d1_11, -m_hippurate]
+[-r_d1d1d1d42_2, +r_d2d3d1d61_4]
+[+r_d1d3d99d1_10, -r_d4d2d1d2_8]
+[-r_d4d2d1d3_6, +r_d2d6d1d39_0]
+[+r_d4d2d1d2_8, -r_d1d3d99d1_11]
+[-r_d1d1d1d42_2, +m_transaconitate]
+[-r_d4d2d1d3_6, +r_d1d1d1d42_2]
+[-r_d4d2d1d3_6, +r_d1d3d99d1_10]
+[+r_d4d2d1d2_9, -r_d4d2d1d2_8]
+[-r_d2d3d1d61_5, +r_d2d6d1d39_0]
+[+r_d4d2d1d3_7, -m_hippurate]
+[+r_d4d2d1d3_7, -r_d1d13d11d16_12]
+[+r_d4d2d1d2_9, -r_d4d2d1d3_7]
+[+r_d4d2d1d3_7, -r_d1d3d99d1_10]
+[-r_d2d3d1d61_4, +r_d2d6d1d39_0]
+[+m_transaconitate, -r_d1d3d99d1_10]
+[-r_d2d3d1d61_5, +r_d4d2d1d3_7]
+[+r_d4d2d1d2_8, -r_d1d13d11d16_12]
+[-r_d1d1d1d42_2, +r_d4d2d1d3_7]
+[+m_hippurate, -r_d4d2d1d2_8]
+[+r_d1d3d99d1_11, -r_d2d6d1d39_0]
+[+m_transaconitate, -r_d1d1d1d42_3]
+[-r_d1d3d99d1_11, +r_d2d3d1d61_4]
+[+r_d4d2d1d2_8, -r_d4d2d1d3_6]
+[-r_d2d3d1d61_5, +r_d1d1d1d42_3]
+[-r_d1d1d1d42_2, +r_d2d3d1d61_5]
+[+r_d2d3d1d61_4, -r_d4d2d1d2_8]
+[-r_d4d2d1d3_6, +r_d2d6d1d39_1]
+[+r_d1d13d11d16_12, -r_d1d1d1d42_3]
+[-r_d4d2d1d3_6, +r_d1d13d11d16_12]
+[-r_d2d3d1d61_4, +r_d2d6d1d39_1]
+[-r_d2d3d1d61_5, +r_d2d6d1d39_1]
+[+r_d2d3d1d61_4, -r_d4d2d1d3_7]
+[+r_d4d2d1d2_8, -r_d1d1d1d42_3]
+[+m_transaconitate, -r_d4d2d1d3_7]
+[-r_d1d1d1d42_2, +r_d1d13d11d16_12]
+[-r_d1d1d1d42_3, +r_d4d2d1d3_7]
+[+r_d2d3d1d61_5, -r_d4d2d1d2_8]
+[+r_d1d3d99d1_10, -r_d4d2d1d3_7]
+[+r_d4d2d1d3_6, -r_d2d3d1d61_5]
+[+r_d2d6d1d39_0, -r_d4d2d1d2_8]
+[+r_d1d3d99d1_11, -r_d1d3d99d1_10]
+[+r_d1d1d1d42_3, -r_d1d3d99d1_10]
+[+r_d2d3d1d61_4, -r_d1d13d11d16_12]
+[-r_d2d6d1d39_1, +r_d2d3d1d61_5]
+[+r_d4d2d1d2_8, -m_hippurate]
+[+r_d4d2d1d2_8, -r_d4d2d1d3_7]
+[+r_d4d2d1d3_6, -r_d4d2d1d2_9]
+[-r_d2d6d1d39_1, +r_d4d2d1d3_7]
+[+r_d1d3d99d1_10, -r_d1d1d1d42_3]
+[-r_d2d6d1d39_1, +r_d1d3d99d1_10]
+[+r_d1d13d11d16_12, -m_hippurate]
+[+r_d1d1d1d42_2, -r_d2d6d1d39_0]
+[-r_d2d6d1d39_1, +m_hippurate]
+[+m_transaconitate, -r_d4d2d1d2_8]
+[+r_d4d2d1d3_6, -r_d1d1d1d42_2]
+[+r_d4d2d1d3_6, -r_d1d1d1d42_3]
+[-r_d1d1d1d42_2, +m_hippurate]
+[-r_d1d3d99d1_11, +m_transaconitate]
+[-r_d2d3d1d61_5, +r_d1d1d1d42_2]
+[+r_d1d3d99d1_10, -r_d2d3d1d61_4]
+[+r_d1d3d99d1_10, -m_hippurate]
+[+r_d2d3d1d61_4, -r_d1d1d1d42_3]
+[+r_d1d1d1d42_2, -r_d4d2d1d3_7]
+[+r_d1d3d99d1_11, -r_d2d6d1d39_1]
+[+r_d1d1d1d42_3, -m_hippurate]
+[+r_d2d3d1d61_4, -r_d1d3d99d1_10]
+[+r_d1d1d1d42_2, -r_d4d2d1d2_8]
+[+r_d2d6d1d39_0, -r_d4d2d1d2_9]
+[+r_d2d6d1d39_0, -m_hippurate]
+[+r_d4d2d1d2_9, -r_d1d1d1d42_3]
+[+m_transaconitate, -r_d1d13d11d16_12]
+[+r_d2d3d1d61_5, -r_d1d3d99d1_10]
+[-r_d4d2d1d3_6, +r_d4d2d1d3_7]
+[+r_d1d1d1d42_2, -r_d1d13d11d16_12]
+[-r_d2d3d1d61_4, +r_d1d1d1d42_3]
+[+r_d1d1d1d42_3, -r_d1d13d11d16_12]
+[+r_d2d6d1d39_0, -r_d4d2d1d3_7]
+[+r_d1d3d99d1_10, -r_d4d2d1d2_9]
+[+r_d1d1d1d42_2, -m_hippurate]
+[+m_hippurate, -r_d4d2d1d2_9]
+[+r_d1d3d99d1_11, -r_d4d2d1d2_9]
+[-r_d2d3d1d61_4, +r_d4d2d1d3_7]
+[+r_d4d2d1d3_7, -r_d4d2d1d2_8]
+[+r_d1d1d1d42_2, -r_d2d3d1d61_4]
+[+m_hippurate, -r_d1d3d99d1_10]
+[-r_d2d6d1d39_1, +r_d1d13d11d16_12]
+[-r_d1d1d1d42_2, +r_d1d3d99d1_10]
+[+r_d2d3d1d61_4, -r_d4d2d1d2_9]
+[+r_d2d3d1d61_5, -m_hippurate]
+[+r_d1d3d99d1_11, -r_d1d1d1d42_2]
+[-r_d2d3d1d61_5, +m_transaconitate]
+[-r_d2d6d1d39_1, +r_d1d1d1d42_3]
+[+r_d4d2d1d2_8, -r_d2d6d1d39_1]
+[+r_d4d2d1d2_8, -r_d1d3d99d1_10]
+[+r_d1d13d11d16_12, -r_d4d2d1d2_9]
+[-r_d2d3d1d61_5, +r_d1d13d11d16_12]
+[+r_d1d3d99d1_11, -r_d1d1d1d42_3]
+[-r_d1d1d1d42_2, +r_d2d6d1d39_1]
+[+r_d2d6d1d39_1, -r_d4d2d1d2_9]
+[+r_d4d2d1d2_9, -r_d4d2d1d3_6]
+[+r_d4d2d1d3_6, -r_d1d13d11d16_12]
+[-r_d1d3d99d1_11, +r_d1d1d1d42_3]
+[+r_d4d2d1d3_6, -r_d2d6d1d39_1]
+[-r_d2d3d1d61_5, +r_d2d3d1d61_4]
+
+
+Total execution time was 672192 ms.
+
+
+Execution time was 672189 ms.
+
+status 103
+---System Timeout---
+Problems/Bio/glucolysis_min-15_ld3--1_MONO
+
+removing temp .csv#########################

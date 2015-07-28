@@ -1,0 +1,419 @@
+generate VARIANT################################
+launch MONO#####################################
+-d64
+-Xms512m
+-Xmx10g
+-jar
+ressources/CFLauncher_7.jar
+-method=SOLAR-Inc-Carc
+-verbose
+-t=1200000
+-var=_min-5_ld2--1
+-csq=Problems/Bio/glucolysis_min-5_ld2--1_MONO
+Problems/Bio/glucolysis
+Problems/Bio/glucolysis_min-5_ld2--1
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [31, 1, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 1, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [10, 8, 2, 2, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 18, 6, 3, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 14, 4, 3, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11, 142, 48, 26, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 19, 6, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 79, 27, 14, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 23, 7, 5, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [39, 757, 257, 147, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [38, 757, 257, 147, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [10, 140, 49, 23, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [64, 1580, 561, 256, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [64, 1580, 561, 256, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [36, 1580, 561, 256, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [34, 1580, 561, 256, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [32, 1580, 561, 256, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [8, 314, 103, 20, 0, 5, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 198, 72, 20, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [76, 4098, 1501, 432, 0, 5, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [88, 4098, 1501, 432, 0, 5, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [116, 4098, 1501, 432, 0, 5, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [17, 725, 266, 56, 0, 5, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [50, 5893, 2187, 548, 0, 10, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [9, 398, 146, 34, 0, 8, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [70, 9926, 3711, 800, 0, 30, 0, 24]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [15, 1604, 607, 128, 0, 8, 0, 2]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [271, 23538, 8883, 1813, 0, 52, 0, 57]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [207, 23538, 8883, 1813, 0, 52, 0, 57]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [48, 23538, 8883, 1813, 0, 52, 0, 57]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 1442, 551, 107, 0, 8, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [38, 30451, 11651, 2139, 0, 60, 0, 61]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [32, 30451, 11651, 2139, 0, 60, 0, 61]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [33, 30451, 11651, 2139, 0, 60, 0, 61]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 2644, 1003, 170, 0, 10, 0, 8]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [42, 39782, 15353, 2586, 0, 75, 0, 75]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [41, 39782, 15353, 2586, 0, 75, 0, 75]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [41, 39782, 15353, 2586, 0, 75, 0, 75]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [51, 39782, 15353, 2586, 0, 75, 0, 75]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 10, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 13, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 13, 5, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [76, 50497, 19587, 2795, 0, 95, 0, 79]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [61, 50497, 19587, 2795, 0, 95, 0, 79]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [33, 50497, 19587, 2795, 0, 95, 0, 79]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 2432, 961, 119, 0, 20, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [38, 59529, 23275, 3217, 0, 105, 0, 90]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [37, 59529, 23275, 3217, 0, 105, 0, 90]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [36, 59529, 23275, 3217, 0, 105, 0, 90]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 2586, 1027, 119, 0, 20, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [42, 70574, 27733, 3639, 0, 115, 0, 101]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [40, 70574, 27733, 3639, 0, 115, 0, 101]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [65, 70574, 27733, 3639, 0, 115, 0, 101]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 20, 8, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [46, 76815, 30330, 3699, 0, 115, 0, 103]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [68, 76815, 30330, 3699, 0, 115, 0, 103]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [80, 76815, 30330, 3699, 0, 115, 0, 103]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 27, 11, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [84, 83574, 33157, 3759, 0, 115, 0, 105]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [91, 83574, 33157, 3759, 0, 115, 0, 105]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [95, 83574, 33157, 3759, 0, 115, 0, 105]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 34, 14, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [115, 104485, 41675, 4116, 0, 175, 0, 108]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 1091, 423, 30, 0, 0, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 38, 15, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [249, 154565, 60903, 4692, 0, 255, 0, 176]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [174, 154565, 60903, 4692, 0, 255, 0, 176]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [175, 154565, 60903, 4692, 0, 255, 0, 176]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 72, 29, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [223, 192298, 76310, 4966, 0, 295, 0, 182]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [243, 192298, 76310, 4966, 0, 295, 0, 182]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 74, 30, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [500, 270081, 107963, 5482, 0, 395, 0, 408]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [348, 270081, 107963, 5482, 0, 395, 0, 408]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 79, 32, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 82, 33, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [427, 373548, 148345, 6478, 0, 505, 0, 328]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [434, 373548, 148345, 6478, 0, 505, 0, 328]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [425, 373548, 148345, 6478, 0, 505, 0, 328]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [31, 24253, 9713, 248, 0, 40, 0, 8]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [316, 479199, 191552, 7235, 0, 625, 0, 352]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 148, 60, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [611, 627340, 251748, 8136, 0, 785, 0, 391]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 181, 73, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [968, 1058134, 422611, 10218, 0, 1075, 0, 436]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1274, 1058134, 422611, 10218, 0, 1075, 0, 436]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1276, 1058134, 422611, 10218, 0, 1075, 0, 436]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [119, 92208, 37161, 496, 0, 80, 0, 13]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1951, 1369772, 548300, 11210, 0, 1235, 0, 515]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1943, 1369772, 548300, 11210, 0, 1235, 0, 515]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1656, 1369772, 548300, 11210, 0, 1235, 0, 515]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 197, 80, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1796, 1626363, 653547, 12202, 0, 1395, 0, 541]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1130, 1626363, 653547, 12202, 0, 1395, 0, 541]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1707, 1626363, 653547, 12202, 0, 1395, 0, 541]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 204, 83, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2120, 1993340, 803750, 13690, 0, 1635, 0, 580]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2429, 1993340, 803750, 13690, 0, 1635, 0, 580]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2359, 1993340, 803750, 13690, 0, 1635, 0, 580]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2444, 1993340, 803750, 13690, 0, 1635, 0, 580]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2557, 1993340, 803750, 13690, 0, 1635, 0, 580]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [290, 201889, 81311, 992, 0, 160, 0, 26]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [314, 206256, 83058, 992, 0, 160, 0, 26]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3679, 2938419, 1183792, 16666, 0, 2115, 0, 1260]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2980, 2938419, 1183792, 16666, 0, 2115, 0, 1260]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3636, 2938419, 1183792, 16666, 0, 2115, 0, 1260]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 10, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3931, 2938455, 1183808, 16666, 0, 2115, 0, 1260]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3882, 2938455, 1183808, 16666, 0, 2115, 0, 1260]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3859, 2938455, 1183808, 16666, 0, 2115, 0, 1260]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 17, 7, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3909, 2938547, 1183848, 16666, 0, 2115, 0, 1260]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 19, 8, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4032, 3005905, 1213547, 16841, 0, 2115, 0, 1267]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [9, 5685, 2284, 107, 0, 8, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1056, 768289, 308465, 14248, 0, 187, 0, 784]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1030, 768289, 308465, 14248, 0, 187, 0, 784]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1025, 768289, 308465, 14248, 0, 187, 0, 784]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11, 5755, 2314, 107, 0, 8, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1103, 806629, 324431, 14608, 0, 203, 0, 788]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [17, 10347, 4160, 145, 0, 9, 0, 7]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1846, 1316076, 528120, 27693, 0, 465, 0, 1238]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [42, 27672, 11104, 465, 0, 27, 0, 27]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2759, 1954097, 784255, 39345, 0, 696, 0, 1552]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [19, 11031, 4434, 156, 0, 2, 0, 3]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4133, 2753347, 1106581, 57530, 0, 1245, 0, 2348]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [90, 55667, 22488, 631, 0, 38, 0, 48]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6478, 4329213, 1741212, 85995, 0, 1344, 0, 3362]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6511, 4329213, 1741212, 85995, 0, 1344, 0, 3362]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6446, 4329213, 1741212, 85995, 0, 1344, 0, 3362]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 10, 4, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4053, 4329249, 1741228, 85995, 0, 1344, 0, 3362]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 3995, 1594, 70, 0, 0, 0, 5]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3568, 4485778, 1811282, 86330, 0, 1344, 0, 3384]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [59, 63533, 25637, 946, 0, 56, 0, 48]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4040, 4998329, 2018244, 92123, 0, 1568, 0, 3590]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4108, 4998329, 2018244, 92123, 0, 1568, 0, 3590]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4706, 4998329, 2018244, 92123, 0, 1568, 0, 3590]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [111, 63750, 25730, 946, 0, 56, 0, 48]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7903, 5303612, 2145026, 94803, 0, 1624, 0, 3650]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [138, 95812, 38747, 1034, 0, 40, 0, 76]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [10751, 8998046, 3639833, 166779, 0, 2880, 0, 5982]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [194, 211982, 85567, 2669, 0, 109, 0, 217]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [15292, 14682349, 5928062, 269341, 0, 4044, 0, 8610]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [13156, 14682349, 5928062, 269341, 0, 4044, 0, 8610]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [13467, 14682349, 5928062, 269341, 0, 4044, 0, 8610]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [299, 321996, 130013, 3989, 0, 175, 0, 319]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11, 8663, 3484, 124, 0, 0, 0, 7]
+SolveToClause Finished!
+5 CHARACTERISTIC CLAUSES
+[+r_d2d6d1d39_0]
+[+r_d2d6d1d39_1]
+[+r_d1d1d1d42_3]
+[+r_d1d1d1d42_2]
+[+r_d2d3d1d61_4]
+
+
+Total execution time was 222611 ms.
+
+
+Execution time was 222609 ms.
+
+status 101
+Problems/Bio/glucolysis_min-5_ld2--1_MONO
+
+NO TIME OUT#################################
+output to finishing problems################
+GENERATE DISTRIBUTION#######################
+temporary file did not exist
+buildGraph #########################################
+File loaded, Now making graph...
+temporary file did not exist
+kMETIS #############################################
+**********************************************************************
+  METIS 4.0.3 Copyright 1998, Regents of the University of Minnesota
+Graph Information ---------------------------------------------------
+  Name: Problems/Bio/glucolysis_min-5_ld2--1temp_graph_kmet2.gra, #Vertices: 148, #Edges: 290, #Parts: 2
+
+K-way Partitioning... -----------------------------------------------
+  2-way Edge-Cut:       4, Balance:  1.03 
+
+Timing Information --------------------------------------------------
+  I/O:          		   0.000
+  Partitioning: 		   0.000   (KMETIS time)
+  Total:        		   0.000
+**********************************************************************
+
+graph2DCF ##########################################
+File loaded, Now saving...
+Dist is quite VALID#############################
+temporary file did not exist
+buildGraph #########################################
+File loaded, Now making graph...
+temporary file did not exist
+kMETIS #############################################
+**********************************************************************
+  METIS 4.0.3 Copyright 1998, Regents of the University of Minnesota
+Graph Information ---------------------------------------------------
+  Name: Problems/Bio/glucolysis_min-5_ld2--1temp_graph_kmet4.gra, #Vertices: 148, #Edges: 290, #Parts: 4
+
+K-way Partitioning... -----------------------------------------------
+  4-way Edge-Cut:      21, Balance:  1.03 
+
+Timing Information --------------------------------------------------
+  I/O:          		   0.000
+  Partitioning: 		   0.000   (KMETIS time)
+  Total:        		   0.001
+**********************************************************************
+
+graph2DCF ##########################################
+File loaded, Now saving...
+Dist is quite VALID#############################
+temporary file did not exist
+buildGraph #########################################
+File loaded, Now making graph...
+temporary file did not exist
+kMETIS #############################################
+**********************************************************************
+  METIS 4.0.3 Copyright 1998, Regents of the University of Minnesota
+Graph Information ---------------------------------------------------
+  Name: Problems/Bio/glucolysis_min-5_ld2--1temp_graph_kmet6.gra, #Vertices: 148, #Edges: 290, #Parts: 6
+
+K-way Partitioning... -----------------------------------------------
+  6-way Edge-Cut:      30, Balance:  1.14 
+
+Timing Information --------------------------------------------------
+  I/O:          		   0.000
+  Partitioning: 		   0.000   (KMETIS time)
+  Total:        		   0.001
+**********************************************************************
+
+graph2DCF ##########################################
+File loaded, Now saving...
+Dist is quite VALID#############################
+temporary file did not exist
+buildGraph #########################################
+File loaded, Now making graph...
+temporary file did not exist
+kMETIS #############################################
+**********************************************************************
+  METIS 4.0.3 Copyright 1998, Regents of the University of Minnesota
+Graph Information ---------------------------------------------------
+  Name: Problems/Bio/glucolysis_min-5_ld2--1temp_graph_kmet8.gra, #Vertices: 148, #Edges: 290, #Parts: 8
+
+K-way Partitioning... -----------------------------------------------
+  8-way Edge-Cut:      33, Balance:  1.03 
+
+Timing Information --------------------------------------------------
+  I/O:          		   0.000
+  Partitioning: 		   0.000   (KMETIS time)
+  Total:        		   0.001
+**********************************************************************
+
+graph2DCF ##########################################
+File loaded, Now saving...
+Dist is quite VALID#############################
+removing temp .csv#########################

@@ -1,0 +1,549 @@
+generate VARIANT################################
+launch MONO#####################################
+-d64
+-Xms512m
+-Xmx10g
+-jar
+ressources/CFLauncher_7.jar
+-method=SOLAR-Inc-Carc
+-verbose
+-t=1200000
+-var=_max-20_ld-1--1
+-csq=Problems/Bio/glucolysis_max-20_ld-1--1_MONO
+Problems/Bio/glucolysis
+Problems/Bio/glucolysis_max-20_ld-1--1
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [43, 1, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [14, 8, 2, 2, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 15, 4, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 23, 8, 3, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [9, 84, 30, 12, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 16, 5, 3, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [13, 149, 52, 26, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [8, 48, 17, 7, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [28, 384, 139, 55, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 24, 8, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [39, 575, 207, 89, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [12, 94, 34, 13, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [74, 1105, 404, 152, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 32, 11, 5, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 35, 12, 6, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [109, 1748, 631, 268, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [87, 1748, 631, 268, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [18, 285, 85, 48, 0, 4, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [12, 167, 58, 23, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [129, 3907, 1363, 532, 0, 8, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 44, 15, 7, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [136, 4588, 1609, 649, 0, 8, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [21, 566, 196, 69, 0, 5, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [103, 5899, 2100, 768, 0, 9, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [9, 234, 82, 28, 0, 1, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [145, 8820, 3133, 1130, 0, 29, 0, 13]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [20, 838, 304, 100, 0, 8, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [220, 18083, 6548, 2176, 0, 68, 0, 25]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [59, 18083, 6548, 2176, 0, 68, 0, 25]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [66, 18083, 6548, 2176, 0, 68, 0, 25]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 909, 335, 99, 0, 8, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [41, 23221, 8569, 2515, 0, 76, 0, 28]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [34, 23221, 8569, 2515, 0, 76, 0, 28]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [33, 23221, 8569, 2515, 0, 76, 0, 28]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 1951, 715, 193, 0, 12, 0, 2]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [39, 29882, 11147, 3000, 0, 94, 0, 33]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 119, 43, 14, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [46, 34260, 12589, 3772, 0, 94, 0, 33]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [43, 34260, 12589, 3772, 0, 94, 0, 33]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 18, 7, 1, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1, 26, 9, 3, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 1917, 697, 185, 0, 22, 0, 3]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [70, 55415, 20324, 5701, 0, 199, 0, 59]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [93, 55415, 20324, 5701, 0, 199, 0, 59]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [119, 55415, 20324, 5701, 0, 199, 0, 59]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6, 1275, 480, 119, 0, 3, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [122, 64217, 23850, 6158, 0, 210, 0, 65]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [95, 64217, 23850, 6158, 0, 210, 0, 65]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [94, 64217, 23850, 6158, 0, 210, 0, 65]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 1359, 516, 119, 0, 3, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [96, 74080, 27774, 6685, 0, 221, 0, 71]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [100, 74080, 27774, 6685, 0, 221, 0, 71]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [99, 74080, 27774, 6685, 0, 221, 0, 71]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [5, 1791, 679, 148, 0, 10, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [112, 85238, 32252, 7195, 0, 241, 0, 74]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 154, 57, 15, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [106, 94045, 35618, 8134, 0, 251, 0, 73]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [7, 2228, 840, 193, 0, 10, 0, 2]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [254, 125925, 47482, 10862, 0, 340, 0, 101]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 34, 12, 4, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [239, 127770, 48208, 11205, 0, 340, 0, 101]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [9, 2829, 1081, 237, 0, 14, 0, 2]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [263, 183548, 69139, 16212, 0, 434, 0, 111]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 797, 285, 83, 0, 0, 0, 1]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [9, 3644, 1377, 307, 0, 25, 0, 3]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [348, 234064, 86431, 20735, 0, 1709, 0, 213]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 332, 123, 32, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [324, 240219, 88848, 21936, 0, 1709, 0, 215]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [13, 5955, 2212, 536, 0, 48, 0, 7]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [534, 342586, 126032, 31029, 0, 2089, 0, 579]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 340, 126, 33, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [36, 10337, 3844, 955, 0, 215, 0, 13]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 343, 127, 34, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [1439, 798492, 294323, 73719, 0, 4712, 0, 2964]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [102, 52257, 19372, 4542, 0, 939, 0, 30]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [61, 31789, 11868, 2691, 0, 272, 0, 42]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2899, 1599324, 575447, 156025, 0, 16025, 0, 4903]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2728, 1599324, 575447, 156025, 0, 16025, 0, 4903]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2529, 1599324, 575447, 156025, 0, 16025, 0, 4903]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [50, 31294, 11359, 2987, 0, 77, 0, 24]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3592, 1778956, 647115, 165070, 0, 16349, 0, 4971]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [95, 49940, 18783, 4039, 0, 478, 0, 38]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3855, 2309697, 858987, 204708, 0, 18677, 0, 10392]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [246, 133306, 50034, 11081, 0, 1190, 0, 151]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6069, 3709358, 1392185, 311818, 0, 30445, 0, 17231]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [25, 12762, 4751, 1144, 0, 38, 0, 26]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6198, 6021954, 2271089, 506871, 0, 43916, 0, 34490]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [116, 130951, 48694, 11734, 0, 496, 0, 74]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6218, 6861867, 2594105, 576284, 0, 48192, 0, 34904]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [6831, 6861867, 2594105, 576284, 0, 48192, 0, 34904]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11542, 6861867, 2594105, 576284, 0, 48192, 0, 34904]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [231, 118297, 44687, 9604, 0, 1046, 0, 134]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11412, 7215645, 2735003, 593253, 0, 48892, 0, 35042]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [8079, 7215645, 2735003, 593253, 0, 48892, 0, 35042]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [10481, 7215645, 2735003, 593253, 0, 48892, 0, 35042]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [212, 118745, 44879, 9604, 0, 1046, 0, 134]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [11427, 7661993, 2911033, 617462, 0, 50034, 0, 35210]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [12012, 7661993, 2911033, 617462, 0, 50034, 0, 35210]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [26, 12580, 4685, 1126, 0, 37, 0, 26]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [26, 12445, 4634, 1115, 0, 36, 0, 26]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [26575, 14732776, 5606837, 1181721, 0, 77778, 0, 88120]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [393, 229456, 85099, 20678, 0, 1358, 0, 97]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [385, 219406, 81716, 18578, 0, 1216, 0, 93]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [46974, 24861815, 9502443, 1899971, 0, 188576, 0, 157613]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [45086, 24861815, 9502443, 1899971, 0, 188576, 0, 157613]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [46921, 24861815, 9502443, 1899971, 0, 188576, 0, 157613]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 14, 5, 1, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [46740, 24861870, 9502465, 1899975, 0, 188576, 0, 157613]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 15, 5, 2, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [46634, 24861898, 9502475, 1899979, 0, 188576, 0, 157613]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 37, 14, 3, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [46576, 24862081, 9502546, 1899995, 0, 188576, 0, 157613]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [176, 89571, 34626, 6380, 0, 290, 0, 1326]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [86171, 42941750, 16371064, 3358109, 0, 304794, 0, 242627]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [717, 349083, 134796, 25004, 0, 1370, 0, 4986]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [45233, 20463585, 7840591, 1594093, 0, 198469, 0, 40706]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [2, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [3, 0, 0, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [4, 0, 0, 0, 0, 0, 0, 0]
+SolveToClause Finished!
+225 CHARACTERISTIC CLAUSES
+[-m_formaldehyde, +c_compoundCarginine_fumarateC]
+[-m_sarcosine, +c_compoundCarginine_fumarateC]
+[-m_formaldehyde, +m_succinate]
+[-m_e2oxoglutarate, +m_isocitrate]
+[-m_sarcosine, +m_formaldehyde]
+[-m_sarcosine, +m_ornithine]
+[-c_compoundCurea_ornithineC, +m_ornithine]
+[-m_l2aminoadipate, +m_succinate]
+[-m_formaldehyde, +m_sarcosine]
+[-m_creatine, +m_ornithine]
+[-c_compoundCarginine_fumarateC, +m_creatine]
+[+m_succinate, -c_compoundCcitrate_transaconitateC]
+[-m_formaldehyde, +m_ornithine]
+[-c_compoundCarginine_fumarateC, +m_formaldehyde]
+[-m_l2aminoadipate, +m_e2oxoglutarate]
+[-m_succinate, +m_isocitrate]
+[-m_isocitrate, +c_compoundCcitrate_transaconitateC]
+[+m_l2aminoadipate, -m_e2oxoglutarate]
+[-m_ornithine, +m_creatine]
+[-m_creatine, +m_sarcosine]
+[-m_succinate, +c_compoundCcitrate_transaconitateC]
+[-m_sarcosine, +m_arginine]
+[-m_formaldehyde, +m_arginine]
+[-m_e2oxoglutarate, +c_compoundCcitrate_transaconitateC]
+[-m_ornithine, +m_fumarate]
+[-m_sarcosine, +m_creatine]
+[-c_compoundCarginine_fumarateC, +m_sarcosine]
+[-m_succinate, +m_l2aminoadipate]
+[+m_succinate, -m_e2oxoglutarate]
+[-c_compoundCarginine_fumarateC, +m_ornithine]
+[-m_formaldehyde, +m_fumarate]
+[-m_fumarate, +m_succinate]
+[-m_ornithine, +c_compoundCarginine_fumarateC]
+[-m_arginine, +m_ornithine]
+[-m_ornithine, +m_sarcosine]
+[+m_succinate, -m_isocitrate]
+[-m_formaldehyde, +m_creatine]
+[+m_succinate, -c_compoundCarginine_fumarateC]
+[+m_citrate, -m_succinate]
+[-m_sarcosine, +m_succinate]
+[-c_compoundCarginine_fumarateC, +m_fumarate]
+[-m_succinate, +m_e2oxoglutarate]
+[-m_arginine, +c_compoundCurea_ornithineC]
+[-m_succinate, +m_fumarate]
+[-m_citrate, +m_fumarate]
+[+m_succinate, -m_citrate]
+[-m_sarcosine, +m_fumarate]
+[-m_arginine, +m_sarcosine]
+[-m_acryloylcoa, +m_fumarate]
+[-c_compoundCurea_sarcosineC, +c_compoundCcitrate_transaconitateC]
+[-m_formaldehyde, +m_e2oxoglutarate]
+[-m_creatine, +m_arginine]
+[-c_compoundCarginine_fumarateC, +m_betaalanine]
+[-c_compoundCurea_ornithineC, +m_formaldehyde]
+[-m_acryloylcoa, +c_compoundCcitrate_transaconitateC]
+[-m_fumarate, +c_compoundCcitrate_transaconitateC]
+[-c_compoundCurea_ornithineC, +m_creatine]
+[-c_compoundCcitrate_transaconitateC, +m_isocitrate]
+[-m_citrate, +m_acryloylcoa]
+[-m_betaalanine, +m_acryloylcoa]
+[-c_compoundCurea_ornithineC, +m_betaalanine]
+[-c_compoundCcitrate_transaconitateC, +m_e2oxoglutarate]
+[+c_compoundCarginine_fumarateC, -c_compoundCurea_ornithineC]
+[-m_sarcosine, +m_isocitrate]
+[-m_e2oxoglutarate, +m_acryloylcoa]
+[+m_succinate, -c_compoundCurea_sarcosineC]
+[-m_e2oxoglutarate, +m_fumarate]
+[+m_succinate, -m_arginine]
+[-m_creatine, +c_compoundCformaldehyde_methylamineC]
+[-m_creatine, +c_compoundCarginine_fumarateC]
+[+m_ornithine, -c_compoundCurea_sarcosineC]
+[-m_formaldehyde, +m_betaalanine]
+[-c_compoundCformaldehyde_methylamineC, +c_compoundCarginine_fumarateC]
+[-m_sarcosine, +c_compoundCcitrate_transaconitateC]
+[-m_betaalanine, +m_succinate]
+[-m_formaldehyde, +m_isocitrate]
+[+m_fumarate, -m_arginine]
+[-m_l2aminoadipate, +m_acryloylcoa]
+[-c_compoundCcitrate_transaconitateC, +m_fumarate]
+[-m_citrate, +m_isocitrate]
+[-m_citrate, +m_l2aminoadipate]
+[-c_compoundCarginine_fumarateC, +c_compoundCcitrate_transaconitateC]
+[-m_creatine, +m_succinate]
+[-c_compoundCformaldehyde_methylamineC, +m_arginine]
+[-c_compoundCformaldehyde_methylamineC, +m_acryloylcoa]
+[-m_formaldehyde, +c_compoundCurea_ornithineC]
+[-m_ornithine, +c_compoundCformaldehyde_methylamineC]
+[-m_ornithine, +m_l2aminoadipate]
+[-m_isocitrate, +m_e2oxoglutarate]
+[-m_citrate, +m_betaalanine]
+[-m_ornithine, +c_compoundCcitrate_transaconitateC]
+[-m_sarcosine, +m_citrate]
+[-m_betaalanine, +m_isocitrate]
+[-m_arginine, +m_citrate]
+[-m_arginine, +c_compoundCcitrate_transaconitateC]
+[-c_compoundCurea_sarcosineC, +m_l2aminoadipate]
+[-m_creatine, +m_citrate]
+[-m_sarcosine, +c_compoundCurea_ornithineC]
+[-c_compoundCcitrate_transaconitateC, +m_betaalanine]
+[-m_succinate, +m_acryloylcoa]
+[-c_compoundCarginine_fumarateC, +m_e2oxoglutarate]
+[-m_acryloylcoa, +m_isocitrate]
+[-m_betaalanine, +m_citrate]
+[-m_l2aminoadipate, +m_isocitrate]
+[-m_arginine, +m_e2oxoglutarate]
+[-m_arginine, +m_l2aminoadipate]
+[-m_ornithine, +m_succinate]
+[-m_ornithine, +m_e2oxoglutarate]
+[-m_ornithine, +m_arginine]
+[-m_betaalanine, +m_e2oxoglutarate]
+[+m_fumarate, -c_compoundCurea_sarcosineC]
+[-c_compoundCurea_ornithineC, +m_sarcosine]
+[-c_compoundCformaldehyde_methylamineC, +m_succinate]
+[-c_compoundCurea_ornithineC, +m_isocitrate]
+[-m_fumarate, +m_citrate]
+[-m_ornithine, +m_isocitrate]
+[-c_compoundCformaldehyde_methylamineC, +m_creatine]
+[-c_compoundCformaldehyde_methylamineC, +c_compoundCurea_sarcosineC]
+[-c_compoundCcitrate_transaconitateC, +m_l2aminoadipate]
+[+m_fumarate, -c_compoundCurea_ornithineC]
+[-c_compoundCurea_sarcosineC, +m_acryloylcoa]
+[-c_compoundCurea_sarcosineC, +m_citrate]
+[-m_l2aminoadipate, +m_fumarate]
+[-m_betaalanine, +c_compoundCcitrate_transaconitateC]
+[-m_arginine, +m_betaalanine]
+[-m_arginine, +c_compoundCurea_sarcosineC]
+[-m_arginine, +m_formaldehyde]
+[-m_fumarate, +m_betaalanine]
+[-m_ornithine, +m_citrate]
+[-m_fumarate, +m_l2aminoadipate]
+[-c_compoundCformaldehyde_methylamineC, +m_ornithine]
+[-m_creatine, +m_fumarate]
+[-c_compoundCformaldehyde_methylamineC, +m_citrate]
+[-c_compoundCurea_ornithineC, +c_compoundCformaldehyde_methylamineC]
+[-m_isocitrate, +m_citrate]
+[+m_arginine, -c_compoundCurea_ornithineC]
+[-m_creatine, +m_e2oxoglutarate]
+[-m_ornithine, +m_formaldehyde]
+[-m_arginine, +m_isocitrate]
+[-c_compoundCurea_sarcosineC, +c_compoundCurea_ornithineC]
+[-m_acryloylcoa, +m_l2aminoadipate]
+[-m_ornithine, +c_compoundCurea_sarcosineC]
+[-m_arginine, +m_creatine]
+[-c_compoundCurea_sarcosineC, +m_isocitrate]
+[-m_isocitrate, +m_acryloylcoa]
+[+c_compoundCarginine_fumarateC, -c_compoundCurea_sarcosineC]
+[-m_l2aminoadipate, +c_compoundCcitrate_transaconitateC]
+[-m_l2aminoadipate, +m_citrate]
+[-m_fumarate, +m_e2oxoglutarate]
+[-m_sarcosine, +m_e2oxoglutarate]
+[-m_ornithine, +c_compoundCurea_ornithineC]
+[-c_compoundCarginine_fumarateC, +c_compoundCformaldehyde_methylamineC]
+[-m_sarcosine, +c_compoundCurea_sarcosineC]
+[-m_ornithine, +m_betaalanine]
+[+c_compoundCarginine_fumarateC, -m_arginine]
+[-c_compoundCformaldehyde_methylamineC, +m_l2aminoadipate]
+[-c_compoundCcitrate_transaconitateC, +m_acryloylcoa]
+[-m_fumarate, +m_isocitrate]
+[-c_compoundCformaldehyde_methylamineC, +m_e2oxoglutarate]
+[+m_creatine, -c_compoundCurea_sarcosineC]
+[-m_sarcosine, +m_l2aminoadipate]
+[-c_compoundCarginine_fumarateC, +m_l2aminoadipate]
+[-m_isocitrate, +m_l2aminoadipate]
+[-m_ornithine, +m_acryloylcoa]
+[-m_sarcosine, +c_compoundCformaldehyde_methylamineC]
+[-c_compoundCcitrate_transaconitateC, +m_citrate]
+[-m_succinate, +m_betaalanine]
+[-c_compoundCurea_sarcosineC, +m_formaldehyde]
+[-m_citrate, +m_e2oxoglutarate]
+[-m_e2oxoglutarate, +m_citrate]
+[-c_compoundCurea_sarcosineC, +m_betaalanine]
+[-m_creatine, +m_l2aminoadipate]
+[-m_sarcosine, +m_betaalanine]
+[+c_compoundCurea_ornithineC, -c_compoundCarginine_fumarateC]
+[-c_compoundCformaldehyde_methylamineC, +c_compoundCurea_ornithineC]
+[-m_creatine, +m_formaldehyde]
+[-c_compoundCarginine_fumarateC, +m_citrate]
+[-m_betaalanine, +m_fumarate]
+[-m_creatine, +c_compoundCurea_sarcosineC]
+[-c_compoundCurea_sarcosineC, +m_e2oxoglutarate]
+[-m_creatine, +m_betaalanine]
+[-m_isocitrate, +m_betaalanine]
+[-c_compoundCformaldehyde_methylamineC, +c_compoundCcitrate_transaconitateC]
+[-c_compoundCurea_sarcosineC, +m_sarcosine]
+[+m_succinate, -c_compoundCurea_ornithineC]
+[-c_compoundCformaldehyde_methylamineC, +m_betaalanine]
+[-m_creatine, +c_compoundCcitrate_transaconitateC]
+[-m_citrate, +c_compoundCcitrate_transaconitateC]
+[-c_compoundCurea_ornithineC, +c_compoundCcitrate_transaconitateC]
+[-c_compoundCurea_ornithineC, +m_e2oxoglutarate]
+[-m_creatine, +c_compoundCurea_ornithineC]
+[-c_compoundCurea_ornithineC, +m_l2aminoadipate]
+[-m_isocitrate, +m_fumarate]
+[-c_compoundCurea_sarcosineC, +c_compoundCformaldehyde_methylamineC]
+[-c_compoundCurea_ornithineC, +c_compoundCurea_sarcosineC]
+[-c_compoundCformaldehyde_methylamineC, +m_fumarate]
+[+m_arginine, -c_compoundCarginine_fumarateC]
+[-c_compoundCurea_ornithineC, +m_citrate]
+[+m_betaalanine, -m_acryloylcoa]
+[-m_creatine, +m_acryloylcoa]
+[-m_creatine, +m_isocitrate]
+[-m_formaldehyde, +c_compoundCformaldehyde_methylamineC]
+[-c_compoundCarginine_fumarateC, +m_isocitrate]
+[-m_fumarate, +m_acryloylcoa]
+[-c_compoundCarginine_fumarateC, +m_acryloylcoa]
+[-m_arginine, +m_acryloylcoa]
+[-c_compoundCformaldehyde_methylamineC, +m_isocitrate]
+[+m_arginine, -c_compoundCurea_sarcosineC]
+[-m_betaalanine, +m_l2aminoadipate]
+[-m_acryloylcoa, +m_e2oxoglutarate]
+[-m_acryloylcoa, +m_succinate]
+[-m_e2oxoglutarate, +m_betaalanine]
+[-m_l2aminoadipate, +m_betaalanine]
+[-c_compoundCformaldehyde_methylamineC, +m_formaldehyde]
+[-m_formaldehyde, +c_compoundCurea_sarcosineC]
+[-m_sarcosine, +m_acryloylcoa]
+[-m_formaldehyde, +m_acryloylcoa]
+[-c_compoundCurea_ornithineC, +m_acryloylcoa]
+[-m_formaldehyde, +m_citrate]
+[-m_formaldehyde, +m_l2aminoadipate]
+[-c_compoundCformaldehyde_methylamineC, +m_sarcosine]
+[-m_formaldehyde, +c_compoundCcitrate_transaconitateC]
+[-c_compoundCarginine_fumarateC, +c_compoundCurea_sarcosineC]
+[-m_arginine, +c_compoundCformaldehyde_methylamineC]
+[-m_acryloylcoa, +m_citrate]
+
+
+Total execution time was 693618 ms.
+
+
+Execution time was 693615 ms.
+
+status 103
+---System Timeout---
+Problems/Bio/glucolysis_max-20_ld-1--1_MONO
+
+removing temp .csv#########################

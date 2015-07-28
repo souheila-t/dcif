@@ -1,0 +1,7 @@
+timeout 0
+nb csq 2
+cnf(consequence, axiom, [+r_d2d6d1d39_0]).
+cnf(consequence, axiom, [+r_d2d6d1d39_1]).
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+Problems/Bio/glucolysis_min-2_ld2--1;_kmet2;2;DICF-PB-Star-FixedRoot-0;0;2;1112;503;3814;9803;0;0;6;8;312;3240;8367;0;0;4;5;191;574;1436;0;0;2;3;191;574;1436;0;0;4;5
+

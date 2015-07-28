@@ -1,0 +1,14 @@
+LAUNCH MULTI PROBLEM############################
+-d64
+-Xms512m
+-Xmx2g
+-jar
+ressources/CFLauncher_7.jar
+-method=DICF-PB-Token-FixedOrder-0-1
+-verbose
+-t=10000
+-var=_min-2_ld2--1
+-dist=_kmet2
+-csq=Problems/Bio/glucolysis_min-2_ld2--1_MULTI_DICF-PB-Token-FixedOrder-0-1
+Problems/Bio/glucolysis
+Problems/Bio/glucolysis_min-2_ld2--1_MULTI_DICF-PB-Token-FixedOrder-0-1

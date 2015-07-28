@@ -80,12 +80,14 @@ public class CFLauncher {
 		if(!finished)
 			System.out.println("---System Timeout---");
 
-		//ouput in csq file for checking results
-		saveConsequences(consequences,outputCsqFilename,!finished);
 
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
+
+		//ouput in csq file for checking results
+		String stats = ExpeSummary.labels() + "\n" + result.toLine()+"\n";		
+		saveConsequences(consequences,outputCsqFilename,!finished,stats);
 		return result;
 	}	
 
@@ -118,16 +120,20 @@ public class CFLauncher {
 		if(!finished)
 			System.out.println("---System Timeout---");
 
-		//ouput in csq file for checking results
-		saveConsequences(consequences, outputCsqFilename,!finished);
 
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
+
+
+		//ouput in csq file for checking results
+		String stats = ExpeSummary.labels() + "\n" + result.toLine()+"\n";		
+		saveConsequences(consequences,outputCsqFilename,!finished,stats);
 		return result;
 	}	
-	public static void saveConsequences(Collection<Clause> consequences, String name,boolean timeOut ) throws Exception{
+	public static void saveConsequences(Collection<Clause> consequences, String name,boolean timeOut, String stats) throws Exception{
 		CsqHolder csqH = new CsqHolder(consequences, timeOut);
+		csqH.setStats(stats);
 		csqH.save(name, true);
 	}
 
@@ -149,6 +155,10 @@ public class CFLauncher {
 				order.add(num);
 			}
 		}
+		System.out.println("ORDER is: ");
+		for (int n : order)
+			System.out.print(n+"-");
+		System.out.println("");
 
 		PBTokenIncConsFinding pb=new PBTokenIncConsFinding(problem, useNC, pruneCsq, order, deadline);
 		long middle = System.currentTimeMillis();
@@ -169,11 +179,13 @@ public class CFLauncher {
 			System.out.println("---System Timeout---");
 
 
-		//ouput in csq file for checking results
-		saveConsequences(consequences, outputCsqFilename,!finished);
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
 		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
+
+		//ouput in csq file for checking results
+		String stats = ExpeSummary.labels() + "\n" + result.toLine()+"\n";		
+		saveConsequences(consequences,outputCsqFilename,!finished,stats);
 		return result;
 	}	
 
@@ -226,17 +238,23 @@ public class CFLauncher {
 			finished = false;
 			System.out.println("---System Timeout---");
 		}
-		//ouput in csq file for checking results
-		saveConsequences(resultingCons,outputCsqFilename,!finished);
 
 		// set result line
 		List<ConsFindingAgentStats> agStats=new ArrayList<ConsFindingAgentStats>();
 		agStats.add(stat);
 		ExpeSummary result=new ExpeSummary(pbName, "Mono", 0,method, end-start, resultingCons.size(),agStats);
+
+		//ouput in csq file for checking results
+		String stats = ExpeSummary.labels() + "\n" + result.toLine()+"\n";		
+		saveConsequences(resultingCons,outputCsqFilename,!finished,stats);	
+		
 		return result;		
 	}
 
 	public static ExpeSummary runExpe(String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis,String outputCsqFilename) throws Exception{
+		if (outputCsqFilename.equals(""))
+			outputCsqFilename = pbBaseName + variantSuffix+"_" + method;
+
 		ExpeSummary result=null;
 		long deadline=-1;
 		List<String> methodOptions=getMethodOptions(method);
@@ -469,20 +487,6 @@ public class CFLauncher {
 			e.printStackTrace();
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

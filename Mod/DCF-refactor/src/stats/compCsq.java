@@ -28,9 +28,9 @@ public class compCsq {
 	 */
 	public static void printHelp(){
 		System.out.println("Usage :");
-		System.out.println("    compCsq filename.csq filename2.csq [output.csqstats]");
+		System.out.println("    compCsq filename.csq filename2.csq [output .csv]");
 		System.out.println("compares the 2 csq files to produces stats regarding the experiences.\n"
-				+ ", the files contain csq in the form of a .sol file.\n"
+				+ ", the files contain csq in the form of a .sol file, the ref is the 2 nd file.\n"
 				);
 	}
 
@@ -64,12 +64,12 @@ public class compCsq {
 		
 		
 
-		String outputFilename=getParentFolder(filename1)+compCsq.getShortFilename(filename1) + "_" +compCsq.getShortFilename(filename2) + "_csqstats"+".csv";
+		String outputFilename=getParentFolder(filename1)+compCsq.getShortFilename(filename1) + "_" +compCsq.getShortFilename(filename2) + ".csv";
 		if (args.length>i+1)
 			outputFilename=args[i+1].trim();
-		if (outputFilename.endsWith("_csqstats"+".csv"))
+		if (outputFilename.endsWith(".csv"))
 
-			outputFilename=outputFilename.substring(0,outputFilename.length()-13);
+			outputFilename=outputFilename.substring(0,outputFilename.length()-4);
 
 		// MAIN
 		try {
@@ -241,7 +241,7 @@ public class compCsq {
 			// save output to CSV
 		} catch (Exception e) {
 			System.err.println("Error while saving");
-			//e.printStackTrace();
+			e.printStackTrace();
 		}
 	}
 

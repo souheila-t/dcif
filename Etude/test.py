@@ -5,23 +5,11 @@
 
 
 import sys
-from commons import *
 from subprocess import *
-
-PROJECT_PATH = "/home/magma/projects/dcif/Etude/"
-RSRC_PATH = PROJECT_PATH + 'ressources/'
-GEN_PATH = PROJECT_PATH + 'gen/'
-TOOLS_PATH = "/home/magma/projects/dcif/ScriptDCF/tools/"
-
-BUILDGRAPH_JAR = TOOLS_PATH + "buildGraph.jar"
-KMETIS_EX = TOOLS_PATH + "metis-4.0.3/kmetis"
-GRAPH2DCF_JAR = TOOLS_PATH + "graph2dcf.jar"
-MAKESOLVARIANT_JAR = TOOLS_PATH + "makeSolVariant.jar"
-CFLAUNCHER_JAR =RSRC_PATH + 'CFLauncher_5_csq.jar'
-
-
-
+from commons import *
 import argparse
+TEMP_PATH = 'temp/'
+CFLAUNCHER_JAR =RSRC_PATH + 'CFLauncher_8_Token_debug.jar'
 def define_arguments():    
     parser = argparse.ArgumentParser(description='Process to test the DCIF.')
     parser.add_argument('infile', 
@@ -59,7 +47,9 @@ def define_arguments():
                         ,kmetis')
     parser.add_argument('--dist',
                         help = 'distSuffix  use the distribution with given suffix (should begin by \"_\").");')
-        
+    parser.add_argument('--csq',
+                        help = 'outputfilename for csq')
+            
     return parser
 parser = define_arguments()
 #class ArgHolder :
@@ -79,7 +69,7 @@ print 'les arguments passés sont :', argsDict
 from agentPartitioning import *
 import os
 
-def flow():
+def flow(argsDict):
     if argsDict['dist'] != None :
         return
     if (argsDict['numagent'] == None) or (argsDict['numagent'] == 1 ) :
@@ -91,7 +81,7 @@ def flow():
                 
         
     else:
-        temp_graph_filename=GEN_PATH + 'temp_graph'
+        temp_graph_filename=TEMP_PATH + 'temp_graph'
         if  argsDict['par'] ==  'kmetis':
             ########On utilise un partitionnement un peu opti:
             ########buildGraph    
@@ -103,7 +93,7 @@ def flow():
             print 'buildGRAPH ################################################'   
             # on supprime le fichier s'il existe.       
             #
-            args = [BUILDGRAPH_JAR, argsDict['infile'], temp_graph_filename ]
+            args = ['-jar', BUILDGRAPH_JAR, argsDict['infile'], temp_graph_filename ]
             result = jarWrapper(*args)
             
             ########kMetis
@@ -112,87 +102,39 @@ def flow():
             result = exWrapper(*args)
             ########graph2DCF
             print 'graph2DCF ################################################'  
-            args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
+            args = ['-jar',GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
             result = jarWrapper(*args)
         elif argsDict['par'] == 'naive_eq' :
             print 'naivePARTITIONING ################################################'  
             divEquNaive(argsDict['infile'], temp_graph_filename, argsDict['numagent'])
             ########graph2DCF
             print 'graph2DCF ################################################' 
-            args = [GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
+            args = ['-jar',GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
             result = jarWrapper(*args)
-flow()
-#IF NONE
-#######SOIT
-########on fait un partitionnemnt naïf
-########SOL -> DCF : using graph2DCF
-###############################################################################
+
 
 
 ###############################################################################
-#on envoie le problème a DCIF avec une variante ou pas...
-#args = [CFLAUNCHER_JAR, RSRC_PATH+argsDict['infile'].name, 
-#RSRC_PATH+argsDict['outfile'].name, '-method=DICF-PB-Async',
-# '-verbose','var=_max-4_ld-1--1' ]
 
-args = [CFLAUNCHER_JAR, 
-        '-method='+argsDict['method']]
-
-if argsDict['verbose'] == True :
-    print 'verbose'
-    args.append('-verbose')
-if argsDict['timeout'] != None :
-    print argsDict['timeout']
-    args.append('-t='+str(argsDict['timeout']))
-if argsDict['var'] != None :
-    print argsDict['var']
-    args.append('-var='+argsDict['var'])
-if argsDict['dist'] != None :
-    print argsDict['dist']
-    args.append('-dist='+argsDict['dist'])    
-    
-#adding arguments at the end because (cf CfLauncher.java ^^).
-args = args + [argsDict['infile'], GEN_PATH+argsDict['outfile']]
 
 print 'CFLAUNCHER MULTI ################################################' 
+flow(argsDict)
+JAVA_ARGS = ['-d64', '-Xms512m', '-Xmx4g','-jar']
+print CFLAUNCHER_JAR
+args = computeArgs (CFLAUNCHER_JAR,argsDict,exe_args=JAVA_ARGS)
+print args
 result = jarWrapper(*args)  
-#problem : ici ON GARDE TOUTES LES TRACES D'EXÉCUTION EN MÉMOIRE, IL FAUDRAIT LES ECRIRE AU FUR ET A MESURE DANS UN FICHIER
-#ET ON RECUPEREAIT ENSUITE SEULEMENT CE QUI NOUS INTERESSERAIT
-#TODO REECRIRE JARwRAPPER, AVEC EN ARG UN OUTFILEnAME
-import os
-char_clauses = result
-print len(result)
-#on écrit les résultats dans un fichier pour un traitement ultérieur
-#print os.path.basename(argsDict['infile'])
-'''
-outfile_csq = os.path.basename(argsDict['infile'])[:-4] + '.multicsq.log'
-f = open(GEN_PATH+outfile_csq, 'w')
+print result
 
-for line in char_clauses :
+log_result = os.path.basename(argsDict['infile'])[:-4] +argsDict['var']+argsDict['method'] +'.log'
+f = open(TEMP_PATH+ log_result, 'w')
+for line in result :
     f.write(line+'\n')
 f.close()
-'''
-print 'CFLAUNCHER MONO################################################'
-
-argsDict_MONO = argsDict.copy()
-argsDict_MONO['numagent'] == 1
-result = jarWrapper(*args)
-
-'''
-char_clauses = result
-outfile_csq = os.path.basename(argsDict['infile'])[:-4] + '.monocsq.log'
-f = open(GEN_PATH+outfile_csq, 'w')
-
-for line in char_clauses :
-    f.write(line+'\n')
-f.close()
-'''
 
 
+#python test.py ressources/glucolysis.sol gen/debug_test1.csv -n 2 --var _max-2_ld-1--1 --verbose -t 10000 --method DICF-PB-Token
 
-
-##and now checking the results between mono agent and Multi
-#and compare the result with what we should have had
 
 
 #python test.py ressources/glucolysis.sol debug_test1.csv -n 4 --var _max-4_ld-1--1 --verbose -t 10000

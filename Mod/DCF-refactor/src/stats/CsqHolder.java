@@ -42,7 +42,9 @@ public class CsqHolder implements Parser, Saver {
 	public void load(String filename) throws Exception{
 		LoaderTool.load(filename, ".csq", this);
 	 }
-	
+	public void setStats(String s){
+		this.stats = s;
+	}
 	@Override
 	public void parse(BufferedReader bIn) throws IOException{
 		String line=LoaderTool.getNextLine(bIn, '%');
@@ -69,6 +71,12 @@ public class CsqHolder implements Parser, Saver {
 			parseCnf(line);
 		if (line.startsWith("pf"))
 			setPField(PField.parse(env, opt, line));
+		if (line.equalsIgnoreCase(""))
+			return;
+		if (line.equals("\n"))
+			return;
+		else
+			stats += line + "\n";
 	}
 	/*
 	 * all csq are axioms here
@@ -110,12 +118,18 @@ public class CsqHolder implements Parser, Saver {
 			if (cl != null)
 				p.println(IndepClause.toSolFileLine(cl, "axiom"));
 		}
+		printFooter(p);
 	//	p.println();
 		//p.println(IndepPField.toSolFileLine(getPField()));
 	}
 	
+	//print .csv informations to be centralised after (can't guarantee that mono has been computed)
+	private void printFooter(PrintStream p) {
+		p.println(stats);
+		
+	}
+
 	private void printHeader(PrintStream p) {
-		p.println("nb csq "+Integer.toString(this.getClauses().size()));
 		String t;
 
 		if (this.timeOut == true)
@@ -123,6 +137,8 @@ public class CsqHolder implements Parser, Saver {
 		else 
 			t = "0";
 		p.println("timeout "+t);
+
+		p.println("nb csq "+Integer.toString(this.getClauses().size()));
 	}
 
 	private Collection<Clause> clauses = new ArrayList<Clause>();
@@ -130,6 +146,7 @@ public class CsqHolder implements Parser, Saver {
 	private Env env;
 	private Options opt;
 	private boolean timeOut;
+	String stats;
 	public Collection<Clause> getClauses(){
 		return this.clauses;
 	}

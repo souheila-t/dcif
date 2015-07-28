@@ -18,7 +18,8 @@ import java.util.List;
 public class ASPCaller {
 
 	public static final String DLV_PATH="/Users/ki/bin/";
-	public static final String CLASP_PATH="/usr/local/bin/";
+	//public static final String CLASP_PATH="/usr/local/bin/"; //modified bi BR the 26th of july 2015
+	public static final String CLASP_PATH=""; //modified bi BR the 26th of july 2015
 	public static final int ASP_DLV=0;
 	public static final int ASP_CLASP=1;
 	

@@ -13,7 +13,7 @@ public class makeSolVariant {
 		System.out.println("    makeSolVariant filename.sol [filename2.var]");
 		System.out.println("Options");
 		System.out.println("-replace  replace the produced .var if it already exists.");
-		System.out.println("-meth=xxx  use variant xxx.");
+		System.out.println("-method=xxx  use variant xxx.");
 		System.out.println("          xxx=min-N / max-N / all");
 		System.out.println("-len=N  set length limit.");
 		System.out.println("-d=N  set depth limit.");
@@ -79,7 +79,6 @@ public class makeSolVariant {
 				return;
 			}
 		}
-		
 		String problemFilename=args[i].trim();
 		if (problemFilename.endsWith(".sol"))
 			problemFilename=problemFilename.substring(0,problemFilename.length()-4);
