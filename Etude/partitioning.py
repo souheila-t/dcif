@@ -38,8 +38,9 @@ class Clause(IndexedLine):
         a raffiner http://stackoverflow.com/questions/18906514/regex-for-matching-functions-and-capturing-their-arguments
         il faut faire un parser normalement
         '''        
+        
         p = re.sub(r'(cnf\(\w*,)\s*\w*\s*,\s*\[([\w\-,\s]*)\]\)\.',
-            '\\2', self.data)      
+            '\\2', self.data)     
         newString,nbCommas = re.subn(',','', p)
         return nbCommas
         
@@ -90,7 +91,12 @@ class FileBase(object):
             else:                
                 self.lines.append(IndexedLine(index,line)) 
 
-    
+    def count_clauses(self):
+        count = 0 
+        for line in self.lines:
+            if isinstance(line, Clause):
+                count += 1
+        return count
     def reset_all_to_axioms(self):
         for line in self.lines:
             if isinstance(line, Clause):
@@ -165,19 +171,31 @@ class FileSol(FileBase):
                     return True
         return False
         
-    def create_dcf_Agent_distribution(self,nbAgents,method = 'naive_eq') :
+    def create_dcf_Agent_distribution(self,nbAgents,method = 'naive_eq',outpath = None):
         '''
         on doit prendre en compte l'index des lignes désormais
         method = ['naive_eq', 'naive_indent'(if possible),'sol2dcf'] en cours de debug
+        remarque, au lieu d'ecrie agent(agX) on ecrit agent(X) ne change rien normalement
         '''
         filename = self.filename
+        if outpath == None :
+            outpath = self.path
+            
         if method == 'naive_eq':
             dcf_lines = self.naive_eq(nbAgents)
-            filename += '_AgDistNaiveEq_nbag'+str(nbAgents)
+            filename += '_naiveEq'+str(nbAgents)
+            return FileDCF(outpath,filename,lines= dcf_lines )
         elif method == 'naive_indent':
             dcf_lines = self.naive_indent(nbAgents)
-            filename += '_AgDistNaiveIndent_nbag'+str(nbAgents)
-        return FileDCF(self.path,filename,lines= dcf_lines )
+            filename += '_naiveEq'+str(nbAgents)
+            return FileDCF(outpath,filename,lines= dcf_lines )
+        elif method == 'kmetis':
+            #execute the kmetis trnasifmantion
+            filename += '_kmet'+str(nbAgents)
+            outpath, outfilename = generate_kmet_distribution_simple(nbAgents, self.path, self.filename, outfile_path=outpath, outfile_name=filename)
+            res = FileDCF(outpath, outfilename)
+            res.load()
+            return res
             
     def naive_eq(self,nbAgents):
         clauses = []
@@ -257,6 +275,26 @@ class FileSol(FileBase):
             dcf_lines.append(line)
            
         return dcf_lines
+    def load_file_sol_from_clauses(self,clauses):
+        nbPrecLines = 0
+        if self.lines != None:
+            nbPrecLines = len(self.lines)
+        else:
+            self.lines= []
+        for index, clause in enumerate(clauses):
+            newIndex = index + nbPrecLines
+            newClause = Clause(newIndex, clause)
+            self.lines.append(newClause)
+            
+    def add_IndexedLine(self,lineData):
+        '''
+        pas une clause ici
+        '''
+        if self.lines != None :
+            index = self.lines[-1].index + 1
+        else :
+            index = 0
+        self.lines.append(IndexedLine(index, lineData))
         
 class FileDCF(FileBase):
     def __init__(self,path,filename, ext = '.dcf',lines = None):
@@ -329,7 +367,7 @@ class FileDCF(FileBase):
                     raise Exception ('wtf on a des cnf dans un dcf alors quon a pas declaé d agents !!')
                 currentAgentClauses.append(line)
                 nbClauses += 1
-            else:
+            else:#il faudrait utiliser starts with...
                 if 'agent(' in line.data :
                     nbAgents +=1
                     if currentAgent != None:
@@ -392,7 +430,31 @@ class FileDCF(FileBase):
         if filename == None:
             filename = self.filename+'_TPuniform'+method+'dist_per'+str(percTotal)+'_'+'seuil'+str(seuilMin)
         return FileSol(self.path,filename,ext = '.sol', lines = sol_lines )
-                
+        
+    def get_pf(self):
+        for line in self.lines:
+            if line.data.startswith('pf'):
+                return line.data
+        raise Exception ('Pas de Pf dans le dcf !')
+
+    def get_clauses_of_one_agent(self,numagent):
+        print self.filename        
+        print len(self.lines)
+        
+        clauses = []
+        isAgent = False
+        for line in self.lines:
+            if 'agent' in line.data:
+                currentAgent = int(re.findall(r'\d+', line.data)[0])
+                if numagent != currentAgent :
+                    isAgent = False
+                else:
+                    isAgent = True
+            elif isinstance(line, Clause):
+                if isAgent :
+                    clauses.append(line.data)
+        return clauses
+            
 def merge_inner_lists(list_of_lists):
     merged_list = []
     for l in list_of_lists:
@@ -428,7 +490,6 @@ def dcf2sol(dcfFile):
             new_line = IndexedLine(index, line.data)
         sol_lines.append(new_line)
         
-    sol_filename = dcfFile.filename
-    return FileSol(dcfFile.path,sol_filename,ext='.sol',lines = sol_lines)
+    return FileSol(dcfFile.path,dcfFile.filename,ext='.sol',lines = sol_lines)
 
     

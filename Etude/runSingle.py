@@ -9,7 +9,7 @@ from subprocess import *
 from commons import *
 import argparse
 TEMP_PATH = 'temp/'
-CFLAUNCHER_JAR =RSRC_PATH + 'CFLauncher_8_Token_debug.jar'
+CFLAUNCHER_JAR =RSRC_PATH + 'CFLauncher_9.jar'
 def define_arguments():    
     parser = argparse.ArgumentParser(description='Process to test the DCIF.')
     parser.add_argument('infile', 
@@ -69,7 +69,7 @@ print 'les arguments passés sont :', argsDict
 from agentPartitioning import *
 import os
 
-def flow(argsDict):
+def old_flow(argsDict):
     if argsDict['dist'] != None :
         return
     if (argsDict['numagent'] == None) or (argsDict['numagent'] == 1 ) :
@@ -112,22 +112,57 @@ def flow(argsDict):
             args = ['-jar',GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4] ]
             result = jarWrapper(*args)
 
+def flow(argsDict):
+    if (argsDict['numagent'] == None) or (argsDict['numagent'] == 1 ) :
+        print 'MONO AGENT, by default'
+        #check if method basée est bien celle la : facultatif
+        if  argsDict['method'] != 'SOLAR-Inc-Carc':
+            print 'Methode Mono Agent non passée, mis par défaut en mode Mono'
+            argsDict['method'] = 'SOLAR-Inc-Carc'
+    else:
+        temp_graph_filename=TEMP_PATH + 'temp_graph'
+        dist_suffix = '_kmet'+str(argsDict['numagent'])
+        ########On utilise un partitionnement un peu opti:
+        ########buildGraph    
+        try:
+            os.remove(temp_graph_filename+'.gra')
+            print 'removing old temporary file'
+        except OSError:
+            pass
+        print 'buildGRAPH ################################################'   
+        # on supprime le fichier s'il existe.       
+        #
+        args = ['-jar', BUILDGRAPH_JAR, argsDict['infile'], temp_graph_filename ]
+        result = jarWrapper(*args)
+        
+        ########kMetis
+        print 'kMETIS ################################################'  
+        args = [KMETIS_EX, temp_graph_filename+'.gra', str(argsDict['numagent']) ]
+        result = exWrapper(*args)
+        ########graph2DCF
+        print 'graph2DCF ################################################'  
+        args = ['-jar',GRAPH2DCF_JAR, argsDict['infile'], temp_graph_filename+'.gra.part.'+str(argsDict['numagent']), argsDict['infile'][:-4]+dist_suffix ]
+        result = jarWrapper(*args)
+        argsDict['dist'] = dist_suffix
+        print argsDict['infile'][:-4]+dist_suffix
+    return argsDict#pas besoin normalement...
 
 
 ###############################################################################
 
 
 print 'CFLAUNCHER MULTI ################################################' 
-flow(argsDict)
-JAVA_ARGS = ['-d64', '-Xms512m', '-Xmx4g','-jar']
+#argsDict = flow(argsDict)
+argsDict['dist'] = '_kmet4'
+JAVA_ARGS = ['-jar']
 print CFLAUNCHER_JAR
-args = computeArgs (CFLAUNCHER_JAR,argsDict,exe_args=JAVA_ARGS)
-print args
+args = computeArgs_old (CFLAUNCHER_JAR,argsDict,exe_args=JAVA_ARGS)
+print 'ZISI ARGS',args
 result = jarWrapper(*args)  
 print result
 
 log_result = os.path.basename(argsDict['infile'])[:-4] +argsDict['var']+argsDict['method'] +'.log'
-f = open(TEMP_PATH+ log_result, 'w')
+f = open('ressources/log.log', 'w')
 for line in result :
     f.write(line+'\n')
 f.close()
