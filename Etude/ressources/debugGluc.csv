@@ -1,6 +1,0 @@
-problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
-glucolysis_max-4_ld-1--1;;4;DICF-PB-Token-FixedOrder-3-2-1-0;0;3;2179;1281;87787;246435;0;0;33;89;859;75770;213031;0;0;10;33;57;68;168;0;0;6;15;58;68;168;0;0;8;17
-glucolysis_max-4_ld-1--1;;4;DICF-PB-Async;0;3;2184;1326;87745;246318;0;0;27;75;850;75767;213021;0;0;8;27;63;50;121;0;0;6;12;63;50;121;0;0;6;12
-glucolysis_max-4_ld-1--1;;4;DICF-PB-Token-FixedOrder-3-2-1-0;0;3;2192;1297;87787;246435;0;0;33;89;844;75770;213031;0;0;10;33;59;68;168;0;0;6;15;59;68;168;0;0;8;17
-glucolysis_max-4_ld-1--1;;4;DICF-PB-Token-FixedOrder-3-2-1-0;0;3;2170;1284;87787;246435;0;0;33;89;898;75770;213031;0;0;10;33;57;68;168;0;0;6;15;57;68;168;0;0;8;17
-glucolysis_max-4_ld-1--1;;4;DICF-PB-Token-FixedOrder-3-2-1-0;0;3;2202;1092;87787;246435;0;0;33;89;685;75770;213031;0;0;10;33;64;68;168;0;0;6;15;65;68;168;0;0;8;17

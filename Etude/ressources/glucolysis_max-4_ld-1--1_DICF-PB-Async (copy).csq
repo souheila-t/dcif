@@ -1,5 +1,0 @@
-nb csq 3
-timeout 1
-cnf(consequence, axiom, [+m_succinate]).
-cnf(consequence, axiom, [+m_citrate]).
-cnf(consequence, axiom, [+m_fumarate]).

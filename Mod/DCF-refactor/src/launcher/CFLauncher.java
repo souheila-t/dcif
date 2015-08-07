@@ -80,6 +80,7 @@ public class CFLauncher {
 		if(!finished)
 			System.out.println("---System Timeout---");
 
+		System.out.println("DCIF PROBLEM ASYNC");
 
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
@@ -119,6 +120,7 @@ public class CFLauncher {
 		System.out.println("Execution time was " + (end - middle) + " ms.\n");
 		if(!finished)
 			System.out.println("---System Timeout---");
+		System.out.println("DCIF PROBLEM STAR");
 
 
 		// set result line
@@ -177,7 +179,14 @@ public class CFLauncher {
 		System.out.println("Execution time was " + (end - middle) + " ms.\n");
 		if(!finished)
 			System.out.println("---System Timeout---");
+		System.out.println("DCIF PROBLEM TOKEN");
+		
 
+		System.out.println("ORDER is: ");
+		for (int n : order)
+			System.out.print(n+"-");
+		System.out.println("");
+		System.out.println("len of order is " + String.valueOf(order.size()));
 
 		// set result line
 		List<ConsFindingAgentStats> agStats=pb.getAllStats();
@@ -238,7 +247,7 @@ public class CFLauncher {
 			finished = false;
 			System.out.println("---System Timeout---");
 		}
-
+		System.out.println("SOLAR PROBLEM");
 		// set result line
 		List<ConsFindingAgentStats> agStats=new ArrayList<ConsFindingAgentStats>();
 		agStats.add(stat);
@@ -370,6 +379,15 @@ public class CFLauncher {
 
 	private static void exec(String resultFilename, String method, String pbBaseName, String variantSuffix, String distributionSuffix, long timeLimitMillis,String outputCsqFilename) throws Exception{
 		boolean label=false;
+		System.out.println("resultFilename :"+resultFilename);
+		System.out.println("nethod:"+method);
+
+		System.out.println("pbBasename :"+pbBaseName);
+
+		System.out.println("variantSuffix:"+variantSuffix);
+
+		System.out.println("distr suff:"+distributionSuffix);
+		System.out.println("timout :"+ String.valueOf(timeLimitMillis));
 
 		ExpeSummary res=runExpe(method, pbBaseName, variantSuffix, distributionSuffix, timeLimitMillis, outputCsqFilename);
 		//pbName = pbBaseName+variantSuffix

@@ -1,6 +1,0 @@
-%Sol source: Problems/Bio/glucolysis
-%Variant name: max-2_ld-1--1
-
-solSource(Problems/Bio/glucolysis).
-pf([m_citrate, -m_citrate, m_fumarate, -m_fumarate]).
-depthLimit(-1).

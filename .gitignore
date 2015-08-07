@@ -7,14 +7,23 @@
 *.o
 *.so
 *.pyc
+*.log
 
 # Temporary Files
 #################
 *~
 
+
+
 #generated and problems Files
 ################
 Etude/Problems/
+*.log
+*.gra*
+*.csq
+*.dcf
+*.sol
+
 
 # Environment Settings
 #################

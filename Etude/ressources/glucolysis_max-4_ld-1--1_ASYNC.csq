@@ -1,3 +1,0 @@
-cnf(consequence, axiom, [+m_citrate]).
-cnf(consequence, axiom, [+m_succinate]).
-cnf(consequence, axiom, [+m_fumarate]).
