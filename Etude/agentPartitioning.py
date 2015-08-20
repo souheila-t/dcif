@@ -7,47 +7,8 @@ prend un fichier .sol et un nombre d'agents en entrée et renvoie un fichier
 dans la premiere partie on ne s'occupe pas des TOP CLAUSES 
 """
 
-def annotateLines(f):
-    '''
-    annotate lines with information used for partitioning
-    '''
-    l = []
-    nbClauses=0
-    nLines=0
-    for line in f:
-        print line
-        if line[:3] == 'cnf':
-            if 'top_clause' in line :
-                l.append(('cnf',line,nbClauses,'top_clause'))
-            else:
-                l.append(('cnf',line,nbClauses,'axiom'))
-            nbClauses += 1
-        elif line[:1] == '%':
-            pass
-        elif line[:2] == 'pf':
-            pass
-        elif line.isspace():
-            l.append(('blank',''))
-        else:
-            print 'error : .sol file contains invalid or unknown lines'
-        nLines+=1
-    print 'nb de clauses : ',nbClauses
-    return l, nbClauses
-    
-def filterClauses(l):
-    '''
-    ne garde que les clauses
-    '''
-    res = []    
-    for line in l :
-        if line[0] == 'cnf' :
-            res.append(line)
-    return res
-    
-def chunks(l, n):
-    """Yield successive n-sized chunks from l."""
-    for i in xrange(0, len(l), n):
-        yield l[i:i+n]
+
+
         
 def divEquNaive(infilename,outfilename, nbAgents):
     '''

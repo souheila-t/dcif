@@ -11,8 +11,6 @@ from generate_BIO_problems import *
 import argparse
 
 
-GEN_PATH = 'Problems/Bio/'
-
 
 def writeToLog(log_filename, toAdd) :
     with open(log_filename + '.log', 'a') as log_file :
@@ -69,6 +67,15 @@ def comp_dict(obj1, obj2):
     sort in place
         clauses.sort(cmp=comp_length_clauses)
     '''
+    params = ['infile_path','infile','var','method','numagent','dist']
+    for p in params :
+        if obj1[p] < obj2[p] :
+            return -1
+        elif obj1[p] > obj2[p] :
+            return 1
+    return 0
+    '''
+    else : 
     if obj1['infile_path'] < obj2['infile_path'] :
         return -1
     elif obj1['infile_path'] > obj2['infile_path'] :
@@ -100,6 +107,7 @@ def comp_dict(obj1, obj2):
                             return 1
                         else:
                             return 0
+                            '''
                             
 
 def launch_MULTI_problem_seq(paramDict, gen_path, java_args):
@@ -172,6 +180,20 @@ def readMulti_allstats(filename, ext):
         for rowDict in reader:
             res.append(rowDict)
     return res       
+def readMulti_allstats_allfiles(path, configfilename):
+    print path
+    print configfilename
+    res=[]
+    for filename in os.listdir(path) :
+        if configfilename in filename:
+            with open(path+filename) as csvfile:
+                reader = csv.DictReader(csvfile)
+                for rowDict in reader:
+                    res.append(rowDict)
+    print res
+    return res
+    
+
 def compareDict(dictStats, dictMulti):
     if (dictStats['or_method'] != dictMulti['method']
         or dictStats['or_numagent'] != dictMulti['numagent']
@@ -205,13 +227,14 @@ if __name__ == '__main__':
     lock_allstats = mp.Lock()
     lock_failed_multi = mp.Lock()
     '''
-    problemsDir = 'Problems/Bio/'
+    #problemsDir = 'Problems/Bio_ext/'
+    #problemsDir = '/home/magma/BIO_mono_multi_debrief/'
     #problemsDir = '/home/magma/'
-    
+    problemsDir = 'Problems/Bio_merge/Bio/'
     suffix =  '_'+str(argsDict['numagent'])+'agents_'+str(argsDict['div'])+'div_k'+str(argsDict['kpos']) 
    # with open(problemsDir+'/'+GLOBAL_LOG_FILENAME + suffix + '.log', 'a') as log_file_GLOBAL  :   
-    log_file_GLOBAL = problemsDir+'/'+GLOBAL_LOG_FILENAME + suffix
-    
+    log_file_GLOBAL = problemsDir+GLOBAL_LOG_FILENAME + suffix
+    writeToLog(log_file_GLOBAL, ['NEW EXPERIENCE'])
     print 'les arguments passés sont :', argsDict
     writeToLog(log_file_GLOBAL, argsDict)
     writeToLog(log_file_GLOBAL, argsDict.values())
@@ -220,8 +243,8 @@ if __name__ == '__main__':
     
     global multi_problems_allstats_filename
     global failed_multi_problems_filename 
-    multi_problems_allstats_filename = MULTI_PROBLEMS_ALLSTATS_FILENAME +suffix
-    failed_multi_problems_filename =FAILED_MULTI_PROBLEMS_FILENAME + suffix
+    multi_problems_allstats_filename = 'MERG_'+MULTI_PROBLEMS_ALLSTATS_FILENAME +suffix
+    failed_multi_problems_filename ='MERG_'+FAILED_MULTI_PROBLEMS_FILENAME + suffix
     
     '''
     pool = mp.Pool(nbProcesses,initializer=init, initargs=(lock_allstats,lock_failed_multi, multi_pb_allstats_filename, failed_multi_pb_filename))
@@ -231,14 +254,43 @@ if __name__ == '__main__':
     #ici il faut sorter ces parametres !! tres important !!
     
     list_parameters_MULTI = getArgsForN(problemsDir + MULTI_PROBLEMS_ALGO_PARAMETERS_FILENAME,'.csv',argsDict['numagent'])
-    print 'size  old: ', len(list_parameters_MULTI)      
+    writeToLog(log_file_GLOBAL, ['SSSS'+ str(len(list_parameters_MULTI))])    
+    list_parameters_MULTI_ext = getArgsForN(problemsDir + 'EXT_'+MULTI_PROBLEMS_ALGO_PARAMETERS_FILENAME,'.csv',argsDict['numagent'])
+    list_parameters_MULTI += list_parameters_MULTI_ext
+    writeToLog(log_file_GLOBAL, ['SSSS'+ str(len(list_parameters_MULTI))] )   
+
+    print 'size all for agents: ', len(list_parameters_MULTI)      
     writeToLog(log_file_GLOBAL, ['size  old: '+ str(len(list_parameters_MULTI) )])
     list_parameters_MULTI.sort(cmp = comp_dict)
     list_parameters_MULTI = getKinDivN_minLast(list_parameters_MULTI,int(argsDict['div']),int(argsDict['kpos']))
-    print 'size  new: ', len(list_parameters_MULTI)   
+    print 'size  part: ', len(list_parameters_MULTI)   
     
     writeToLog(log_file_GLOBAL, ['size  new: '+ str(len(list_parameters_MULTI))])
     
+    #before merge les deux running all stats filename
+    problemsToSolve =[]
+    problemsFromRun = readMulti_allstats_allfiles(problemsDir, MULTI_PROBLEMS_ALLSTATS_FILENAME)
+    
+    #on ne fait pas les problemes all...
+    for dictMulti in list_parameters_MULTI :
+        for dictStats in problemsFromRun :
+            if compareDict(dictStats, dictMulti) and dictStats['timed_out'] == str(1) and 'all' not in dictStats['var']: 
+                dictMulti['timeout'] =1200000 
+                problemsToSolve.append(dictMulti)
+                break
+        
+    print 'size  new after removing already run experiences: ', len(problemsToSolve)   
+    writeToLog(log_file_GLOBAL, ['size  new after removing already run experiences: '+ str(len(problemsToSolve))])
+
+    maxHeapSize = 6#(144 / 24) * nbCores - 2 #si on alloue la meme ram a tous les coeurs
+    java_args = ['-d64', '-Xms512m', '-Xmx'+str(maxHeapSize)+'g','-jar']
+    #faire sequentiel now...
+    #calculer le java_args en fonction du nombre d vore !!
+    for param in problemsToSolve :
+        launch_MULTI_problem_seq(param, problemsDir, java_args=java_args)
+    #pool.map(launch_MULTI_problem,list_parameters_MULTI)
+    
+    '''
     problemsToSolve =[]
     problemsFromRun = readMulti_allstats(problemsDir +multi_problems_allstats_filename, '.csv')
     for dictMulti in list_parameters_MULTI :
@@ -251,13 +303,13 @@ if __name__ == '__main__':
         
     print 'size  new after removing already run experiences: ', len(problemsToSolve)   
     writeToLog(log_file_GLOBAL, ['size  new after removing already run experiences: '+ str(len(problemsToSolve))])
-    
-    maxHeapSize = 10#(144 / 24) * nbCores - 2 #si on alloue la meme ram a tous les coeurs
+
+    maxHeapSize = 6#(144 / 24) * nbCores - 2 #si on alloue la meme ram a tous les coeurs
     java_args = ['-d64', '-Xms512m', '-Xmx'+str(maxHeapSize)+'g','-jar']
     #faire sequentiel now...
     #calculer le java_args en fonction du nombre d vore !!
     for param in problemsToSolve :
         launch_MULTI_problem_seq(param, problemsDir, java_args=java_args)
     #pool.map(launch_MULTI_problem,list_parameters_MULTI)
-    
-    
+    '''
+

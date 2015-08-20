@@ -155,8 +155,11 @@ print 'CFLAUNCHER MULTI ################################################'
 #argsDict = flow(argsDict)
 argsDict['dist'] = '_kmet4'
 JAVA_ARGS = ['-jar']
+CFLAUNCHER_JAR = '/home/magma/projects/dcif_finalProject/ExternalTools/CFLauncher_9.jar'
 print CFLAUNCHER_JAR
+result = [CFLAUNCHER_JAR]
 args = computeArgs_old (CFLAUNCHER_JAR,argsDict,exe_args=JAVA_ARGS)
+result+= args
 print 'ZISI ARGS',args
 result = jarWrapper(*args)  
 print result
@@ -168,7 +171,7 @@ for line in result :
 f.close()
 
 
-#python test.py ressources/glucolysis.sol gen/debug_test1.csv -n 2 --var _max-2_ld-1--1 --verbose -t 10000 --method DICF-PB-Token
+#python test.py glucolysis.sol gen/debug_test1.csv -n 4 --var _max-4_ld-1--1--verbose -t 10000 --method DICF-PB-Token
 
 
 

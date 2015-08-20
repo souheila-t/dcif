@@ -454,12 +454,8 @@ class FileDCF(FileBase):
                 if isAgent :
                     clauses.append(line.data)
         return clauses
-            
-def merge_inner_lists(list_of_lists):
-    merged_list = []
-    for l in list_of_lists:
-        merged_list += l
-    return merged_list
+
+    
 solFilename = 'ressources/glucolysis.sol'
 def dcf2sol(dcfFile): 
     '''

@@ -63,6 +63,115 @@ def exWrapper(*args):
     ret.remove('')
     return ret
 
+    
+def read_dcf(f):
+    nb_axioms=0
+    nb_top_clauses=0
+    nb_ag=0
+    isValid = False
+    numAgent = 0
+    l = []
+    for line in f:   
+        if line.startswith('agent'):
+            isValid = True
+            numAgent = re.findall(r'\d+',line)[0]
+            nb_ag += 1
+        elif isValid:
+            if line.startswith('cnf'):
+                if 'top_clause' in line:
+                    l.append((numAgent,'top_clause', line))
+                    nb_top_clauses+=1
+                elif 'axiom' in line :#check if axiom or top_clause
+                    l.append((numAgent,'axiom', line))
+                    nb_axioms+=1
+    return l, nb_ag, nb_axioms, nb_top_clauses
+
+def get_problem_files(problem_path,ext):
+    res = []
+    for file in os.listdir(problem_path):
+        if file.endswith(ext):
+            res.append(file)
+    return res    
+
+def make_dirs_safe(path):
+    try: 
+        os.makedirs(path)
+    except OSError:
+        if not os.path.isdir(path):
+            raise
+
+def read_csv_config(filename, ext,log_file):
+    res= []
+    if not os.path.isfile(filename+ext) :
+        addToLog(log_file,['pas de fichier '+filename])
+    with open(filename+ext) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for rowDict in reader:
+            res.append(rowDict)
+    return res
+
+def read_config(filename,ext,log_file):
+    res= []
+    if not os.path.isfile(filename+ext) :
+        addToLog(log_file,['pas de fichier '+filename])
+    with open(filename+ext,'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for rowDict in reader:
+            res.append(rowDict)
+    return res
+def reset_config(filename,ext,log_file):
+    with open(filename+ext,'w') as csvfile:
+        pass
+    
+
+def outputs_config_file_one_row(argsDict,fieldnames, filename, ext,gen_path,lock=None):
+    output_file =gen_path + filename + ext
+    file_exist = False
+    if os.path.isfile(output_file) : 
+        file_exist = True
+    if lock!= None:
+        lock.acquire()
+    with open(output_file, 'a') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames,extrasaction='ignore')
+        if not file_exist :
+            writer.writeheader()
+        writer.writerow(argsDict)
+        if lock!= None:
+            lock.release()
+            
+def outputs_config_file_all_rows(l_argsDict,fieldnames, filename, ext,gen_path,lock=None):
+    output_file =gen_path + filename + ext
+    file_exist = False
+    if os.path.isfile(output_file) : 
+        file_exist = True
+    if lock!= None:
+        lock.acquire()
+    with open(output_file, 'a') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames,extrasaction='ignore')
+        if not file_exist :
+            writer.writeheader()
+        for argsDict in l_argsDict :
+            writer.writerow(argsDict)
+    if lock!= None:
+        lock.release()
+        
+        
+def remove_ext(problem_filenames, ext):
+    res=[]
+    for filename in problem_filenames :
+        if filename.endswith(ext):
+            filename_noext = filename[:-len(ext)]
+            res.append(filename_noext)
+    return res
+    
+            
+def merge_inner_lists(list_of_lists):
+    merged_list = []
+    for l in list_of_lists:
+        merged_list += l
+    return merged_list
+    
+
 def computeArgs_old(EXE,argsDict,exe_args=[]):
     args =  exe_args + [EXE]
     args = args + ['-method='+argsDict['method']]
@@ -164,101 +273,3 @@ def generate_kmet_distribution_simple(nbAgent,infile_path,infile_name,outfile_pa
         os.remove(temp_graph_file+'.gra.part.'+nbAgent)
     return outfile_path,outfile_name
     
-    
-def read_dcf(f):
-    nb_axioms=0
-    nb_top_clauses=0
-    nb_ag=0
-    isValid = False
-    numAgent = 0
-    l = []
-    for line in f:   
-        if line.startswith('agent'):
-            isValid = True
-            numAgent = re.findall(r'\d+',line)[0]
-            nb_ag += 1
-        elif isValid:
-            if line.startswith('cnf'):
-                if 'top_clause' in line:
-                    l.append((numAgent,'top_clause', line))
-                    nb_top_clauses+=1
-                elif 'axiom' in line :#check if axiom or top_clause
-                    l.append((numAgent,'axiom', line))
-                    nb_axioms+=1
-    return l, nb_ag, nb_axioms, nb_top_clauses
-
-def get_problem_files(problem_path,ext):
-    res = []
-    for file in os.listdir(problem_path):
-        if file.endswith(ext):
-            res.append(file)
-    return res    
-
-def make_dirs_safe(path):
-    try: 
-        os.makedirs(path)
-    except OSError:
-        if not os.path.isdir(path):
-            raise
-
-def read_csv_config(filename, ext,log_file):
-    res= []
-    if not os.path.isfile(filename+ext) :
-        addToLog(log_file,['pas de fichier '+filename])
-    with open(filename+ext) as csvfile:
-        reader = csv.DictReader(csvfile)
-        for rowDict in reader:
-            res.append(rowDict)
-    return res
-
-def read_config(filename,ext,log_file):
-    res= []
-    if not os.path.isfile(filename+ext) :
-        addToLog(log_file,['pas de fichier '+filename])
-    with open(filename+ext,'r') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for rowDict in reader:
-            res.append(rowDict)
-    return res
-def reset_config(filename,ext,log_file):
-    with open(filename+ext,'w') as csvfile:
-        pass
-    
-
-def outputs_config_file_one_row(argsDict,fieldnames, filename, ext,gen_path,lock=None):
-    output_file =gen_path + filename + ext
-    file_exist = False
-    if os.path.isfile(output_file) : 
-        file_exist = True
-    if lock!= None:
-        lock.acquire()
-    with open(output_file, 'a') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames,extrasaction='ignore')
-        if not file_exist :
-            writer.writeheader()
-        writer.writerow(argsDict)
-        if lock!= None:
-            lock.release()
-            
-def outputs_config_file_all_rows(l_argsDict,fieldnames, filename, ext,gen_path,lock=None):
-    output_file =gen_path + filename + ext
-    file_exist = False
-    if os.path.isfile(output_file) : 
-        file_exist = True
-    if lock!= None:
-        lock.acquire()
-    with open(output_file, 'a') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames,extrasaction='ignore')
-        if not file_exist :
-            writer.writeheader()
-        for argsDict in l_argsDict :
-            writer.writerow(argsDict)
-    if lock!= None:
-        lock.release()
-def remove_ext(problem_filenames, ext):
-    res=[]
-    for filename in problem_filenames :
-        if filename.endswith(ext):
-            filename_noext = filename[:-len(ext)]
-            res.append(filename_noext)
-    return res

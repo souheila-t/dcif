@@ -9,17 +9,21 @@ import copy
 from BIO_lib import *
 
 PROCESSES = 12
-JAVA_ARGS = ['-d64', '-Xms512m', '-Xmx10g','-jar']
+JAVA_ARGS = ['-d64', '-Xms512m', '-Xmx6g','-jar']
 TIMEOUT_MONO = 2000000#correspond a peu pres a 20 minutes
 TIMEOUT_MULTI = 600000 #10 min
-LENGTH_LIST = [-1,2,3,4,5]
+LENGTH_LIST = [1]
 DEPTH_LIST =[-1]
-METH_LIST = [ 'max-','min-','all']
+METH_LIST = [ 'max-','min-']#,'all']
 METH_N_LIST = [1,2,3,4,5,10,15] 
 
 NUMAGENT_LIST = [2,4,6,8]
 METHODS = ['DICF-PB-Async', 'DICF-PB-Star', 'DICF-PB-Token']
 
+
+METHOD_AGENT_DISTRIBUTION = ['_kmet','_naiveEq']#'naive_indent'
+METHOD_TP_DISTRIBUTION_LIST = ['short']#,'random']
+PERC_TP_DIST_LIST = [1,2,5,10]
 '''
 PROCESSES = 4
 JAVA_ARGS = ['-d64', '-Xms512m', '-Xmx2g','-jar']
@@ -70,9 +74,7 @@ GLOBAL_LOG_FILENAME = 'global_log'
 #il faut catché l'exception et supprimer la variante distributionnelle dans ce cas...
 #ne pas générer de statistiques, peut etre juste un log des problemes qui n'ont pas été lancés (qd on catch une exception)
 #ROBUSTE ainsi
-METHOD_AGENT_DISTRIBUTION = ['_kmet','_naiveEq']#'naive_indent'
-METHOD_TP_DISTRIBUTION_LIST = ['short']#,'random']
-PERC_TP_DIST_LIST = [1,2,5,10]
+
 '''
 tout mettre dans le même fichier
 utililser kwargs : dictionray of parameters... 
@@ -427,7 +429,7 @@ if __name__ == '__main__':
     with open(GEN_PATH+GLOBAL_LOG_FILENAME + '.log', 'a') as log_file_GLOBAL  :        
         print 'pool = %s' % pool        
         addToLog(log_file_GLOBAL,['Creating pool with %d processes\n' % PROCESSES])
-        '''
+        
         addToLog(log_file_GLOBAL,['generating Parameters for MONO problems'])
         list_parameters_MONO = generate_problems_MONO(log_file_GLOBAL)
         #on peut ecrire ca dans un fichier...
@@ -459,6 +461,5 @@ if __name__ == '__main__':
        # addToLog(log_file_GLOBAL,['launching MULTI problems'])
         #list_parameters_MULTI = read_csv_config(PROBLEM_PATH + MULTI_PROBLEMS_ALGO_PARAMETERS_FILENAME,'.csv',log_file_GLOBAL)
         #pool.map(launch_MULTI_problem,list_parameters_MULTI)
-        
-        
         addToLog(log_file_GLOBAL,['ZIIS ZE END'])
+        '''
