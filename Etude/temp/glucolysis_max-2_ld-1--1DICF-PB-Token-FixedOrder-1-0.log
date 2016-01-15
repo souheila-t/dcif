@@ -1,0 +1,41 @@
+ORDER is: 
+1-0-
+Time for creating graph: 0.038s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Ag0 <------  {New neighbour}
+Sys -> Ag0 : {Start}
+Ag1 <------  {New neighbour}
+Sys -> Ag1 : {Start}
+Sys -> Ag1 : {Launch}
+Ag1 <------  {Start}
+Ag0 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag1 <------  {Launch}
+Sys <------  {Started}
+Ag0 -> Sys : {Started}
+Sys <------  {Started}
+Ag1 receives []
+After pruning []
+Input Languages : {Ag0=[-r_d4d2d1d2_9, -m_glucose, +r_d4d2d1d2_8, +m_fumarate, -m_fumarate]}
+Ag1: updated receivedCl []
+updated lstCsq []
+Sys -> Sys : {Time up!}
+Sys <------  {Time up!}
+0 (NEW) CHARACTERISTIC CLAUSES
+
+Total execution time was 10207 ms.
+
+Execution time was 10104 ms.
+
+---System Timeout---
+ressources/glucolysis_max-2_ld-1--1_DICF-PB-Token-FixedOrder-1-0
+
+Exception in thread "Ag1" java.lang.NullPointerException
+	at agLib.agentCommunicationSystem.CommunicationModule.send(CommunicationModule.java:81)
+	at distNewCarc.partition.tokenbased.TokenProtocol.receiveCl(TokenProtocol.java:141)
+	at distNewCarc.partition.tokenbased.TokenProtocol.receiveMessage(TokenProtocol.java:69)
+	at agLib.agentCommunicationSystem.CommunicationModule.receiveMessage(CommunicationModule.java:55)
+	at agLib.agentCommunicationSystem.BasicAgent.run(BasicAgent.java:58)
+	at java.lang.Thread.run(Thread.java:745)
+

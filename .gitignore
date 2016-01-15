@@ -1,0 +1,44 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+*.log
+
+# Temporary Files
+#################
+*~
+
+
+
+#generated and problems Files
+################
+Etude/Problems/
+*.log
+*.gra*
+*.csq
+*.dcf
+*.sol
+
+
+# Environment Settings
+#################
+.spyderworkspace
+.project
+.metadata
+.gradle
+
+*.metadata
+Mod/.metadata/
+Mod/.project/
+Mod/.gradle/
+
+
+
+*/.*
+.*
+!/.gitignore

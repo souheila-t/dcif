@@ -1,0 +1,10 @@
+cnf(c1, axiom, [caused(X, Y), -connected(X, Y)]).
+cnf(c2, axiom, [caused(X, Y), -connected(X, Z), -caused(Z, Y)]).
+cnf(c3, axiom, [connected(is, bc)]).
+cnf(c4, axiom, [connected(bc, smb), connected(bc, stb)]).
+cnf(c5, axiom, [connected(smb, flw)]).
+cnf(c6, axiom, [-connected(is, kac)]).
+cnf(c7, axiom, [-connected(sb, kac)]).
+cnf(c8, axiom, [-connected(smb, kac)]).
+cnf(c9, top_clause, [-caused(is, kac)]).
+pf([-connected(_,_)]).

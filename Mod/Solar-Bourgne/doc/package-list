@@ -1,0 +1,14 @@
+org.nabelab.debug
+org.nabelab.mhs
+org.nabelab.mining
+org.nabelab.solar
+org.nabelab.solar.constraint
+org.nabelab.solar.equality
+org.nabelab.solar.indexing
+org.nabelab.solar.operator
+org.nabelab.solar.parser
+org.nabelab.solar.pfield
+org.nabelab.solar.proof
+org.nabelab.solar.simp
+org.nabelab.solar.util
+org.nabelab.util

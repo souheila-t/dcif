@@ -1,0 +1,7 @@
+6 (NEW) CHARACTERISTIC CLAUSES
+[-mode(K,ok), -type(K,and), -value(out(n1,K),n0), value(in(n1,K),n0), value(in(n2,K),n0)]
+[-mode(K,ok), -type(K,and), -value(in(Any,K),n0), value(out(n1,K),n0)]
+[-mode(K,ok), -type(K,not), -value(in(n1,K),n0), value(out(n1,K),n1)]
+[-mode(K,ok), -type(K,not), -value(in(n1,K),n1), value(out(n1,K),n0)]
+[-mode(K,ok), -type(K,not), -value(out(n1,K),n0), value(in(n1,K),n1)]
+[-mode(K,ok), -type(K,not), -value(out(n1,K),n1), value(in(n1,K),n0)]

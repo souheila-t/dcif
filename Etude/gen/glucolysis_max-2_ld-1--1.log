@@ -1,0 +1,18 @@
+generate VARIANT################################
+Error.
+
+launch MONO#####################################
+ressources/CFLauncher_7.jar
+-d64
+-Xms512m
+-Xmx6g
+-jar
+-method=SOLAR-Inc-Carc
+-verbose
+-t=10000
+-var=_max-2_ld-1--1
+-csq=gen/glucolysis_max-2_ld-1--1_MONO
+Problems/Bio/glucolysis
+gen/glucolysis_max-2_ld-1--1
+Error: Could not find or load main class ressources.CFLauncher_7.jar
+

@@ -1,2 +1,3 @@
-# dcif
-Dsitributed Incremetnal Conseuqnece Finding project
+# DICF
+Distributed Incremental Consequence Finding project
+

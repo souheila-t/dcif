@@ -1,0 +1,130 @@
+#examples of commands
+#-method=DICF-PB-Async -dist=_def -verbose toy-pb1.sol debugi.csv
+java -jar CFLauncher_1.jar -method=DICF-PB-Async -dist=_def -verbose glucolysis.sol debugi.csv
+java -jar CFLauncher_1.jar -method=DICF-PB-Token -var=_max-4_ld-1--1 -verbose glucolysis.sol debugi.csv
+
+ARGS for tools
+#########################
+METIS
+http://glaros.dtc.umn.edu/gkhome/metis/metis/download
+#########################
+java -jar buildGraph.jar 
+Usage :
+    buildGraph filename.sol [filename2.gra]
+'filename.sol'  is the file of the program whose graph should be generated.
+'filename2.gra'  is the output file, by default,same name as filename with .gra extension.
+
+RQ. On ne peut pas passer l'Argument booléen "replace", donc quand le fichier de graph existe déjà, cela renvoie le message error (ca peut etre utile pour optimiser si on utilise toujours le meme partitionnement mais comme ce n'est pas le cas, on decide de supprimer le fichier s'il existe)
+
+#########################
+java -jar cnfsat2sol.jar -
+This tools convert a cnf sat problem into a solar consequence finding problem (pfield is set to get all consequences)
+Usage :
+    cnfsat2sol filename.cnf [filename2.sol]
+Options
+-replace  replace the produced .sol if it already exists.
+#########################
+java -jar dcf2ocnf.jar 
+Usage :
+    dcf2ocnf filename.dcf [output.o.cnf]
+'filename.dcfl'  is the file of the program whose graph should be generated.
+'output.o.cnf'  is the output file, by default, same name as filename with .o.cnf extension.
+
+#########################
+java -jar graph2dcf.jar 
+Usage :
+    graph2dcf filename.sol filename2.gra.part.N [output.dcf]
+'filename.sol'  is the file of the program whose graph should be generated.
+'output.dcf'  is the output file, by default, same name as filename2 with .part.N.dcf extension.
+
+#########################
+java -jar makeSolVariant.jar -
+This tools make a variant for a sol problem
+Usage :
+    makeSolVariant filename.sol [filename2.var]
+Options
+-replace  replace the produced .var if it already exists.
+-method=xxx  use variant xxx.
+          xxx=min-N / max-N / all
+-len=N  set length limit.
+-d=N  set depth limit.
+
+#########################
+java -jar p2sol.jar -
+Usage :
+    p2sol [-method=XXX] filename.p [filename2.sol]
+Options
+-replace  replace the produced .sol if it already exists.
+-method=XXX  gives the name of the conversion method to be used.
+             supported methods are : 
+                 ALL_FULLCARC : (default) considers all clauses as axioms and use the whole vocabulary as production field
+                 ALL_REFUT : considers all clauses as axioms and tries to find contradiction
+                 NCONJ_CARC : considers axioms and hypotheses as axioms and use the vocabulary of conjecture to make the production field
+                 TCONJ_FULLNEWC : considers axioms and hypotheses as axioms, negated_conjecture as top-clause, and use the whole vocabulary as pf
+                 TCONJ_REFUT : considers axioms and hypotheses as axioms, negated_conjecture as top-clause, and tries to find contradiction in the Newcarc
+                 THYP_FULLNEWC : considers axioms and negated_conjecture as axioms, hypothesis as top-clauses, and use the whole vocabulary as pf
+                 THYP_REFUT : considers axioms and negated_conjecture as axioms, hypothesis as top-clauses, and tries to find contradiction in the Newcarc
+                 TCH_FULLNEWC : considers only axioms as axioms, hypothesis and negated_conjecture as top-clause, and use the whole vocabulary as pf
+                 TCH_REFUT : considers only axioms as axioms, hypothesis and negated_conjecture as top-clause and tries to find contradiction in the Newcarc
+                 THYP_NCONJ_NEWC : considers axioms as such and hypotheses as top-clauses, and use the vocabulary of conjecture to make the production field
+                 ABDUCTION consider axioms as such and negated_conjecture as top-clauses and use the vocabulary of negated hypothesis to make the production field
+#########################
+java -jar makeTree.jar -
+This tools make and save the proper labeled tree corresponding to a dcf problem
+Usage :
+    makeTree [Options] filename.dcf [filename2.tree]
+Options
+-replace  replace the produced .tree if it already exists.
+-verbose  print each edge cut.
+##########################
+ % java -jar /home/magma/Documents/dcif/Etude/CFLauncher_1.jar -
+Launch an expe with the given parameters and append the result line to the given outpur file
+Usage :
+    CFLaucher [Options] baseProblem[.sol] output[.csv]
+Options
+-method=xxx use method xxx.
+          xxx=SOLAR-Carc (default), SOLAR-Inc-Carc, DCF-PB-Seq-FixedRoot-0, DCF-PB-Par-MaxClSize,...
+          	DICF-PB-Async
+-t=N  set time limit.
+-var=varSuffix  use the variant with given suffix (should begin by "_").
+-dist=distSuffix  use the distribution with given suffix (should begin by "_").
+
+
+##########################
+System.out.println("Usage :");
+		System.out.println("    sol2dcf -nbAg=N [Options] filename.sol [filename2.dcf]");
+		System.out.println("-nbAg=N  indicate the number of agents of output distributed CFP.");
+		System.out.println("'filename.sol'  is the file of the program that should be distributed.");
+		System.out.println("Options");
+		System.out.println("-replace  replace the produced .sol if it already exists.");	
+		System.out.println("-dist=filename3  use the ASP base distribution program 'filename3.asp' " +
+						"instead of the default on 'cut-distribute.asp'.");
+		System.out.println("-asp=name  choose the ASP solver (CLASP or DLV). " +
+		"default is CLASP");
+		System.out.println("-minProp=R indicates the minimal proportion of the clauses " +
+				"given to each agents (between 0 and 1/nbAg). default is 2/3nbAg");
+		System.out.println("-maxProp=R indicates the maximal proportion of the clauses " +
+		"given to each agents (between 1/nbAg and 1). default is 3/2nbAg (max 1)");
+
+REMQRAU PERSO ICI : max = 1 et min = 1/nbAg => tres desequilibré
+		    max = 1/nbAg ou min = 1/nbAf => très bien réparti
+comment adapter la répartition de toutes ces clauses à un faible pourcentage:
+METHOD 1 NAIVE=
+	prendre un pourcentage des premiers plus courtes clauses (et un seuilmin) 		et les transformer en top_clauses
+	=> ensuite n'importe quelle methde de partitionnement (indentation 		préservée donc naive_eq, naive_indent ou KMETIS)
+
+METHOD 2 KMETIS ROUND TRIP =
+	faire le partitionnement entre agents
+	et pour chaque agent, donner un pourcentage du pourcentage de nb Total de TOPCLauses.
+	parametres= pourcentage total de top_clauses => nb Max de TopClauses, 		seuilMin (au moins une top clause)
+	minProp et maxProp (use ) 
+PARAMS= pourcentage de TOP_CLAUSES:
+	pourcentage de top_clause
+
+METHOD 2 SOL2DCF ROUNDTRIP = 
+	pareil que KMETIS mais avec un autre partitionnement des agents préalable
+	
+
+FAIRE DESSINS DE TOUT CA
+	
+EST CE QUE SOL2DCF conserve les TOP CLAUSES ??
