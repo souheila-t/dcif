@@ -11,8 +11,6 @@ public class buildGraph {
 		System.out.println("    buildGraph filename.sol [filename2.gra]");
 		System.out.println("'filename.sol'  is the file of the program whose graph should be generated.");
 		System.out.println("'filename2.gra'  is the output file, by default,same name as filename with .gra extension.");
-				
-		
 	}
 	
 	/**

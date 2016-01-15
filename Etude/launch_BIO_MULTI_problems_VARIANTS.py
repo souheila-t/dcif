@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+# -*- coding: utf-8 -*-
+
 '''
 takes n = nbCore = nbAgent as argument
 and a filenameProblem
@@ -9,8 +11,6 @@ only when !! RMA is 144 Go !!
 '''
 from generate_BIO_problems import *
 import argparse
-
-
 
 def writeToLog(log_filename, toAdd) :
     with open(log_filename + '.log', 'a') as log_file :
@@ -22,29 +22,24 @@ def define_arguments():
     parser = argparse.ArgumentParser(description='Process to launch Multi problems with a fixed number of agents')
     parser.add_argument('-n', '--numagent', type= int ,required=True,
                         help="le nombre d\'Agents, doit correspondre idealement au nbre de cores..")
-    parser.add_argument('-d', '--div', type= int ,required=True,
-                        help="le nombre de divisions ")
-    parser.add_argument('-k', '--kpos', type= int ,required=True,
-                        help="la kieme partie des D divisions est calculée, 0<=k<D")
-    '''                    
-    parser.add_argument('problemDir', 
-                        help='repertoire ou on va chercher le file avec les multiproblems')
-    '''
+    parser.add_argument('-d', '--div', type= int,
+                        help="le nbre de div")
+    parser.add_argument('-k','--kpos', type= int,
+                        help="la position de la partition")
     return parser
 def chunks(l, n):
     """Yield successive n-sized chunks from l."""
     for i in xrange(0, len(l), n):
         yield l[i:i+n]
         
-def getArgsForN(filename, ext, numagent):
+def readPbBase(filename, ext):
     res= []
     if not os.path.isfile(filename+ext) :
         print 'pas de fichier ', filename
     with open(filename+ext) as csvfile:
         reader = csv.DictReader(csvfile)
         for rowDict in reader:
-            if rowDict['numagent'] == str(numagent) :
-                res.append(rowDict)
+            res.append(rowDict)
     return res
 def getKinDivN_minLast(l,div,kpos):
     '''
@@ -66,6 +61,7 @@ def comp_dict(obj1, obj2):
 
     sort in place
         clauses.sort(cmp=comp_length_clauses)
+        ici method inclut l'ordre  don c'est bon
     '''
     params = ['infile_path','infile','var','method','numagent','dist']
     for p in params :
@@ -74,9 +70,19 @@ def comp_dict(obj1, obj2):
         elif obj1[p] > obj2[p] :
             return 1
     return 0
+def getArgsForN(filename, ext, numagent):
+    res= []
+    if not os.path.isfile(filename+ext) :
+        print 'pas de fichier ', filename
+    with open(filename+ext) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for rowDict in reader:
+            if rowDict['numagent'] == str(numagent) :
+                res.append(rowDict)
+    return res
 
 def launch_MULTI_problem_seq(paramDict, gen_path, java_args):
-    log_filename = paramDict['outfile']+'_'+paramDict['dist']
+    log_filename = paramDict['outfile']+'_'+paramDict['dist']+'_'+paramDict['method']
     with open(log_filename + '.log', 'w') as log_file :
         try:
             addToLog(log_file,['LAUNCH MULTI PROBLEM############################'])
@@ -163,26 +169,50 @@ def compareDict(dictStats, dictMulti):
     if (dictStats['or_method'] != dictMulti['method']
         or dictStats['or_numagent'] != dictMulti['numagent']
         or dictStats['or_dist'] != dictMulti['dist']
-        or dictStats['or_csq'] != dictMulti['csq']
+      #  or dictStats['or_csq'] != dictMulti['csq']#removing this because we do not want to redo the same eproblem 
         or dictStats['or_csq_mono'] != dictMulti['csq_mono']
         or dictStats['infile_path'] != dictMulti['infile_path']
         or dictStats['infile'] != dictMulti['infile']
         or dictStats['var'] != dictMulti['var']):
         return False
     return True         
-'''
-def init(l_allstats, l_failed_multi,multi_pb_allstats_filename,failed_multi_pb_filename):    
-    global lock_MULTI_ALLSTATS
-    global lock_FAILED_MULTI
-    global multi_problems_allstats_filename
-    global failed_multi_problems_filename 
-
-    lock_MULTI_ALLSTATS = l_allstats
-    lock_FAILED_MULTI = l_failed_multi
-    multi_problems_allstats_filename = multi_pb_allstats_filename
-    failed_multi_problems_filename =failed_multi_pb_filename
-''' 
-
+import copy
+['infile_path','infile','outfile','var','verbose','timeout','method','numagent','dist','csq','csq_mono']
+def generatePbNagentRoot(lPbBase, numagent):
+    '''
+    et la distribution ??
+    '''
+    #rename the csq field    
+    distArr = ['_kmet', '_naiveEq']    
+    pbGen = []
+    
+    normalProblems = []    
+    predistributedProblems = []
+    
+    for baseDict in lPbBase :
+        for i in range(numagent):
+            for i in distArr:
+                newDict = copy.deepcopy(baseDict)
+                newDict['csq'] = newDict['csq'] + str(method)#permet de les identifier
+                newDict['method'] ="DICF-PB-Star-FixedRoot-"+str(i)#DICF-PB-Token-FixedOrder-0-1-2-3-4-5
+                newDict['outfile'] = newDict['outfile']+ str(method)
+                newDict['timeout'] = 3600000 #set to one hour for better results
+                newDict['numagent'] = str(numagent)
+                newDict['dist'] = dist+str(numagent)
+            pbGen.append(newDict)
+    #on ajoute aussi les pb async mais il n'y en a pas beaucoup...
+    for baseDict in lPbBase :
+        for i in distArr:
+            newDict = copy.deepcopy(baseDict)
+            newDict['csq'] = newDict['csq'] + 'method'#permet de les identifier
+            newDict['method'] ="DICF-PB-Async" #DICF-PB-Token-FixedOrder-0-1-2-3-4-5
+            newDict['timeout'] = 3600000 #set to one hour for better results
+            newDict['outfile'] = newDict['outfile']+ str(method)
+            newDict['numagent'] = str(numagent)
+            newDict['dist'] = dist+str(numagent)
+        pbGen.append(newDict)
+    return pbGen
+    
 if __name__ == '__main__':
     parser = define_arguments()                                
     args = parser.parse_args()
@@ -195,10 +225,11 @@ if __name__ == '__main__':
     #problemsDir = 'Problems/Bio_ext/'
     #problemsDir = '/home/magma/BIO_mono_multi_debrief/'
     #problemsDir = '/home/magma/'
-    problemsDir = 'Problems/Bio_merge/Bio/'
+    problemsDir = 'Problems/Bio_focus/Bio/'
+    supDir = 'Problems/Bio_focus/'
     suffix =  '_'+str(argsDict['numagent'])+'agents_'+str(argsDict['div'])+'div_k'+str(argsDict['kpos']) 
    # with open(problemsDir+'/'+GLOBAL_LOG_FILENAME + suffix + '.log', 'a') as log_file_GLOBAL  :   
-    log_file_GLOBAL = problemsDir+GLOBAL_LOG_FILENAME + suffix
+    log_file_GLOBAL = supDir+GLOBAL_LOG_FILENAME + suffix
     writeToLog(log_file_GLOBAL, ['NEW EXPERIENCE'])
     print 'les arguments passés sont :', argsDict
     writeToLog(log_file_GLOBAL, argsDict)
@@ -208,73 +239,27 @@ if __name__ == '__main__':
     
     global multi_problems_allstats_filename
     global failed_multi_problems_filename 
-    multi_problems_allstats_filename = 'MERG_'+MULTI_PROBLEMS_ALLSTATS_FILENAME +suffix
-    failed_multi_problems_filename ='MERG_'+FAILED_MULTI_PROBLEMS_FILENAME + suffix
-    
-    '''
-    pool = mp.Pool(nbProcesses,initializer=init, initargs=(lock_allstats,lock_failed_multi, multi_pb_allstats_filename, failed_multi_pb_filename))
-    print 'pool = %s' % pool        
-    writeToLog(log_file_GLOBAL,['Creating pool with %d processes\n' % nbProcesses])
-    '''     
-    #ici il faut sorter ces parametres !! tres important !!
-    
-    list_parameters_MULTI = getArgsForN(problemsDir + MULTI_PROBLEMS_ALGO_PARAMETERS_FILENAME,'.csv',argsDict['numagent'])
-    writeToLog(log_file_GLOBAL, ['SSSS'+ str(len(list_parameters_MULTI))])    
-    list_parameters_MULTI_ext = getArgsForN(problemsDir + 'EXT_'+MULTI_PROBLEMS_ALGO_PARAMETERS_FILENAME,'.csv',argsDict['numagent'])
-    list_parameters_MULTI += list_parameters_MULTI_ext
-    writeToLog(log_file_GLOBAL, ['SSSS'+ str(len(list_parameters_MULTI))] )   
+    multi_problems_allstats_filename = 'FOCUS_'+MULTI_PROBLEMS_ALLSTATS_FILENAME +suffix
+    failed_multi_problems_filename ='FOCUS_'+FAILED_MULTI_PROBLEMS_FILENAME + suffix
 
-    print 'size all for agents: ', len(list_parameters_MULTI)      
-    writeToLog(log_file_GLOBAL, ['size  old: '+ str(len(list_parameters_MULTI) )])
-    list_parameters_MULTI.sort(cmp = comp_dict)
-    list_parameters_MULTI = getKinDivN_minLast(list_parameters_MULTI,int(argsDict['div']),int(argsDict['kpos']))
-    print 'size  part: ', len(list_parameters_MULTI)   
+    problemsource = supDir + 'GEN_algo_parameters_MULTI_problems'
+    list_parameters_MULTI  = getArgsForN(problemsource, '.csv', argsDict['numagent'])
+    writeToLog(log_file_GLOBAL, ['SSSS'+ str(len(list_parameters_MULTI))])  
+
+    #list_parameters_MULTI = getKinDivN_minLast(list_parameters_MULTI,argsDict['div'],argsDict['kpos'])
+
+    writeToLog(log_file_GLOBAL, ['SSSS'+ str(len(list_parameters_MULTI))])    
     
+    
+    print 'size all for agents: ', len(list_parameters_MULTI)          
     writeToLog(log_file_GLOBAL, ['size  new: '+ str(len(list_parameters_MULTI))])
     
-    #before merge les deux running all stats filename
-    problemsToSolve =[]
-    problemsFromRun = readMulti_allstats_allfiles(problemsDir, MULTI_PROBLEMS_ALLSTATS_FILENAME)
     
-    #on ne fait pas les problemes all...
-    for dictMulti in list_parameters_MULTI :
-        for dictStats in problemsFromRun :
-            if compareDict(dictStats, dictMulti) and dictStats['timed_out'] == str(1) and 'all' not in dictStats['var']: 
-                dictMulti['timeout'] =1200000 
-                problemsToSolve.append(dictMulti)
-                break
-        
-    print 'size  new after removing already run experiences: ', len(problemsToSolve)   
-    writeToLog(log_file_GLOBAL, ['size  new after removing already run experiences: '+ str(len(problemsToSolve))])
-
-    maxHeapSize = 6#(144 / 24) * nbCores - 2 #si on alloue la meme ram a tous les coeurs
+    
+    maxHeapSize = 5#(144 / 24) * nbCores - 2 #si on alloue la meme ram a tous les coeurs
     java_args = ['-d64', '-Xms512m', '-Xmx'+str(maxHeapSize)+'g','-jar']
     #faire sequentiel now...
     #calculer le java_args en fonction du nombre d vore !!
-    for param in problemsToSolve :
+    for param in list_parameters_MULTI:
         launch_MULTI_problem_seq(param, problemsDir, java_args=java_args)
-    #pool.map(launch_MULTI_problem,list_parameters_MULTI)
-    
-    '''
-    problemsToSolve =[]
-    problemsFromRun = readMulti_allstats(problemsDir +multi_problems_allstats_filename, '.csv')
-    for dictMulti in list_parameters_MULTI :
-        hasBeenRun = False
-        for dictStats in problemsFromRun :
-            if compareDict(dictStats, dictMulti):
-                hasBeenRun = True
-        if not hasBeenRun :
-            problemsToSolve.append(dictMulti)
-        
-    print 'size  new after removing already run experiences: ', len(problemsToSolve)   
-    writeToLog(log_file_GLOBAL, ['size  new after removing already run experiences: '+ str(len(problemsToSolve))])
-
-    maxHeapSize = 6#(144 / 24) * nbCores - 2 #si on alloue la meme ram a tous les coeurs
-    java_args = ['-d64', '-Xms512m', '-Xmx'+str(maxHeapSize)+'g','-jar']
-    #faire sequentiel now...
-    #calculer le java_args en fonction du nombre d vore !!
-    for param in problemsToSolve :
-        launch_MULTI_problem_seq(param, problemsDir, java_args=java_args)
-    #pool.map(launch_MULTI_problem,list_parameters_MULTI)
-    '''
 

@@ -1,0 +1,4 @@
+,infile_path,infile,outfile,var,verbose,timeout,method,numagent,dist,csq,csq_mono,timed_out
+260,Problems/Bio/,glucolysis_naiveEq2_TPuniformshortdist_per5_seuil1,,_min-2_ld2--1,,,DICF-PB-Async,2,_naiveEq2,Problems/Bio/glucolysis_naiveEq2_TPuniformshortdist_per5_seuil1_min-2_ld2--1_MULTI_DICF-PB-Async,,0
+83,Problems/Bio/,glucolysis_TPnaiveshortdist_per1_seuil1,,_min-1_ld2--1,,,DICF-PB-Async,6,_naiveEq6,Problems/Bio/glucolysis_TPnaiveshortdist_per1_seuil1_min-1_ld2--1_MULTI_DICF-PB-Async,,1
+39,Problems/Bio/,glucolysis_kmet4_TPuniformshortdist_per5_seuil1,,_min-10_ld3--1,,,DICF-PB-Async,4,_kmet4,Problems/Bio/glucolysis_kmet4_TPuniformshortdist_per5_seuil1_min-10_ld3--1_MULTI_DICF-PB-Async,,0

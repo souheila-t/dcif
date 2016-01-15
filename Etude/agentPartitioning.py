@@ -6,9 +6,6 @@ prend un fichier .sol et un nombre d'agents en entrée et renvoie un fichier
 
 dans la premiere partie on ne s'occupe pas des TOP CLAUSES 
 """
-
-
-
         
 def divEquNaive(infilename,outfilename, nbAgents):
     '''

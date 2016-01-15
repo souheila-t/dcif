@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-    module permet de vérifier l'efficacité de l'algorithme en comparant les résultats produits
+    module permettant de vérifier l'efficacité de l'algorithme en comparant les résultats produits
     (basé sur un ordre)
 '''
 
@@ -38,12 +38,7 @@ class Clause :
     def is_subsumed(self, clause):
         clause.subsumes(self)
 
-'''
-QUESTION : EST CE QU 'ono peut AVOIR DES PROP ET DES PRED DANS UNE MEME Clause ???
-REGARDER DANS LES FICHIERS DE REPONSES 
-'''
-
-class Prop():
+class Prop :
     def __init__(self,name):
         self.name = name
     def is_prop(self):

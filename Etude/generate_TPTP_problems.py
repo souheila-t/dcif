@@ -204,5 +204,3 @@ if __name__ == '__main__':
         generate_MULTI_config_to_file(problemsDir,log_file_GLOBAL)       
         addToLog(log_file_GLOBAL,['now everything is generated I hope...'])
         
-        
-        addToLog(log_file_GLOBAL,['ZIIS ZE END'])

@@ -59,15 +59,17 @@ def launch_mono(argsDict,log_file,java_args=[]):
     return log
 def get_stats(argsDict):
     '''
-    on prend la premiere ligne
+    on prend la premiere ligne #maj le 20 august, on prend la DERNIERE LIGNE 
+    !! car on peut travailler sur de nouveaux problemes plus recetn
     '''
     filename = argsDict['outfile']
-    
+    last = None
     with open(filename+'.csv') as csvfile:
         reader = csv.DictReader(csvfile,delimiter=';')
         for row in reader:
             if argsDict['method'].startswith(row['method']):
-                return row
+                last = row
+        return last
 
 
 def is_timeout(log):

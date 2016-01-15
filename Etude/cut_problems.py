@@ -51,7 +51,7 @@ def cut_Problems(problemsDir):
     '''
     for root, dirnames, filenames in os.walk(problemsDir):
         print root
-        '''
+        
         for base_filename in remove_ext(fnmatch.filter(filenames, '*.sol'),'.sol'):
             #create a dir for each problem and cut it inside
             solDir = root + '/' + base_filename
@@ -88,7 +88,7 @@ def cut_Problems(problemsDir):
                         newFileSol.add_IndexedLine(pf)
                         print ''
                         newFileSol.save()
-                    '''
+                    
 
 dirProb = 'Problems/sourceCnf'
 cut_Problems(dirProb)

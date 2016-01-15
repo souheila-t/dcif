@@ -8,22 +8,23 @@ import multiprocessing as mp
 import copy
 from BIO_lib import *
 
-PROCESSES = 12
+PROCESSES = 1
 JAVA_ARGS = ['-d64', '-Xms512m', '-Xmx6g','-jar']
 TIMEOUT_MONO = 2000000#correspond a peu pres a 20 minutes
 TIMEOUT_MULTI = 600000 #10 min
-LENGTH_LIST = [1]
+LENGTH_LIST = [3]
 DEPTH_LIST =[-1]
-METH_LIST = [ 'max-','min-']#,'all']
-METH_N_LIST = [1,2,3,4,5,10,15] 
+METH_LIST = [ 'max-']#,'min-']#,'all']
+METH_N_LIST = [4]#,5,10,15] 1,2,3,
 
-NUMAGENT_LIST = [2,4,6,8]
-METHODS = ['DICF-PB-Async', 'DICF-PB-Star', 'DICF-PB-Token']
+NUMAGENT_LIST = [2,4]#,6,8]
+METHODS = ['DICF-PB-Async']#, 'DICF-PB-Star', 'DICF-PB-Token']
 
 
 METHOD_AGENT_DISTRIBUTION = ['_kmet','_naiveEq']#'naive_indent'
 METHOD_TP_DISTRIBUTION_LIST = ['short']#,'random']
-PERC_TP_DIST_LIST = [1,2,5,10]
+PERC_TP_DIST_LIST = [2]#1,5,10]
+
 '''
 PROCESSES = 4
 JAVA_ARGS = ['-d64', '-Xms512m', '-Xmx2g','-jar']
@@ -102,14 +103,12 @@ def generate_parameters_onesol_var(problem_path,problem_filename,length_list,dep
                     argsDict['methodVar'] = meth
                     resL.append(argsDict)
     return resL
-
 def generate_parameters_sols_var(problems_path, problem_filenames,length_list,depth_list,meth_list,methN_list):
     res =[]
     for filename in problem_filenames :
         dictL = generate_parameters_onesol_var(problems_path, filename,length_list,depth_list,meth_list,methN_list)
         res += dictL
     return res
-
 def generate_parameters_algos_dist(problem_filenames,numagent_list):
     '''
     add here a for methodAgentPAritioning = kmetis or naive_eq
@@ -127,7 +126,6 @@ def generate_parameters_algos_dist(problem_filenames,numagent_list):
                 argsDict['infile_path'] = PROBLEM_PATH
                 resL.append(argsDict)        
     return resL
-    
 def generate_valid_problem_filenames_with_TP(problem_filenames):
     valid_problem_filenames = []
     for sol_filename in problem_filenames :
@@ -225,7 +223,7 @@ def generate_valid_distributions(argsDict,log_file,java_args=[]):
             d.update(argsDistribution) 
             valid_distributions.append(d)  
     return valid_distributions
-def generate_algos_parameters(filename, ext,parameters,gen_path,log_file) :
+def generate_algos_parameters(filename, ext,parameters,gen_path) :
     '''
     ici il faudra faire varier les parametres d'ordre pour TOKEN et STAR
     faire toutes les combinaisons
@@ -234,7 +232,6 @@ def generate_algos_parameters(filename, ext,parameters,gen_path,log_file) :
     dictParameters=[]
     filename = gen_path+ filename + ext
     if not os.path.isfile(filename) :
-        addToLog(log_file,['PAS de PROBLEMS FILE GENERE, on le touch'])
         open(filename, 'a').close()#touch
     with open(filename) as csvfile:
         reader = csv.DictReader(csvfile)
@@ -265,37 +262,64 @@ def generate_algos_parameters(filename, ext,parameters,gen_path,log_file) :
                 dictParameters.append(argsDict)
     return dictParameters
 
-def generate_MULTI_config_to_file(log_file_GLOBAL):
-    '''
-    a partir du fichier contenant les variantes de problemes solvables,
-    générer les parametres pour les differents algos multi-agents dans un fichier
-    '''
-    parameters = TIMEOUT_MULTI,  METHODS, NUMAGENT_LIST
-    addToLog(log_file_GLOBAL,['generating parameters MULTI'])
-    list_parameters_MULTI = generate_algos_parameters(MULTI_PROBLEMS_FILENAME,
-                                                      '.csv', parameters, 
-                                                      GEN_PATH,log_file_GLOBAL)
-    addToLog(log_file_GLOBAL,['generating parameters MULTI :'+str(len(list_parameters_MULTI))+' problems'])
+def generate_kmet_distribution(argsDict,gen_path,java_args=[]):
+  #generate DCF
+    #if already exist do nothing, keep it all the same
+    dist_outfile_path = argsDict['infile_path']
+    dist_outfile_name = argsDict['infile']+argsDict['dist']
+    if os.path.isfile(dist_outfile_path+dist_outfile_name+'.dcf') : 
+         return dist_outfile_path,dist_outfile_name
+    temp_graph_filename=gen_path+argsDict['infile']+'temp_graph'+argsDict['dist']
+    ########buildGraph    
+    try:
+        os.remove(temp_graph_filename+'.gra')        
+    except OSError:
+        pass                
+    args = java_args+[BUILDGRAPH_JAR]+[argsDict['infile_path']+argsDict['infile'], temp_graph_filename ]
+    log = jarWrapper(*args)
+    ########kMetis
+    try:
+        os.remove(temp_graph_filename+'.gra.part.'+argsDict['numagent'])
+    except OSError:
+        pass
+    args = [KMETIS_EX, temp_graph_filename+'.gra', argsDict['numagent']]
+    log = exWrapper(*args)
+    ########graph2DCF
+    
+    args = java_args+[GRAPH2DCF_JAR]+[argsDict['infile_path']+argsDict['infile'],temp_graph_filename+'.gra.part.'+argsDict['numagent'] , dist_outfile_path+dist_outfile_name+'.dcf']
+    log = jarWrapper(*args)
+    #clean un peu...
+    if os.path.isfile(temp_graph_filename+'.gra') : 
+        os.remove(temp_graph_filename+'.gra')
+    if os.path.isfile(temp_graph_filename+'.gra.part.'+argsDict['numagent']) : 
+        os.remove(temp_graph_filename+'.gra.part.'+argsDict['numagent'])
+    return dist_outfile_path,dist_outfile_name
 
-    outputs_config_file_all_rows(list_parameters_MULTI, 
-                                MULTI_PROBLEMS_ALGO_PARAMETERS_FIELDNAMES_ORDER, 
-                                MULTI_PROBLEMS_ALGO_PARAMETERS_FILENAME, 
-                                '.csv',GEN_PATH,lock=None)
-#je n'utilise pas le lock ic car c'est sequenetiel et je nepeux pas car cEst dans le glonbal namespace que du POOL
+def generate_naiveEq_distribution(argsDict,gen_path):
+    #load the sol file
+    nbagent = int(argsDict['numagent'])
+    sol_filepath = argsDict['infile_path']
+    sol_filename = argsDict['infile']   
+    sol_file = par.FileSol(sol_filepath,sol_filename)
+    sol_file.load()
+    
+    dcf_file = sol_file.create_dcf_Agent_distribution(nbagent, method = 'naive_eq')
+    dcf_file.save()
+    
+    return dcf_file.path,dcf_file.filename
+def generate_distribution(argsDict,gen_path,java_args=[]) :
+    if '_kmet' in argsDict['dist'] :
+        p,n=generate_kmet_distribution(argsDict,gen_path,java_args)
+    elif '_naiveEq' in argsDict['dist']:
+        p,n=generate_naiveEq_distribution(argsDict, gen_path)
+    if n != argsDict['infile']+argsDict['dist']:
+        raise Exception('PROBLEME GENERATION DISTRIBUTION :'+ n+'not eq to : '+argsDict['infile']+argsDict['dist'])
+    return p,n
 
-def launch_MONO_problem(argsDict):
-    suffix_var = "_"+argsDict['methodVar']+"_ld"+argsDict['length']+"-"+argsDict['depth']        
-    output_filename = argsDict['infile'] + suffix_var
-    log_filename = argsDict['infile_path'] + output_filename   
+def generate_MONO_problem_dependencies(argsDict, prefix = ''):
+    output_filename = argsDict['infile'] + argsDict['var']
     isDistributed = True        
-                               
-    argsDict['method'] = 'SOLAR-Inc-Carc'        
     argsDict['verbose'] = True 
-    argsDict['timeout'] = TIMEOUT_MONO      
-    argsDict['var'] = suffix_var     
-    argsDict['log_filename'] = log_filename
-    argsDict['outfile'] = GEN_PATH + output_filename
-    argsDict['csq'] = GEN_PATH + output_filename+'_MONO'
     argsDict['csq_mono'] = GEN_PATH + output_filename+'_MONO'
     try:
         argsDict['dist']       
@@ -303,51 +327,20 @@ def launch_MONO_problem(argsDict):
         isDistributed = False
         argsDict['dist'] = None
         argsDict['numagent'] = None
-        
-    with open(log_filename + '.log', 'w') as log_file :
-        try:        
-            addToLog(log_file,['generate VARIANT################################'])
-            generate_variant(argsDict, log_file,java_args=JAVA_ARGS)
-            addToLog(log_file,['launch MONO#####################################'])
-            log_mono=launch_mono(argsDict,log_file,JAVA_ARGS)  
-        #    addToLog(log_file, log_mono)
-            if not is_timeout(log_mono) :
-            #if True:
-                addToLog(log_file,['NO TIME OUT#################################'])
-                addToLog(log_file,['output to finishing problems################'])
-                statsDict = get_stats(argsDict)    
-                field_names_order = FINISHING_MONO_PROBLEMS_FIELDNAMES_ORDER + statsDict.keys()
-                statsDict.update(argsDict)
-                outputs_config_file_one_row(statsDict,field_names_order,FINISHING_MONO_PROBLEMS_FILENAME,'.csv',GEN_PATH, lock=lock_FINISHING_MONO)    
-                
-                addToLog(log_file,['GENERATE DISTRIBUTION#######################'])
-                if isDistributed :
-                    #copy_distribution
-                    origin_dist_filename = argsDict['distfile_name']
-                    origin_dist_filepath = argsDict['distfile_path']
-                    dist_file = par.FileDCF(origin_dist_filepath, origin_dist_filename)
-                    dist_file.load()
-                    dist_outfilename = argsDict['infile'] + argsDict['dist'] 
-                    dist_outfilepath = argsDict['infile_path']
-                    dist_file.save(dist_outfilepath,dist_outfilename)
-                    #generate_distribution(argsDict, log_file,GEN_PATH,java_args=JAVA_ARGS) 
-                    outputs_config_file_one_row(argsDict,MULTI_PROBLEMS_FIELDNAMES_ORDER,MULTI_PROBLEMS_FILENAME,'.csv',GEN_PATH, lock=lock_MULTI)    
-                else:
-                    addToLog(log_file,['ICICICIICICICICCICICCICIICN#######################'])
-                    print 'efefefefef'
-                    distributions = generate_valid_distributions(argsDict,log_file,java_args=JAVA_ARGS)
-                    outputs_distributions(MULTI_PROBLEMS_FIELDNAMES_ORDER,MULTI_PROBLEMS_FILENAME,'.csv',distributions,log_file,GEN_PATH, lock=lock_MULTI)
+    if isDistributed :
+        if '2' in argsDict['dist'] or '4' in argsDict['dist']: # on n'essaie qu'avec ceux la
+            #copy_distribution
+            print 'HERERER'
+            #origin_dist_filename = argsDict['distfile_name']
+            #origin_dist_filepath = argsDict['distfile_path']
+            #dist_file = par.FileDCF(origin_dist_filepath, origin_dist_filename)
+            #dist_file.load()
+            #dist_outfilename = argsDict['infile'] + argsDict['dist'] 
+            #dist_outfilepath = argsDict['infile_path']
+            #dist_file.save(dist_outfilepath,dist_outfilename)
+            generate_distribution(argsDict, GEN_PATH,java_args=JAVA_ARGS) 
+            outputs_config_file_one_row(argsDict,MULTI_PROBLEMS_FIELDNAMES_ORDER, prefix+MULTI_PROBLEMS_FILENAME,'.csv',GEN_PATH, lock=lock_MULTI)    
     
-                filename_stats_temp = argsDict['outfile']+'.csv'
-                if os.path.isfile(filename_stats_temp):
-                    addToLog(log_file,['removing temp .csv#########################'])
-                    os.remove(filename_stats_temp) 
-            else:
-                outputs_config_file_one_row(argsDict,FAILED_MONO_PROBLEMS_FIELDNAMES_ORDER,FAILED_MONO_PROBLEMS_FILENAME,'.csv',GEN_PATH, lock=lock_FAILED_MONO)    
-        except Exception as e:
-            addToLog(log_file, [str(e)])
-            outputs_config_file_one_row(argsDict,FAILED_MONO_PROBLEMS_FIELDNAMES_ORDER,FAILED_MONO_PROBLEMS_FILENAME,'.csv',GEN_PATH, lock=lock_FAILED_MONO)    
-               
 def launch_MULTI_problem(paramDict):
     log_filename = paramDict['outfile']+'_'+paramDict['dist']
     with open(log_filename + '.log', 'w') as log_file :
@@ -402,8 +395,22 @@ def launch_MULTI_problem(paramDict):
         except Exception as e:
             addToLog(log_file, [str(e)])
             outputs_config_file_one_row(argsDict,FAILED_MULTI_PROBLEMS_FIELDNAMES_ORDER,FAILED_MULTI_PROBLEMS_FILENAME,'.csv',GEN_PATH, lock=lock_FAILED_MULTI)    
-               
 
+
+def generate_MULTI_config_to_file_from_fail( prefix= ''):
+    '''
+    a partir du fichier contenant les variantes de problemes solvables,
+    générer les parametres pour les differents algos multi-agents dans un fichier
+    '''
+    parameters = TIMEOUT_MULTI,  METHODS, NUMAGENT_LIST
+    list_parameters_MULTI = generate_algos_parameters(prefix +MULTI_PROBLEMS_FILENAME,
+                                                      '.csv', parameters, 
+                                                      GEN_PATH)
+
+    outputs_config_file_all_rows(list_parameters_MULTI, 
+                                MULTI_PROBLEMS_ALGO_PARAMETERS_FIELDNAMES_ORDER, 
+                                prefix+MULTI_PROBLEMS_ALGO_PARAMETERS_FILENAME, 
+                                '.csv',GEN_PATH,lock=None)
     
 def init(l_mono,l_multi,l_allstats, l_multi_algo, l_failed_mono, l_failed_multi):    
     global lock_MULTI_algos_p    
@@ -429,40 +436,25 @@ if __name__ == '__main__':
     lock_failed_multi = mp.Lock()
     
     pool = mp.Pool(PROCESSES,initializer=init, initargs=(lock_mono,lock_multi,lock_allstats,lock_multi_algo,lock_failed_mono,lock_failed_multi ))
-    with open(GEN_PATH+GLOBAL_LOG_FILENAME + '.log', 'a') as log_file_GLOBAL  :        
-        print 'pool = %s' % pool        
-        addToLog(log_file_GLOBAL,['Creating pool with %d processes\n' % PROCESSES])
+    print 'pool = %s' % pool        
+    
+    print 'ee'
+    
+    #read failed mono problems
+    failed_mono_list = []
+    filename = GEN_PATH+ FAILED_MONO_PROBLEMS_FILENAME + '.csv'
+    with open(filename) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for rowDict in reader:
+            failed_mono_list.append(rowDict)
+    prefix = 'FAILTRY'
         
-        addToLog(log_file_GLOBAL,['generating Parameters for MONO problems'])
-        list_parameters_MONO = generate_problems_MONO(log_file_GLOBAL)
-        #on peut ecrire ca dans un fichier...
-        
-        addToLog(log_file_GLOBAL,['launching MONO problems'])                                                                                                                                                               
-        
-        addToLog(log_file_GLOBAL,['generating Dist parameters and dependencies for MULTI problems'])
-        
-        #on prend les problems avec pas du all d'Abord
-        methAllProblems = []
-        otherProblems = []
-        for argsDict in list_parameters_MONO :
-            if 'all' in argsDict['methodVar']:
-                methAllProblems.append(argsDict)
-            else:
-                otherProblems.append(argsDict)
-        #et ensuite on prend les autres...
-                
-        addToLog(log_file_GLOBAL,['LAUNCHING MONO PROBLEMs, befor ALL'])
-        pool.map(launch_MONO_problem, otherProblems)
-        addToLog(log_file_GLOBAL,['LAUNCHING MONO PROBLEMS WITH VAR= ALL'])
-        
-        pool.map(launch_MONO_problem, methAllProblems)
-        '''
-        addToLog(log_file_GLOBAL,['generating Method Parameters for MULTI problems'])
-        generate_MULTI_config_to_file(log_file_GLOBAL)
-       
-        addToLog(log_file_GLOBAL,['now everything is generated I hope...'])
-       # addToLog(log_file_GLOBAL,['launching MULTI problems'])
-        #list_parameters_MULTI = read_csv_config(PROBLEM_PATH + MULTI_PROBLEMS_ALGO_PARAMETERS_FILENAME,'.csv',log_file_GLOBAL)
-        #pool.map(launch_MULTI_problem,list_parameters_MULTI)
-        addToLog(log_file_GLOBAL,['ZIIS ZE END'])
-        '''
+    print 'eavant generat dependence'
+    #generate dependencies
+    pool.map(generate_MONO_problem_dependencies,failed_mono_list)
+    print 'apresgenerat dependence'
+    #generate multi algo parameters
+    
+    generate_MULTI_config_to_file_from_fail( prefix= prefix)
+    
+    print 'multi from fail'
