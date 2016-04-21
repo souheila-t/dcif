@@ -567,7 +567,7 @@ public class IndepPField {
 		for (i=0; i<occurences.length; i++)
 			occurences[i]=0;
 		for (Literal lit:cl.getLiterals()){
-			int ind = pf.getPLiterals().indexOf(toPLiteral(IndepLiteral.getFreedLiteral(env, opt, lit)));
+			int ind = pf.getPLiterals().indexOf(toPLiteral(IndepLiteral.getFreedLiteral(env, opt, lit), pf.getMaxTermDepth(), pf.getMaxLength()));
 			if (ind>=0){
 				occurences[ind]++;
 				int mlength = pf.getPLiterals().get(ind).getMaxLength();
