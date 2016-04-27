@@ -324,7 +324,8 @@ public class CFLauncher {
 						}
 						i++;
 					}
-					pHeuristic=method.substring(method.lastIndexOf(methodOptions.get(i)));
+					if (hasParamHeuristic)
+						pHeuristic=method.substring(method.lastIndexOf(methodOptions.get(i)));
 				}
 				//RUN
 				if (timeLimitMillis!=-1) deadline=System.currentTimeMillis()+timeLimitMillis;

@@ -21,6 +21,7 @@ import genLib.tools.Pair;
 import genLib.tools.ToolIndex;
 
 
+
 public class IndepPField {
 	
 	public static class PFCond{
@@ -528,8 +529,8 @@ public class IndepPField {
 		else
 			pf= createPField(env, opt, CNF.getVocabulary(env, clauses));
 		
-		for (Clause cl:clauses)
-			pf = IndepPField.fitConditionsToClause(pf, cl, negated);
+		/*for (Clause cl:clauses)
+			pf = IndepPField.fitConditionsToClause(pf, cl, negated);*/
 		return pf;
 	}
 	
@@ -548,9 +549,9 @@ public class IndepPField {
 				localConds.add(litCond);
 		}
 		if (cl.getLiterals().size()>maxSize)
-			return new IndepPField(literals,localConds,
+			return new PField(literals,localConds,
 					new PFCond(globalConditions.maxDepth,maxSize));
-		return new IndepPField(literals,localConds, globalConditions);
+		return new PField(literals,localConds, globalConditions);
 	}
 	
 	public static boolean belongsTo(Env env, PField pf, Clause cl) throws ParseException{
@@ -747,7 +748,7 @@ public class IndepPField {
 	
 	//protected List<IndepLiteral> literals=new ArrayList<IndepLiteral>();
 	
-	//protected List<PFCond> localConditions=new ArrayList<PFCond>();
+	protected List<PFCond> localConditions=new ArrayList<PFCond>();
 	
 	//protected PFCond globalConditions=new PFCond();
 	

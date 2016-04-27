@@ -5,5 +5,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/AgentLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GeneralLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/solar-314"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/OldLogicLibrary"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

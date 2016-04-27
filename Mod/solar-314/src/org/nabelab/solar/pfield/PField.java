@@ -376,5 +376,17 @@ public class PField implements TermTypes, DebugTypes {
   private int maxTermDepth = UNLIMITED;
   /** The maximum length limitation */
   private int maxLength = UNLIMITED;
+  
+  public boolean contain(PLiteral l) {
+	  // TODO Auto-generated method stub
+	  if (this.isEmpty())
+		  return false;
+	  else{ 
+		  boolean exist=false;
+		  for (PLiteral pl:literals)
+			  if(pl.equals(l)) exist=true;
+		  return exist;
+	  }
+  }
 
 }

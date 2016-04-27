@@ -574,22 +574,22 @@ public class Tableau implements Tags, OptionTypes, DebugTypes {
     }
 
 //    // Skip-minimality checking
-//    if (opt.use(USE_SKIP_MINIMALITY)) {
-//      curConseq = skipped.convertToConseq();
-//      if (cfp.getConseqSet().isSubsuming(curConseq.getFVec(true), curConseq)) {
-//
-////        // TEST
-////        Conseq c = skipped.convertToConseq();
-////        if (!cfp.getConseqSet().isSubsuming(c.getFVec(true), c)) {
-////          System.out.println("cur = " + curConseq);
-////          System.out.println("c   = " + c);
-////        }
-//
-//        stats().incSuccs(Stats.SKIP_MINIMALITY);
-//        if (!cancel())
-//          return false;
-//      }
-//    }
+    if (opt.use(USE_SKIP_MINIMALITY)) {
+      curConseq = skipped.convertToConseq();
+      if (cfp.getConseqSet().isSubsuming(curConseq.getFVec(true), curConseq)) {
+
+//        // TEST
+//        Conseq c = skipped.convertToConseq();
+//        if (!cfp.getConseqSet().isSubsuming(c.getFVec(true), c)) {
+//          System.out.println("cur = " + curConseq);
+//          System.out.println("c   = " + c);
+//        }
+
+        stats().incSuccs(Stats.SKIP_MINIMALITY);
+        if (!cancel())
+          return false;
+      }
+    }
 
     return true;
   }
