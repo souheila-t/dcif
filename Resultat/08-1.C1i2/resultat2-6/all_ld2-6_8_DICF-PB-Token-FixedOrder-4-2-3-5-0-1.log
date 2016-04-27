@@ -1,0 +1,23 @@
+resultFilename :PUZ008-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-4-2-3-5-0-1
+pbBasename :PUZ008-1.C1i2
+variantSuffix:_all_ld2-6
+distr suff:_kmet8
+timout :600000
+ORDER is: 
+4-2-3-5-0-1-
+Time for creating graph: 0.058s
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:2245)
+	at java.util.Arrays.copyOf(Arrays.java:2219)
+	at java.util.ArrayList.grow(ArrayList.java:242)
+	at java.util.ArrayList.ensureExplicitCapacity(ArrayList.java:216)
+	at java.util.ArrayList.ensureCapacityInternal(ArrayList.java:208)
+	at java.util.ArrayList.add(ArrayList.java:440)
+	at systemStructure.PartitionGraph.getForwardBackwardPath(PartitionGraph.java:522)
+	at systemStructure.PartitionGraph.makeCircuitFormation(PartitionGraph.java:505)
+	at distNewCarc.partition.tokenbased.PBTokenIncConsFinding.<init>(PBTokenIncConsFinding.java:75)
+	at launcher.CFLauncher.partitionBasedTokenIncCF(CFLauncher.java:165)
+	at launcher.CFLauncher.runExpe(CFLauncher.java:340)
+	at launcher.CFLauncher.exec(CFLauncher.java:393)
+	at launcher.CFLauncher.main(CFLauncher.java:503)
