@@ -1,0 +1,1015 @@
+resultFilename :PUZ008-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-3-2-1-0
+pbBasename :PUZ008-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_kmet4
+timout :600000
+ORDER is: 
+3-2-1-0-
+Time for creating graph: 0.056s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag3 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag2 : {Start}
+Sys -> Ag3 : {Start}
+Sys -> Ag3 : {Launch}
+Ag0 <------  {New neighbour}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag1 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag2 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag2 <------  {Start}
+Ag2 -> Sys : {Started}
+Ag3 <------  {New neighbour}
+Ag3 <------  {New neighbour}
+Ag3 <------  {Start}
+Ag3 -> Sys : {Started}
+Ag3 <------  {Launch}
+Ag3 receives [[+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]]
+After pruning [[+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3))))]
+ [-achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3)))))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3))), +achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(_0)))),_1,east(_2,_3))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+Top clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+>>>>>>>>>>>> Solve - measure : [38, 10, 3, 3, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag3: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]]
+Ag3 -> Ag2 : Send Clauses: Forward Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]]
+Ag2 <------  Send Clauses: Forward Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]]
+Ag2 receives [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]]
+After pruning [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]]
+Input Languages : {Ag3=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)], Ag1=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3)))), +achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(s(_0))))),_1,east(_2,_3))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(_3)))))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(s(_3))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+Top clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [8, 17, 5, 5, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag2 -> Ag1 : Send Clauses: Forward {N [Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag1 <------  Send Clauses: Forward {N [Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag1 receives [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+After pruning [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3))))), +achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3)))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3))), +achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3))))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3)))), +achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+Top clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [11, 29, 9, 9, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]]
+Ag1 -> Ag0 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]]
+Ag0 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]]
+Ag0 receives [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]]
+After pruning [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]]
+Input Languages : {Ag3=[], Ag1=[]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+Top clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+Production field:
+ [+achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [7, 28, 9, 9, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag0 -> Ag3 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag3 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag3 receives [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+After pruning [[+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3)))), -achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3))))), -achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(_0)))),_1,east(_2,_3))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+Top clauses:
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [8, 22, 6, 6, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag3: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag3 -> Ag2 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag2 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+Ag2 receives [[+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]]
+After pruning [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]]
+Input Languages : {Ag3=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)], Ag1=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3))), -achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(s(_0))))),_1,east(_2,_3))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(_3)))))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(s(_3))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+Top clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [8, 15, 4, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+Ag2 -> Ag1 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+Ag1 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+Ag1 receives [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+After pruning [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3)))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3))), -achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3))), +achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3)))), -achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3)))), +achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+Top clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [11, 21, 6, 6, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+Ag1 -> Ag0 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+Ag0 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+Ag0 receives [[+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+After pruning [[+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]]
+Input Languages : {Ag3=[], Ag1=[]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+Top clauses:
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+Production field:
+ [+achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [6, 19, 6, 6, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+Ag0 -> Ag3 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+Ag3 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+Ag3 receives [[+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+After pruning [[+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3)))), -achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3))))), -achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(_0)))),_1,east(_2,_3))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+Top clauses:
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [10, 19, 6, 6, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag3: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]]
+Ag3 -> Ag2 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]]
+Ag2 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]]
+Ag2 receives [[+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]]
+After pruning [[+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]]
+Input Languages : {Ag3=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)], Ag1=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3))), -achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(s(_0))))),_1,east(_2,_3))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(_3)))))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(s(_3))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+Top clauses:
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [11, 14, 4, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+Ag2 -> Ag1 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+Ag1 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+Ag1 receives [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]]
+After pruning [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3)))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3))), -achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3)))), -achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+Top clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [15, 13, 4, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]]
+Ag1 -> Ag0 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]]
+Ag0 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]]
+Ag0 receives [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]]
+After pruning [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]]
+Input Languages : {Ag3=[], Ag1=[]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+Top clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+Production field:
+ [+achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [10, 13, 4, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag0 -> Ag3 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 receives [[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+After pruning [[+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3)))), -achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3))))), -achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(_0)))),_1,east(_2,_3))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Top clauses:
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [15, 13, 4, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag3: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 -> Ag2 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag2 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag2 receives [[+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+After pruning [[+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Input Languages : {Ag3=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)], Ag1=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3))), -achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(s(_0))))),_1,east(_2,_3))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(_3)))))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(s(_3))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Top clauses:
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [16, 11, 3, 3, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+Ag2 -> Ag1 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+Ag1 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+Ag1 receives [[+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+After pruning [[+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3)))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3))), -achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3)))), -achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+Top clauses:
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [21, 10, 3, 3, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Ag1 -> Ag0 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Ag0 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Ag0 receives [[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+After pruning [[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Input Languages : {Ag3=[], Ag1=[]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+Top clauses:
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+Production field:
+ [+achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [14, 10, 3, 3, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Ag0 -> Ag3 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Ag3 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Ag3 receives [[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+After pruning [[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3)))), -achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3))))), -achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(_0)))),_1,east(_2,_3))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+Top clauses:
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [20, 12, 3, 3, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag3: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatonwest,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+Ag3 -> Ag2 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatonwest,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+Ag2 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatonwest,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+Ag2 receives [[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatonwest,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]]
+After pruning [[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]]
+Input Languages : {Ag3=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)], Ag1=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3))), -achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(s(_0))))),_1,east(_2,_3))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(_3)))))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(s(_3))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+Top clauses:
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [17, 7, 2, 2, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag2 -> Ag1 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag1 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag1 receives [[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+After pruning [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3)))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3))), -achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3)))), -achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Top clauses:
+ [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [22, 4, 1, 1, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag1 -> Ag0 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag0 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag0 receives [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+After pruning [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Input Languages : {Ag3=[], Ag1=[]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Top clauses:
+ [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Production field:
+ [+achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [13, 4, 1, 1, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag0 -> Ag3 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 receives [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+After pruning [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3)))), -achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3))))), -achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(_0)))),_1,east(_2,_3))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))]
+ [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(n0)),boatonwest,east(m(s(s(n0))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Top clauses:
+ [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [19, 5, 1, 1, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag3: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatonwest,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 -> Ag2 : Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag2 <------  Send Clauses: Forward {N [Ag1, Ag2]} Clauses = [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag2 receives [[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+After pruning []
+Input Languages : {Ag3=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)], Ag1=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Ag2: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag2 -> Ag3 : Send Clauses: Backward {C [Ag1]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 <------  Send Clauses: Backward {C [Ag1]} Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 receives [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+After pruning []
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Ag3: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatonwest,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 -> Ag0 : Send Clauses: Backward {C [Ag1]} Clauses = []
+Ag0 <------  Send Clauses: Backward {C [Ag1]} Clauses = []
+Ag0 receives []
+After pruning []
+Input Languages : {Ag3=[], Ag1=[]}
+Ag0: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag0 -> Ag1 : Send Clauses: Backward {C [Ag1]} Clauses = []
+Ag1 <------  Send Clauses: Backward {C [Ag1]} Clauses = []
+Ag1 receives []
+After pruning []
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Ag1: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag1 -> Ag2 : Send Clauses: Backward Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag2 <------  Send Clauses: Backward Clauses = [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag2 receives [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+After pruning [[+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+Input Languages : {Ag3=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)], Ag1=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3))), -achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3))))]
+ [+achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3))), -achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(s(_0))))),_1,east(_2,_3))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(_3)))))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(s(_3))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+ [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+ [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+ [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+ [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+ [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+ [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+Top clauses:
+ [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+Production field:
+ [+achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2), -achievable(_0,_1,_2), +achievable(_0,_1,_2):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [17, 5, 1, 1, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+Ag2 -> Ag3 : Send Clauses: Backward {N [Ag2]} Clauses = [[+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+Ag3 <------  Send Clauses: Backward {N [Ag2]} Clauses = [[+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+Ag3 receives [[+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+After pruning []
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Ag3: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatonwest,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatonwest,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(n0)),boatonwest,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(n0)),boatonwest,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag3 -> Ag2 : Send Clauses: Forward {C [Ag2]} Clauses = []
+Ag2 <------  Send Clauses: Forward {C [Ag2]} Clauses = []
+Ag2 receives []
+After pruning []
+Input Languages : {Ag3=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)], Ag1=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Ag2: updated receivedCl []
+updated lstCsq [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+Ag2 -> Ag1 : Send Clauses: Forward Clauses = [[+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+Ag1 <------  Send Clauses: Forward Clauses = [[+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+Ag1 receives [[+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]]
+After pruning []
+Input Languages : {Ag0=[], Ag2=[+achievable(_0,_1,_2), -achievable(_0,_1,_2)]}
+Ag1 -> Sys : Send Consequences : [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Ag1 -> Sys : {Finish}
+Sys <------  Send Consequences : [[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))], [+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))], [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))], [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))], [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))], [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))], [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))], [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))], [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))], [+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))], [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))], [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))], [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]]
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Sys -> Ag3 : {Finish}
+Ag0 <------  {Finish}
+Ag3 <------  {Finish}
+Ag1 <------  {Finish}
+Ag2 <------  {Finish}
+23 (NEW) CHARACTERISTIC CLAUSES
+
+[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+[+achievable(west(m(s(n0)),c(s(s(s(n0))))),boatoneast,east(m(s(s(n0))),c(n0)))]
+[+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatoneast,east(m(s(n0)),c(n0)))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+[+achievable(west(m(s(s(n0))),c(s(n0))),boatoneast,east(m(s(n0)),c(s(s(n0)))))]
+[+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+[+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+[+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]
+[+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+[+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+[+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]
+[+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]
+[+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]
+[+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+[+achievable(west(m(s(n0)),c(n0)),boatoneast,east(m(s(s(n0))),c(s(s(s(n0))))))]
+[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+[+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+
+Total execution time was 1105 ms.
+
+Execution time was 1018 ms.
+
+DCIF PROBLEM TOKEN
+ORDER is: 
+3-2-1-0-
+len of order is 4
+PUZ008-1.C1i2_all_ld-1-2_DICF-PB-Token-FixedOrder-3-2-1-0
