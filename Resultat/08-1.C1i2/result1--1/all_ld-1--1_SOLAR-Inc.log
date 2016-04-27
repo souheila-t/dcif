@@ -1,0 +1,37 @@
+resultFilename :PUZ008-1.C1i2
+nethod:SOLAR-Inc
+pbBasename :PUZ008-1.C1i2
+variantSuffix:_all_ld-1--1
+distr suff:
+timout :600000
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [143, 202, 38, 38, 0, 0, 0, 0]
+SolveToClause Finished!
+16 CHARACTERISTIC CLAUSES
+
+[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+[+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+[+achievable(west(m(n0),c(s(s(s(n0))))),boatonwest,east(m(s(s(s(n0)))),c(n0)))]
+[+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+[+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+[+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatonwest,east(m(s(n0)),c(s(n0))))]
+[+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+[+achievable(west(m(n0),c(s(s(n0)))),boatoneast,east(m(s(s(s(n0)))),c(s(n0))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+
+
+Total execution time was 1646 ms.
+
+
+Execution time was 1614 ms.
+
+status 101
+SOLAR PROBLEM
+PUZ008-1.C1i2_all_ld-1--1_SOLAR-Inc

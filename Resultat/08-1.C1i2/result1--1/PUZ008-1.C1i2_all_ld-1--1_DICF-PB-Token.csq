@@ -1,0 +1,27 @@
+timeout 0
+nb csq 22
+cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]).
+cnf(consequence, axiom, [+achievable(west(m(n0),c(s(s(s(n0))))),boatoneast,east(m(s(s(s(n0)))),c(n0)))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(n0))),c(s(s(s(n0))))),boatonwest,east(m(s(n0)),c(n0)))]).
+cnf(consequence, axiom, [+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(n0))),c(n0)),boatoneast,east(m(s(n0)),c(s(s(s(n0))))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(n0)),c(s(s(n0)))),boatonwest,east(m(s(s(n0))),c(s(n0))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(n0)),c(s(s(n0)))),boatoneast,east(m(s(s(n0))),c(s(n0))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]).
+cnf(consequence, axiom, [+achievable(west(m(n0),c(s(s(n0)))),boatoneast,east(m(s(s(s(n0)))),c(s(n0))))]).
+cnf(consequence, axiom, [+achievable(west(m(n0),c(s(s(s(n0))))),boatonwest,east(m(s(s(s(n0)))),c(n0)))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatonwest,east(m(s(n0)),c(s(n0))))]).
+cnf(consequence, axiom, [+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]).
+cnf(consequence, axiom, [+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]).
+cnf(consequence, axiom, [+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]).
+cnf(consequence, axiom, [+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]).
+cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(n0)),boatonwest,east(m(n0),c(s(s(s(n0))))))]).
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+PUZ008-1.C1i2_all_ld-1--1;_kmet8;7;DICF-PB-Token;0;22;3231;690;186;643;0;0;52;308;152;33;126;0;0;9;66;69;22;77;0;0;6;24;152;25;88;0;0;7;50
+
