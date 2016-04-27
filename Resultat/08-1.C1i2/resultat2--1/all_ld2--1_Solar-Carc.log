@@ -1,0 +1,60 @@
+resultFilename :PUZ008-1.C1i2
+nethod:Solar-Carc
+pbBasename :PUZ008-1.C1i2
+variantSuffix:_all_ld2--1
+distr suff:
+timout :600000
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3))))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(_3)))), +achievable(west(m(_0),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3)))))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(_2),c(s(s(_3))))), +achievable(west(m(_0),c(s(s(_1)))),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3)))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(_3))), +achievable(west(m(s(_0)),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3)))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(s(s(_2))),c(_3))), +achievable(west(m(s(s(_0))),c(_1)),boatonwest,east(m(_2),c(_3)))]
+ [-achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3))), +achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3))))]
+ [-achievable(west(m(_0),c(_1)),boatoneast,east(m(s(_2)),c(s(_3)))), +achievable(west(m(s(_0)),c(s(_1))),boatonwest,east(m(_2),c(_3)))]
+ [+achievable(west(m(s(_0)),c(s(s(_0)))),_1,east(_2,_3))]
+ [+achievable(west(m(s(_0)),c(s(s(s(_0))))),_1,east(_2,_3))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(_3)))))]
+ [+achievable(west(_0,_1),_2,east(m(s(_3)),c(s(s(s(_3))))))]
+ [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+Production field:
+ [+achievable(_0,_1,_2)] <= 2
+
+>>>>>>>>>>>> Solving at depth : -1( real 0)
+>>>>>>>>>>>> Solve - measure : [118, 202, 38, 38, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+16 CHARACTERISTIC CLAUSES
+
+[+achievable(west(m(n0),c(s(n0))),boatonwest,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(n0)),boatoneast,east(m(n0),c(s(s(s(n0))))))]
+[+achievable(west(m(n0),c(s(s(n0)))),boatonwest,east(m(s(s(s(n0)))),c(s(n0))))]
+[+achievable(west(m(n0),c(n0)),boatoneast,east(m(s(s(s(n0)))),c(s(s(s(n0))))))]
+[+achievable(west(m(s(n0)),c(s(n0))),boatonwest,east(m(s(s(n0))),c(s(s(n0)))))]
+[+achievable(west(m(n0),c(s(s(s(n0))))),boatonwest,east(m(s(s(s(n0)))),c(n0)))]
+[+achievable(west(m(s(n0)),c(s(n0))),boatoneast,east(m(s(s(n0))),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatonwest,east(m(n0),c(s(n0))))]
+[+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]
+[+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatonwest,east(m(s(n0)),c(s(n0))))]
+[+achievable(west(m(n0),c(s(n0))),boatoneast,east(m(s(s(s(n0)))),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatonwest,east(m(n0),c(s(s(n0)))))]
+[+achievable(west(m(n0),c(s(s(n0)))),boatoneast,east(m(s(s(s(n0)))),c(s(n0))))]
+[+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]
+
+
+Total execution time was 1092 ms.
+
+
+Execution time was 1069 ms.
+
+status 101
+SOLAR PROBLEM
+PUZ008-1.C1i2_all_ld2--1_Solar-Carc
