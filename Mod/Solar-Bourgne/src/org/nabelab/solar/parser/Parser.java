@@ -263,8 +263,12 @@ public class Parser implements OptionTypes, ParserConstants {
   int    length = 0;
     jj_consume_token(PRODUCTION_FIELD);
     jj_consume_token(32);
-    jj_consume_token(32);
-    boolean f = true;
+    
+    boolean f = false;
+    if(((jj_ntk==-1)?jj_ntk():jj_ntk) == 32){
+    	f = true;
+    	jj_consume_token(32);
+    }
     while (f){
     	PField pf = new PField(env, opt);
     	jj_consume_token(34);
@@ -308,6 +312,8 @@ public class Parser implements OptionTypes, ParserConstants {
     	pfield.addConstraint(constraint);
     	switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
     	case 33: f = false;
+    			 jj_consume_token(33);
+    			 jj_consume_token(36);
     			 break;
     		
 		default:
@@ -316,18 +322,9 @@ public class Parser implements OptionTypes, ParserConstants {
 		}
     	
     }
-    jj_consume_token(33);
-    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-    case 38:
-	case 39:
-		length = length();
-		pfield.setMaxLength(length);
-		break;
-	default:
-		jj_la1[4] = jj_gen;
-		;
-    }
-    jj_consume_token(36);
+    
+    
+    
     jj_consume_token(34);
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
 	case ALL:
@@ -353,6 +350,16 @@ public class Parser implements OptionTypes, ParserConstants {
 		jj_la1[3] = jj_gen;
 		;
 	}
+	switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case 38:
+	case 39:
+		length = length();
+		pfield.setMaxLength(length);
+		break;
+	default:
+		jj_la1[4] = jj_gen;
+		;
+    }
 	jj_consume_token(33);
     jj_consume_token(PERIOD);
                  {if (true) return pfield;}
