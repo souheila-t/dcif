@@ -10,6 +10,7 @@ import org.nabelab.solar.Options;
 import org.nabelab.solar.PLiteral;
 import org.nabelab.solar.SymTable;
 import org.nabelab.solar.Unifiable;
+import org.nabelab.solar.parser.ParseException;
 
 
 public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
@@ -69,33 +70,31 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 						//TODO check if more specific form of this literal are preent in the disc tree ??
 						if (pfieldItems != null){
 							PFieldItem i = pfieldItems.contains(Literal.parse(env, new Options(env), lit.toString()));
-							if( i != null)
-								i.addToGroup(pfCtr);
-							
-							else {
+							if( i == null){
 								PFieldItem item = pfieldItems.containsOtherForm(Literal.parse(env, new Options(env), lit.toString()));
-								if (item!=null){
-									switch (sign) {
-									case PLiteral.POS: 
-										positives[name]= new PFieldItem(lit, maxLenCounter);
-										positives[name].addToGroup(pfCtr);
-										break;
-									case PLiteral.NEG:
-										negatives[name]= new PFieldItem(lit, maxLenCounter);
-										negatives[name].addToGroup(pfCtr);
-										break;
-									case PLiteral.BOTH: 
-										positives[name]= new PFieldItem(lit, maxLenCounter);
-										positives[name].addToGroup(pfCtr);
-										negatives[name]= new PFieldItem(lit, maxLenCounter);
-										negatives[name].addToGroup(pfCtr);
-									}
+								if (item == null){
+									//									switch (sign) {
+									//									case PLiteral.POS: 
+									//										positives[name]= new PFieldItem(lit, maxLenCounter);
+									//										positives[name].addToGroup(pfCtr);
+									//										break;
+									//									case PLiteral.NEG:
+									//										negatives[name]= new PFieldItem(lit, maxLenCounter);
+									//										negatives[name].addToGroup(pfCtr);
+									//										break;
+									//									case PLiteral.BOTH: 
+									//										positives[name]= new PFieldItem(lit, maxLenCounter);
+									//										positives[name].addToGroup(pfCtr);
+									//										negatives[name]= new PFieldItem(lit, maxLenCounter);
+									//										negatives[name].addToGroup(pfCtr);
+									//									}
+									//									pfieldItems.add(Literal.parse(env, new Options(env), lit.toString()), item);
+									throw new Exception(lit + " does not belong to pf");
 								}
-								else throw new Exception(lit + " does not belong to pf");
 							}
 						}
 					}
-					
+
 				}
 				else {
 					// check if this specific literal is already present
@@ -144,7 +143,7 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 							if (pfieldItems.isSubsumed(l) == null){
 								PFieldItem item = new PFieldItem(lit, maxLenCounter);
 								pfieldItems.add(l, item);
-								
+
 							}
 						}
 						break;
@@ -174,69 +173,61 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 		}
 	}
 
-	
+
 	public static PFieldCheckerCardConstraints createChecker(Env env, PField pfield) throws Exception {
 		return new PFieldCheckerCardConstraints(env, pfield);
-		
+
 	}
 
 
-	 public boolean belongs(Clause c) {
+	public boolean belongs(Clause c) {
 
-		 List<PFCardConstraint> constraints = pfield.getAddConstraints();
-		 for (Literal lit : c.getLiterals()) {
-			 List<Unifiable<PFieldItem>> unifs = getUnifiableItems(lit);
-			 if (unifs == null)
-				 return false;
-		 } 
-		 
-		 if(constraints.size()!=0){
-			 int count[] = new int[constraints.size()];
-			 for (int i= 0 ; i< constraints.size(); i++){
-				 count[i]= constraints.get(i).getMaxLengthGroup();
-			 }
-			 List<Literal> lits = new ArrayList<Literal>();
-			 for (Literal lit : c.getLiterals()) {
-				 PFieldItem item= null; 
-					if(lit.isNegative())
-						item = negatives[lit.getName()];
-					else if(lit.isPositive())
-						item = positives[lit.getName()];
-					if (item != null)
-						for (int i= 0 ; i< constraints.size(); i++){
-							if (constraints.get(i).getGroup().contains(item.getPLiteral())){
-								lits.add(lit);
-								break;
-							}
-						}
-					else return true;
-			 }
-			 if(lits.isEmpty())
-				 return true;
-			 return checkGroup(lits, count, constraints,  0);
-		 }
-		 return true;
-	 }
+		List<PFCardConstraint> constraints = pfield.getAddConstraints();
+		for (Literal lit : c.getLiterals()) {
+			List<Unifiable<PFieldItem>> unifs = getUnifiableItems(lit);
+			if (unifs == null)
+				return false;
+		} 
+
+		if(constraints.size()!=0){
+			int count[] = new int[constraints.size()];
+			for (int i= 0 ; i< constraints.size(); i++){
+				count[i]= constraints.get(i).getMaxLengthGroup();
+			}
+			List<Literal> lits = new ArrayList<Literal>();
+
+			for (Literal lit : c.getLiterals()) {
+				for (PFCardConstraint crt : constraints){
+					if (crt.contains(env, new Options(env), lit) != null){
+						lits.add(lit);
+						break;
+					}
+
+				}
+			}
+
+
+			if(lits.isEmpty() || lits.size() != c.getLiterals().size())
+				return true;
+			return checkGroup(lits, count, constraints,  0);
+		}
+		return true;
+	}
 
 
 	private boolean checkGroup(List<Literal> lits, int[] count,
 			List<PFCardConstraint> constraints, int i) {
-			
+
 		for (int j = 0; j< count.length; j++)
 			if (count[j] == -1) return false;
-		
-		
+
+
 		if (i >= lits.size()) return true;
 		Literal lit = lits.get(i);
-		PFieldItem item= null; 
-		if(lit.isNegative())
-			item = negatives[lit.getName()];
-		else if(lit.isPositive())
-			item = positives[lit.getName()];
-		
+
 		for (int j = 0; j<constraints.size(); j++){
-			if (constraints.get(j).getGroup().contains(item.getPLiteral())){
-				
+			if (constraints.get(j).contains(env, new Options(env), lit) != null){
+
 				count[j]--;
 				if (checkGroup(lits, count, constraints, i=i+1)){
 					return true;
@@ -247,6 +238,6 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 				}
 			}
 		}
-		 return false;
+		return false;
 	}
 }
