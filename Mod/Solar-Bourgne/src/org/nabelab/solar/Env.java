@@ -66,9 +66,19 @@ public class Env implements Debuggable, DebugTypes {
     varTable = new VarTable(this);
     debug = new boolean[256];
     for (int i=0; i < debug.length; i++)
-      debug[i] = false;
+      debug[i] = true;
   }
-  
+  /*
+   * Constructs a environment with a new variable table.
+   * @param symTable  a symbol table
+   * @param debug     a debug information.
+   */
+  public Env(SymTable symTable, boolean[] debug) {
+  	this.stats    = new Stats();
+  	this.symTable = symTable;
+  	this.varTable = new VarTable(this);
+  	this.debug    = debug;
+  }
   /**
    * Returns the statistics information.
    * @return the statistics information.
@@ -76,6 +86,10 @@ public class Env implements Debuggable, DebugTypes {
   public Stats getStats() {
     return stats;
   }
+  public boolean[] getDebug() {
+	  	return debug;
+	  }
+
   
   /**
    * Returns the statistics information.

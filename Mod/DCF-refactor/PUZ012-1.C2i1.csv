@@ -1,0 +1,20 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+PUZ012-1.C2i1_all_ld2-2;Mono;1;Solar-Inc;0;1;518;44;5;14;0;0;0;0;44;5;14;0;0;0;0;44;5;14;0;0;0;0;44;5;14;0;0;0;0
+PUZ012-1.C2i1_all_ld2-2;_kmet4;4;DICF-PB-Async;0;0;700298;331758;9867444;56854144;0;0;13;1852;330771;9803087;56532577;0;0;5;1678;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld2-2;_kmet4;4;DICF-PB-Async-UseRc;0;0;700249;969;29602;148758;0;0;29;1818;754;27550;137494;0;0;13;1590;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld2-6;_kmet4;4;DICF-PB-Async-UseRc;0;0;700180;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld2-6;Mono;1;Solar-TrueNc;0;9;467;159;3988;9107;0;0;0;0;159;3988;9107;0;0;0;0;159;3988;9107;0;0;0;0;159;3988;9107;0;0;0;0
+PUZ012-1.C2i1_all_ld2-6;_kmet4;4;DICF-PB-Token;0;0;700360;0;0;0;0;0;5;0;0;0;0;0;0;2;0;0;0;0;0;0;1;0;0;0;0;0;0;2;0
+PUZ012-1.C2i1_all_ld2-6;_kmet4;4;DICF-PB-Token-FixedOrder-1-2-3-0;0;0;700747;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld2-6;_kmet4;4;DICF-PB-Star-FixedRoot-1;0;0;700650;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld5--1;_kmet4;4;DICF-PB-Star-FixedRoot-1;0;0;700250;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld5--1;_kmet4;4;DICF-PB-Async;0;0;700254;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld5--1;Mono;1;Solar-Inc;0;68;2863;2715;566586;1365251;0;0;0;0;2715;566586;1365251;0;0;0;0;2715;566586;1365251;0;0;0;0;2715;566586;1365251;0;0;0;0
+PUZ012-1.C2i1_all_ld5--1;_kmet6;6;DICF-PB-Async;0;0;700334;973;4308;27684;0;0;27;2633;266;1727;13241;0;0;7;602;23;73;344;0;0;4;173;215;990;4579;0;0;4;602
+PUZ012-1.C2i1_all_ld5--1;_kmet6;6;DICF-PB-Async-PruneCsq;0;0;700255;1821;29773;72973;0;0;18;1316;1301;25958;61690;0;0;4;580;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld5--1;_kmet8;8;DICF-PB-Star-FixedRoot-5;0;0;700172;442;2277;18603;0;0;22;445;210;1727;13241;0;0;8;185;0;0;0;0;0;2;0;0;0;0;0;0;2;0
+PUZ012-1.C2i1_all_ld5--1;_kmet4;4;DICF-PB-Star-FixedRoot-1;0;0;700237;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld5--1;_kmet8;8;DICF-PB-Async;0;0;700326;826;3936;28908;0;0;39;3178;252;1727;13241;0;0;7;738;19;73;344;0;0;3;4;44;249;955;0;0;5;8
+PUZ012-1.C2i1_all_ld5--1;_kmet2;2;DICF-PB-Async;0;0;700238;211;3789;11879;0;0;4;110;166;3749;11760;0;0;2;106;45;40;119;0;0;2;4;166;3749;11760;0;0;2;106
+PUZ012-1.C2i1_all_ld5--1;_kmet4;4;DICF-PB-Token-FixedOrder-1-3-2-0;0;0;700269;0;0;0;0;0;4;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ012-1.C2i1_all_ld-1--1;Mono;1;Solar-Inc;0;68;2887;2677;578163;1414584;0;0;0;0;2677;578163;1414584;0;0;0;0;2677;578163;1414584;0;0;0;0;2677;578163;1414584;0;0;0;0

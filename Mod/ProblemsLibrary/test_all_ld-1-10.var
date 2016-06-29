@@ -1,0 +1,6 @@
+%Sol source: test
+%Variant name: all_ld-1-10
+
+solSource(test).
+pf([-pair(s(s(s(_0))))]).
+depthLimit(10).

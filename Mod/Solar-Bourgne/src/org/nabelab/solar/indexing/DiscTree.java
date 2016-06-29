@@ -40,12 +40,14 @@ import java.util.List;
 
 import org.nabelab.solar.Env;
 import org.nabelab.solar.Literal;
+import org.nabelab.solar.PLiteral;
 import org.nabelab.solar.Subst;
 import org.nabelab.solar.Term;
 import org.nabelab.solar.TermCont;
 import org.nabelab.solar.TermTypes;
 import org.nabelab.solar.Unifiable;
 import org.nabelab.solar.VarTable;
+import org.nabelab.solar.pfield.PFieldItem;
 import org.nabelab.solar.util.ArrayStack;
 import org.nabelab.solar.util.Pair;
 import org.nabelab.util.LightArrayList;
@@ -553,6 +555,8 @@ public class DiscTree<E> implements TermTypes {
     Term     term = lit.getTerm();
     DiscNode<E> node = root.findChild(term.getStartName(), term.getStartType());
     
+
+    
     if (node == null)
       return null;
     if (newNameSpace) {
@@ -718,7 +722,7 @@ public class DiscTree<E> implements TermTypes {
     DiscNode<E> root = lit.isPositive() ? negRoot : posRoot;
     Term        term = lit.getTerm();
     DiscNode<E> node = root.findChild(term.getStartName(), term.getStartType());
-    
+
     if (node == null)
       return null;
     if (newNameSpace) {
@@ -738,6 +742,8 @@ public class DiscTree<E> implements TermTypes {
     int state = varTable.state();
     int   cur = term.getStart();
     int   end = term.getNext(cur);
+   
+    
     TermCont termCont = null;
     candStack.clear();    
     while (true) {        // Loop for each candidate.
@@ -1205,5 +1211,22 @@ public class DiscTree<E> implements TermTypes {
     }
     private Subst     head = null;
     private SubstList rest = null;
+  }
+
+  public E containsOtherForm(Literal lit) {
+	// TODO Auto-generated method stub
+	DiscNode<E> root = lit.isPositive() ? negRoot : posRoot;
+    Term        term = lit.getTerm();
+    DiscNode<E> node = root.findChild(term.getStartName(), term.getStartType());
+    int state = varTable.state();
+    DiscNode<E> nodet= posRoot.getFirstChild();
+
+    if (nodet.equals(node)){
+    	LightArrayList<E> leaves = node.getLeaves();
+    	assert(!leaves.isEmpty());
+    	return leaves.get(0);
+    }
+
+    return null;
   }
 }

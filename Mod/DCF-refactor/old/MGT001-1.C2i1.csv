@@ -1,0 +1,10 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;196;89;16;58;0;0;0;0;89;16;58;0;0;0;0;89;16;58;0;0;0;0;89;16;58;0;0;0;0
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;195;88;16;58;0;0;0;0;88;16;58;0;0;0;0;88;16;58;0;0;0;0;88;16;58;0;0;0;0
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;121;89;16;58;0;0;0;0;89;16;58;0;0;0;0;89;16;58;0;0;0;0;89;16;58;0;0;0;0
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;189;92;16;58;0;0;0;0;92;16;58;0;0;0;0;92;16;58;0;0;0;0;92;16;58;0;0;0;0
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;63;52;16;58;0;0;0;0;52;16;58;0;0;0;0;52;16;58;0;0;0;0;52;16;58;0;0;0;0
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;89;42;16;58;0;0;0;0;42;16;58;0;0;0;0;42;16;58;0;0;0;0;42;16;58;0;0;0;0
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;55;42;16;58;0;0;0;0;42;16;58;0;0;0;0;42;16;58;0;0;0;0;42;16;58;0;0;0;0
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;53;44;16;58;0;0;0;0;44;16;58;0;0;0;0;44;16;58;0;0;0;0;44;16;58;0;0;0;0
+MGT001-1.C2i1_all_ld-1-2;Mono;1;Solar-Inc;0;16;54;46;16;58;0;0;0;0;46;16;58;0;0;0;0;46;16;58;0;0;0;0;46;16;58;0;0;0;0

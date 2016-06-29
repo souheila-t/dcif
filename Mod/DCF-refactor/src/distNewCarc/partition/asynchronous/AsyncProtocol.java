@@ -87,7 +87,7 @@ public class AsyncProtocol extends BaseMainProtocol implements CFMessageTypes{
 			newCl.addAll(ag.getAllTopClauses());
 		}
 		for(Clause cl:sentCl)
-			newCl.add(new Clause(ag.getEnv(), cl));	//this is necessary because of the vartable
+			newCl.add(new Clause(ag.getEnv(), cl.getLiterals()));	//this is necessary because of the vartable
 		//newCl.addAll(sentCl);
 		if (newCl.isEmpty() || Thread.currentThread().isInterrupted()){
 			ag.setDormant(true);

@@ -1,17 +1,15 @@
 package org.nabelab.solar.pfield;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.nabelab.solar.Env;
 import org.nabelab.solar.Literal;
+import org.nabelab.solar.Options;
 import org.nabelab.solar.PLiteral;
 import org.nabelab.solar.SymTable;
-import org.nabelab.solar.indexing.DiscTree;
+import org.nabelab.solar.parser.ParseException;
 
 public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 
-	public PFieldCheckerCardConstraints(Env env, PField pfield) {
+	public PFieldCheckerCardConstraints(Env env, PField pfield) throws ParseException {
 	    super(env, pfield);
 	
 	    for (PFCardConstraint constraint : pfield.getAddConstraints()){
@@ -62,11 +60,17 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 	    	          assert(false);
 	    	        }	    	    	  
 	    	        if (checkTree) {
-	    	        	// TODO check if more specific form of this literal are preent in the disc tree ??
+	    	        	 //TODO check if more specific form of this literal are preent in the disc tree ??
+	    	        	if (pfieldItems != null){
+	    	        		PFieldItem item = pfieldItems.containsOtherForm(Literal.parse(env, new Options(env), lit.toString()));
+	    	        		if (item!=null)
+	    	        			item.addToGroup(pfCtr);
+	    	        	}
 	    	        }
 	    	    }
 	    	    else {
 	    	    	// check if this specific literal is already present
+	    	    	boolean addNode = true;
 	    	    	if (pfieldItems!=null){
 	    	    		Literal refLitPos=new Literal(env, true,  lit.getTerm());
 	    	    		Literal refLitNeg=new Literal(env, false,  lit.getTerm());
@@ -74,22 +78,70 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 	    	    		boolean neg= (lit.getSign()!=PLiteral.POS);
 	    	    		if (pos){
 	    	    			PFieldItem item=pfieldItems.contains(refLitPos);
-	    	    			if (item!=null)
+	    	    			if (item!=null){
 	    	    				item.addToGroup(pfCtr);
+	    	    				addNode = false;
+	    	    			}
 	    	    		}
 	    	    		if (neg){
 	    	    			PFieldItem item=pfieldItems.contains(refLitNeg);
-	    	    			if (item!=null)
+	    	    			if (item!=null){
 	    	    				item.addToGroup(pfCtr);
-	    	    		}	    	    			    	    		
+	    	    				addNode = false;
+	    	    			}	    	    	
+	    	    		}
+	    	    		//TODO Problem : double sign // special literals and cardinality constraints on single sign ?
 	    	    	}
-	    	    	//TODO Problem : double sign // special literals and cardinality constraints on single sign ?
+	    	    	
+	    	    	
 	    	    	//TODO if not present, add a new node ? not unless there is a subsuming node (or a max general instance)
+	    	    	if (addNode){
+	    	    		
+	    	    			switch (lit.getSign()) {
+	    	    			case PLiteral.POS:      
+	    	    			{
+	    	    				Literal l = new Literal(env, true, lit.getTerm());
+	    	    				if (pfieldItems.findSubsumed(l) == null){
+	    	    					PFieldItem item = new PFieldItem(lit, maxLenCounter);
+	    	    					pfieldItems.add(l, item);
+	    	    					break;
+	    	    				}
+	    	    			}
+	    	    			case PLiteral.NEG:
+	    	    			{
+	    	    				Literal l = new Literal(env, false, lit.getTerm());
+	    	    				if (pfieldItems.findSubsumed(l) == null){
+	    	    					
+	    	    					PFieldItem item = new PFieldItem(lit, maxLenCounter);
+	    	    					pfieldItems.add(l, item);
+	    	    					break;
+	    	    				}
+	    	    			}
+	    	    			case PLiteral.BOTH:
+	    	    			{
+	    	    				Literal l1 = new Literal(env, true,  lit.getTerm());
+	    	    				Literal l2 = new Literal(env, false, lit.getTerm());
+	    	    				PFieldItem item = new PFieldItem(lit, maxLenCounter);
+	    	    				pfieldItems.add(l1, item);
+	    	    				pfieldItems.add(l2, item);
+	    	    				break;
+	    	    			}
+	    	    			}
+	    	    		}
+
+	    	    	}
 	    	    }
 	    	        
+	    	    
 	    	}
 	    }
 	    
+	    
+	}
+	
+	public static PFieldCheckerCardConstraints createChecker(Env env, PField pfield) throws ParseException {
+		return new PFieldCheckerCardConstraints(env, pfield);
+		
 	}
 	
 	

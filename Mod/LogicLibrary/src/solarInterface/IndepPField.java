@@ -15,6 +15,7 @@ import org.nabelab.solar.Literal;
 import org.nabelab.solar.Options;
 import org.nabelab.solar.PLiteral;
 import org.nabelab.solar.parser.ParseException;
+import org.nabelab.solar.pfield.PFCardConstraint;
 import org.nabelab.solar.pfield.PField;
 
 import genLib.tools.Pair;
@@ -237,6 +238,9 @@ public class IndepPField {
 		PField newpf = createPField(env, opt, pf.getPLiterals());
 		newpf.setMaxLength(pf.getMaxLength());
 		newpf.setMaxTermDepth(pf.getMaxTermDepth());
+		if (pf.getAddConstraints() != null)
+			for (PFCardConstraint constraint : pf.getAddConstraints())
+				newpf.addConstraint(constraint);
 		return newpf;
 	}
 	
@@ -498,6 +502,10 @@ public class IndepPField {
 		PField add = copyPField(env, opt, other);
 		constrainAllLocalWith(add, add);
 		IndepPField.addPLiterals(res, add.getPLiterals());
+		for(PFCardConstraint csr : add.getAddConstraints()){
+			res.addConstraint(csr);
+		}
+
 		return res;
 		//return res.addToLiterals(other.getLiterals(),
 			//	other.constrainAllLocalWith(other.globalConditions).localConditions);

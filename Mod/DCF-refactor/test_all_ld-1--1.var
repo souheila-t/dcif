@@ -1,0 +1,6 @@
+%Sol source: test
+%Variant name: all_ld-1--1
+
+solSource(test).
+pf( [ ([a,b,d]<=1, [a,b,e]<=1, [a,c,d]<=1, [a,c,e]<=1),[a,b,c,d,e]]<=2).
+depthLimit(-1).

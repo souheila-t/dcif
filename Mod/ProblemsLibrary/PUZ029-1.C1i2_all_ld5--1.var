@@ -1,0 +1,6 @@
+%Sol source: PUZ029-1.C1i2
+%Variant name: all_ld5--1
+
+solSource(PUZ029-1.C1i2).
+pf([-balloonist(_0)] <= 5).
+depthLimit(-1).

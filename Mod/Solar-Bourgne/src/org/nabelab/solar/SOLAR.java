@@ -201,7 +201,7 @@ public class SOLAR implements ExitStatus, OptionTypes, DebugTypes {
   public boolean solve(SearchParam param) {
     
     stats.inc(Stats.STAGE);
-    stats.setDepth(param.getDepthLimit());
+    //stats.setDepth(param.getDepthLimit());
     
     if (env.dbg(DBG_VERBOSE)) {
       if (stats.get(Stats.STAGE) != 1 && env.dbg(DBG_TABLEAUX))
