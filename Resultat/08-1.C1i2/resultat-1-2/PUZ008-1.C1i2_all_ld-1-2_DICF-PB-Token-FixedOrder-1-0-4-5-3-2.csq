@@ -1,9 +1,0 @@
-timeout 0
-nb csq 4
-cnf(consequence, axiom, [+achievable(west(m(s(s(n0))),c(s(s(n0)))),boatoneast,east(m(s(n0)),c(s(n0))))]).
-cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(s(s(n0)))),boatoneast,east(m(n0),c(s(n0))))]).
-cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(s(n0))),boatoneast,east(m(n0),c(s(s(n0)))))]).
-cnf(consequence, axiom, [+achievable(west(m(s(s(s(n0)))),c(s(s(s(n0))))),boatonwest,east(m(n0),c(n0)))]).
-problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
-PUZ008-1.C1i2_all_ld-1-2;_kmet6;6;DICF-PB-Token-FixedOrder-1-0-4-5-3-2;0;4;1127;81;31;107;0;0;25;50;44;6;21;0;0;5;12;5;4;15;0;0;4;5;5;5;17;0;0;4;5
-

@@ -263,104 +263,42 @@ public class Parser implements OptionTypes, ParserConstants {
   int    length = 0;
     jj_consume_token(PRODUCTION_FIELD);
     jj_consume_token(32);
-    
-    boolean f = false;
-    if(((jj_ntk==-1)?jj_ntk():jj_ntk) == 32){
-    	f = true;
-    	jj_consume_token(32);
-    }
-    while (f){
-    	PField pf = new PField(env, opt);
-    	jj_consume_token(34);
-    	switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-    	case ALL:
-    	case ALL_POS:
-    	case ALL_NEG:
-    	case CONSTANT:
-    	case POS:
-    	case NEG:
-    	case POS_NEG:
-    		pfieldConds(pf);
-    		break;
-    	default:
-    		jj_la1[2] = jj_gen;
-    		;
-    	}
-    	jj_consume_token(35);
-    	switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-    	case 37:
-    		depth = termDepth();
-    		pfield.setMaxTermDepth(depth);
-    		break;
-    	default:
-    		jj_la1[3] = jj_gen;
-    		;
-    	}
-    	switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-    	
-    	case 38:
-    	case 39:
-    		length = length();
-    		pf.setMaxLength(length);
-    		break;
-    	default:
-    		jj_la1[4] = jj_gen;
-    		;
-    	}
-  
-    	PFCardConstraint constraint = new PFCardConstraint(pf.getPLiterals(), pf.getMaxLength());
-    	pfield.addConstraint(constraint);
-    	switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-    	case 33: f = false;
-    			 jj_consume_token(33);
-    			 jj_consume_token(36);
-    			 break;
-    		
-		default:
-			jj_consume_token(36);
-			;
-		}
-    	
-    }
-    
-    
-    
     jj_consume_token(34);
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-	case ALL:
-	case ALL_POS:
-	case ALL_NEG:
-	case CONSTANT:
-	case POS:
-	case NEG:
-	case POS_NEG:
-		pfieldConds(pfield);
-		break;
-	default:
-		jj_la1[2] = jj_gen;
-		;
-	}
-    jj_consume_token(35);
-	switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-	case 37:
-		depth = termDepth();
-		pfield.setMaxTermDepth(depth);
-		break;
-	default:
-		jj_la1[3] = jj_gen;
-		;
-	}
-	switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-    case 38:
-	case 39:
-		length = length();
-		pfield.setMaxLength(length);
-		break;
-	default:
-		jj_la1[4] = jj_gen;
-		;
+    case ALL:
+    case ALL_POS:
+    case ALL_NEG:
+    case CONSTANT:
+    case POS:
+    case NEG:
+    case POS_NEG:
+      pfieldConds(pfield);
+      break;
+    default:
+      jj_la1[2] = jj_gen;
+      ;
     }
-	jj_consume_token(33);
+    jj_consume_token(35);
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case 37:
+      depth = termDepth();
+                             pfield.setMaxTermDepth(depth);
+      break;
+    default:
+      jj_la1[3] = jj_gen;
+      ;
+    }
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case 38:
+    case 39:
+      length = length();
+                             pfield.setMaxLength(length);
+      break;
+    default:
+      jj_la1[4] = jj_gen;
+      ;
+    }
+    jj_consume_token(33);
     jj_consume_token(PERIOD);
                  {if (true) return pfield;}
     throw new Error("Missing return statement in function");

@@ -1,6 +1,0 @@
-%Sol source: MGT001-1.C2i1
-%Variant name: all_ld-1-2
-
-solSource(MGT001-1.C2i1).
-pf([+organization(_0,_1), +reliability(_0,_1,_2), +accountability(_0,_1,_2), +survival_chance(_0,_1,_2), +greater(_0,_1), -greater(_0,_1), +reproducibility(_0,_1,_2), +reorganization_free(_0,_1,_2), +inertia(_0,_1,_2)]).
-depthLimit(2).

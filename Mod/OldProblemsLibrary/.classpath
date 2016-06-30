@@ -4,8 +4,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/AgentLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GeneralLibrary"/>
-	<classpathentry kind="lib" path="/home/tlati/Project/dcif/EclipseDCF/External Libs/jdom.jar"/>
-	<classpathentry kind="lib" path="/home/tlati/Project/dcif/EclipseDCF/External Libs/solar2-build314.jar"/>
+	<classpathentry kind="lib" path="../External Libs/jdom.jar"/>
+	<classpathentry kind="lib" path="../External Libs/solar2-build314.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/OldLogicLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Solar-Bourgne"/>
 	<classpathentry kind="output" path="bin"/>

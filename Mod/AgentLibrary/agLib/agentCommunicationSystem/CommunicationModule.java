@@ -47,12 +47,17 @@ public class CommunicationModule implements SystemMessageTypes{
 		return gbProtocol.gereParProtocol(m);
 	}
 	
-	public void receiveMessage(Message<?> m){
+	public void receiveMessage(Message<?> m) {
    	  if (m!=null) {
    		if (!system && stats!=null)
    			stats.receivedMessages(m);
-   		 if (gbProtocol.gereParProtocol(m)) 
-   			 gbProtocol.receiveMessage(m);
+   		 if (gbProtocol.gereParProtocol(m))
+			try {
+				gbProtocol.receiveMessage(m);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
    		 if (m instanceof SystemMessage) switch(m.getCode()){
  		case SYS_CRASH: gbProtocol.destroyNeighbour(m.getSender());
  		break;

@@ -4,6 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/AgentLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GeneralLibrary"/>
-	<classpathentry kind="lib" path="/home/tlati/Project/dcif/EclipseDCF/External Libs/solar.jar" sourcepath="/Solar-Bourgne"/>
+	<classpathentry kind="lib" path="../External Libs/solar2-build314.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

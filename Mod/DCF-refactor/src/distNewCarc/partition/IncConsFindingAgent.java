@@ -66,7 +66,7 @@ public class IncConsFindingAgent extends BasicTheoryAgent implements TheoryAgent
 
 
 	
-	public Collection<Clause> computeNewCons(Collection<Clause> newCl) throws ParseException {
+	public Collection<Clause> computeNewCons(Collection<Clause> newCl) throws Exception {
 		if(Thread.currentThread().isInterrupted())
 			return null;
 		CNF result = new CNF();

@@ -29,7 +29,7 @@ public class CFSolver {
 	public static final int SOLST_INF=-2;
 
 	public static int solveToClause(SolProblem pb, long deadline, List<StatCounter<Integer>> ctr, 
-			Collection<Clause> resultingCons, boolean incremental, boolean trueNewC) throws ParseException{
+			Collection<Clause> resultingCons, boolean incremental, boolean trueNewC) throws Exception{
 		if(Thread.currentThread().isInterrupted())
 			return ExitStatus.UNKNOWN;
 		List<Conseq> tempRes=new ArrayList<Conseq>();
@@ -77,7 +77,7 @@ public class CFSolver {
 	}
 	
 	public static int incSolve(SolProblem pb, long deadline, List<StatCounter<Integer>> ctr, 
-			Collection<Conseq> resultingCons){
+			Collection<Conseq> resultingCons) throws Exception{
 		int status=ExitStatus.SATISFIABLE;
 		List<Clause> top = pb.getTopClauses();
 		List<Clause> base = pb.getAxioms();
@@ -214,6 +214,9 @@ public class CFSolver {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (ParseException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if(Thread.currentThread().isInterrupted())

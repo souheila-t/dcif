@@ -1,6 +1,0 @@
-%Sol source: PUZ029-1.C1i2
-%Variant name: all_ld-1--1
-
-solSource(PUZ029-1.C1i2).
-pf([-balloonist(_0)]).
-depthLimit(-1).

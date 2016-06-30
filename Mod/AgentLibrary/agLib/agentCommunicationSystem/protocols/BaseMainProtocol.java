@@ -2,6 +2,10 @@ package agLib.agentCommunicationSystem.protocols;
 
 import java.util.List;
 
+import jdk.nashorn.internal.runtime.ParserException;
+
+
+
 import agLib.agentCommunicationSystem.CanalComm;
 import agLib.agentCommunicationSystem.CommunicationModule;
 import agLib.agentCommunicationSystem.Message;
@@ -38,7 +42,7 @@ public abstract class BaseMainProtocol implements MainProtocol {
 	
 	public abstract boolean gereParProtocol(Message<?> m);
 	
-	public abstract void receiveMessage(Message<?> m);
+	public abstract void receiveMessage(Message<?> m) throws Exception;
 
 	public abstract void initProtocol();
 }

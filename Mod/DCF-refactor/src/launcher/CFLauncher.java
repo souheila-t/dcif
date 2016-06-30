@@ -290,6 +290,7 @@ public class CFLauncher {
 				System.out.println("------------------  TIME OUT --------------------");
 			}
 		}
+		else
 		if (methodOptions.get(0).equalsIgnoreCase("DICF")){
 			//If the method is Distributed Incremental Consequence Finding
 			DistributedConsequenceFindingProblem<SolProblem> problem=setProblem(pbBaseName, variantSuffix, distributionSuffix);	//Set the problem

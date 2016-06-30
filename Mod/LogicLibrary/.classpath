@@ -4,7 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/AgentLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GeneralLibrary"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/solar-314"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/OldLogicLibrary"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Solar-Bourgne"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

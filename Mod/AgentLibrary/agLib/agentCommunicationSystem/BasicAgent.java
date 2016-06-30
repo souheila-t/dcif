@@ -19,7 +19,7 @@ package agLib.agentCommunicationSystem;
  */
 
 
-public class BasicAgent implements ThreadAgent,SystemMessageTypes {
+public class BasicAgent implements ThreadAgent,SystemMessageTypes{
 	
 
 	public BasicAgent(){
@@ -48,7 +48,7 @@ public class BasicAgent implements ThreadAgent,SystemMessageTypes {
 	public void finish() {
 		agentThread=null;
 	}
-	public void run() {
+	public void run(){
 		
 	    Thread myThread = Thread.currentThread();
         while (agentThread == myThread) {

@@ -102,13 +102,16 @@ public class TokenProtocol extends BaseMainProtocol implements CFMessageTypes{
 		}
 		
 		for(Clause cl:arg.getSentCl())
-			newCl.add(new Clause(ag.getEnv(), cl.getLiterals()));	//this is necessary because of the vartable
+			newCl.add(new Clause(ag.getEnv(), cl));	//this is necessary because of the vartable
 		
 		//newCl.addAll(arg.getSentCl());
 		//Computing new consequence
 		try {
 			tempCsq=ag.computeNewCons(newCl);
 		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

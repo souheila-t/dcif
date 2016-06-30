@@ -244,7 +244,7 @@ public class DCFProblem implements Parser,Saver, DistributedConsequenceFindingPr
 		String ag=line.substring("agent(".length(),line.lastIndexOf(")."));
 		if (!agents.contains(ag)){
 			agents.add(ag);
-			Env newenv = new Env( env.getSymTable(), env.getDebug());
+			Env newenv = new Env(env.getSymTable(), env.getDebug());
 			localProblems.add(new SolProblem(newenv, new Options(newenv)));
 		}	
 		lastParsedAgent=ag;

@@ -72,16 +72,18 @@ public class SOLAR implements ExitStatus, OptionTypes, DebugTypes {
   /**
    * Solves the consequence finding problem.
    * @param startTime the start CPU time in milliseconds of the solving process.
+ * @throws Exception 
    */
-  public void solve(long startTime) throws FileNotFoundException, ParseException {
+  public void solve(long startTime) throws Exception {
     this.startTime = startTime;
     solve();
   }
 
   /**
    * Solves the consequence finding problem.
+ * @throws Exception 
    */
-  public void solve() throws FileNotFoundException, ParseException {
+  public void solve() throws Exception {
 	  if(Thread.currentThread().isInterrupted())
 			return;
 
@@ -204,8 +206,9 @@ public class SOLAR implements ExitStatus, OptionTypes, DebugTypes {
    * Solves the consequence finding problem with the specified search parameter.
    * @param param  the search parameter.
    * @return true when normal exit, false when restart since the axiom set is changed.
+ * @throws ParseException 
    */
-  public boolean solve(SearchParam param) {
+  public boolean solve(SearchParam param) throws ParseException {
 	  if(Thread.currentThread().isInterrupted())
 			return false;
 
@@ -289,6 +292,7 @@ public class SOLAR implements ExitStatus, OptionTypes, DebugTypes {
       }
       else if (tableau.getNumOpenNodes() == 0) {
         Conseq conseq = tableau.getConseq();
+
         if (opt.hasVerifyOp()) {
           Proof proof = tableau.getProof(conseq);
           conseq.setProof(proof);
@@ -298,7 +302,7 @@ public class SOLAR implements ExitStatus, OptionTypes, DebugTypes {
           System.out.println("SOLVED");
           System.out.println(stats.inf() + " " + tableau);
         }
-        if (cfp.addConseq(conseq)) {
+        if (tableau.getPFChecker().belongs(conseq) && cfp.addConseq(conseq)) {
           stats.setProds(Stats.CONSEQUENCES, cfp.getConseqSet().size());
           stats.setProds(Stats.CONSEQ_LITS , cfp.getConseqSet().getNumLiterals());
           if (cfp.hasEmptyConseq()) {
@@ -354,16 +358,18 @@ public class SOLAR implements ExitStatus, OptionTypes, DebugTypes {
 
   /**
    * Executes SOLAR system.
+ * @throws Exception 
    */
-  public void exec() throws FileNotFoundException, ParseException {
+  public void exec() throws Exception {
     exec(0);
   }
 
   /**
    * Executes SOLAR system.
    * @param startTime the start CPU time in milliseconds of the solving process.
+ * @throws Exception 
    */
-  private void exec(long startTime) throws FileNotFoundException, ParseException {
+  private void exec(long startTime) throws Exception {
     isSolving = true;
   	Runtime runtime = Runtime.getRuntime();
     SHook shook = new SHook(this, cfp);

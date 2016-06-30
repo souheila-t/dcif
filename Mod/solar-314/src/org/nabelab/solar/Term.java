@@ -2017,23 +2017,23 @@ public class Term implements VarHolder, TermTypes {
   private int start = 0;
   /** The variable offset of the term. */
   private int offset = 0;
-public boolean contains(Term term) {
+  
+  
+  public boolean contains(Term term) {
 
-	int k = 0;
-	for (int i = 0; i<this.type.length; i++){
-		if(this.type[i]==term.getType(i)){
-			//if ((term.getName(i) != null) && k>0)
-				
-			if (this.name[i] == term.getName(i))
-				k++;
-			else 
-				return false;
-			
-		}
+	  int k = 0;
+	  for (int i = 0; i<this.type.length; i++){
+		  if(this.type[i]==term.getType(i)){
+			  //if ((term.getName(i) != null) && k>0)
 
-	}
-	return true;
-}
+			  if (this.name[i] == term.getName(i))
+				  k++;
+			  else 
+				  return false;
+		  }
+	  }
+	  return true;
+  }
 
 
 

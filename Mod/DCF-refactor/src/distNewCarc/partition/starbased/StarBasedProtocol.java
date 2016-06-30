@@ -96,7 +96,7 @@ public class StarBasedProtocol extends BaseMainProtocol implements CFMessageType
 				receivedCl.addAll(ag.getAllTopClauses());
 			}
 			for(Clause cl:sentCl)
-				receivedCl.add(new Clause(ag.getEnv(), cl.getLiterals()));	//this is necessary because of the vartable
+				receivedCl.add(new Clause(ag.getEnv(), cl));	//this is necessary because of the vartable
 			//receivedCl.addAll(sentCl);	
 			waitingFor.remove(sender);
 			if(Thread.currentThread().isInterrupted())
@@ -110,6 +110,10 @@ public class StarBasedProtocol extends BaseMainProtocol implements CFMessageType
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} // TODO: check that correct pfield is used
+ catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if(Thread.currentThread().isInterrupted())
 					return;
 				ag.updateListNewCons(newCsq);
@@ -152,13 +156,16 @@ public class StarBasedProtocol extends BaseMainProtocol implements CFMessageType
 				newCl.addAll(ag.getAllTopClauses());
 			}
 			for(Clause cl:sentCl)
-				newCl.add(new Clause(ag.getEnv(), cl.getLiterals()));	//this is necessary because of the vartable
+				newCl.add(new Clause(ag.getEnv(), cl));	//this is necessary because of the vartable
 			//newCl.addAll(sentCl);
 			
 			//Computing new consequence
 			try {
 				newCsq=ag.computeNewCons(newCl);
 			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

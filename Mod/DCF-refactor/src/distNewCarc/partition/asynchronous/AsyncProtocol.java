@@ -46,7 +46,7 @@ public class AsyncProtocol extends BaseMainProtocol implements CFMessageTypes{
 	}
 
 	@Override
-	public void receiveMessage(Message<?> m) {
+	public void receiveMessage(Message<?> m) throws Exception {
 		if (m instanceof CFMessage){
 			switch(m.getCode()){
 			case PBM_SEND_CLAUSES:
@@ -75,7 +75,7 @@ public class AsyncProtocol extends BaseMainProtocol implements CFMessageTypes{
 	
 	
 	
-	protected void receiveCl(Collection<Clause> sentCl){
+	protected void receiveCl(Collection<Clause> sentCl) throws Exception{
 		if(Thread.currentThread().isInterrupted())
 			return;
 		ag.setDormant(false);
@@ -87,7 +87,7 @@ public class AsyncProtocol extends BaseMainProtocol implements CFMessageTypes{
 			newCl.addAll(ag.getAllTopClauses());
 		}
 		for(Clause cl:sentCl)
-			newCl.add(new Clause(ag.getEnv(), cl.getLiterals()));	//this is necessary because of the vartable
+			newCl.add(new Clause(ag.getEnv(), cl));	//this is necessary because of the vartable
 		//newCl.addAll(sentCl);
 		if (newCl.isEmpty() || Thread.currentThread().isInterrupted()){
 			ag.setDormant(true);

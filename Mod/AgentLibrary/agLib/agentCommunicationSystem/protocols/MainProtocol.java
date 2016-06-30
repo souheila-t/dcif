@@ -1,12 +1,13 @@
 package agLib.agentCommunicationSystem.protocols;
 
+import jdk.nashorn.internal.runtime.ParserException;
 import agLib.agentCommunicationSystem.CanalComm;
 import agLib.agentCommunicationSystem.Message;
 
 
 public interface MainProtocol {
 	public void initProtocol();
-	public void receiveMessage(Message<?> m);
+	public void receiveMessage(Message<?> m) throws  Exception;
 	public boolean gereParProtocol(Message<?> m);
 	//public boolean protocolTrigger(TriggerArgument trigger, boolean ownModif);
 	// network and competence evolution

@@ -72,7 +72,7 @@ public class ConsFindingLocalTheory extends SolProblem {
 	////	TOOLS FOR COMPUTATIONS
 	
 	public CNF consequenceFinding(Env env, Options opt, PField pField, List<Clause> topClauses,
-					List<StatCounter<Integer>> ctr, boolean usePrevTopClauses, long deadline) throws ParseException {
+					List<StatCounter<Integer>> ctr, boolean usePrevTopClauses, long deadline) throws Exception {
 		
 		SolProblem pb;
 		if (!usePrevTopClauses){

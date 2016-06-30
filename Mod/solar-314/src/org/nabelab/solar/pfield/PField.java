@@ -119,6 +119,21 @@ public class PField implements TermTypes, DebugTypes {
   }
   
   /**
+   * Adds a group cardinality constraint
+   * @param constraint the added constraint
+   */
+  public void addConstraint(PFCardConstraint constraint){
+	  addConstraints.add(constraint);
+  }
+  
+  /**
+   * get all the additional cardinality constraints (by reference). 
+   */
+  public List<PFCardConstraint> getAddConstraints(){
+	  return addConstraints;
+  }
+  
+  /**
    * Returns the maximum term depth limitation.
    * @return the maximum term depth limitation.
    */
@@ -376,17 +391,6 @@ public class PField implements TermTypes, DebugTypes {
   private int maxTermDepth = UNLIMITED;
   /** The maximum length limitation */
   private int maxLength = UNLIMITED;
-  
-  public boolean contain(PLiteral l) {
-	  // TODO Auto-generated method stub
-	  if (this.isEmpty())
-		  return false;
-	  else{ 
-		  boolean exist=false;
-		  for (PLiteral pl:literals)
-			  if(pl.equals(l)) exist=true;
-		  return exist;
-	  }
-  }
-
+  /** The additional cardinality constraints on groups */
+  private List<PFCardConstraint> addConstraints= new ArrayList<PFCardConstraint>();
 }

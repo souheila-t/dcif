@@ -188,7 +188,7 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 			if (unifs == null)
 				return false;
 		} 
-
+		Clause p = c.instantiate();
 		if(constraints.size()!=0){
 			int count[] = new int[constraints.size()];
 			for (int i= 0 ; i< constraints.size(); i++){
@@ -196,7 +196,7 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 			}
 			List<Literal> lits = new ArrayList<Literal>();
 
-			for (Literal lit : c.getLiterals()) {
+			for (Literal lit : p.getLiterals()) {
 				for (PFCardConstraint crt : constraints){
 					if (crt.contains(env, new Options(env), lit) != null){
 						lits.add(lit);
@@ -207,7 +207,7 @@ public class PFieldCheckerCardConstraints extends PFieldCheckerWithSubst {
 			}
 
 
-			if(lits.isEmpty() || lits.size() != c.getLiterals().size())
+			if(lits.isEmpty() || lits.size() != p.getLiterals().size())
 				return true;
 			return checkGroup(lits, count, constraints,  0);
 		}

@@ -1236,7 +1236,7 @@ public class Options implements OptionTypes, DebugTypes {
   /** Whether verifies found consequences. */
   private boolean verify = false;
   /** Whether outputs proofs of found consequences. */
-  private boolean proof = true;
+  private boolean proof = false;
   /** Whether outputs used clauses for each found consequence. */
   private boolean usedClauses = false;
   /** The output file for found consequences. */

@@ -1,6 +1,0 @@
-%Sol source: test
-%Variant name: all_ld-1-2
-
-solSource(test).
-pf([-pair(s(s(s(_0))))]).
-depthLimit(2).
