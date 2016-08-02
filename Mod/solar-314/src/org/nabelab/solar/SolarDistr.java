@@ -10,6 +10,7 @@ import org.nabelab.solar.operator.Operator;
 import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.Proof;
 
+import agLib.agentCommunicationSystem.CanalComm;
 import agLib.agentCommunicationSystem.CommMessage;
 import agLib.agentCommunicationSystem.CommunicationModule;
 import agLib.agentCommunicationSystem.Message;
@@ -24,6 +25,7 @@ public class SolarDistr extends SOLAR{
 
 
 	public  void solve(CommunicationModule cAg) throws Exception {
+
 		if(Thread.currentThread().isInterrupted())
 			return;
 
@@ -55,6 +57,7 @@ public class SolarDistr extends SOLAR{
 		}
 		boolean sorted = false;
 		boolean addedEqRef = false;
+
 		if(Thread.currentThread().isInterrupted())
 			return;
 		if (opt.getEqType() != CFP.EQ_AXIOMS_REQUIRED && cfp.useEquality()) {
@@ -133,7 +136,16 @@ public class SolarDistr extends SOLAR{
 		SearchParam param = null;
 		boolean loop = true;
 		Collection<Conseq> oldConsq = new ArrayList<>();
+
+		Message<?> ms ;
+
+		CommMessage m;
+
+		Collection<Clause> newCl;
+
 		while ((param = strategy.getNextSearchParam(stats, getCPUTime(), tableau.getMaxNumSkipped(), param)) != null){
+			if(Thread.currentThread().isInterrupted())
+				return;
 			stats.inc(Stats.STAGE);
 			stats.setDepth(param.getDepthLimit());
 
@@ -146,7 +158,8 @@ public class SolarDistr extends SOLAR{
 
 			tableau.reset();
 			tableau.setSearchParam(param);
-			CommMessage m;
+
+
 			while (loop){
 				oldConsq = cfp.getConseqSet().get();
 				loop = solve(param);
@@ -162,29 +175,26 @@ public class SolarDistr extends SOLAR{
 					}
 
 					//checker les clauses reçu
-					Collection<Clause> newCl;
-
 					if(!cAg.getComm().isEmpty()){
-						Message<?> ms = cAg.getComm().get();
-						if(ms instanceof SystemMessage){
-							cAg.gbProtocol.receiveMessage(ms);
-						}
-						Collection<Clause> collection = (Collection<Clause>)ms.getArgument();
-						newCl = collection;
-						for(Clause cl: newCl){
-							cl.setType(ClauseTypes.TOP_CLAUSE);
-							cfp.addClause(cl);
+						ms = cAg.getComm().get();
+						if(!( ms instanceof SystemMessage)){
+							Collection<Clause> collection = (Collection<Clause>)ms.getArgument();
+							newCl = collection;
+							for(Clause cl: newCl){
+								cl.setType(ClauseTypes.TOP_CLAUSE);
+								cfp.addClause(new Clause(env,cl));
+							}
 						}
 					}
 				}
 			}
-			if (env.dbg(DBG_VERBOSE))
-				System.out.println();
-
-			env.getVarTable().backtrackTo(0);
-			env.getVarTable().removeAllVars();
-
 		}
+
+		if (env.dbg(DBG_VERBOSE))
+			System.out.println();
+
+		env.getVarTable().backtrackTo(0);
+		env.getVarTable().removeAllVars();
 	}
 
 	private Collection<Clause> compare(Collection<Conseq> oldConsq, Collection<Conseq> cons) {
@@ -199,106 +209,106 @@ public class SolarDistr extends SOLAR{
 				}
 		return n;
 	}
-	
-	public boolean solve(SearchParam param) throws ParseException {
-		
-    	if(Thread.currentThread().isInterrupted())
+
+	private boolean solve(SearchParam param) throws ParseException {
+
+		if(Thread.currentThread().isInterrupted())
 			return false;
 
-      // Running time checking (checks each 1024 steps because getCpuTime() is a little bit slow).
-      if (stats.inf() % 1024 == 0) {
-        if (param.getTimeLimit() != 0 && param.getTimeLimit() < getCPUTime()) {
-          param.setExhaustiveness(false);
-          return false;
-        }
-      }
-      if (param.getMaxNumInfs() != 0 && param.getMaxNumInfs() == stats.inf()) {
-        param.setExhaustiveness(false);
-        return false;
-      }
+		// Running time checking (checks each 1024 steps because getCpuTime() is a little bit slow).
+		if (stats.inf() % 1024 == 0) {
+			if (param.getTimeLimit() != 0 && param.getTimeLimit() < getCPUTime()) {
+				param.setExhaustiveness(false);
+				return false;
+			}
+		}
+		if (param.getMaxNumInfs() != 0 && param.getMaxNumInfs() == stats.inf()) {
+			param.setExhaustiveness(false);
+			return false;
+		}
 
-      // If some characteristic clauses are received from other threads, then adds them to CFP.
-      //if (!carcQueue.isEmpty())
-      	while (!carcQueue.isEmpty())
-      		cfp.addCarc(carcQueue.poll());
+		// If some characteristic clauses are received from other threads, then adds them to CFP.
+		//if (!carcQueue.isEmpty())
+		while (!carcQueue.isEmpty())
+			cfp.addCarc(carcQueue.poll());
 
-      stats.incInf();
+		stats.incInf();
 
-      Node subgoal = tableau.getNextSubgoal();
+		Node subgoal = tableau.getNextSubgoal();
 
-      if (env.dbgNow(DBG_TABLEAUX)) {
-        System.out.println();
-        System.out.println("----------------------------------------");
-        System.out.println(stats.inf());
-        System.out.println(tableau);
-      }
-      else if (env.dbgNow(DBG_STEPS)) {
-        System.out.println(stats.inf());
-      }
-      if (env.dbgNow(DBG_APPLIED_OPS)) {
-        //System.out.println(stats.inf());
-        //System.out.println(tableau.getAppOps().toSimpleString());
-        System.out.println(tableau.getLastOperator());
-      }
+		if (env.dbgNow(DBG_TABLEAUX)) {
+			System.out.println();
+			System.out.println("----------------------------------------");
+			System.out.println(stats.inf());
+			System.out.println(tableau);
+		}
+		else if (env.dbgNow(DBG_STEPS)) {
+			System.out.println(stats.inf());
+		}
+		if (env.dbgNow(DBG_APPLIED_OPS)) {
+			//System.out.println(stats.inf());
+			//System.out.println(tableau.getAppOps().toSimpleString());
+			System.out.println(tableau.getLastOperator());
+		}
 
-      if (subgoal == null)
-    	  return false;
-      Operator op = subgoal.getNextOperator();
-      if (op == null) {
-        if (tableau.cancel() == false)
-        	return false;
-        if (opt.use(USE_NEGATION_AS_FAILURE) && !tableau.removeClosedNAFSubTableau())
-        	return false;
-        return true;
-      }
-      if (tableau.apply(op) == false)
-        return true;
+		if (subgoal == null)
+			return false;
+		Operator op = subgoal.getNextOperator();
+		if (op == null) {
+			if (tableau.cancel() == false)
+				return false;
+			if (opt.use(USE_NEGATION_AS_FAILURE) && !tableau.removeClosedNAFSubTableau())
+				return false;
+			return true;
+		}
+		if (tableau.apply(op) == false)
+			return true;
 
-      if (opt.use(USE_NEGATION_AS_FAILURE) && !tableau.removeClosedNAFSubTableau())
-    	  return false;
-      if (!tableau.removeRedundancy())
-    	  return false;
-      if (opt.divide()) {
-        if (cfp.hasEmptyConseq())
-        	return false;
-        if (param.getMaxNumConseqs() != 0 && cfp.getConseqSet().size() >= param.getMaxNumConseqs()) {
-          param.setExhaustiveness(false);
-          return false;
-        }
-      }
-      else if (tableau.getNumOpenNodes() == 0) {
-        Conseq conseq = tableau.getConseq();
+		if (opt.use(USE_NEGATION_AS_FAILURE) && !tableau.removeClosedNAFSubTableau())
+			return false;
+		if (!tableau.removeRedundancy())
+			return false;
+		if (opt.divide()) {
+			if (cfp.hasEmptyConseq())
+				return false;
+			if (param.getMaxNumConseqs() != 0 && cfp.getConseqSet().size() >= param.getMaxNumConseqs()) {
+				param.setExhaustiveness(false);
+				return false;
+			}
+		}
+		else if (tableau.getNumOpenNodes() == 0) {
+			Conseq conseq = tableau.getConseq();
 
-        if (opt.hasVerifyOp()) {
-          Proof proof = tableau.getProof(conseq);
-          conseq.setProof(proof);
-        }
-        if (env.dbg(DBG_SOLVED_TABLEAUX)) {
-          System.out.println();
-          System.out.println("SOLVED");
-          System.out.println(stats.inf() + " " + tableau);
-        }
-        if (tableau.getPFChecker().belongs(conseq) && cfp.addConseq(conseq)) {
-          
-          stats.setProds(Stats.CONSEQUENCES, cfp.getConseqSet().size());
-          stats.setProds(Stats.CONSEQ_LITS , cfp.getConseqSet().getNumLiterals());
-          
-          if (cfp.hasEmptyConseq()) {
-            cfp.setStatus(UNSATISFIABLE);
-            return false;
-          }
-          if (cfp.getConseqSet().size() == param.getMaxNumConseqs()) {
-            param.setExhaustiveness(false);
-            return false;
-          }
-          tableau.markAs(Tags.SOLVABLE);
-        }
-        tableau.cancel();
-       
-        //return true;
-      }
-    
-    return true;
-  }
+			if (opt.hasVerifyOp()) {
+				Proof proof = tableau.getProof(conseq);
+				conseq.setProof(proof);
+			}
+			if (env.dbg(DBG_SOLVED_TABLEAUX)) {
+				System.out.println();
+				System.out.println("SOLVED");
+				System.out.println(stats.inf() + " " + tableau);
+			}
+			if (tableau.getPFChecker().belongs(conseq) && cfp.addConseq(conseq)) {
+
+				stats.setProds(Stats.CONSEQUENCES, cfp.getConseqSet().size());
+				stats.setProds(Stats.CONSEQ_LITS , cfp.getConseqSet().getNumLiterals());
+
+				if (cfp.hasEmptyConseq()) {
+					cfp.setStatus(UNSATISFIABLE);
+					return false;
+				}
+				if (cfp.getConseqSet().size() == param.getMaxNumConseqs()) {
+					param.setExhaustiveness(false);
+					return false;
+				}
+				tableau.markAs(Tags.SOLVABLE);
+			}
+			tableau.cancel();
+
+			//return true;
+		}
+
+		return true;
+	}
 
 }
