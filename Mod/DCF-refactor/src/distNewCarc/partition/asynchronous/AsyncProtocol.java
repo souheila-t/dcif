@@ -138,5 +138,11 @@ public class AsyncProtocol extends BaseMainProtocol implements CFMessageTypes{
 	
 	public static boolean verbose = true;
 
+	@Override
+	public void send(Message<?> m) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }

@@ -40,6 +40,7 @@ public abstract class BaseMainProtocol implements MainProtocol {
 	public void reconnectNeighbour(CanalComm ag){}
 	public void destroyNeighbour(CanalComm ag){}
 	
+	
 	public abstract boolean gereParProtocol(Message<?> m);
 	
 	public abstract void receiveMessage(Message<?> m) throws Exception;

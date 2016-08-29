@@ -70,8 +70,10 @@ public class NewAsyncProtocol extends BaseMainProtocol implements CFMessageTypes
 				break;
 			case SystemMessageTypes.SYS_FINISH:
 				ag.setDormant(true);
-				m = new SystemMessage(SystemMessageTypes.SYS_FINISH, cAg.commAgent);
-				cAg.commAgent.enqueue(commSystem, m);
+//				m = new SystemMessage(SystemMessageTypes.SYS_FINISH, cAg.commAgent);
+//				cAg.commAgent.enqueue(commSystem, m);
+				//ag.getComm().getAgentThread().destroy();
+				break;
 			}
 		}				
 	}
@@ -127,11 +129,11 @@ public class NewAsyncProtocol extends BaseMainProtocol implements CFMessageTypes
 		}
 		if (newCl.isEmpty()){
 			ag.setDormant(true);
-			while(cAg.getComm().isEmpty()){
-				Message<?> m= cAg.getComm().get();
-				receiveMessage(m);
+//			while(cAg.getComm().isEmpty()){
+//				Message<?> m= cAg.getComm().get();
+//				receiveMessage(m);
 				return;
-			}
+			//}
 		}
 		//Computing new consequence
 		try {
@@ -149,18 +151,9 @@ public class NewAsyncProtocol extends BaseMainProtocol implements CFMessageTypes
 			if (ag.isPossibleOutput(cl))
 				csqBatch.add(cl);
 		}
-//		boolean exit = true;
-//		for (CanalComm c : getRelevantNeighbours())
-//			if(! c.getOwner().isDormant())
-//				exit = false;
-//				
-//		if (!csqBatch.isEmpty() && !exit)
-//			cAg.send(new CFMessage(CFMessageTypes.PBM_SEND_CONSEQS,csqBatch), output);
-//		if (!csqBatch.isEmpty() && exit)
-//			cAg.send(new CFMessage(CFMessageTypes.PBM_SEND_CONSEQS,csqBatch), commSystem);
-		
+	
 		if (!csqBatch.isEmpty())
-			cAg.send(new CFMessage(CFMessageTypes.PBM_SEND_CONSEQS,csqBatch), output);
+			cAg.send(new CFMessage(CFMessageTypes.PBM_SEND_CONSEQS,csqBatch), commSystem);
 		ag.updateListNewCons(newCsq);
 		ag.setDormant(true);
 	}	

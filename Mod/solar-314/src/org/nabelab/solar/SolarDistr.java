@@ -144,26 +144,28 @@ public class SolarDistr extends SOLAR{
 		Collection<Clause> newCl;
 
 		while ((param = strategy.getNextSearchParam(stats, getCPUTime(), tableau.getMaxNumSkipped(), param)) != null){
-			if(Thread.currentThread().isInterrupted())
-				return;
-			stats.inc(Stats.STAGE);
-			stats.setDepth(param.getDepthLimit());
+			
+				if(Thread.currentThread().isInterrupted())
+					return;
+				stats.inc(Stats.STAGE);
+				stats.setDepth(param.getDepthLimit());
 
-			if (env.dbg(DBG_VERBOSE)) {
-				if (stats.get(Stats.STAGE) != 1 && env.dbg(DBG_TABLEAUX))
-					System.out.println();
-				System.out.printf("Stage %d  (%s inf:%d)\n",
-						stats.get(Stats.STAGE), param.toString(), stats.inf());
-			}
+				if (env.dbg(DBG_VERBOSE)) {
+					if (stats.get(Stats.STAGE) != 1 && env.dbg(DBG_TABLEAUX))
+						System.out.println();
+					System.out.printf("Stage %d  (%s inf:%d)\n",
+							stats.get(Stats.STAGE), param.toString(), stats.inf());
+				}
+				
+				tableau.reset();
+				
+				tableau.setSearchParam(param);
+			
+				
+				while (loop){
+					oldConsq = cfp.getConseqSet().get();
+					loop = solve(param);
 
-			tableau.reset();
-			tableau.setSearchParam(param);
-
-
-			while (loop){
-				oldConsq = cfp.getConseqSet().get();
-				loop = solve(param);
-				if(cAg!=null){
 					Collection<Conseq> cons;
 					Collection<Clause> toSent;
 					cons = cfp.getConseqSet().get();
@@ -175,7 +177,7 @@ public class SolarDistr extends SOLAR{
 					}
 
 					//checker les clauses reçu
-					if(!cAg.getComm().isEmpty()){
+					while(!cAg.getComm().isEmpty()){
 						ms = cAg.getComm().get();
 						if(!( ms instanceof SystemMessage)){
 							Collection<Clause> collection = (Collection<Clause>)ms.getArgument();
@@ -187,9 +189,8 @@ public class SolarDistr extends SOLAR{
 						}
 					}
 				}
-			}
+			
 		}
-
 		if (env.dbg(DBG_VERBOSE))
 			System.out.println();
 

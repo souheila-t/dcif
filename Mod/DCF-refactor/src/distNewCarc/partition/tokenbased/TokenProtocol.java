@@ -178,5 +178,12 @@ public class TokenProtocol extends BaseMainProtocol implements CFMessageTypes{
 	protected HashMap<Integer,Collection<Clause>> newCsq=new HashMap<Integer,Collection<Clause>>();
 	public static boolean verbose = true;
 
+
+	@Override
+	public void send(Message<?> m) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }

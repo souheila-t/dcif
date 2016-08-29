@@ -562,4 +562,8 @@ public class SolProblem extends CFP implements Parser, Saver{
 	private Env env;
 	/**The options*/
 	private Options opt;
+	public CNF listClauses() {
+		CNF theory = CNF.copy(getClauses());
+		return theory;
+	}
 }

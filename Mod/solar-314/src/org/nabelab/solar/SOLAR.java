@@ -2,7 +2,6 @@
  Copyright 2003-2009, University of Yamanashi. All rights reserved.
  By using this software the USER indicates that he or she has read,
  understood and will comply with the following:
-
  --- University of Yamanashi hereby grants USER non-exclusive permission
  to use, copy and/or modify this software for internal, non-commercial,
  research purposes only. Any distribution, including commercial sale or
@@ -16,15 +15,12 @@
  documentation. No right is granted to use in advertising, publicity or
  otherwise any trademark, service mark, or the name of University of
  Yamanashi.
-
  --- This software and any associated documentation is provided "as is"
-
  UNIVERSITY OF YAMANASHI MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS
  OR IMPLIED, INCLUDING THOSE OF MERCHANTABILITY OR FITNESS FOR A
  PARTICULAR PURPOSE, OR THAT USE OF THE SOFTWARE, MODIFICATIONS, OR
  ASSOCIATED DOCUMENTATION WILL NOT INFRINGE ANY PATENTS, COPYRIGHTS,
  TRADEMARKS OR OTHER INTELLECTUAL PROPERTY RIGHTS OF A THIRD PARTY.
-
  University of Yamanashi shall not be liable under any circumstances for
  any direct, indirect, special, incidental, or consequential damages
  with respect to any claim by USER or any third party on account of or
@@ -208,7 +204,7 @@ public class SOLAR implements ExitStatus, OptionTypes, DebugTypes {
    * @return true when normal exit, false when restart since the axiom set is changed.
  * @throws ParseException 
    */
-  public boolean solve(SearchParam param) throws ParseException {
+  private boolean solve(SearchParam param) throws ParseException {
 	  if(Thread.currentThread().isInterrupted())
 			return false;
 
@@ -715,24 +711,25 @@ public class SOLAR implements ExitStatus, OptionTypes, DebugTypes {
   }
 
   /** The environment. */
-  private Env env = null;
+  protected Env env = null;
   /** The consequence finding problem. */
-  private CFP cfp = null;
+  protected CFP cfp = null;
   /** The tableau. */
-  private Tableau tableau = null;
+  protected Tableau tableau = null;
   /** The statistics information. */
-  private Stats stats = null;
+  protected Stats stats = null;
   /** The options. */
-  private Options opt = null;
+  protected Options opt = null;
   /** Whether SOLAR is solving or not. */
-  private boolean isSolving;
+  protected boolean isSolving;
   /** Characteristic clauses to be added during search process. */
-  private Queue<Clause> carcQueue = new ConcurrentLinkedQueue<Clause>();
+  protected Queue<Clause> carcQueue = new ConcurrentLinkedQueue<Clause>();
   /** The start time of the SOLAR process. */
-  private long startTime = 0;
+  protected long startTime = 0;
   /** For getting CPU time. */
-  private ThreadMXBean threadMxBean = ManagementFactory.getThreadMXBean();
+  protected ThreadMXBean threadMxBean = ManagementFactory.getThreadMXBean();
 
   public final static String VERSION = "SOLAR (SOL for Advanced Reasoning) 2.0 alpha (build 314)";
 
 }
+

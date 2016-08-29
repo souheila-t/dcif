@@ -187,6 +187,12 @@ public class StarBasedProtocol extends BaseMainProtocol implements CFMessageType
 		
 		public static boolean verbose = true;
 
+		@Override
+		public void send(Message<?> m) {
+			// TODO Auto-generated method stub
+			
+		}
+
 		
 }
 

@@ -299,15 +299,17 @@ public class Extension extends Operator implements TermTypes {
     }
     
     // check term depth
-    if (!checkTermDepth(clause)){
-    	super.cancel();
-    	varTable.removeVars(clause.getNumVars());
-    	stats.incSuccs(stats.FAIL);
-    	if (env.dbgNow(DBG_TABLEAUX)) {
-    		System.out.println();
-    		System.out.println("FAILED by TermDepth.");
+    if(env.isDepthTerm()){
+    	if (!checkTermDepth(clause)){
+    		super.cancel();
+    		varTable.removeVars(clause.getNumVars());
+    		stats.incSuccs(stats.FAIL);
+    		if (env.dbgNow(DBG_TABLEAUX)) {
+    			System.out.println();
+    			System.out.println("FAILED by TermDepth.");
+    		}
+    		return false;
     	}
-    	return false;
     }
     // Regularity checking.
     if (opt.use(USE_REGULARITY) && !clause.isUnit()) {

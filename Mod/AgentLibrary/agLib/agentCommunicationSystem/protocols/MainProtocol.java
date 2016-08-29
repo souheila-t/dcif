@@ -1,5 +1,9 @@
 package agLib.agentCommunicationSystem.protocols;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
+
 import jdk.nashorn.internal.runtime.ParserException;
 import agLib.agentCommunicationSystem.CanalComm;
 import agLib.agentCommunicationSystem.Message;
@@ -16,7 +20,9 @@ public interface MainProtocol {
 	public void reconnectNeighbour(CanalComm ag);
 	public void disconnectNeighbour(CanalComm ag);
 	public void destroyNeighbour(CanalComm ag);
-	
+	//public <Conseq> void send(Collection<Clause> newCons);
+	public void send(Message<?> m);
+
 	
 }
 

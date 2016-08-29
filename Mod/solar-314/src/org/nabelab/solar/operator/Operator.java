@@ -440,6 +440,8 @@ public abstract class Operator implements TermTypes, Tags, OptionTypes, DebugTyp
   }
 
   public boolean checkTermDepth(Clause c) throws ParseException{
+	  if(tableau.getOptions().getDepthLimit()==0)
+		  return true;
 	  Clause p = c.instantiate();
 	   
 	  for(Literal l : p.getLiterals()){

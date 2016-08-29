@@ -1,6 +1,11 @@
 package agLib.agentCommunicationSystem;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
+
+
 
 import agLib.agentCommunicationSystem.protocols.MainProtocol;
 
@@ -58,7 +63,8 @@ public class CommunicationModule implements SystemMessageTypes{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-   		 if (m instanceof SystemMessage) switch(m.getCode()){
+   		 if (m instanceof SystemMessage) 
+   	 switch(m.getCode()){
  		case SYS_CRASH: gbProtocol.destroyNeighbour(m.getSender());
  		break;
 		case SYS_DISCONNECT: gbProtocol.disconnectNeighbour(m.getSender());
@@ -83,6 +89,7 @@ public class CommunicationModule implements SystemMessageTypes{
 		if (!system && stats!=null) 
 			stats.sentMessages(mToSend, 1);
 		//send
+		
 		destinataire.enqueue(commAgent,mToSend);		
 	}
 	
@@ -153,4 +160,13 @@ public class CommunicationModule implements SystemMessageTypes{
 		stats=null;
 		gbProtocol=null;
 	}
+
+	public void send(Message<?> m) {
+		// TODO Auto-generated method stub
+		gbProtocol.send(m);
+	}
+	
+
+
+
 }

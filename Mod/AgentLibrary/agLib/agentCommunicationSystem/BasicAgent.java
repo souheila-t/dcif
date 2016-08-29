@@ -63,6 +63,7 @@ public class BasicAgent implements ThreadAgent,SystemMessageTypes{
         	if (m!=null) {
         		if (m instanceof SystemMessage) switch(m.getCode()){
         		case SYS_FINISH:
+        		//case SYS_LAUNCH:
         			finish();
         		break;
         		}

@@ -87,7 +87,7 @@ public class ConsFindingLocalTheory extends SolProblem {
 		CNF result = new CNF();
 		// TODO !!! Attention : trueNewCarc was at false for PB base approaches... Not sure if better. TO TEST.
 		boolean trueNewCarc=!(topClauses==null || topClauses.isEmpty());
-		CFSolver.solveToClause(pb, deadline, ctr, result, incremental, trueNewCarc);
+		CFSolver.solveToClause(pb, deadline, ctr, result, incremental, trueNewCarc, null);
 		return result;
 	}
 

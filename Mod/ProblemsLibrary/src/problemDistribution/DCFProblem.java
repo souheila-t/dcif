@@ -210,7 +210,7 @@ public class DCFProblem implements Parser,Saver, DistributedConsequenceFindingPr
 		}
 		//for now, the production field is supposed common.
 		p.println();
-		p.println(IndepPField.toSolFileLine(pf));
+		//p.println(IndepPField.toSolFileLine(pf));
 
 	}
 	

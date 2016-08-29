@@ -78,7 +78,7 @@ public class LocalTheory implements ExitStatus, ClauseTypes, TermTypes{
 	public LocalTheory(CFSolver solver, SolProblem cfp, int id) {
 		this.solver=solver;
 		locTheory=new CNF();
-		for (int i=0;i<cfp.getNbClauses();i++){
+		for (int i=0;i<cfp.getNumClauses();i++){
 			locTheory.add(cfp.getClause(i));
 		}
 		manifestations=new UnitClauseCNF();

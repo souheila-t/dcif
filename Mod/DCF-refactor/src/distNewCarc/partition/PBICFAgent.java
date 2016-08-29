@@ -20,4 +20,5 @@ public interface PBICFAgent extends Agent{
 	public Collection<Clause> getListConseq();
 	public Env getEnv();
 	public Options getOptions();
+	public void send(Collection<Clause> cl);
 }
